@@ -1,0 +1,2029 @@
+[
+ {
+  "seat_id": "Q01",
+  "seat_name": "高盛世纪大道",
+  "branch_full_names": [
+   {
+    "full_name": "高盛(中国)证券有限责任公司上海浦东新区世纪大道证券营业部",
+    "lhb_records_1y": 4231,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 2453,
+     "active_days": 122,
+     "two_way_share": 0.493,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.543,
+      0.705,
+      0.859
+     ],
+     "board_share": {
+      "主板": 0.797,
+      "科创板": 0.203
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 1.0,
+     "net_buy_records_with_d1": 1289,
+     "next_day_ret_mean_pct": 0.29,
+     "next_day_ret_median_pct": -0.21,
+     "next_day_up_prob": 0.486,
+     "median_buy_amt_wan": 3460.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.493,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.543,
+      0.705,
+      0.859
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 1.0,
+    "days_with_ge3_same_board": 1.0,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.797,
+    "科创板": 0.203
+   },
+   "median_buy_amt_wan": 3460.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.1,
+   "next_day_ret_mean_pct(net_buy)": 0.29,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "外资",
+   "高盛"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q02",
+  "seat_name": "瑞银花园石桥路",
+  "branch_full_names": [
+   {
+    "full_name": "瑞银证券有限责任公司上海花园石桥路证券营业部",
+    "lhb_records_1y": 2927,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1496,
+     "active_days": 122,
+     "two_way_share": 0.284,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.588,
+      0.749,
+      0.893
+     ],
+     "board_share": {
+      "主板": 0.808,
+      "科创板": 0.191,
+      "创业板": 0.001
+     },
+     "days_with_ge3_stocks": 0.975,
+     "days_with_ge3_same_board": 0.975,
+     "net_buy_records_with_d1": 683,
+     "next_day_ret_mean_pct": -0.09,
+     "next_day_ret_median_pct": -0.54,
+     "next_day_up_prob": 0.464,
+     "median_buy_amt_wan": 3269.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.284,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.588,
+      0.749,
+      0.893
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.975,
+    "days_with_ge3_same_board": 0.975,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.808,
+    "科创板": 0.191,
+    "创业板": 0.001
+   },
+   "median_buy_amt_wan": 3269.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": -0.03,
+   "next_day_ret_mean_pct(net_buy)": -0.09,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "瑞银"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q03",
+  "seat_name": "摩根大通银城中路",
+  "branch_full_names": [
+   {
+    "full_name": "摩根大通证券(中国)有限公司上海银城中路证券营业部",
+    "lhb_records_1y": 2235,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1058,
+     "active_days": 121,
+     "two_way_share": 0.282,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.635,
+      0.786,
+      0.903
+     ],
+     "board_share": {
+      "主板": 0.814,
+      "科创板": 0.186
+     },
+     "days_with_ge3_stocks": 0.975,
+     "days_with_ge3_same_board": 0.917,
+     "net_buy_records_with_d1": 551,
+     "next_day_ret_mean_pct": -0.09,
+     "next_day_ret_median_pct": -0.37,
+     "next_day_up_prob": 0.481,
+     "median_buy_amt_wan": 3378.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.282,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.635,
+      0.786,
+      0.903
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.975,
+    "days_with_ge3_same_board": 0.917,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.814,
+    "科创板": 0.186
+   },
+   "median_buy_amt_wan": 3378.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": -0.03,
+   "next_day_ret_mean_pct(net_buy)": -0.09,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "小摩"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q04",
+  "seat_name": "中金上海分公司",
+  "branch_full_names": [
+   {
+    "full_name": "中国国际金融股份有限公司上海分公司",
+    "lhb_records_1y": 2249,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1284,
+     "active_days": 122,
+     "two_way_share": 0.502,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.294,
+      0.566,
+      0.791
+     ],
+     "board_share": {
+      "主板": 0.71,
+      "创业板": 0.154,
+      "科创板": 0.136
+     },
+     "days_with_ge3_stocks": 0.992,
+     "days_with_ge3_same_board": 0.975,
+     "net_buy_records_with_d1": 638,
+     "next_day_ret_mean_pct": 0.14,
+     "next_day_ret_median_pct": -0.37,
+     "next_day_up_prob": 0.486,
+     "median_buy_amt_wan": 2423.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.502,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.294,
+      0.566,
+      0.791
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.992,
+    "days_with_ge3_same_board": 0.975,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.71,
+    "创业板": 0.154,
+    "科创板": 0.136
+   },
+   "median_buy_amt_wan": 2423.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.05,
+   "next_day_ret_mean_pct(net_buy)": 0.14,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "中金上分"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q05",
+  "seat_name": "中金北京建国门外大街",
+  "branch_full_names": [
+   {
+    "full_name": "中国国际金融股份有限公司北京建国门外大街证券营业部",
+    "lhb_records_1y": 278,
+    "last_on_list": "2026-10-14",
+    "stats_6m": {
+     "records_6m": 93,
+     "active_days": 53,
+     "two_way_share": 0.032,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.094,
+      0.734,
+      0.734
+     ],
+     "board_share": {
+      "主板": 0.624,
+      "科创板": 0.323,
+      "北交所": 0.054
+     },
+     "days_with_ge3_stocks": 0.17,
+     "days_with_ge3_same_board": 0.094,
+     "net_buy_records_with_d1": 42,
+     "next_day_ret_mean_pct": -1.32,
+     "next_day_ret_median_pct": -0.41,
+     "next_day_up_prob": 0.5,
+     "median_buy_amt_wan": 2331.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.032,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.094,
+      0.734,
+      0.734
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.17,
+    "days_with_ge3_same_board": 0.094,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.623,
+    "科创板": 0.323,
+    "北交所": 0.054
+   },
+   "median_buy_amt_wan": 2331.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": -0.44,
+   "next_day_ret_mean_pct(net_buy)": -1.32,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q06",
+  "seat_name": "中金深圳分公司",
+  "branch_full_names": [
+   {
+    "full_name": "中国国际金融股份有限公司深圳分公司",
+    "lhb_records_1y": 28,
+    "last_on_list": "2026-08-24",
+    "stats_6m": {
+     "records_6m": 20,
+     "active_days": 14,
+     "two_way_share": 0.3,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.001,
+      0.003
+     ],
+     "board_share": {
+      "主板": 0.45,
+      "北交所": 0.3,
+      "创业板": 0.2,
+      "科创板": 0.05
+     },
+     "days_with_ge3_stocks": 0.143,
+     "days_with_ge3_same_board": 0.143,
+     "net_buy_records_with_d1": 8,
+     "next_day_ret_mean_pct": -6.63,
+     "next_day_ret_median_pct": -10.01,
+     "next_day_up_prob": 0.25,
+     "median_buy_amt_wan": 4240.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.3,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.001,
+      0.001,
+      0.003
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.143,
+    "days_with_ge3_same_board": 0.143,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.45,
+    "北交所": 0.3,
+    "创业板": 0.2,
+    "科创板": 0.05
+   },
+   "median_buy_amt_wan": 4240.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": -1,
+   "next_day_ret_mean_pct(net_buy)": -6.63,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q07",
+  "seat_name": "中信证券上海分公司",
+  "branch_full_names": [
+   {
+    "full_name": "中信证券股份有限公司上海分公司",
+    "lhb_records_1y": 3283,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 2137,
+     "active_days": 122,
+     "two_way_share": 0.404,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.596,
+      0.752,
+      0.871
+     ],
+     "board_share": {
+      "主板": 0.759,
+      "科创板": 0.234,
+      "创业板": 0.006,
+      "北交所": 0.001
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 1.0,
+     "net_buy_records_with_d1": 1066,
+     "next_day_ret_mean_pct": -0.04,
+     "next_day_ret_median_pct": -0.5,
+     "next_day_up_prob": 0.468,
+     "median_buy_amt_wan": 3233.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.404,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.596,
+      0.752,
+      0.871
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 1.0,
+    "days_with_ge3_same_board": 1.0,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.759,
+    "科创板": 0.234,
+    "创业板": 0.006,
+    "北交所": 0.001
+   },
+   "median_buy_amt_wan": 3233.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": -0.01,
+   "next_day_ret_mean_pct(net_buy)": -0.04,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "中信上分"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q08",
+  "seat_name": "中信深南中路中信大厦",
+  "branch_full_names": [
+   {
+    "full_name": "中信证券股份有限公司深圳深南中路中信大厦证券营业部",
+    "lhb_records_1y": 718,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 655,
+     "active_days": 119,
+     "two_way_share": 0.183,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.562,
+      0.754,
+      0.863
+     ],
+     "board_share": {
+      "主板": 0.834,
+      "科创板": 0.142,
+      "创业板": 0.021,
+      "其他": 0.003
+     },
+     "days_with_ge3_stocks": 0.815,
+     "days_with_ge3_same_board": 0.731,
+     "net_buy_records_with_d1": 323,
+     "next_day_ret_mean_pct": 0.03,
+     "next_day_ret_median_pct": 0.14,
+     "next_day_up_prob": 0.511,
+     "median_buy_amt_wan": 2195.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.183,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.562,
+      0.754,
+      0.863
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.815,
+    "days_with_ge3_same_board": 0.731,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.834,
+    "科创板": 0.142,
+    "创业板": 0.021,
+    "其他": 0.003
+   },
+   "median_buy_amt_wan": 2195.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.01,
+   "next_day_ret_mean_pct(net_buy)": 0.03,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q09",
+  "seat_name": "中信证券总部(非营业场所)",
+  "branch_full_names": [
+   {
+    "full_name": "中信证券股份有限公司总部(非营业场所)",
+    "lhb_records_1y": 37,
+    "last_on_list": "2026-09-09",
+    "stats_6m": {
+     "records_6m": 19,
+     "active_days": 17,
+     "two_way_share": 0.0,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      null,
+      null,
+      null
+     ],
+     "board_share": {
+      "主板": 0.632,
+      "科创板": 0.368
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 6,
+     "next_day_ret_mean_pct": 0.94,
+     "next_day_ret_median_pct": -0.79,
+     "next_day_up_prob": 0.5,
+     "median_buy_amt_wan": 1602.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.0,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      null,
+      null,
+      null
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.0,
+    "days_with_ge3_same_board": 0.0,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.632,
+    "科创板": 0.368
+   },
+   "median_buy_amt_wan": 1602.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.31,
+   "next_day_ret_mean_pct(net_buy)": 0.94,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q10",
+  "seat_name": "华泰营业总部(非营业场所)",
+  "branch_full_names": [
+   {
+    "full_name": "华泰证券股份有限公司营业总部(非营业场所)",
+    "lhb_records_1y": 971,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 645,
+     "active_days": 121,
+     "two_way_share": 0.153,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.542,
+      0.804,
+      0.892
+     ],
+     "board_share": {
+      "主板": 0.792,
+      "科创板": 0.208
+     },
+     "days_with_ge3_stocks": 0.76,
+     "days_with_ge3_same_board": 0.678,
+     "net_buy_records_with_d1": 463,
+     "next_day_ret_mean_pct": 0.84,
+     "next_day_ret_median_pct": 0,
+     "next_day_up_prob": 0.497,
+     "median_buy_amt_wan": 2006.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.153,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.542,
+      0.804,
+      0.892
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.76,
+    "days_with_ge3_same_board": 0.678,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.792,
+    "科创板": 0.208
+   },
+   "median_buy_amt_wan": 2006.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.28,
+   "next_day_ret_mean_pct(net_buy)": 0.84,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "华泰总部"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q11",
+  "seat_name": "国泰海通总部",
+  "branch_full_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司",
+    "lhb_records_1y": 4987,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 3055,
+     "active_days": 122,
+     "two_way_share": 0.592,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.573,
+      0.737,
+      0.866
+     ],
+     "board_share": {
+      "主板": 0.817,
+      "科创板": 0.183
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 1.0,
+     "net_buy_records_with_d1": 1668,
+     "next_day_ret_mean_pct": 0.21,
+     "next_day_ret_median_pct": -0.14,
+     "next_day_up_prob": 0.488,
+     "median_buy_amt_wan": 3277.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.592,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.573,
+      0.737,
+      0.866
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 1.0,
+    "days_with_ge3_same_board": 1.0,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.817,
+    "科创板": 0.183
+   },
+   "median_buy_amt_wan": 3277.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.07,
+   "next_day_ret_mean_pct(net_buy)": 0.21,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [
+   "国君总部(旧称)"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q12",
+  "seat_name": "国泰海通上海分公司",
+  "branch_full_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司上海分公司",
+    "lhb_records_1y": 283,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 205,
+     "active_days": 100,
+     "two_way_share": 0.259,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.501,
+      0.768
+     ],
+     "board_share": {
+      "主板": 0.776,
+      "创业板": 0.127,
+      "科创板": 0.098
+     },
+     "days_with_ge3_stocks": 0.3,
+     "days_with_ge3_same_board": 0.16,
+     "net_buy_records_with_d1": 128,
+     "next_day_ret_mean_pct": 1.44,
+     "next_day_ret_median_pct": 1.46,
+     "next_day_up_prob": 0.57,
+     "median_buy_amt_wan": 7129.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "pb_multi_strategy",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.259,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.002,
+      0.501,
+      0.768
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.3,
+    "days_with_ge3_same_board": 0.16,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.775,
+    "创业板": 0.127,
+    "科创板": 0.098
+   },
+   "median_buy_amt_wan": 7129.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：盘中分批成交、多股同时出现，常为指数/多因子或外资通道，非单一主体",
+  "next_day_exit_window": "社区经验/推测：无固定兑现窗口，T+1~T+5 分批调仓",
+  "next_day_premium_bias": {
+   "score": 0.48,
+   "next_day_ret_mean_pct(net_buy)": 1.44,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "不把它当方向信号，只看是否与游资合力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q13",
+  "seat_name": "华鑫上海分公司",
+  "branch_full_names": [
+   {
+    "full_name": "华鑫证券有限责任公司上海分公司",
+    "lhb_records_1y": 181,
+    "last_on_list": "2026-10-15",
+    "stats_6m": {
+     "records_6m": 66,
+     "active_days": 47,
+     "two_way_share": 0.439,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.013,
+      0.049,
+      0.406
+     ],
+     "board_share": {
+      "主板": 0.909,
+      "创业板": 0.045,
+      "科创板": 0.045
+     },
+     "days_with_ge3_stocks": 0.106,
+     "days_with_ge3_same_board": 0.085,
+     "net_buy_records_with_d1": 45,
+     "next_day_ret_mean_pct": 1.93,
+     "next_day_ret_median_pct": 1.89,
+     "next_day_up_prob": 0.622,
+     "median_buy_amt_wan": 758.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "limit_up_sweep",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.439,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.013,
+      0.049,
+      0.406
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.106,
+    "days_with_ge3_same_board": 0.085,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.91,
+    "创业板": 0.045,
+    "科创板": 0.045
+   },
+   "median_buy_amt_wan": 758.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：涨停价附近大额扫单/排板，单向买入为主",
+  "next_day_exit_window": "社区经验/推测：次日竞价或开盘30分钟内兑现",
+  "next_day_premium_bias": {
+   "score": 0.64,
+   "next_day_ret_mean_pct(net_buy)": 1.93,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "次日竞价不及预期即离场，不在高开时接力"
+  },
+  "community_slang": [
+   "华鑫上分"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q14",
+  "seat_name": "华宝上海东大名路",
+  "branch_full_names": [
+   {
+    "full_name": "华宝证券股份有限公司上海东大名路证券营业部",
+    "lhb_records_1y": 189,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 38,
+     "active_days": 29,
+     "two_way_share": 0.184,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.059,
+      0.074
+     ],
+     "board_share": {
+      "主板": 0.605,
+      "科创板": 0.316,
+      "创业板": 0.079
+     },
+     "days_with_ge3_stocks": 0.069,
+     "days_with_ge3_same_board": 0.069,
+     "net_buy_records_with_d1": 24,
+     "next_day_ret_mean_pct": 1.32,
+     "next_day_ret_median_pct": 2.41,
+     "next_day_up_prob": 0.542,
+     "median_buy_amt_wan": 897.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "limit_up_sweep",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.184,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.002,
+      0.059,
+      0.074
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.069,
+    "days_with_ge3_same_board": 0.069,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.605,
+    "科创板": 0.316,
+    "创业板": 0.079
+   },
+   "median_buy_amt_wan": 897.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：涨停价附近大额扫单/排板，单向买入为主",
+  "next_day_exit_window": "社区经验/推测：次日竞价或开盘30分钟内兑现",
+  "next_day_premium_bias": {
+   "score": 0.44,
+   "next_day_ret_mean_pct(net_buy)": 1.32,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "次日竞价不及预期即离场，不在高开时接力"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q15",
+  "seat_name": "开源西安西大街",
+  "branch_full_names": [
+   {
+    "full_name": "开源证券股份有限公司西安西大街证券营业部",
+    "lhb_records_1y": 1960,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 590,
+     "active_days": 84,
+     "two_way_share": 0.536,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.005,
+      0.549
+     ],
+     "board_share": {
+      "主板": 0.829,
+      "创业板": 0.142,
+      "科创板": 0.029
+     },
+     "days_with_ge3_stocks": 0.536,
+     "days_with_ge3_same_board": 0.536,
+     "net_buy_records_with_d1": 393,
+     "next_day_ret_mean_pct": 1.23,
+     "next_day_ret_median_pct": 0.3,
+     "next_day_up_prob": 0.517,
+     "median_buy_amt_wan": 3097.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "limit_up_sweep",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.536,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.001,
+      0.005,
+      0.549
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.536,
+    "days_with_ge3_same_board": 0.536,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.829,
+    "创业板": 0.142,
+    "科创板": 0.029
+   },
+   "median_buy_amt_wan": 3097.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：涨停价附近大额扫单/排板，单向买入为主",
+  "next_day_exit_window": "社区经验/推测：次日竞价或开盘30分钟内兑现",
+  "next_day_premium_bias": {
+   "score": 0.41,
+   "next_day_ret_mean_pct(net_buy)": 1.23,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "次日竞价不及预期即离场，不在高开时接力"
+  },
+  "community_slang": [
+   "开源西安"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q16",
+  "seat_name": "开源西安太华路",
+  "branch_full_names": [
+   {
+    "full_name": "开源证券股份有限公司西安太华路证券营业部",
+    "lhb_records_1y": 1822,
+    "last_on_list": "2026-09-21",
+    "stats_6m": {
+     "records_6m": 1021,
+     "active_days": 93,
+     "two_way_share": 0.406,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.0,
+      0.008,
+      0.909
+     ],
+     "board_share": {
+      "主板": 0.671,
+      "创业板": 0.266,
+      "科创板": 0.063
+     },
+     "days_with_ge3_stocks": 0.903,
+     "days_with_ge3_same_board": 0.882,
+     "net_buy_records_with_d1": 650,
+     "next_day_ret_mean_pct": 1.6,
+     "next_day_ret_median_pct": 1.25,
+     "next_day_up_prob": 0.563,
+     "median_buy_amt_wan": 4937.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "limit_up_sweep",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.406,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.0,
+      0.008,
+      0.909
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.903,
+    "days_with_ge3_same_board": 0.882,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.671,
+    "创业板": 0.266,
+    "科创板": 0.063
+   },
+   "median_buy_amt_wan": 4937.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：涨停价附近大额扫单/排板，单向买入为主",
+  "next_day_exit_window": "社区经验/推测：次日竞价或开盘30分钟内兑现",
+  "next_day_premium_bias": {
+   "score": 0.53,
+   "next_day_ret_mean_pct(net_buy)": 1.6,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "次日竞价不及预期即离场，不在高开时接力"
+  },
+  "community_slang": [
+   "开源西安"
+  ],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q17",
+  "seat_name": "国金深圳分公司",
+  "branch_full_names": [
+   {
+    "full_name": "国金证券股份有限公司深圳分公司",
+    "lhb_records_1y": 1610,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 769,
+     "active_days": 120,
+     "two_way_share": 0.887,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.154,
+      0.358,
+      0.638
+     ],
+     "board_share": {
+      "北交所": 0.741,
+      "主板": 0.198,
+      "创业板": 0.049,
+      "科创板": 0.012
+     },
+     "days_with_ge3_stocks": 0.9,
+     "days_with_ge3_same_board": 0.842,
+     "net_buy_records_with_d1": 426,
+     "next_day_ret_mean_pct": -0.89,
+     "next_day_ret_median_pct": -1.53,
+     "next_day_up_prob": 0.413,
+     "median_buy_amt_wan": 637.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "convertible_or_micro",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.887,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.154,
+      0.358,
+      0.638
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.9,
+    "days_with_ge3_same_board": 0.842,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "北交所": 0.741,
+    "主板": 0.198,
+    "创业板": 0.049,
+    "科创板": 0.012
+   },
+   "median_buy_amt_wan": 637.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：集中于北交所/小市值，高换手、双向",
+  "next_day_exit_window": "社区经验/推测：次日高开即卖",
+  "next_day_premium_bias": {
+   "score": -0.3,
+   "next_day_ret_mean_pct(net_buy)": -0.89,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "北交所/小票上榜时，若该席位双向，降低信号权重"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q18",
+  "seat_name": "国信深圳互联网分公司",
+  "branch_full_names": [
+   {
+    "full_name": "国信证券股份有限公司深圳互联网分公司",
+    "lhb_records_1y": 1055,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 563,
+     "active_days": 121,
+     "two_way_share": 0.885,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.249,
+      0.47,
+      0.739
+     ],
+     "board_share": {
+      "北交所": 0.748,
+      "主板": 0.195,
+      "创业板": 0.046,
+      "科创板": 0.011
+     },
+     "days_with_ge3_stocks": 0.785,
+     "days_with_ge3_same_board": 0.678,
+     "net_buy_records_with_d1": 268,
+     "next_day_ret_mean_pct": -1.13,
+     "next_day_ret_median_pct": -2.25,
+     "next_day_up_prob": 0.41,
+     "median_buy_amt_wan": 636.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "convertible_or_micro",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.885,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.249,
+      0.47,
+      0.739
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.785,
+    "days_with_ge3_same_board": 0.678,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "北交所": 0.748,
+    "主板": 0.195,
+    "创业板": 0.046,
+    "科创板": 0.011
+   },
+   "median_buy_amt_wan": 636.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：集中于北交所/小市值，高换手、双向",
+  "next_day_exit_window": "社区经验/推测：次日高开即卖",
+  "next_day_premium_bias": {
+   "score": -0.38,
+   "next_day_ret_mean_pct(net_buy)": -1.13,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "北交所/小票上榜时，若该席位双向，降低信号权重"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q19",
+  "seat_name": "国信深圳红岭中路",
+  "branch_full_names": [
+   {
+    "full_name": "国信证券股份有限公司深圳红岭中路证券营业部",
+    "lhb_records_1y": 729,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 426,
+     "active_days": 119,
+     "two_way_share": 0.974,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.076,
+      0.219,
+      0.469
+     ],
+     "board_share": {
+      "北交所": 0.96,
+      "主板": 0.026,
+      "科创板": 0.007,
+      "创业板": 0.005,
+      "其他": 0.002
+     },
+     "days_with_ge3_stocks": 0.697,
+     "days_with_ge3_same_board": 0.672,
+     "net_buy_records_with_d1": 202,
+     "next_day_ret_mean_pct": -0.07,
+     "next_day_ret_median_pct": -0.98,
+     "next_day_up_prob": 0.411,
+     "median_buy_amt_wan": 378.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "convertible_or_micro",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.974,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.076,
+      0.219,
+      0.469
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.697,
+    "days_with_ge3_same_board": 0.672,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "北交所": 0.96,
+    "主板": 0.026,
+    "科创板": 0.007,
+    "创业板": 0.005,
+    "其他": 0.002
+   },
+   "median_buy_amt_wan": 378.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：集中于北交所/小市值，高换手、双向",
+  "next_day_exit_window": "社区经验/推测：次日高开即卖",
+  "next_day_premium_bias": {
+   "score": -0.02,
+   "next_day_ret_mean_pct(net_buy)": -0.07,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "北交所/小票上榜时，若该席位双向，降低信号权重"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q20",
+  "seat_name": "中信建投北京东城分公司",
+  "branch_full_names": [
+   {
+    "full_name": "中信建投证券股份有限公司北京东城分公司",
+    "lhb_records_1y": 335,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 214,
+     "active_days": 108,
+     "two_way_share": 0.967,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.044,
+      0.148,
+      0.317
+     ],
+     "board_share": {
+      "北交所": 0.981,
+      "主板": 0.019
+     },
+     "days_with_ge3_stocks": 0.259,
+     "days_with_ge3_same_board": 0.25,
+     "net_buy_records_with_d1": 129,
+     "next_day_ret_mean_pct": 0.37,
+     "next_day_ret_median_pct": -0.7,
+     "next_day_up_prob": 0.45,
+     "median_buy_amt_wan": 403.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "convertible_or_micro",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.967,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.044,
+      0.148,
+      0.317
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.259,
+    "days_with_ge3_same_board": 0.25,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "北交所": 0.981,
+    "主板": 0.019
+   },
+   "median_buy_amt_wan": 403.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：集中于北交所/小市值，高换手、双向",
+  "next_day_exit_window": "社区经验/推测：次日高开即卖",
+  "next_day_premium_bias": {
+   "score": 0.12,
+   "next_day_ret_mean_pct(net_buy)": 0.37,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "北交所/小票上榜时，若该席位双向，降低信号权重"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q21",
+  "seat_name": "国信浙江互联网分公司",
+  "branch_full_names": [
+   {
+    "full_name": "国信证券股份有限公司浙江互联网分公司",
+    "lhb_records_1y": 2787,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1272,
+     "active_days": 122,
+     "two_way_share": 0.671,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.486,
+      0.717,
+      0.847
+     ],
+     "board_share": {
+      "主板": 0.994,
+      "北交所": 0.005,
+      "创业板": 0.001
+     },
+     "days_with_ge3_stocks": 0.984,
+     "days_with_ge3_same_board": 0.984,
+     "net_buy_records_with_d1": 826,
+     "next_day_ret_mean_pct": -2.33,
+     "next_day_ret_median_pct": -2.82,
+     "next_day_up_prob": 0.347,
+     "median_buy_amt_wan": 2107.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.671,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.486,
+      0.717,
+      0.847
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.984,
+    "days_with_ge3_same_board": 0.984,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.994,
+    "北交所": 0.005,
+    "创业板": 0.001
+   },
+   "median_buy_amt_wan": 2107.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": -0.78,
+   "next_day_ret_mean_pct(net_buy)": -2.33,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q22",
+  "seat_name": "中信建投上海营口路",
+  "branch_full_names": [
+   {
+    "full_name": "中信建投证券股份有限公司上海营口路证券营业部",
+    "lhb_records_1y": 733,
+    "last_on_list": "2026-10-15",
+    "stats_6m": {
+     "records_6m": 450,
+     "active_days": 118,
+     "two_way_share": 0.787,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.197,
+      0.506,
+      0.722
+     ],
+     "board_share": {
+      "主板": 0.713,
+      "北交所": 0.182,
+      "创业板": 0.073,
+      "科创板": 0.031
+     },
+     "days_with_ge3_stocks": 0.559,
+     "days_with_ge3_same_board": 0.347,
+     "net_buy_records_with_d1": 250,
+     "next_day_ret_mean_pct": 0.63,
+     "next_day_ret_median_pct": 0.97,
+     "next_day_up_prob": 0.56,
+     "median_buy_amt_wan": 509.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.787,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.197,
+      0.506,
+      0.722
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.559,
+    "days_with_ge3_same_board": 0.347,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.714,
+    "北交所": 0.182,
+    "创业板": 0.073,
+    "科创板": 0.031
+   },
+   "median_buy_amt_wan": 509.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": 0.21,
+   "next_day_ret_mean_pct(net_buy)": 0.63,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q23",
+  "seat_name": "华鑫上海瑞平路",
+  "branch_full_names": [
+   {
+    "full_name": "华鑫证券有限责任公司上海徐汇区瑞平路证券营业部",
+    "lhb_records_1y": 249,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 114,
+     "active_days": 71,
+     "two_way_share": 0.289,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.265,
+      0.63,
+      0.889
+     ],
+     "board_share": {
+      "主板": 0.947,
+      "创业板": 0.053
+     },
+     "days_with_ge3_stocks": 0.113,
+     "days_with_ge3_same_board": 0.113,
+     "net_buy_records_with_d1": 68,
+     "next_day_ret_mean_pct": 0.67,
+     "next_day_ret_median_pct": -0.79,
+     "next_day_up_prob": 0.485,
+     "median_buy_amt_wan": 609.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.289,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.265,
+      0.63,
+      0.889
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.113,
+    "days_with_ge3_same_board": 0.113,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.947,
+    "创业板": 0.053
+   },
+   "median_buy_amt_wan": 609.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": 0.22,
+   "next_day_ret_mean_pct(net_buy)": 0.67,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q24",
+  "seat_name": "联储证券陕西分公司",
+  "branch_full_names": [
+   {
+    "full_name": "联储证券股份有限公司陕西分公司",
+    "lhb_records_1y": 138,
+    "last_on_list": "2026-09-24",
+    "stats_6m": {
+     "records_6m": 103,
+     "active_days": 60,
+     "two_way_share": 0.67,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.121,
+      0.406,
+      0.725
+     ],
+     "board_share": {
+      "主板": 0.893,
+      "创业板": 0.087,
+      "科创板": 0.019
+     },
+     "days_with_ge3_stocks": 0.15,
+     "days_with_ge3_same_board": 0.117,
+     "net_buy_records_with_d1": 50,
+     "next_day_ret_mean_pct": 0.15,
+     "next_day_ret_median_pct": 0.35,
+     "next_day_up_prob": 0.52,
+     "median_buy_amt_wan": 370.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.67,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.121,
+      0.406,
+      0.725
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.15,
+    "days_with_ge3_same_board": 0.117,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.894,
+    "创业板": 0.087,
+    "科创板": 0.019
+   },
+   "median_buy_amt_wan": 370.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": 0.05,
+   "next_day_ret_mean_pct(net_buy)": 0.15,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q25",
+  "seat_name": "中信证券浙江分公司",
+  "branch_full_names": [
+   {
+    "full_name": "中信证券股份有限公司浙江分公司",
+    "lhb_records_1y": 497,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 214,
+     "active_days": 102,
+     "two_way_share": 0.514,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.142,
+      0.309,
+      0.503
+     ],
+     "board_share": {
+      "主板": 0.78,
+      "创业板": 0.103,
+      "北交所": 0.093,
+      "科创板": 0.023
+     },
+     "days_with_ge3_stocks": 0.294,
+     "days_with_ge3_same_board": 0.235,
+     "net_buy_records_with_d1": 102,
+     "next_day_ret_mean_pct": -1.64,
+     "next_day_ret_median_pct": -2.26,
+     "next_day_up_prob": 0.353,
+     "median_buy_amt_wan": 913.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": true,
+    "two_way_share": 0.514,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.142,
+      0.309,
+      0.503
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.294,
+    "days_with_ge3_same_board": 0.235,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.781,
+    "创业板": 0.103,
+    "北交所": 0.093,
+    "科创板": 0.023
+   },
+   "median_buy_amt_wan": 913.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": -0.55,
+   "next_day_ret_mean_pct(net_buy)": -1.64,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q26",
+  "seat_name": "国信深圳泰然九路",
+  "branch_full_names": [
+   {
+    "full_name": "国信证券股份有限公司深圳泰然九路证券营业部",
+    "lhb_records_1y": 247,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 116,
+     "active_days": 70,
+     "two_way_share": 0.724,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.08,
+      0.154,
+      0.322
+     ],
+     "board_share": {
+      "主板": 0.448,
+      "北交所": 0.224,
+      "其他": 0.129,
+      "创业板": 0.129,
+      "科创板": 0.069
+     },
+     "days_with_ge3_stocks": 0.143,
+     "days_with_ge3_same_board": 0.071,
+     "net_buy_records_with_d1": 46,
+     "next_day_ret_mean_pct": -0.42,
+     "next_day_ret_median_pct": 0.0,
+     "next_day_up_prob": 0.478,
+     "median_buy_amt_wan": 167.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "intraday_t0_arb",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.724,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.08,
+      0.154,
+      0.322
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.143,
+    "days_with_ge3_same_board": 0.071,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.448,
+    "北交所": 0.224,
+    "其他": 0.129,
+    "创业板": 0.129,
+    "科创板": 0.069
+   },
+   "median_buy_amt_wan": 167.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：买卖双向且金额接近，日内T0",
+  "next_day_exit_window": "社区经验/推测：当日即完成大部分对冲，次日影响小",
+  "next_day_premium_bias": {
+   "score": -0.14,
+   "next_day_ret_mean_pct(net_buy)": -0.42,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "忽略其净买卖额，看剔除后的游资结构"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q27",
+  "seat_name": "东莞证券四川分公司",
+  "branch_full_names": [
+   {
+    "full_name": "东莞证券股份有限公司四川分公司",
+    "lhb_records_1y": 211,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 104,
+     "active_days": 61,
+     "two_way_share": 0.663,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.034,
+      0.194,
+      0.674
+     ],
+     "board_share": {
+      "主板": 0.481,
+      "北交所": 0.365,
+      "创业板": 0.115,
+      "科创板": 0.038
+     },
+     "days_with_ge3_stocks": 0.197,
+     "days_with_ge3_same_board": 0.082,
+     "net_buy_records_with_d1": 54,
+     "next_day_ret_mean_pct": 0.8,
+     "next_day_ret_median_pct": 0.85,
+     "next_day_up_prob": 0.574,
+     "median_buy_amt_wan": 534.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)"
+   }
+  ],
+  "quant_type": "convertible_or_micro",
+  "quant_type_note": "按 6 个月统计特征 + 社区经验归类，属推测，不代表具体主体",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": false,
+    "two_way_share": 0.663,
+    "buy_sell_ratio_range": {
+     "min/max_p25_p50_p75": [
+      0.034,
+      0.194,
+      0.674
+     ]
+    }
+   },
+   "sector_spread": {
+    "days_with_ge3_stocks": 0.197,
+    "days_with_ge3_same_board": 0.082,
+    "note": "同板块按交易所板块(主板/创业/科创/北交)近似，未按行业"
+   },
+   "preferred_board": {
+    "主板": 0.481,
+    "北交所": 0.365,
+    "创业板": 0.115,
+    "科创板": 0.038
+   },
+   "median_buy_amt_wan": 534.0,
+   "source": "统计脚本 seat_stats.py，窗口 2026-04-16~2026-10-16"
+  },
+  "intraday_behavior": "社区经验/推测：集中于北交所/小市值，高换手、双向",
+  "next_day_exit_window": "社区经验/推测：次日高开即卖",
+  "next_day_premium_bias": {
+   "score": 0.27,
+   "next_day_ret_mean_pct(net_buy)": 0.8,
+   "score_method": "score=clip(次日均值/3,-1,1)，数据推导；counter_strategy 为主观",
+   "counter_strategy": "北交所/小票上榜时，若该席位双向，降低信号权重"
+  },
+  "community_slang": [],
+  "verification": "全称与上榜次数为真实请求验证；类型、行为、兑现窗口是社区经验/推测，不断言是某具体私募"
+ },
+ {
+  "seat_id": "Q99",
+  "seat_name": "机构专用(量化假机构 识别模式)",
+  "branch_full_names": [
+   {
+    "full_name": "机构专用",
+    "status": "东财RPT_ORGANIZATION_TRADE_DETAILS 真实请求验证；无法区分具体主体"
+   }
+  ],
+  "quant_type": "fake_institution",
+  "billboard_signature": {
+   "two_way_trading": {
+    "bool": null,
+    "buy_sell_ratio_range": "见 stats_institution_6m.json"
+   },
+   "sector_spread": null,
+   "preferred_board": "创业板/科创板小市值(识别条件)",
+   "stats": {
+    "records_6m": 6463,
+    "all_net_buy": {
+     "n": 3192,
+     "d1_mean": 0.29,
+     "d1_up_prob": 0.486
+    },
+    "two_way_close(min/max>=0.6)": {
+     "n": 2763,
+     "d1_mean": -0.06,
+     "d1_up_prob": 0.458
+    },
+    "pure_buy(sell=0)": {
+     "n": 446,
+     "d1_mean": 0.19,
+     "d1_up_prob": 0.487
+    },
+    "20cm_smallcap(freecap<50亿)_pure_buy_2000-4000万": {
+     "n": 10,
+     "d1_mean": -1.23,
+     "d1_up_prob": 0.4
+    },
+    "20cm_smallcap_pure_buy_other_amt": {
+     "n": 35,
+     "d1_mean": -6.39,
+     "d1_up_prob": 0.257
+    },
+    "main_board_pure_buy": {
+     "n": 244,
+     "d1_mean": -0.08,
+     "d1_up_prob": 0.471
+    },
+    "buy_times>=3_net_buy": {
+     "n": 1281,
+     "d1_mean": 0.44,
+     "d1_up_prob": 0.497
+    },
+    "buy_times==1_net_buy": {
+     "n": 1108,
+     "d1_mean": 0.2,
+     "d1_up_prob": 0.474
+    },
+    "20cm_2000-4000万纯买_次日机构席位卖出>=80%_observed": {
+     "base": 25,
+     "observed_dump": 3,
+     "note": "仅当次日该股再次上榜才可观测，下界估计"
+    }
+   }
+  },
+  "intraday_behavior": "识别模式：机构专用席位纯买入、小市值20cm、金额集中于2000-4000万",
+  "next_day_exit_window": "社区经验：次日机构专用席位卖出",
+  "next_day_premium_bias": {
+   "score": -0.41,
+   "counter_strategy": "首板/二板出现纯买机构专用且小市值20cm时，次日按一日游处理",
+   "note": "样本仅10条，统计意义弱"
+  },
+  "community_slang": [
+   "假机构",
+   "量化机构"
+  ],
+  "verification": "识别模式，不对应单一主体"
+ }
+]

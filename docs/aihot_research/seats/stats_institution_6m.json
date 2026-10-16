@@ -1,0 +1,48 @@
+{
+ "records_6m": 6463,
+ "all_net_buy": {
+  "n": 3192,
+  "d1_mean": 0.29,
+  "d1_up_prob": 0.486
+ },
+ "two_way_close(min/max>=0.6)": {
+  "n": 2763,
+  "d1_mean": -0.06,
+  "d1_up_prob": 0.458
+ },
+ "pure_buy(sell=0)": {
+  "n": 446,
+  "d1_mean": 0.19,
+  "d1_up_prob": 0.487
+ },
+ "20cm_smallcap(freecap<50亿)_pure_buy_2000-4000万": {
+  "n": 10,
+  "d1_mean": -1.23,
+  "d1_up_prob": 0.4
+ },
+ "20cm_smallcap_pure_buy_other_amt": {
+  "n": 35,
+  "d1_mean": -6.39,
+  "d1_up_prob": 0.257
+ },
+ "main_board_pure_buy": {
+  "n": 244,
+  "d1_mean": -0.08,
+  "d1_up_prob": 0.471
+ },
+ "buy_times>=3_net_buy": {
+  "n": 1281,
+  "d1_mean": 0.44,
+  "d1_up_prob": 0.497
+ },
+ "buy_times==1_net_buy": {
+  "n": 1108,
+  "d1_mean": 0.2,
+  "d1_up_prob": 0.474
+ },
+ "20cm_2000-4000万纯买_次日机构席位卖出>=80%_observed": {
+  "base": 25,
+  "observed_dump": 3,
+  "note": "仅当次日该股再次上榜才可观测，下界估计"
+ }
+}

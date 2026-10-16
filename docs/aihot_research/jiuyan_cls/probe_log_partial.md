@@ -1,0 +1,12 @@
+# 第五波探测日志（部分，2026-10-16 18:10 台北时间，curl 直连，桌面 Chrome UA）
+- https://www.jiuyangongshe.com/ → HTTP 200 245KB，Nuxt SSR(data-n-head-ssr)，title 韭研公社-为实战研究赋能
+- https://www.jiuyangongshe.com/action → HTTP 200 21KB，SSR，title「韭研公社-2026-10-16异动」
+- https://www.jiuyangongshe.com/hotsearch → HTTP 302（跳转目标待查）
+- POST https://app.jiuyangongshe.com/jystock-app/api/v1/action/field {"date":"2026-10-16","pc":1} → 200 JSON errCode 9「版本过低」（缺 App 版本/签名头，待核实）
+- https://www.cls.cn/telegraph → 200 18KB Next.js 页面
+- https://www.cls.cn/nodeapi/telegraphList?rn=5 → 404；/nodeapi/updateTelegraphList?... → 404
+- https://api.xuangubao.cn/api/pc/msgs?... → 000（连接失败/超时）
+- https://flash-api.xuangubao.cn/api/surge_stock/stocks?normal=true&uplimit=true → 200 JSON 34KB，code 20000，fields: code,prod_name,cur_price,px_change_rate,circulation_value,description,enter_time,up_limit,plates,time_on_market,turnover_ratio,m_days_n_boards,...；样本 300006.SZ 莱美药业
+- https://api-one.wallstcn.com/apiv1/content/lives?channel=global-channel&limit=5 → 200 JSON，data.items[]{author,content,channels,comment_count...}
+- https://news.10jqka.com.cn/tapp/news/push/stock/?page=1&tag=&track=website&pagesize=5 → 200 JSON，data.list[]{id,seq,title,digest...}；样本标题「上交所：本周对新华传媒等严重异常波动股票进行重点监控…」
+- https://data.10jqka.com.cn/dataapi/transaction/stock/v1/list → 500

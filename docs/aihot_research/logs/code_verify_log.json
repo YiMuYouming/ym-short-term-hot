@@ -1,0 +1,1562 @@
+{
+ "000061": {
+  "expected": "农产品",
+  "eastmoney_name": "农产品",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000564": {
+  "expected": "供销大集",
+  "eastmoney_name": "供销大集",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000567": {
+  "expected": "海德股份",
+  "eastmoney_name": "海德股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000723": {
+  "expected": "美锦能源",
+  "eastmoney_name": "美锦能源",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000831": {
+  "expected": "中国稀土",
+  "eastmoney_name": "中国稀土",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000876": {
+  "expected": "新希望",
+  "eastmoney_name": "新希望",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000960": {
+  "expected": "锡业股份",
+  "eastmoney_name": "锡业股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000975": {
+  "expected": "山金国际",
+  "eastmoney_name": "山金国际",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000977": {
+  "expected": "浪潮信息",
+  "eastmoney_name": "浪潮信息",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "000999": {
+  "expected": "华润三九",
+  "eastmoney_name": "华润三九",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "001696": {
+  "expected": "宗申动力",
+  "eastmoney_name": "宗申动力",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002007": {
+  "expected": "华兰生物",
+  "eastmoney_name": "华兰生物",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002036": {
+  "expected": "联创电子",
+  "eastmoney_name": "联创电子",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002044": {
+  "expected": "美年健康",
+  "eastmoney_name": "美年健康",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002046": {
+  "expected": "国机精工",
+  "eastmoney_name": "国机精工",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002050": {
+  "expected": "三花智控",
+  "eastmoney_name": "三花智控",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002074": {
+  "expected": "国轩高科",
+  "eastmoney_name": "国轩高科",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002085": {
+  "expected": "万丰奥威",
+  "eastmoney_name": "万丰奥威",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002103": {
+  "expected": "广博股份",
+  "eastmoney_name": "广博股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002127": {
+  "expected": "南极电商",
+  "eastmoney_name": "南极电商",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002130": {
+  "expected": "沃尔核材",
+  "eastmoney_name": "沃尔核材",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002149": {
+  "expected": "西部材料",
+  "eastmoney_name": "西部材料",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002152": {
+  "expected": "广电运通",
+  "eastmoney_name": "广电运通",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002202": {
+  "expected": "金风科技",
+  "eastmoney_name": "金风科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002223": {
+  "expected": "鱼跃医疗",
+  "eastmoney_name": "鱼跃医疗",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002229": {
+  "expected": "鸿博股份",
+  "eastmoney_name": "鸿博股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002230": {
+  "expected": "科大讯飞",
+  "eastmoney_name": "科大讯飞",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002241": {
+  "expected": "歌尔股份",
+  "eastmoney_name": "歌尔股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002242": {
+  "expected": "九阳股份",
+  "eastmoney_name": "九阳股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002254": {
+  "expected": "泰和新材",
+  "eastmoney_name": "泰和新材",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002261": {
+  "expected": "拓维信息",
+  "eastmoney_name": "拓维信息",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002273": {
+  "expected": "水晶光电",
+  "eastmoney_name": "水晶光电",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002281": {
+  "expected": "光迅科技",
+  "eastmoney_name": "光迅科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002292": {
+  "expected": "奥飞娱乐",
+  "eastmoney_name": "奥飞娱乐",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002353": {
+  "expected": "杰瑞股份",
+  "eastmoney_name": "杰瑞股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002368": {
+  "expected": "太极股份",
+  "eastmoney_name": "太极股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002371": {
+  "expected": "北方华创",
+  "eastmoney_name": "北方华创",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002428": {
+  "expected": "云南锗业",
+  "eastmoney_name": "云南锗业",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002439": {
+  "expected": "启明星辰",
+  "eastmoney_name": "启明星辰",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002460": {
+  "expected": "赣锋锂业",
+  "eastmoney_name": "赣锋锂业",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002463": {
+  "expected": "沪电股份",
+  "eastmoney_name": "沪电股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002466": {
+  "expected": "天齐锂业",
+  "eastmoney_name": "天齐锂业",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002475": {
+  "expected": "立讯精密",
+  "eastmoney_name": "立讯精密",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002493": {
+  "expected": "荣盛石化",
+  "eastmoney_name": "荣盛石化",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002555": {
+  "expected": "三七互娱",
+  "eastmoney_name": "三七互娱",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002594": {
+  "expected": "比亚迪",
+  "eastmoney_name": "比亚迪",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002602": {
+  "expected": "世纪华通",
+  "eastmoney_name": "世纪华通",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002603": {
+  "expected": "以岭药业",
+  "eastmoney_name": "以岭药业",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002605": {
+  "expected": "姚记科技",
+  "eastmoney_name": "姚记科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002624": {
+  "expected": "完美世界",
+  "eastmoney_name": "完美世界",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002670": {
+  "expected": "国盛证券",
+  "eastmoney_name": "国盛证券",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002709": {
+  "expected": "天赐材料",
+  "eastmoney_name": "天赐材料",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002714": {
+  "expected": "牧原股份",
+  "eastmoney_name": "牧原股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002803": {
+  "expected": "吉宏股份",
+  "eastmoney_name": "吉宏股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002837": {
+  "expected": "英维克",
+  "eastmoney_name": "英维克",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002862": {
+  "expected": "实丰文化",
+  "eastmoney_name": "实丰文化",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002891": {
+  "expected": "中宠股份",
+  "eastmoney_name": "中宠股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002916": {
+  "expected": "深南电路",
+  "eastmoney_name": "深南电路",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "002920": {
+  "expected": "德赛西威",
+  "eastmoney_name": "德赛西威",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300008": {
+  "expected": "天海防务",
+  "eastmoney_name": "天海防务",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300014": {
+  "expected": "亿纬锂能",
+  "eastmoney_name": "亿纬锂能",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300015": {
+  "expected": "爱尔眼科",
+  "eastmoney_name": "爱尔眼科",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300033": {
+  "expected": "同花顺",
+  "eastmoney_name": "同花顺",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300059": {
+  "expected": "东方财富",
+  "eastmoney_name": "东方财富",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300073": {
+  "expected": "当升科技",
+  "eastmoney_name": "当升科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300122": {
+  "expected": "智飞生物",
+  "eastmoney_name": "智飞生物",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300124": {
+  "expected": "汇川技术",
+  "eastmoney_name": "汇川技术",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300166": {
+  "expected": "东方国信",
+  "eastmoney_name": "东方国信",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300212": {
+  "expected": "易华录",
+  "eastmoney_name": "*ST易录",
+  "security_type": "深A",
+  "match": false,
+  "st_flag": true,
+  "http_ok": true
+ },
+ "300229": {
+  "expected": "拓尔思",
+  "eastmoney_name": "拓尔思",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300238": {
+  "expected": "冠昊生物",
+  "eastmoney_name": "冠昊生物",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300274": {
+  "expected": "阳光电源",
+  "eastmoney_name": "阳光电源",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300308": {
+  "expected": "中际旭创",
+  "eastmoney_name": "中际旭创",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300339": {
+  "expected": "润和软件",
+  "eastmoney_name": "润和软件",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300342": {
+  "expected": "天银机电",
+  "eastmoney_name": "天银机电",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300364": {
+  "expected": "中文在线",
+  "eastmoney_name": "中文在线",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300394": {
+  "expected": "天孚通信",
+  "eastmoney_name": "天孚通信",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300413": {
+  "expected": "芒果超媒",
+  "eastmoney_name": "芒果超媒",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300418": {
+  "expected": "昆仑万维",
+  "eastmoney_name": "昆仑万维",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300433": {
+  "expected": "蓝思科技",
+  "eastmoney_name": "蓝思科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300442": {
+  "expected": "润泽科技",
+  "eastmoney_name": "润泽科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300443": {
+  "expected": "金雷股份",
+  "eastmoney_name": "金雷股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300454": {
+  "expected": "深信服",
+  "eastmoney_name": "深信服",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300468": {
+  "expected": "四方精创",
+  "eastmoney_name": "四方精创",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300471": {
+  "expected": "厚普股份",
+  "eastmoney_name": "厚普股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300476": {
+  "expected": "胜宏科技",
+  "eastmoney_name": "胜宏科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300496": {
+  "expected": "中科创达",
+  "eastmoney_name": "中科创达",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300498": {
+  "expected": "温氏股份",
+  "eastmoney_name": "温氏股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300499": {
+  "expected": "高澜股份",
+  "eastmoney_name": "高澜股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300502": {
+  "expected": "新易盛",
+  "eastmoney_name": "新易盛",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300568": {
+  "expected": "星源材质",
+  "eastmoney_name": "星源材质",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300602": {
+  "expected": "飞荣达",
+  "eastmoney_name": "飞荣达",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300673": {
+  "expected": "佩蒂股份",
+  "eastmoney_name": "佩蒂股份",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300699": {
+  "expected": "光威复材",
+  "eastmoney_name": "光威复材",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300735": {
+  "expected": "光弘科技",
+  "eastmoney_name": "光弘科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300738": {
+  "expected": "奥飞数据",
+  "eastmoney_name": "奥飞数据",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300750": {
+  "expected": "宁德时代",
+  "eastmoney_name": "宁德时代",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300753": {
+  "expected": "爱朋医疗",
+  "eastmoney_name": "爱朋医疗",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300763": {
+  "expected": "锦浪科技",
+  "eastmoney_name": "锦浪科技",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300785": {
+  "expected": "值得买",
+  "eastmoney_name": "值得买",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300792": {
+  "expected": "壹网壹创",
+  "eastmoney_name": "壹网壹创",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300866": {
+  "expected": "安克创新",
+  "eastmoney_name": "安克创新",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "300913": {
+  "expected": "兆龙互连",
+  "eastmoney_name": "兆龙互连",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "301071": {
+  "expected": "力量钻石",
+  "eastmoney_name": "力量钻石",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "301308": {
+  "expected": "江波龙",
+  "eastmoney_name": "江波龙",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "301381": {
+  "expected": "赛维时代",
+  "eastmoney_name": "赛维时代",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "301498": {
+  "expected": "乖宝宠物",
+  "eastmoney_name": "乖宝宠物",
+  "security_type": "深A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600019": {
+  "expected": "宝钢股份",
+  "eastmoney_name": "宝钢股份",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600026": {
+  "expected": "中远海能",
+  "eastmoney_name": "中远海能",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600030": {
+  "expected": "中信证券",
+  "eastmoney_name": "中信证券",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600036": {
+  "expected": "招商银行",
+  "eastmoney_name": "招商银行",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600111": {
+  "expected": "北方稀土",
+  "eastmoney_name": "北方稀土",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600118": {
+  "expected": "中国卫星",
+  "eastmoney_name": "中国卫星",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600150": {
+  "expected": "中国船舶",
+  "eastmoney_name": "中国船舶",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600172": {
+  "expected": "黄河旋风",
+  "eastmoney_name": "黄河旋风",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600183": {
+  "expected": "生益科技",
+  "eastmoney_name": "生益科技",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600196": {
+  "expected": "复星医药",
+  "eastmoney_name": "复星医药",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600210": {
+  "expected": "紫江企业",
+  "eastmoney_name": "紫江企业",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600276": {
+  "expected": "恒瑞医药",
+  "eastmoney_name": "恒瑞医药",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600309": {
+  "expected": "万华化学",
+  "eastmoney_name": "万华化学",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600390": {
+  "expected": "五矿资本",
+  "eastmoney_name": "五矿资本",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600406": {
+  "expected": "国电南瑞",
+  "eastmoney_name": "国电南瑞",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600438": {
+  "expected": "通威股份",
+  "eastmoney_name": "通威股份",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600519": {
+  "expected": "贵州茅台",
+  "eastmoney_name": "贵州茅台",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600522": {
+  "expected": "中天科技",
+  "eastmoney_name": "中天科技",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600536": {
+  "expected": "中国软件",
+  "eastmoney_name": "中国软件",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600540": {
+  "expected": "新赛股份",
+  "eastmoney_name": "新赛股份",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600547": {
+  "expected": "山东黄金",
+  "eastmoney_name": "山东黄金",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600549": {
+  "expected": "厦门钨业",
+  "eastmoney_name": "厦门钨业",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600570": {
+  "expected": "恒生电子",
+  "eastmoney_name": "恒生电子",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600596": {
+  "expected": "新安股份",
+  "eastmoney_name": "新安股份",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600633": {
+  "expected": "浙数文化",
+  "eastmoney_name": "浙数文化",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600685": {
+  "expected": "中船防务",
+  "eastmoney_name": "中船防务",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600697": {
+  "expected": "欧亚集团",
+  "eastmoney_name": "欧亚集团",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600699": {
+  "expected": "均胜电子",
+  "eastmoney_name": "均胜电子",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600729": {
+  "expected": "重庆百货",
+  "eastmoney_name": "重百集团",
+  "security_type": "沪A",
+  "match": false,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600760": {
+  "expected": "中航沈飞",
+  "eastmoney_name": "中航沈飞",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600816": {
+  "expected": "建元信托",
+  "eastmoney_name": "建元信托",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600825": {
+  "expected": "新华传媒",
+  "eastmoney_name": "新华传媒",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600859": {
+  "expected": "王府井",
+  "eastmoney_name": "王府井",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600875": {
+  "expected": "东方电气",
+  "eastmoney_name": "东方电气",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600893": {
+  "expected": "航发动力",
+  "eastmoney_name": "航发动力",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "600900": {
+  "expected": "长江电力",
+  "eastmoney_name": "长江电力",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601012": {
+  "expected": "隆基绿能",
+  "eastmoney_name": "隆基绿能",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601018": {
+  "expected": "宁波港",
+  "eastmoney_name": "宁波港",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601088": {
+  "expected": "中国神华",
+  "eastmoney_name": "中国神华",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601127": {
+  "expected": "赛力斯",
+  "eastmoney_name": "赛力斯",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601211": {
+  "expected": "国泰海通",
+  "eastmoney_name": "XD国泰海",
+  "security_type": "沪A",
+  "match": false,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601225": {
+  "expected": "陕西煤业",
+  "eastmoney_name": "陕西煤业",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601238": {
+  "expected": "广汽集团",
+  "eastmoney_name": "广汽集团",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601288": {
+  "expected": "农业银行",
+  "eastmoney_name": "农业银行",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601318": {
+  "expected": "中国平安",
+  "eastmoney_name": "中国平安",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601390": {
+  "expected": "中国中铁",
+  "eastmoney_name": "中国中铁",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601398": {
+  "expected": "工商银行",
+  "eastmoney_name": "工商银行",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601601": {
+  "expected": "中国太保",
+  "eastmoney_name": "中国太保",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601628": {
+  "expected": "中国人寿",
+  "eastmoney_name": "中国人寿",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601668": {
+  "expected": "中国建筑",
+  "eastmoney_name": "中国建筑",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601689": {
+  "expected": "拓普集团",
+  "eastmoney_name": "拓普集团",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601698": {
+  "expected": "中国卫通",
+  "eastmoney_name": "中国卫通",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601869": {
+  "expected": "长飞光纤",
+  "eastmoney_name": "长飞光纤",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601872": {
+  "expected": "招商轮船",
+  "eastmoney_name": "招商轮船",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601888": {
+  "expected": "中国中免",
+  "eastmoney_name": "中国中免",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601899": {
+  "expected": "紫金矿业",
+  "eastmoney_name": "紫金矿业",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601919": {
+  "expected": "中远海控",
+  "eastmoney_name": "中远海控",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601985": {
+  "expected": "中国核电",
+  "eastmoney_name": "中国核电",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "601995": {
+  "expected": "中金公司",
+  "eastmoney_name": "中金公司",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603000": {
+  "expected": "人民网",
+  "eastmoney_name": "人民网",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603005": {
+  "expected": "晶方科技",
+  "eastmoney_name": "晶方科技",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603011": {
+  "expected": "合锻智能",
+  "eastmoney_name": "合锻智能",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603160": {
+  "expected": "汇顶科技",
+  "eastmoney_name": "汇顶科技",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603259": {
+  "expected": "药明康德",
+  "eastmoney_name": "药明康德",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603305": {
+  "expected": "旭升集团",
+  "eastmoney_name": "旭升集团",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603596": {
+  "expected": "伯特利",
+  "eastmoney_name": "伯特利",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603606": {
+  "expected": "东方电缆",
+  "eastmoney_name": "东方电缆",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603727": {
+  "expected": "博迈科",
+  "eastmoney_name": "博迈科",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603728": {
+  "expected": "鸣志电器",
+  "eastmoney_name": "鸣志电器",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603799": {
+  "expected": "华友钴业",
+  "eastmoney_name": "华友钴业",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603825": {
+  "expected": "华扬联众",
+  "eastmoney_name": "ST华扬",
+  "security_type": "沪A",
+  "match": false,
+  "st_flag": true,
+  "http_ok": true
+ },
+ "603881": {
+  "expected": "数据港",
+  "eastmoney_name": "数据港",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "603986": {
+  "expected": "兆易创新",
+  "eastmoney_name": "兆易创新",
+  "security_type": "沪A",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688012": {
+  "expected": "中微公司",
+  "eastmoney_name": "中微公司",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688017": {
+  "expected": "绿的谐波",
+  "eastmoney_name": "绿的谐波",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688027": {
+  "expected": "国盾量子",
+  "eastmoney_name": "国盾量子",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688041": {
+  "expected": "海光信息",
+  "eastmoney_name": "海光信息",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688102": {
+  "expected": "斯瑞新材",
+  "eastmoney_name": "斯瑞新材",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688111": {
+  "expected": "金山办公",
+  "eastmoney_name": "金山办公",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688256": {
+  "expected": "寒武纪",
+  "eastmoney_name": "寒武纪",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688295": {
+  "expected": "中复神鹰",
+  "eastmoney_name": "中复神鹰",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688339": {
+  "expected": "亿华通",
+  "eastmoney_name": "亿华通-U",
+  "security_type": "科创板",
+  "match": false,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688525": {
+  "expected": "佰维存储",
+  "eastmoney_name": "佰维存储",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688561": {
+  "expected": "奇安信",
+  "eastmoney_name": "奇安信-U",
+  "security_type": "科创板",
+  "match": false,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688580": {
+  "expected": "伟思医疗",
+  "eastmoney_name": "伟思医疗",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688599": {
+  "expected": "天合光能",
+  "eastmoney_name": "天合光能",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688626": {
+  "expected": "翔宇医疗",
+  "eastmoney_name": "翔宇医疗",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ },
+ "688800": {
+  "expected": "瑞可达",
+  "eastmoney_name": "瑞可达",
+  "security_type": "科创板",
+  "match": true,
+  "st_flag": false,
+  "http_ok": true
+ }
+}

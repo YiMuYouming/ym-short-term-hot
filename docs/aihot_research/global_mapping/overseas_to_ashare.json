@@ -1,0 +1,2276 @@
+[
+ {
+  "trigger_id": "NVDA_earnings",
+  "overseas_catalyst": {
+   "subject": "英伟达财报/指引",
+   "us_ticker": "NVDA",
+   "x_signal_keywords": [
+    "NVDA earnings",
+    "data center revenue",
+    "guidance"
+   ]
+  },
+  "transmission_logic": "数据中心收入与指引超预期→光模块/PCB/液冷订单预期上修",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光模块/CPO",
+   "PCB",
+   "液冷"
+  ],
+  "core_stocks": [
+   {
+    "code": "300308",
+    "name": "中际旭创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300308.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速光模块主要供应商之一",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "300502",
+    "name": "新易盛",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300502.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速光模块",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "300476",
+    "name": "胜宏科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300476.SZ",
+    "nicknames": [],
+    "mapping_reason": "AI服务器PCB",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002837",
+    "name": "英维克",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002837.SZ",
+    "nicknames": [],
+    "mapping_reason": "液冷温控",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "NVDA_GTC_CPO",
+  "overseas_catalyst": {
+   "subject": "英伟达GTC/CPO交换机",
+   "us_ticker": "NVDA",
+   "x_signal_keywords": [
+    "GTC",
+    "CPO",
+    "Quantum-X",
+    "Spectrum-X",
+    "co-packaged optics"
+   ]
+  },
+  "transmission_logic": "CPO路线进展→光引擎/光器件/硅光",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光模块/CPO"
+  ],
+  "core_stocks": [
+   {
+    "code": "300394",
+    "name": "天孚通信",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300394.SZ",
+    "nicknames": [],
+    "mapping_reason": "光引擎/光器件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300308",
+    "name": "中际旭创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300308.SZ",
+    "nicknames": [],
+    "mapping_reason": "硅光/高速模块",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002281",
+    "name": "光迅科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002281.SZ",
+    "nicknames": [],
+    "mapping_reason": "光芯片/器件",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "NVDA_Rubin_power",
+  "overseas_catalyst": {
+   "subject": "英伟达800V HVDC/机柜功率",
+   "us_ticker": "NVDA",
+   "x_signal_keywords": [
+    "800V HVDC",
+    "Rubin",
+    "Kyber rack"
+   ]
+  },
+  "transmission_logic": "机柜功率提升→电源/液冷/铜连接",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "液冷/散热",
+   "铜缆高速连接",
+   "电力"
+  ],
+  "core_stocks": [
+   {
+    "code": "002837",
+    "name": "英维克",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002837.SZ",
+    "nicknames": [],
+    "mapping_reason": "液冷",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002130",
+    "name": "沃尔核材",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002130.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速铜缆",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300602",
+    "name": "飞荣达",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300602.SZ",
+    "nicknames": [],
+    "mapping_reason": "散热",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "NVDA_H20_china",
+  "overseas_catalyst": {
+   "subject": "英伟达对华芯片管制/H20",
+   "us_ticker": "NVDA",
+   "x_signal_keywords": [
+    "H20",
+    "export control",
+    "China ban"
+   ]
+  },
+  "transmission_logic": "海外芯片受限→国产算力替代",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI算力芯片",
+   "信创"
+  ],
+  "core_stocks": [
+   {
+    "code": "688256",
+    "name": "寒武纪",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "688256.SH",
+    "nicknames": [],
+    "mapping_reason": "国产AI芯片",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688041",
+    "name": "海光信息",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "688041.SH",
+    "nicknames": [],
+    "mapping_reason": "国产CPU/DCU",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "000977",
+    "name": "浪潮信息",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000977.SZ",
+    "nicknames": [],
+    "mapping_reason": "服务器",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "HBM_memory",
+  "overseas_catalyst": {
+   "subject": "美光/SK海力士HBM与存储涨价",
+   "us_ticker": "MU",
+   "x_signal_keywords": [
+    "HBM",
+    "DRAM price",
+    "NAND price",
+    "Micron earnings"
+   ]
+  },
+  "transmission_logic": "存储价格上行→国产存储模组/设计",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "存储芯片/HBM"
+  ],
+  "core_stocks": [
+   {
+    "code": "603986",
+    "name": "兆易创新",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603986.SH",
+    "nicknames": [],
+    "mapping_reason": "存储设计",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "301308",
+    "name": "江波龙",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "301308.SZ",
+    "nicknames": [],
+    "mapping_reason": "存储模组",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688525",
+    "name": "佰维存储",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688525.SH",
+    "nicknames": [],
+    "mapping_reason": "存储模组/封测",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "TSMC_capex",
+  "overseas_catalyst": {
+   "subject": "台积电月营收/资本开支",
+   "us_ticker": "TSM",
+   "x_signal_keywords": [
+    "TSMC monthly revenue",
+    "CoWoS",
+    "capex"
+   ]
+  },
+  "transmission_logic": "先进封装产能扩张→设备/材料/封测",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "半导体设备/材料"
+  ],
+  "core_stocks": [
+   {
+    "code": "002371",
+    "name": "北方华创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002371.SZ",
+    "nicknames": [],
+    "mapping_reason": "半导体设备",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688012",
+    "name": "中微公司",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "688012.SH",
+    "nicknames": [],
+    "mapping_reason": "刻蚀设备",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603005",
+    "name": "晶方科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603005.SH",
+    "nicknames": [],
+    "mapping_reason": "封装",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "AVGO_ASIC",
+  "overseas_catalyst": {
+   "subject": "博通/定制ASIC",
+   "us_ticker": "AVGO",
+   "x_signal_keywords": [
+    "Broadcom AI revenue",
+    "custom ASIC",
+    "TPU"
+   ]
+  },
+  "transmission_logic": "ASIC放量→光模块/PCB需求多元化",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光模块/CPO",
+   "PCB"
+  ],
+  "core_stocks": [
+   {
+    "code": "300502",
+    "name": "新易盛",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300502.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速光模块",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002463",
+    "name": "沪电股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002463.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速PCB",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300308",
+    "name": "中际旭创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300308.SZ",
+    "nicknames": [],
+    "mapping_reason": "光模块",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "GOOG_TPU",
+  "overseas_catalyst": {
+   "subject": "谷歌TPU/Gemini",
+   "us_ticker": "GOOGL",
+   "x_signal_keywords": [
+    "TPU",
+    "Gemini",
+    "Google Cloud"
+   ]
+  },
+  "transmission_logic": "TPU集群与OCS光交换→光器件",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光模块/CPO",
+   "AI应用"
+  ],
+  "core_stocks": [
+   {
+    "code": "300394",
+    "name": "天孚通信",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300394.SZ",
+    "nicknames": [],
+    "mapping_reason": "光器件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002281",
+    "name": "光迅科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002281.SZ",
+    "nicknames": [],
+    "mapping_reason": "光器件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300229",
+    "name": "拓尔思",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300229.SZ",
+    "nicknames": [],
+    "mapping_reason": "AI应用映射",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "MSFT_META_capex",
+  "overseas_catalyst": {
+   "subject": "微软/Meta/亚马逊资本开支",
+   "us_ticker": "MSFT/META/AMZN",
+   "x_signal_keywords": [
+    "capex guidance",
+    "AI capex",
+    "data center"
+   ]
+  },
+  "transmission_logic": "云厂商capex上修→算力基建全链",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光模块/CPO",
+   "PCB",
+   "算力租赁"
+  ],
+  "core_stocks": [
+   {
+    "code": "300308",
+    "name": "中际旭创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300308.SZ",
+    "nicknames": [],
+    "mapping_reason": "光模块",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002916",
+    "name": "深南电路",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002916.SZ",
+    "nicknames": [],
+    "mapping_reason": "PCB",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300442",
+    "name": "润泽科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300442.SZ",
+    "nicknames": [],
+    "mapping_reason": "IDC",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "OpenAI_model",
+  "overseas_catalyst": {
+   "subject": "OpenAI新模型/Sora",
+   "us_ticker": "—(未上市)",
+   "x_signal_keywords": [
+    "GPT-5",
+    "Sora",
+    "OpenAI DevDay"
+   ]
+  },
+  "transmission_logic": "新模型发布→AI应用/多模态/算力",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI应用/大模型",
+   "传媒/AI短剧"
+  ],
+  "core_stocks": [
+   {
+    "code": "300364",
+    "name": "中文在线",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300364.SZ",
+    "nicknames": [],
+    "mapping_reason": "AIGC内容",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300418",
+    "name": "昆仑万维",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300418.SZ",
+    "nicknames": [],
+    "mapping_reason": "大模型/AI应用",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002230",
+    "name": "科大讯飞",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002230.SZ",
+    "nicknames": [],
+    "mapping_reason": "大模型",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "OpenAI_Stargate",
+  "overseas_catalyst": {
+   "subject": "Stargate/超大型数据中心",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "Stargate",
+    "gigawatt data center"
+   ]
+  },
+  "transmission_logic": "超大规模数据中心→电力/液冷/算力",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "电力/算电协同",
+   "液冷/散热",
+   "算力租赁/IDC"
+  ],
+  "core_stocks": [
+   {
+    "code": "600406",
+    "name": "国电南瑞",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600406.SH",
+    "nicknames": [],
+    "mapping_reason": "电网设备",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002837",
+    "name": "英维克",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002837.SZ",
+    "nicknames": [],
+    "mapping_reason": "液冷",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603881",
+    "name": "数据港",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "603881.SH",
+    "nicknames": [],
+    "mapping_reason": "IDC",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "AI_agent_app",
+  "overseas_catalyst": {
+   "subject": "AI Agent应用爆款",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "AI agent",
+    "Manus",
+    "Claude",
+    "Copilot"
+   ]
+  },
+  "transmission_logic": "Agent爆款→国内AI应用/软件",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI应用/大模型",
+   "信创"
+  ],
+  "core_stocks": [
+   {
+    "code": "300229",
+    "name": "拓尔思",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300229.SZ",
+    "nicknames": [],
+    "mapping_reason": "AI应用",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688111",
+    "name": "金山办公",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "688111.SH",
+    "nicknames": [],
+    "mapping_reason": "办公AI",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002230",
+    "name": "科大讯飞",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002230.SZ",
+    "nicknames": [],
+    "mapping_reason": "AI应用",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "TSLA_Optimus",
+  "overseas_catalyst": {
+   "subject": "特斯拉Optimus量产/审厂",
+   "us_ticker": "TSLA",
+   "x_signal_keywords": [
+    "Optimus",
+    "humanoid",
+    "Optimus V3"
+   ]
+  },
+  "transmission_logic": "量产与供应链审厂→执行器/丝杠/减速器",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "人形机器人"
+  ],
+  "core_stocks": [
+   {
+    "code": "002050",
+    "name": "三花智控",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002050.SZ",
+    "nicknames": [],
+    "mapping_reason": "执行器(媒体报道Optimus供应链)",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "601689",
+    "name": "拓普集团",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601689.SH",
+    "nicknames": [],
+    "mapping_reason": "关节模组/执行器(媒体报道)",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "603305",
+    "name": "旭升集团",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603305.SH",
+    "nicknames": [],
+    "mapping_reason": "关节部件(媒体报道泰国建厂)",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "688017",
+    "name": "绿的谐波",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688017.SH",
+    "nicknames": [],
+    "mapping_reason": "谐波减速器",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "TSLA_Roadster_fly",
+  "overseas_catalyst": {
+   "subject": "特斯拉Roadster飞行汽车",
+   "us_ticker": "TSLA",
+   "x_signal_keywords": [
+    "Roadster",
+    "flying car"
+   ]
+  },
+  "transmission_logic": "飞行汽车话题→低空/碳纤维/COPV",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "低空经济/eVTOL",
+   "碳纤维/新材料"
+  ],
+  "core_stocks": [
+   {
+    "code": "600210",
+    "name": "紫江企业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "600210.SH",
+    "nicknames": [],
+    "mapping_reason": "韭研社区热议低空飞控正宗性",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300699",
+    "name": "光威复材",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300699.SZ",
+    "nicknames": [],
+    "mapping_reason": "碳纤维/COPV",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002085",
+    "name": "万丰奥威",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "002085.SZ",
+    "nicknames": [],
+    "mapping_reason": "通航飞机",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "TSLA_FSD_Robotaxi",
+  "overseas_catalyst": {
+   "subject": "特斯拉FSD/Robotaxi",
+   "us_ticker": "TSLA",
+   "x_signal_keywords": [
+    "FSD",
+    "Robotaxi",
+    "Cybercab"
+   ]
+  },
+  "transmission_logic": "无人驾驶落地→国内智驾/Robotaxi",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "Robotaxi/车联网",
+   "智能驾驶"
+  ],
+  "core_stocks": [
+   {
+    "code": "002920",
+    "name": "德赛西威",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002920.SZ",
+    "nicknames": [],
+    "mapping_reason": "智驾域控",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600699",
+    "name": "均胜电子",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600699.SH",
+    "nicknames": [],
+    "mapping_reason": "汽车电子",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300496",
+    "name": "中科创达",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300496.SZ",
+    "nicknames": [],
+    "mapping_reason": "智能座舱软件",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "TSLA_delivery",
+  "overseas_catalyst": {
+   "subject": "特斯拉交付/储能",
+   "us_ticker": "TSLA",
+   "x_signal_keywords": [
+    "deliveries",
+    "Megapack",
+    "energy storage"
+   ]
+  },
+  "transmission_logic": "储能出货→国内储能/电池",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "储能",
+   "锂电"
+  ],
+  "core_stocks": [
+   {
+    "code": "300750",
+    "name": "宁德时代",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300750.SZ",
+    "nicknames": [],
+    "mapping_reason": "电池",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300274",
+    "name": "阳光电源",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300274.SZ",
+    "nicknames": [],
+    "mapping_reason": "储能变流",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300014",
+    "name": "亿纬锂能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300014.SZ",
+    "nicknames": [],
+    "mapping_reason": "储能电池",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "AAPL_launch",
+  "overseas_catalyst": {
+   "subject": "苹果发布会/新品",
+   "us_ticker": "AAPL",
+   "x_signal_keywords": [
+    "iPhone",
+    "Apple event",
+    "Vision Pro"
+   ]
+  },
+  "transmission_logic": "新品周期→果链",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "消费电子/苹果链"
+  ],
+  "core_stocks": [
+   {
+    "code": "002475",
+    "name": "立讯精密",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002475.SZ",
+    "nicknames": [],
+    "mapping_reason": "苹果主要组装/连接供应商(年报披露大客户)",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "300433",
+    "name": "蓝思科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300433.SZ",
+    "nicknames": [],
+    "mapping_reason": "盖板玻璃(长期苹果供应商)",
+    "mapping_basis": "公开报道/公司披露"
+   },
+   {
+    "code": "002241",
+    "name": "歌尔股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002241.SZ",
+    "nicknames": [],
+    "mapping_reason": "声学/XR",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "AAPL_AI_glasses",
+  "overseas_catalyst": {
+   "subject": "Meta/苹果AI眼镜",
+   "us_ticker": "META/AAPL",
+   "x_signal_keywords": [
+    "Ray-Ban Meta",
+    "smart glasses",
+    "AI glasses"
+   ]
+  },
+  "transmission_logic": "AI眼镜出货→光学/ODM",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI眼镜"
+  ],
+  "core_stocks": [
+   {
+    "code": "002273",
+    "name": "水晶光电",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002273.SZ",
+    "nicknames": [],
+    "mapping_reason": "光学",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002241",
+    "name": "歌尔股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002241.SZ",
+    "nicknames": [],
+    "mapping_reason": "XR ODM",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300735",
+    "name": "光弘科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300735.SZ",
+    "nicknames": [],
+    "mapping_reason": "EMS",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "SpaceX_Starship",
+  "overseas_catalyst": {
+   "subject": "SpaceX星舰/星链",
+   "us_ticker": "—(未上市)",
+   "x_signal_keywords": [
+    "Starship",
+    "Starlink",
+    "Falcon 9"
+   ]
+  },
+  "transmission_logic": "星舰进展→国内商业航天/卫星互联网",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "商业航天/卫星互联网"
+  ],
+  "core_stocks": [
+   {
+    "code": "600118",
+    "name": "中国卫星",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600118.SH",
+    "nicknames": [],
+    "mapping_reason": "卫星制造",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601698",
+    "name": "中国卫通",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601698.SH",
+    "nicknames": [],
+    "mapping_reason": "卫星运营",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688102",
+    "name": "斯瑞新材",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688102.SH",
+    "nicknames": [],
+    "mapping_reason": "火箭发动机部件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300342",
+    "name": "天银机电",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300342.SZ",
+    "nicknames": [],
+    "mapping_reason": "星敏感器",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Neuralink",
+  "overseas_catalyst": {
+   "subject": "Neuralink临床/融资",
+   "us_ticker": "—(未上市)",
+   "x_signal_keywords": [
+    "Neuralink",
+    "brain-computer interface",
+    "BCI"
+   ]
+  },
+  "transmission_logic": "BCI里程碑→国内脑机接口",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "脑机接口"
+  ],
+  "core_stocks": [
+   {
+    "code": "300753",
+    "name": "爱朋医疗",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300753.SZ",
+    "nicknames": [],
+    "mapping_reason": "神经调控",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300238",
+    "name": "冠昊生物",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300238.SZ",
+    "nicknames": [],
+    "mapping_reason": "脑膜材料",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688580",
+    "name": "伟思医疗",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688580.SH",
+    "nicknames": [],
+    "mapping_reason": "康复/神经",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "xAI_Grok",
+  "overseas_catalyst": {
+   "subject": "xAI融资/Colossus",
+   "us_ticker": "—(未上市)",
+   "x_signal_keywords": [
+    "xAI",
+    "Colossus",
+    "Grok"
+   ]
+  },
+  "transmission_logic": "超大集群→算力/电力/液冷",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI算力芯片",
+   "液冷/散热",
+   "电力/算电协同"
+  ],
+  "core_stocks": [
+   {
+    "code": "000977",
+    "name": "浪潮信息",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000977.SZ",
+    "nicknames": [],
+    "mapping_reason": "服务器",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002837",
+    "name": "英维克",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002837.SZ",
+    "nicknames": [],
+    "mapping_reason": "液冷",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600900",
+    "name": "长江电力",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600900.SH",
+    "nicknames": [],
+    "mapping_reason": "电力",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "IONQ_RGTI",
+  "overseas_catalyst": {
+   "subject": "量子计算IONQ/RGTI/谷歌Willow",
+   "us_ticker": "IONQ/RGTI/QBTS",
+   "x_signal_keywords": [
+    "quantum",
+    "IonQ",
+    "Rigetti",
+    "Willow"
+   ]
+  },
+  "transmission_logic": "量子突破→国内量子科技",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "量子科技"
+  ],
+  "core_stocks": [
+   {
+    "code": "688027",
+    "name": "国盾量子",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688027.SH",
+    "nicknames": [],
+    "mapping_reason": "量子通信",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600522",
+    "name": "中天科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600522.SH",
+    "nicknames": [],
+    "mapping_reason": "量子相关业务(待核实)",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": false
+ },
+ {
+  "trigger_id": "OKLO_CEG_nuclear",
+  "overseas_catalyst": {
+   "subject": "OKLO/CEG/SMR核电",
+   "us_ticker": "OKLO/CEG/SMR",
+   "x_signal_keywords": [
+    "SMR",
+    "nuclear power deal",
+    "Oklo"
+   ]
+  },
+  "transmission_logic": "AI电力需求→核电/核聚变",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "可控核聚变/核电",
+   "电力"
+  ],
+  "core_stocks": [
+   {
+    "code": "601985",
+    "name": "中国核电",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601985.SH",
+    "nicknames": [],
+    "mapping_reason": "核电运营",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603011",
+    "name": "合锻智能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "603011.SH",
+    "nicknames": [],
+    "mapping_reason": "聚变装置部件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600406",
+    "name": "国电南瑞",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600406.SH",
+    "nicknames": [],
+    "mapping_reason": "电网",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Fusion_news",
+  "overseas_catalyst": {
+   "subject": "核聚变里程碑(CFS/Helion)",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "fusion",
+    "tokamak",
+    "Helion",
+    "CFS"
+   ]
+  },
+  "transmission_logic": "聚变工程进展→国内聚变链",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "可控核聚变/核电"
+  ],
+  "core_stocks": [
+   {
+    "code": "603011",
+    "name": "合锻智能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "603011.SH",
+    "nicknames": [],
+    "mapping_reason": "聚变部件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601985",
+    "name": "中国核电",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601985.SH",
+    "nicknames": [],
+    "mapping_reason": "核能",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600875",
+    "name": "东方电气",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600875.SH",
+    "nicknames": [],
+    "mapping_reason": "聚变/核电装备",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "QS_solidstate",
+  "overseas_catalyst": {
+   "subject": "QuantumScape固态电池",
+   "us_ticker": "QS",
+   "x_signal_keywords": [
+    "QuantumScape",
+    "solid-state battery"
+   ]
+  },
+  "transmission_logic": "海外固态进展→国内固态电池",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "固态电池"
+  ],
+  "core_stocks": [
+   {
+    "code": "300073",
+    "name": "当升科技",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300073.SZ",
+    "nicknames": [],
+    "mapping_reason": "正极材料",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002074",
+    "name": "国轩高科",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002074.SZ",
+    "nicknames": [],
+    "mapping_reason": "电池",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300568",
+    "name": "星源材质",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300568.SZ",
+    "nicknames": [],
+    "mapping_reason": "隔膜",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Pharma_BD",
+  "overseas_catalyst": {
+   "subject": "创新药海外授权/大药企BD",
+   "us_ticker": "LLY/NVO/MRK",
+   "x_signal_keywords": [
+    "license deal",
+    "upfront payment",
+    "GLP-1"
+   ]
+  },
+  "transmission_logic": "License-out与GLP-1热度→国内创新药/CXO",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "创新药/CXO"
+  ],
+  "core_stocks": [
+   {
+    "code": "600276",
+    "name": "恒瑞医药",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600276.SH",
+    "nicknames": [],
+    "mapping_reason": "创新药授权",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603259",
+    "name": "药明康德",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603259.SH",
+    "nicknames": [],
+    "mapping_reason": "CXO",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600196",
+    "name": "复星医药",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600196.SH",
+    "nicknames": [],
+    "mapping_reason": "创新药",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Flu_season",
+  "overseas_catalyst": {
+   "subject": "海外流感季/WHO预警",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "flu season",
+    "H5N1",
+    "influenza"
+   ]
+  },
+  "transmission_logic": "流感升温→疫苗/抗病毒",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "流感/医药防疫"
+  ],
+  "core_stocks": [
+   {
+    "code": "002007",
+    "name": "华兰生物",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002007.SZ",
+    "nicknames": [],
+    "mapping_reason": "流感疫苗",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300122",
+    "name": "智飞生物",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300122.SZ",
+    "nicknames": [],
+    "mapping_reason": "疫苗",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "000999",
+    "name": "华润三九",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000999.SZ",
+    "nicknames": [],
+    "mapping_reason": "感冒药",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "JOBY_eVTOL",
+  "overseas_catalyst": {
+   "subject": "Joby/Archer eVTOL",
+   "us_ticker": "JOBY/ACHR",
+   "x_signal_keywords": [
+    "Joby",
+    "eVTOL certification",
+    "Archer"
+   ]
+  },
+  "transmission_logic": "适航进展→国内低空",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "低空经济/eVTOL"
+  ],
+  "core_stocks": [
+   {
+    "code": "002085",
+    "name": "万丰奥威",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "002085.SZ",
+    "nicknames": [],
+    "mapping_reason": "通航",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "001696",
+    "name": "宗申动力",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "001696.SZ",
+    "nicknames": [],
+    "mapping_reason": "航空发动机",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600210",
+    "name": "紫江企业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "600210.SH",
+    "nicknames": [],
+    "mapping_reason": "社区热议",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Gold_price",
+  "overseas_catalyst": {
+   "subject": "金价新高/美联储降息",
+   "us_ticker": "GLD",
+   "x_signal_keywords": [
+    "gold record",
+    "Fed cut",
+    "safe haven"
+   ]
+  },
+  "transmission_logic": "金价上行→黄金股",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "黄金/有色"
+  ],
+  "core_stocks": [
+   {
+    "code": "600547",
+    "name": "山东黄金",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600547.SH",
+    "nicknames": [],
+    "mapping_reason": "黄金",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601899",
+    "name": "紫金矿业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601899.SH",
+    "nicknames": [],
+    "mapping_reason": "金铜",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "000975",
+    "name": "山金国际",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000975.SZ",
+    "nicknames": [],
+    "mapping_reason": "黄金",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Copper_aluminum",
+  "overseas_catalyst": {
+   "subject": "铜铝价格/LME",
+   "us_ticker": "FCX/AA",
+   "x_signal_keywords": [
+    "copper price",
+    "LME",
+    "aluminum"
+   ]
+  },
+  "transmission_logic": "铜铝涨价→有色",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "黄金/有色",
+   "小金属"
+  ],
+  "core_stocks": [
+   {
+    "code": "601899",
+    "name": "紫金矿业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601899.SH",
+    "nicknames": [],
+    "mapping_reason": "铜",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603799",
+    "name": "华友钴业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603799.SH",
+    "nicknames": [],
+    "mapping_reason": "钴镍",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "000960",
+    "name": "锡业股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000960.SZ",
+    "nicknames": [],
+    "mapping_reason": "锡",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Oil_shipping",
+  "overseas_catalyst": {
+   "subject": "原油/航运运价/中东局势",
+   "us_ticker": "XOM/ZIM",
+   "x_signal_keywords": [
+    "Brent",
+    "Red Sea",
+    "tanker rates"
+   ]
+  },
+  "transmission_logic": "油价与运价上行→油运/集运",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "航运港口"
+  ],
+  "core_stocks": [
+   {
+    "code": "600026",
+    "name": "中远海能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600026.SH",
+    "nicknames": [],
+    "mapping_reason": "油运",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601872",
+    "name": "招商轮船",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601872.SH",
+    "nicknames": [],
+    "mapping_reason": "油运",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601919",
+    "name": "中远海控",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601919.SH",
+    "nicknames": [],
+    "mapping_reason": "集运",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Tariff_selfreliance",
+  "overseas_catalyst": {
+   "subject": "美国关税/出口管制",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "tariff",
+    "Section 301",
+    "entity list"
+   ]
+  },
+  "transmission_logic": "制裁加码→自主可控/国产替代",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "半导体设备/材料",
+   "信创",
+   "稀土永磁"
+  ],
+  "core_stocks": [
+   {
+    "code": "002371",
+    "name": "北方华创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002371.SZ",
+    "nicknames": [],
+    "mapping_reason": "设备国产化",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600536",
+    "name": "中国软件",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "600536.SH",
+    "nicknames": [],
+    "mapping_reason": "信创",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600111",
+    "name": "北方稀土",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600111.SH",
+    "nicknames": [],
+    "mapping_reason": "稀土反制",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "RareEarth_export",
+  "overseas_catalyst": {
+   "subject": "稀土出口管制/MP Materials",
+   "us_ticker": "MP",
+   "x_signal_keywords": [
+    "rare earth",
+    "MP Materials",
+    "export ban"
+   ]
+  },
+  "transmission_logic": "稀土博弈→稀土永磁",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "稀土永磁"
+  ],
+  "core_stocks": [
+   {
+    "code": "600111",
+    "name": "北方稀土",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600111.SH",
+    "nicknames": [],
+    "mapping_reason": "稀土",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "000831",
+    "name": "中国稀土",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "000831.SZ",
+    "nicknames": [],
+    "mapping_reason": "稀土",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600549",
+    "name": "厦门钨业",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600549.SH",
+    "nicknames": [],
+    "mapping_reason": "钨/稀土",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "FX_RMB",
+  "overseas_catalyst": {
+   "subject": "人民币汇率/美元指数",
+   "us_ticker": "DXY",
+   "x_signal_keywords": [
+    "dollar index",
+    "USDCNH",
+    "yuan"
+   ]
+  },
+  "transmission_logic": "人民币升值→航空/造纸/外资偏好板块",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "券商/金融科技",
+   "银行"
+  ],
+  "core_stocks": [
+   {
+    "code": "600030",
+    "name": "中信证券",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600030.SH",
+    "nicknames": [],
+    "mapping_reason": "风险偏好",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300059",
+    "name": "东方财富",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300059.SZ",
+    "nicknames": [],
+    "mapping_reason": "风险偏好",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601398",
+    "name": "工商银行",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601398.SH",
+    "nicknames": [],
+    "mapping_reason": "外资偏好",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Fed_rates",
+  "overseas_catalyst": {
+   "subject": "美联储议息/美债收益率",
+   "us_ticker": "TLT",
+   "x_signal_keywords": [
+    "FOMC",
+    "rate cut",
+    "10Y yield"
+   ]
+  },
+  "transmission_logic": "降息→成长风格/券商",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "券商/金融科技",
+   "创新药/CXO"
+  ],
+  "core_stocks": [
+   {
+    "code": "300059",
+    "name": "东方财富",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300059.SZ",
+    "nicknames": [],
+    "mapping_reason": "风险偏好",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "603259",
+    "name": "药明康德",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "603259.SH",
+    "nicknames": [],
+    "mapping_reason": "美元融资敏感",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300033",
+    "name": "同花顺",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300033.SZ",
+    "nicknames": [],
+    "mapping_reason": "风险偏好",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Stablecoin",
+  "overseas_catalyst": {
+   "subject": "稳定币立法/Circle",
+   "us_ticker": "CRCL/COIN",
+   "x_signal_keywords": [
+    "stablecoin",
+    "GENIUS Act",
+    "Circle"
+   ]
+  },
+  "transmission_logic": "稳定币监管→数字货币/跨境支付",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "数字货币/稳定币"
+  ],
+  "core_stocks": [
+   {
+    "code": "300468",
+    "name": "四方精创",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "300468.SZ",
+    "nicknames": [],
+    "mapping_reason": "跨境支付科技",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002152",
+    "name": "广电运通",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002152.SZ",
+    "nicknames": [],
+    "mapping_reason": "金融科技",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600570",
+    "name": "恒生电子",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600570.SH",
+    "nicknames": [],
+    "mapping_reason": "金融IT",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Meta_Llama",
+  "overseas_catalyst": {
+   "subject": "Meta开源模型/Llama",
+   "us_ticker": "META",
+   "x_signal_keywords": [
+    "Llama",
+    "open source model"
+   ]
+  },
+  "transmission_logic": "开源模型→算力与应用",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "AI应用/大模型"
+  ],
+  "core_stocks": [
+   {
+    "code": "300418",
+    "name": "昆仑万维",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "300418.SZ",
+    "nicknames": [],
+    "mapping_reason": "大模型",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300364",
+    "name": "中文在线",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300364.SZ",
+    "nicknames": [],
+    "mapping_reason": "内容",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002230",
+    "name": "科大讯飞",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002230.SZ",
+    "nicknames": [],
+    "mapping_reason": "大模型",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Copper_cable_NVL",
+  "overseas_catalyst": {
+   "subject": "NVL72铜缆背板",
+   "us_ticker": "NVDA",
+   "x_signal_keywords": [
+    "NVL72",
+    "copper backplane",
+    "DAC"
+   ]
+  },
+  "transmission_logic": "铜缆互连需求→铜连接",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "铜缆高速连接"
+  ],
+  "core_stocks": [
+   {
+    "code": "002130",
+    "name": "沃尔核材",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002130.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速线",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300913",
+    "name": "兆龙互连",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300913.SZ",
+    "nicknames": [],
+    "mapping_reason": "高速线缆",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688800",
+    "name": "瑞可达",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "688800.SH",
+    "nicknames": [],
+    "mapping_reason": "连接器",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Meta_wearables_AI_toys",
+  "overseas_catalyst": {
+   "subject": "AI玩具/谷子IP热(海外泡泡玛特映射)",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "Labubu",
+    "Pop Mart",
+    "AI toy"
+   ]
+  },
+  "transmission_logic": "IP潮玩热→谷子经济",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "谷子经济"
+  ],
+  "core_stocks": [
+   {
+    "code": "002292",
+    "name": "奥飞娱乐",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "002292.SZ",
+    "nicknames": [],
+    "mapping_reason": "IP玩具",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002862",
+    "name": "实丰文化",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "002862.SZ",
+    "nicknames": [],
+    "mapping_reason": "玩具",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "002103",
+    "name": "广博股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "symbol": "002103.SZ",
+    "nicknames": [],
+    "mapping_reason": "文创",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Shipbuilding_US",
+  "overseas_catalyst": {
+   "subject": "美国对华造船/港口费",
+   "us_ticker": "—",
+   "x_signal_keywords": [
+    "port fee",
+    "shipbuilding",
+    "USTR"
+   ]
+  },
+  "transmission_logic": "港口费与造船博弈→船舶/深海",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "深海科技",
+   "航运港口"
+  ],
+  "core_stocks": [
+   {
+    "code": "600150",
+    "name": "中国船舶",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600150.SH",
+    "nicknames": [],
+    "mapping_reason": "造船",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "601018",
+    "name": "宁波港",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601018.SH",
+    "nicknames": [],
+    "mapping_reason": "港口",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600685",
+    "name": "中船防务",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600685.SH",
+    "nicknames": [],
+    "mapping_reason": "造船",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Solar_US_policy",
+  "overseas_catalyst": {
+   "subject": "美国光伏政策/FSLR",
+   "us_ticker": "FSLR",
+   "x_signal_keywords": [
+    "First Solar",
+    "solar tariff",
+    "IRA"
+   ]
+  },
+  "transmission_logic": "海外光伏政策→国内光伏",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "光伏"
+  ],
+  "core_stocks": [
+   {
+    "code": "601012",
+    "name": "隆基绿能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "601012.SH",
+    "nicknames": [],
+    "mapping_reason": "组件",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "600438",
+    "name": "通威股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "600438.SH",
+    "nicknames": [],
+    "mapping_reason": "硅料/电池",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "688599",
+    "name": "天合光能",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "688599.SH",
+    "nicknames": [],
+    "mapping_reason": "组件",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ },
+ {
+  "trigger_id": "Pets_US",
+  "overseas_catalyst": {
+   "subject": "海外宠物消费/Chewy",
+   "us_ticker": "CHWY",
+   "x_signal_keywords": [
+    "Chewy",
+    "pet food"
+   ]
+  },
+  "transmission_logic": "海外宠物需求→出口型宠物食品",
+  "transmission_logic_status": "主观推演",
+  "ashare_themes": [
+   "宠物经济"
+  ],
+  "core_stocks": [
+   {
+    "code": "002891",
+    "name": "中宠股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "002891.SZ",
+    "nicknames": [],
+    "mapping_reason": "宠物食品出口",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "300673",
+    "name": "佩蒂股份",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "symbol": "300673.SZ",
+    "nicknames": [],
+    "mapping_reason": "宠物食品出口",
+    "mapping_basis": "社区常见映射—待核实"
+   },
+   {
+    "code": "301498",
+    "name": "乖宝宠物",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "symbol": "301498.SZ",
+    "nicknames": [],
+    "mapping_reason": "宠物食品",
+    "mapping_basis": "社区常见映射—待核实"
+   }
+  ],
+  "core_stock_count_ok": true
+ }
+]

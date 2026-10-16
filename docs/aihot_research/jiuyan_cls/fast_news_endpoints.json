@@ -1,0 +1,327 @@
+{
+ "tested_at": "2026-10-16 18:10~19:00 台北时间",
+ "client": "curl/urllib，桌面 Chrome UA，无 cookie",
+ "endpoints": [
+  {
+   "site": "韭研公社",
+   "name": "首页(SSR)",
+   "url": "https://www.jiuyangongshe.com/",
+   "method": "GET",
+   "http": 200,
+   "auth": "否",
+   "format": "Nuxt SSR HTML，含 window.__NUXT__；首页带热门作者榜(/u/<32hex>)和文章链接 /a/<id>",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "韭研公社",
+   "name": "异动解析页",
+   "url": "https://www.jiuyangongshe.com/action",
+   "method": "GET",
+   "http": 200,
+   "auth": "SSR 骨架不需要登录",
+   "format": "SSR 只返回空骨架：actionFieldList:[]、recommendActionList:[]，另带加密 digest(state.mQ7vL2xR9a)。数据由前端带签名的 XHR 加载",
+   "sample": "title=韭研公社-2026-10-16异动",
+   "status": "真实请求验证(仅骨架)；异动数据需浏览器实测"
+  },
+  {
+   "site": "韭研公社",
+   "name": "App 接口",
+   "url": "https://app.jiuyangongshe.com/jystock-app/api/v1/action/field",
+   "method": "POST JSON {\"date\":\"2026-10-16\",\"pc\":1}",
+   "http": 200,
+   "format": "JSON errCode=9『因您的版本过低…』",
+   "status": "真实请求验证：被拒(缺版本/签名头)；/api/v1/timeline/list 同样返回 errCode 9"
+  },
+  {
+   "site": "韭研公社",
+   "name": "文章页(高赞长帖)",
+   "url": "https://www.jiuyangongshe.com/a/{id}",
+   "method": "GET",
+   "http": 200,
+   "format": "SSR HTML，title 为文章标题，含作者 /u/ 链接；39 篇抽样中 38 篇返回 200",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "韭研公社",
+   "name": "用户主页",
+   "url": "https://www.jiuyangongshe.com/u/{32hex}",
+   "method": "GET",
+   "http": 200,
+   "format": "SSR，title=『昵称用户主页-韭研公社』",
+   "status": "真实请求验证(118 个)"
+  },
+  {
+   "site": "韭研公社",
+   "name": "热搜/题材库/学习/搜索",
+   "url": [
+    "https://www.jiuyangongshe.com/hotsearch",
+    "/theme",
+    "/study",
+    "/search?k=…"
+   ],
+   "http": 302,
+   "format": "302 跳回首页 /，推测需要登录或路径不对",
+   "status": "待核实—需浏览器实测"
+  },
+  {
+   "site": "财联社",
+   "name": "电报页",
+   "url": "https://www.cls.cn/telegraph",
+   "http": 200,
+   "format": "Next.js；__NEXT_DATA__ 只有 chooseNav，列表由前端加载",
+   "status": "真实请求验证(无数据)"
+  },
+  {
+   "site": "财联社",
+   "name": "电报滚动接口",
+   "url": "https://www.cls.cn/v1/roll/get_roll_list?app=CailianpressWeb&os=web&sv=8.4.6&rn=5",
+   "http": 200,
+   "format": "{\"errno\":\"10012\",\"msg\":\"签名错误\"}",
+   "status": "真实请求验证：需要 sign 参数；/v3/depth/home/assembled/1000 同样返回签名错误；/nodeapi/telegraphList、/nodeapi/updateTelegraphList 返回 404"
+  },
+  {
+   "site": "选股宝",
+   "name": "异动股/涨停原因",
+   "url": "https://flash-api.xuangubao.cn/api/surge_stock/stocks?normal=true&uplimit=true",
+   "http": 200,
+   "auth": "否",
+   "fields": [
+    "code",
+    "prod_name",
+    "cur_price",
+    "px_change_rate",
+    "circulation_value",
+    "description",
+    "enter_time",
+    "up_limit",
+    "plates",
+    "time_on_market",
+    "turnover_ratio",
+    "m_days_n_boards",
+    "report_id",
+    "report_title",
+    "report_type",
+    "report_url"
+   ],
+   "sample": "[\"300006.SZ\",\"莱美药业\",9.75,0.1993,...]",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "选股宝",
+   "name": "板块排行",
+   "url": "https://flash-api.xuangubao.cn/api/plate/rank?field=core_avg_pcp&type=0",
+   "http": 200,
+   "format": "data 为板块 id 数组",
+   "status": "真实请求验证(只有 id，板块名称接口待核实)"
+  },
+  {
+   "site": "选股宝",
+   "name": "涨停/炸板分时",
+   "url": "https://flash-api.xuangubao.cn/api/market_indicator/line?fields=limit_up_broken_count,limit_up_count",
+   "http": 200,
+   "fields": [
+    "limit_up_broken_count",
+    "limit_up_count",
+    "timestamp"
+   ],
+   "status": "真实请求验证"
+  },
+  {
+   "site": "选股宝",
+   "name": "快讯",
+   "url": [
+    "https://api.xuangubao.cn/api/pc/msgs?...",
+    "https://baoer-api.xuangubao.cn/api/v6/message/newsflash?limit=5"
+   ],
+   "http": 0,
+   "format": "连接失败/超时",
+   "status": "待核实(可能是域名停用或封了 IP)"
+  },
+  {
+   "site": "华尔街见闻",
+   "name": "7x24快讯",
+   "url": "https://api-one.wallstcn.com/apiv1/content/lives?channel=global-channel&limit=5",
+   "http": 200,
+   "auth": "否",
+   "fields": [
+    "items[].id",
+    "content(HTML)",
+    "display_time",
+    "author.display_name",
+    "channels",
+    "comment_count"
+   ],
+   "note": "channel 可用 a-stock-channel(实测 200)",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "同花顺",
+   "name": "个股新闻推送(含异动/监管)",
+   "url": "https://news.10jqka.com.cn/tapp/news/push/stock/?page=1&tag=&track=website&pagesize=5",
+   "http": 200,
+   "auth": "否",
+   "fields": [
+    "data.list[].id",
+    "seq",
+    "title",
+    "digest",
+    "ctime(推测)",
+    "url"
+   ],
+   "sample": "上交所：本周对新华传媒等严重异常波动股票进行重点监控…",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "同花顺",
+   "name": "7x24页面",
+   "url": "https://news.10jqka.com.cn/realtimenews.html",
+   "http": 200,
+   "format": "GBK HTML",
+   "status": "真实请求验证"
+  },
+  {
+   "site": "同花顺",
+   "name": "数据中心",
+   "url": "https://data.10jqka.com.cn/dataapi/transaction/stock/v1/list",
+   "http": 500,
+   "status": "真实请求验证：500"
+  },
+  {
+   "site": "同花顺",
+   "name": "盘中异动专用接口",
+   "status": "未找到免鉴权端点—待核实"
+  },
+  {
+   "site": "韭研公社",
+   "name": "异动解析页(浏览器)",
+   "url": "https://www.jiuyangongshe.com/action",
+   "http": 200,
+   "format": "未登录显示 0 条(周五晚)，没有发现异动专用 XHR",
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)；异动数据仍待核实，需交易日或登录后复测"
+  },
+  {
+   "site": "韭研公社",
+   "name": "web-api XHR 族",
+   "url": "POST https://web-api.jiuyangongshe.com/jystock-app/api/{v1/search/word-cloud,v1/user/info,v1/product/investment/url,v2/article/announcement,v1/timeline/news,v1/article/rank-board,v1/user/trace,v1/area/country-code,v1/config/one}",
+   "http": 200,
+   "format": "未登录时响应体为空",
+   "headers": [
+    "timestamp",
+    "token(未登录也会下发)",
+    "platform",
+    "另有一个疑似签名头(头名未记录—待核实)"
+   ],
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)；签名算法待核实"
+  },
+  {
+   "site": "韭研公社",
+   "name": "热搜/题材库/学习页",
+   "url": [
+    "/hotsearch",
+    "/theme",
+    "/study"
+   ],
+   "http": 302,
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)：302 回首页(与 curl 结果一致)"
+  },
+  {
+   "site": "韭研公社",
+   "name": "文章排序列表(SSR)",
+   "url": {
+    "最新发布": "https://www.jiuyangongshe.com/study_publish",
+    "最新热度": "https://www.jiuyangongshe.com/study_hot",
+    "最新互动": "https://www.jiuyangongshe.com/study_action",
+    "30天热度": "https://www.jiuyangongshe.com/study_30"
+   },
+   "http": 200,
+   "curl_check": "curl /study_hot：HTTP 200，250KB，SSR 含 39 个 /a/ 链接和 96 个计数 span，不需要 JS 即可解析(真实请求验证)",
+   "selectors": {
+    "摘要/链接": "div.html-text a[href^='/a/']",
+    "关联个股": "div.source-box a.text[href^='/search/']",
+    "转发数": "div.btnGroup .handle:has(i.icon.forward) span.fs14-ash",
+    "评论数": ".handle:has(i.icon.reply) span.fs14-ash",
+    "点赞数": ".handle:has(i.icon.fabulous) span.fs14-ash",
+    "积分/打赏": ".handle:has(i.icon.integral) span.fs14"
+   },
+   "note": "按图标 class(forward/reply/fabulous/integral) 判断各数字含义，比浏览器看到的“252/194/299/280.67”数字组更可靠；该数字组的含义仍待核实",
+   "status": "真实请求验证(curl)+浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)"
+  },
+  {
+   "site": "财联社",
+   "name": "电报缓存接口",
+   "url": "https://www.cls.cn/api/cache?app=CailianpressWeb&name=telegraph&os=web&sv=8.7.9&sign=<32hex>",
+   "http": 200,
+   "fields": [
+    "errno",
+    "data.roll_data[].id",
+    "type",
+    "title",
+    "brief",
+    "content"
+   ],
+   "sign_test": "curl 实测：md5(sha1(排序参数串))、md5(参数串)、全 0 的 sign、空 sign、不带 sign，5 种都返回 200 且 errno=0 并有 roll_data → 该接口当前不校验 sign，所以无法验证社区算法(待核实)；/v1/roll/get_roll_list 仍返回 errno 10012 签名错误",
+   "sample": "豪威集团：拟2.5亿元至5亿元回购股份",
+   "status": "浏览器+curl 真实请求验证(免签名可用)；sign 算法待核实"
+  },
+  {
+   "site": "财联社",
+   "name": "推荐配置",
+   "url": "https://www.cls.cn/v1/roll/recommend/conf",
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)(未用 curl 复测)"
+  },
+  {
+   "site": "同花顺",
+   "name": "7x24(大页)",
+   "url": "https://news.10jqka.com.cn/tapp/news/push/stock/?page=1&tag=&track=website&pagesize=400",
+   "http": 200,
+   "headers": [
+    "x-requested-with",
+    "hexin-v(JS 动态反爬 token)"
+   ],
+   "fields": [
+    "code",
+    "msg",
+    "time",
+    "data.list[].id",
+    "seq",
+    "title",
+    "digest",
+    "url"
+   ],
+   "note": "curl 不带 hexin-v 时 pagesize=5 也返回 200(见上方条目)；大页或高频是否需要 hexin-v 待核实",
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)"
+  },
+  {
+   "site": "同花顺",
+   "name": "个股资金流 JSONP",
+   "url": "https://pop.10jqka.com.cn/getcashflow.php?code={code}",
+   "fields": [
+    "code",
+    "name",
+    "pure",
+    "purep",
+    "inrmb",
+    "outrmb",
+    "zdf",
+    "je"
+   ],
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)(未用 curl 复测)"
+  },
+  {
+   "site": "同花顺",
+   "name": "盘中异动专页",
+   "status": "浏览器未找到—待核实"
+  },
+  {
+   "site": "选股宝",
+   "name": "网页端快讯",
+   "url": [
+    "https://xuangubao.cn",
+    "https://xuangubao.cn/live"
+   ],
+   "format": "页面空白，没有业务 XHR/WS；/live 跳首页",
+   "status": "浏览器真实请求验证(2026-10-16 约18:45 台北时间，未登录，父代理实测)：没有找到快讯通道"
+  }
+ ],
+ "browser_merge": "2026-10-16 18:47 并入浏览器实测结果"
+}

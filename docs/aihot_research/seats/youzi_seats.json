@@ -1,0 +1,1885 @@
+[
+ {
+  "seat_id": "Y01",
+  "youzi_name": "章盟主",
+  "nicknames": [
+   "章建平"
+  ],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司上海长宁区江苏路证券营业部",
+    "lhb_records_1y": 1254,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 569,
+     "active_days": 115,
+     "two_way_share": 0.587,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.038,
+      0.086,
+      0.269
+     ],
+     "board_share": {
+      "主板": 0.71,
+      "创业板": 0.19,
+      "科创板": 0.074,
+      "北交所": 0.019,
+      "其他": 0.007
+     },
+     "days_with_ge3_stocks": 0.791,
+     "days_with_ge3_same_board": 0.652,
+     "net_buy_records_with_d1": 363,
+     "next_day_ret_mean_pct": 1.36,
+     "next_day_ret_median_pct": 1.16,
+     "next_day_up_prob": 0.548,
+     "median_buy_amt_wan": 1853.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "章盟主"
+   },
+   {
+    "full_name": "中信证券股份有限公司杭州延安路证券营业部",
+    "lhb_records_1y": 109,
+    "last_on_list": "2026-10-13",
+    "stats_6m": {
+     "records_6m": 75,
+     "active_days": 40,
+     "two_way_share": 0.387,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.006,
+      0.02
+     ],
+     "board_share": {
+      "主板": 0.733,
+      "创业板": 0.16,
+      "科创板": 0.093,
+      "北交所": 0.013
+     },
+     "days_with_ge3_stocks": 0.25,
+     "days_with_ge3_same_board": 0.15,
+     "net_buy_records_with_d1": 53,
+     "next_day_ret_mean_pct": 0.8,
+     "next_day_ret_median_pct": 0.84,
+     "next_day_up_prob": 0.528,
+     "median_buy_amt_wan": 1914.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "协同",
+    "short": "章盟主"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "大资金",
+   "趋势加仓",
+   "容量票"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.43,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.29,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y02",
+  "youzi_name": "炒股养家",
+  "nicknames": [
+   "养家"
+  ],
+  "branch_names": [
+   {
+    "full_name": "华鑫证券有限责任公司上海宛平南路证券营业部",
+    "lhb_records_1y": 362,
+    "last_on_list": "2026-10-14",
+    "stats_6m": {
+     "records_6m": 126,
+     "active_days": 46,
+     "two_way_share": 0.262,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.914,
+      0.947
+     ],
+     "board_share": {
+      "主板": 0.643,
+      "创业板": 0.238,
+      "科创板": 0.119
+     },
+     "days_with_ge3_stocks": 0.391,
+     "days_with_ge3_same_board": 0.196,
+     "net_buy_records_with_d1": 78,
+     "next_day_ret_mean_pct": 0.54,
+     "next_day_ret_median_pct": 0.47,
+     "next_day_up_prob": 0.513,
+     "median_buy_amt_wan": 1643.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "炒股养家"
+   },
+   {
+    "full_name": "华鑫证券有限责任公司上海茅台路证券营业部",
+    "lhb_records_1y": 118,
+    "last_on_list": "2026-08-28",
+    "stats_6m": {
+     "records_6m": 38,
+     "active_days": 26,
+     "two_way_share": 0.816,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.006,
+      0.944
+     ],
+     "board_share": {
+      "主板": 0.947,
+      "创业板": 0.053
+     },
+     "days_with_ge3_stocks": 0.115,
+     "days_with_ge3_same_board": 0.115,
+     "net_buy_records_with_d1": 14,
+     "next_day_ret_mean_pct": 4.57,
+     "next_day_ret_median_pct": 4.73,
+     "next_day_up_prob": 0.786,
+     "median_buy_amt_wan": 1853.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "协同",
+    "short": "炒股养家"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "情绪周期",
+   "龙头"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.38,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.15,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y03",
+  "youzi_name": "作手新一",
+  "nicknames": [
+   "新一"
+  ],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司南京太平南路证券营业部",
+    "lhb_records_1y": 620,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 332,
+     "active_days": 115,
+     "two_way_share": 0.627,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.003,
+      0.009,
+      0.222
+     ],
+     "board_share": {
+      "主板": 0.696,
+      "创业板": 0.196,
+      "科创板": 0.087,
+      "北交所": 0.012,
+      "其他": 0.009
+     },
+     "days_with_ge3_stocks": 0.53,
+     "days_with_ge3_same_board": 0.287,
+     "net_buy_records_with_d1": 186,
+     "next_day_ret_mean_pct": 1.1,
+     "next_day_ret_median_pct": -0.23,
+     "next_day_up_prob": 0.495,
+     "median_buy_amt_wan": 3484.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "作手新一"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "龙头接力"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.37,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.1,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y04",
+  "youzi_name": "孙哥",
+  "nicknames": [
+   "溧阳路"
+  ],
+  "branch_names": [
+   {
+    "full_name": "中信证券股份有限公司上海溧阳路证券营业部",
+    "lhb_records_1y": 54,
+    "last_on_list": "2026-08-03",
+    "stats_6m": {
+     "records_6m": 33,
+     "active_days": 22,
+     "two_way_share": 0.455,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.003,
+      0.009,
+      0.031
+     ],
+     "board_share": {
+      "主板": 0.485,
+      "科创板": 0.273,
+      "创业板": 0.152,
+      "北交所": 0.061,
+      "其他": 0.03
+     },
+     "days_with_ge3_stocks": 0.091,
+     "days_with_ge3_same_board": 0.091,
+     "net_buy_records_with_d1": 24,
+     "next_day_ret_mean_pct": -2.92,
+     "next_day_ret_median_pct": -3.78,
+     "next_day_up_prob": 0.208,
+     "median_buy_amt_wan": 3346.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "孙哥"
+   },
+   {
+    "full_name": "中信证券股份有限公司上海虹口区溧阳路证券营业部",
+    "lhb_records_1y": 10,
+    "last_on_list": "2026-10-09",
+    "stats_6m": {
+     "records_6m": 10,
+     "active_days": 9,
+     "two_way_share": 0.5,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.009,
+      0.017
+     ],
+     "board_share": {
+      "主板": 0.5,
+      "科创板": 0.3,
+      "北交所": 0.1,
+      "创业板": 0.1
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 5,
+     "next_day_ret_mean_pct": -0.57,
+     "next_day_ret_median_pct": 1.03,
+     "next_day_up_prob": 0.8,
+     "median_buy_amt_wan": 2406.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "协同",
+    "short": "孙哥"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "大资金",
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.84,
+   "next_day_ret_mean_pct(net_buy,6m)": -2.51,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y05",
+  "youzi_name": "赵老哥",
+  "nicknames": [
+   "赵老哥"
+  ],
+  "branch_names": [
+   {
+    "full_name": "中国银河证券股份有限公司绍兴证券营业部",
+    "lhb_records_1y": 83,
+    "last_on_list": "2026-02-13",
+    "stats_6m": null,
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "赵老哥"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "连板龙头"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": null,
+   "next_day_ret_mean_pct(net_buy,6m)": null,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y06",
+  "youzi_name": "陈小群",
+  "nicknames": [
+   "小群"
+  ],
+  "branch_names": [
+   {
+    "full_name": "中国银河证券股份有限公司大连黄河路证券营业部",
+    "lhb_records_1y": 132,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 11,
+     "active_days": 9,
+     "two_way_share": 0.364,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.0,
+      0.984,
+      0.992
+     ],
+     "board_share": {
+      "主板": 0.909,
+      "科创板": 0.091
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 3,
+     "next_day_ret_mean_pct": 1.84,
+     "next_day_ret_median_pct": 1.05,
+     "next_day_up_prob": 0.667,
+     "median_buy_amt_wan": 5793.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "陈小群"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "龙头",
+   "高位接力"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.61,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.84,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y07",
+  "youzi_name": "方新侠",
+  "nicknames": [
+   "方新侠"
+  ],
+  "branch_names": [
+   {
+    "full_name": "中信证券股份有限公司西安朱雀大街证券营业部",
+    "lhb_records_1y": 105,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 29,
+     "active_days": 21,
+     "two_way_share": 0.586,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.0,
+      0.002,
+      0.006
+     ],
+     "board_share": {
+      "主板": 0.552,
+      "科创板": 0.276,
+      "北交所": 0.103,
+      "创业板": 0.069
+     },
+     "days_with_ge3_stocks": 0.095,
+     "days_with_ge3_same_board": 0.095,
+     "net_buy_records_with_d1": 22,
+     "next_day_ret_mean_pct": -0.13,
+     "next_day_ret_median_pct": -1.47,
+     "next_day_up_prob": 0.455,
+     "median_buy_amt_wan": 6189.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "方新侠"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "趋势",
+   "大资金"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.04,
+   "next_day_ret_mean_pct(net_buy,6m)": -0.13,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y08",
+  "youzi_name": "上塘路",
+  "nicknames": [
+   "上塘路"
+  ],
+  "branch_names": [
+   {
+    "full_name": "财通证券股份有限公司杭州上塘路证券营业部",
+    "lhb_records_1y": 36,
+    "last_on_list": "2026-10-08",
+    "stats_6m": {
+     "records_6m": 7,
+     "active_days": 6,
+     "two_way_share": 0.571,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.007,
+      0.007,
+      0.03
+     ],
+     "board_share": {
+      "创业板": 0.429,
+      "主板": 0.429,
+      "北交所": 0.143
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 3,
+     "next_day_ret_mean_pct": 6.44,
+     "next_day_ret_median_pct": 5.82,
+     "next_day_up_prob": 0.667,
+     "median_buy_amt_wan": 247.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "上塘路"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 1,
+   "next_day_ret_mean_pct(net_buy,6m)": 6.44,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y09",
+  "youzi_name": "宁波桑田路",
+  "nicknames": [
+   "桑田路"
+  ],
+  "branch_names": [
+   {
+    "full_name": "国盛证券股份有限公司宁波桑田路证券营业部",
+    "lhb_records_1y": 357,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 142,
+     "active_days": 75,
+     "two_way_share": 0.514,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.026,
+      0.051,
+      0.166
+     ],
+     "board_share": {
+      "主板": 0.817,
+      "创业板": 0.099,
+      "科创板": 0.085
+     },
+     "days_with_ge3_stocks": 0.2,
+     "days_with_ge3_same_board": 0.147,
+     "net_buy_records_with_d1": 78,
+     "next_day_ret_mean_pct": -0.18,
+     "next_day_ret_median_pct": -0.62,
+     "next_day_up_prob": 0.462,
+     "median_buy_amt_wan": 4884.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "宁波桑田路"
+   },
+   {
+    "full_name": "国盛证券有限责任公司宁波桑田路证券营业部",
+    "lhb_records_1y": 85,
+    "last_on_list": "2025-11-18",
+    "stats_6m": null,
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "旧名",
+    "short": "宁波桑田路"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "打板",
+   "大资金"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.06,
+   "next_day_ret_mean_pct(net_buy,6m)": -0.18,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y10",
+  "youzi_name": "佛山系",
+  "nicknames": [
+   "佛山"
+  ],
+  "branch_names": [
+   {
+    "full_name": "光大证券股份有限公司佛山绿景路证券营业部",
+    "lhb_records_1y": 19,
+    "last_on_list": "2026-07-23",
+    "stats_6m": {
+     "records_6m": 6,
+     "active_days": 6,
+     "two_way_share": 0.167,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.002,
+      0.002
+     ],
+     "board_share": {
+      "主板": 0.833,
+      "科创板": 0.167
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 2,
+     "next_day_ret_mean_pct": -1.0,
+     "next_day_ret_median_pct": -1.0,
+     "next_day_up_prob": 0.5,
+     "median_buy_amt_wan": 2416.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "佛山系"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "一字板",
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.33,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.0,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y11",
+  "youzi_name": "呼家楼",
+  "nicknames": [
+   "呼家楼"
+  ],
+  "branch_names": [
+   {
+    "full_name": "中信证券股份有限公司北京呼家楼证券营业部",
+    "lhb_records_1y": 8,
+    "last_on_list": "2026-06-04",
+    "stats_6m": null,
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "呼家楼"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": null,
+   "next_day_ret_mean_pct(net_buy,6m)": null,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y12",
+  "youzi_name": "湖里大道",
+  "nicknames": [
+   "湖里大道"
+  ],
+  "branch_names": [
+   {
+    "full_name": "兴业证券股份有限公司厦门湖里大道证券营业部",
+    "lhb_records_1y": 45,
+    "last_on_list": "2026-09-09",
+    "stats_6m": {
+     "records_6m": 10,
+     "active_days": 10,
+     "two_way_share": 0.4,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.006,
+      0.008,
+      0.017
+     ],
+     "board_share": {
+      "主板": 0.6,
+      "创业板": 0.2,
+      "科创板": 0.1,
+      "北交所": 0.1
+     },
+     "days_with_ge3_stocks": 0.0,
+     "days_with_ge3_same_board": 0.0,
+     "net_buy_records_with_d1": 5,
+     "next_day_ret_mean_pct": 2.92,
+     "next_day_ret_median_pct": -0.54,
+     "next_day_up_prob": 0.4,
+     "median_buy_amt_wan": 911.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "湖里大道"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.97,
+   "next_day_ret_mean_pct(net_buy,6m)": 2.92,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y13",
+  "youzi_name": "小鳄鱼",
+  "nicknames": [
+   "小鳄鱼"
+  ],
+  "branch_names": [
+   {
+    "full_name": "南京证券股份有限公司南京大钟亭证券营业部",
+    "lhb_records_1y": 4,
+    "last_on_list": "2026-07-20",
+    "stats_6m": null,
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主",
+    "short": "小鳄鱼"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [
+   "低位",
+   "打板"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": null,
+   "next_day_ret_mean_pct(net_buy,6m)": null,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y14",
+  "youzi_name": "益田路荣超(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "华泰证券股份有限公司深圳益田路荣超商务中心证券营业部",
+    "lhb_records_1y": 212,
+    "last_on_list": "2026-10-15",
+    "stats_6m": {
+     "records_6m": 150,
+     "active_days": 74,
+     "two_way_share": 0.473,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.006,
+      0.06,
+      0.19
+     ],
+     "board_share": {
+      "主板": 0.453,
+      "北交所": 0.26,
+      "科创板": 0.173,
+      "创业板": 0.107,
+      "其他": 0.007
+     },
+     "days_with_ge3_stocks": 0.257,
+     "days_with_ge3_same_board": 0.122,
+     "net_buy_records_with_d1": 78,
+     "next_day_ret_mean_pct": 0.59,
+     "next_day_ret_median_pct": -1.97,
+     "next_day_up_prob": 0.397,
+     "median_buy_amt_wan": 819.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "益田路荣超(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.2,
+   "next_day_ret_mean_pct(net_buy,6m)": 0.59,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y15",
+  "youzi_name": "绍兴胜利东路(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "华鑫证券有限责任公司绍兴胜利东路证券营业部",
+    "lhb_records_1y": 483,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 354,
+     "active_days": 113,
+     "two_way_share": 0.178,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.015,
+      0.097,
+      0.784
+     ],
+     "board_share": {
+      "主板": 0.754,
+      "创业板": 0.186,
+      "科创板": 0.059
+     },
+     "days_with_ge3_stocks": 0.566,
+     "days_with_ge3_same_board": 0.425,
+     "net_buy_records_with_d1": 247,
+     "next_day_ret_mean_pct": 0.77,
+     "next_day_ret_median_pct": 0.28,
+     "next_day_up_prob": 0.522,
+     "median_buy_amt_wan": 1411.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "绍兴胜利东路(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.26,
+   "next_day_ret_mean_pct(net_buy,6m)": 0.77,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y16",
+  "youzi_name": "武汉紫阳东路(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司武汉紫阳东路证券营业部",
+    "lhb_records_1y": 751,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 434,
+     "active_days": 109,
+     "two_way_share": 0.694,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.007,
+      0.021
+     ],
+     "board_share": {
+      "主板": 0.783,
+      "创业板": 0.173,
+      "北交所": 0.025,
+      "科创板": 0.018
+     },
+     "days_with_ge3_stocks": 0.697,
+     "days_with_ge3_same_board": 0.578,
+     "net_buy_records_with_d1": 289,
+     "next_day_ret_mean_pct": 1.12,
+     "next_day_ret_median_pct": 0.91,
+     "next_day_up_prob": 0.543,
+     "median_buy_amt_wan": 11464.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "武汉紫阳东路(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.37,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.12,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y17",
+  "youzi_name": "北京知春路(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司北京知春路证券营业部",
+    "lhb_records_1y": 680,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 326,
+     "active_days": 106,
+     "two_way_share": 0.653,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.013,
+      0.035,
+      0.152
+     ],
+     "board_share": {
+      "主板": 0.905,
+      "创业板": 0.058,
+      "科创板": 0.034,
+      "其他": 0.003
+     },
+     "days_with_ge3_stocks": 0.528,
+     "days_with_ge3_same_board": 0.472,
+     "net_buy_records_with_d1": 190,
+     "next_day_ret_mean_pct": 1.0,
+     "next_day_ret_median_pct": 1.0,
+     "next_day_up_prob": 0.532,
+     "median_buy_amt_wan": 9038.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "北京知春路(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.33,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.0,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y18",
+  "youzi_name": "国新北京分公司(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "国新证券股份有限公司北京分公司",
+    "lhb_records_1y": 788,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 590,
+     "active_days": 116,
+     "two_way_share": 0.414,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.0,
+      0.001,
+      0.267
+     ],
+     "board_share": {
+      "主板": 0.803,
+      "创业板": 0.197
+     },
+     "days_with_ge3_stocks": 0.759,
+     "days_with_ge3_same_board": 0.698,
+     "net_buy_records_with_d1": 332,
+     "next_day_ret_mean_pct": 1.07,
+     "next_day_ret_median_pct": 0.34,
+     "next_day_up_prob": 0.521,
+     "median_buy_amt_wan": 5276.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "国新北京分公司(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.36,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.07,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y19",
+  "youzi_name": "上海松江中山东路(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司上海松江区中山东路证券营业部",
+    "lhb_records_1y": 497,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 227,
+     "active_days": 92,
+     "two_way_share": 0.599,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.006,
+      0.491
+     ],
+     "board_share": {
+      "主板": 0.934,
+      "创业板": 0.035,
+      "科创板": 0.031
+     },
+     "days_with_ge3_stocks": 0.391,
+     "days_with_ge3_same_board": 0.326,
+     "net_buy_records_with_d1": 134,
+     "next_day_ret_mean_pct": 2.56,
+     "next_day_ret_median_pct": 2.66,
+     "next_day_up_prob": 0.619,
+     "median_buy_amt_wan": 3372.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "上海松江中山东路(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.85,
+   "next_day_ret_mean_pct(net_buy,6m)": 2.56,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y20",
+  "youzi_name": "湛江万豪世家(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "国泰海通证券股份有限公司湛江万豪世家证券营业部",
+    "lhb_records_1y": 209,
+    "last_on_list": "2026-10-15",
+    "stats_6m": {
+     "records_6m": 124,
+     "active_days": 71,
+     "two_way_share": 0.597,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.002,
+      0.004,
+      0.011
+     ],
+     "board_share": {
+      "主板": 0.968,
+      "创业板": 0.024,
+      "科创板": 0.008
+     },
+     "days_with_ge3_stocks": 0.211,
+     "days_with_ge3_same_board": 0.183,
+     "net_buy_records_with_d1": 70,
+     "next_day_ret_mean_pct": 2.11,
+     "next_day_ret_median_pct": 2.63,
+     "next_day_up_prob": 0.629,
+     "median_buy_amt_wan": 6495.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "湛江万豪世家(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.7,
+   "next_day_ret_mean_pct(net_buy,6m)": 2.11,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y21",
+  "youzi_name": "东亚前海苏州(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "东亚前海证券有限责任公司苏州分公司",
+    "lhb_records_1y": 471,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 169,
+     "active_days": 80,
+     "two_way_share": 0.473,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.01,
+      0.149
+     ],
+     "board_share": {
+      "主板": 0.899,
+      "创业板": 0.071,
+      "北交所": 0.018,
+      "科创板": 0.012
+     },
+     "days_with_ge3_stocks": 0.325,
+     "days_with_ge3_same_board": 0.287,
+     "net_buy_records_with_d1": 93,
+     "next_day_ret_mean_pct": 1.97,
+     "next_day_ret_median_pct": -0.92,
+     "next_day_up_prob": 0.43,
+     "median_buy_amt_wan": 1515.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "东亚前海苏州(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.66,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.97,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y22",
+  "youzi_name": "杭州曙光路(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "平安证券股份有限公司杭州曙光路证券营业部",
+    "lhb_records_1y": 738,
+    "last_on_list": "2026-09-24",
+    "stats_6m": {
+     "records_6m": 289,
+     "active_days": 90,
+     "two_way_share": 0.664,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.06,
+      0.121,
+      0.319
+     ],
+     "board_share": {
+      "主板": 0.889,
+      "创业板": 0.093,
+      "科创板": 0.017
+     },
+     "days_with_ge3_stocks": 0.578,
+     "days_with_ge3_same_board": 0.511,
+     "net_buy_records_with_d1": 202,
+     "next_day_ret_mean_pct": 1.33,
+     "next_day_ret_median_pct": 1.17,
+     "next_day_up_prob": 0.545,
+     "median_buy_amt_wan": 2369.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "杭州曙光路(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": 0.44,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.33,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y23",
+  "youzi_name": "招商益田路免税(代称)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "招商证券股份有限公司深圳益田路免税商务大厦证券营业部",
+    "lhb_records_1y": 639,
+    "last_on_list": "2026-10-13",
+    "stats_6m": {
+     "records_6m": 406,
+     "active_days": 105,
+     "two_way_share": 0.692,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.057,
+      0.152,
+      0.327
+     ],
+     "board_share": {
+      "主板": 0.677,
+      "创业板": 0.241,
+      "科创板": 0.057,
+      "其他": 0.025
+     },
+     "days_with_ge3_stocks": 0.6,
+     "days_with_ge3_same_board": 0.505,
+     "net_buy_records_with_d1": 184,
+     "next_day_ret_mean_pct": -0.28,
+     "next_day_ret_median_pct": -0.27,
+     "next_day_up_prob": 0.457,
+     "median_buy_amt_wan": 1060.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "招商益田路免税(代称)"
+   }
+  ],
+  "category": "top_youzi",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": -0.09,
+   "next_day_ret_mean_pct(net_buy,6m)": -0.28,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：跟随强势合力，独食高开要谨慎"
+  },
+  "verification": "游资-席位对应：社区公认(淘股吧/股吧/财经自媒体长期流传)，未经官方确认；『(代称)』条目只是近6月数据高活跃席位，没有公认游资名，youzi_name 用营业部简称代替"
+ },
+ {
+  "seat_id": "Y24",
+  "youzi_name": "拉萨金融城南环路",
+  "nicknames": [
+   "拉萨天团",
+   "东财拉萨"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨金融城南环路证券营业部",
+    "lhb_records_1y": 3373,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1945,
+     "active_days": 122,
+     "two_way_share": 0.717,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.479,
+      0.686,
+      0.855
+     ],
+     "board_share": {
+      "主板": 0.694,
+      "北交所": 0.147,
+      "创业板": 0.141,
+      "科创板": 0.019
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 0.992,
+     "net_buy_records_with_d1": 1143,
+     "next_day_ret_mean_pct": -2.11,
+     "next_day_ret_median_pct": -3,
+     "next_day_up_prob": 0.359,
+     "median_buy_amt_wan": 1002.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨金融城南环路"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.7,
+   "next_day_ret_mean_pct(net_buy,6m)": -2.11,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y25",
+  "youzi_name": "拉萨东环路第二",
+  "nicknames": [
+   "拉萨天团"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨东环路第二证券营业部",
+    "lhb_records_1y": 3270,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1571,
+     "active_days": 122,
+     "two_way_share": 0.721,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.473,
+      0.685,
+      0.855
+     ],
+     "board_share": {
+      "主板": 0.538,
+      "北交所": 0.224,
+      "创业板": 0.196,
+      "科创板": 0.042
+     },
+     "days_with_ge3_stocks": 0.992,
+     "days_with_ge3_same_board": 0.984,
+     "net_buy_records_with_d1": 877,
+     "next_day_ret_mean_pct": -1.98,
+     "next_day_ret_median_pct": -2.49,
+     "next_day_up_prob": 0.363,
+     "median_buy_amt_wan": 701.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨东环路第二"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.66,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.98,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y26",
+  "youzi_name": "拉萨团结路第一",
+  "nicknames": [
+   "拉萨天团"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨团结路第一证券营业部",
+    "lhb_records_1y": 2824,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 1210,
+     "active_days": 122,
+     "two_way_share": 0.754,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.474,
+      0.669,
+      0.82
+     ],
+     "board_share": {
+      "主板": 0.579,
+      "北交所": 0.223,
+      "创业板": 0.169,
+      "科创板": 0.03
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 0.951,
+     "net_buy_records_with_d1": 649,
+     "next_day_ret_mean_pct": -2.09,
+     "next_day_ret_median_pct": -2.04,
+     "next_day_up_prob": 0.39,
+     "median_buy_amt_wan": 686.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨团结路第一"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.7,
+   "next_day_ret_mean_pct(net_buy,6m)": -2.09,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y27",
+  "youzi_name": "拉萨团结路第二",
+  "nicknames": [
+   "拉萨天团"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨团结路第二证券营业部",
+    "lhb_records_1y": 1715,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 620,
+     "active_days": 119,
+     "two_way_share": 0.777,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.43,
+      0.639,
+      0.802
+     ],
+     "board_share": {
+      "主板": 0.452,
+      "北交所": 0.353,
+      "创业板": 0.166,
+      "科创板": 0.029
+     },
+     "days_with_ge3_stocks": 0.866,
+     "days_with_ge3_same_board": 0.58,
+     "net_buy_records_with_d1": 344,
+     "next_day_ret_mean_pct": -1.98,
+     "next_day_ret_median_pct": -2.04,
+     "next_day_up_prob": 0.372,
+     "median_buy_amt_wan": 544.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨团结路第二"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.66,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.98,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y28",
+  "youzi_name": "拉萨东环路第一",
+  "nicknames": [
+   "拉萨天团"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨东环路第一证券营业部",
+    "lhb_records_1y": 1638,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 646,
+     "active_days": 119,
+     "two_way_share": 0.743,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.372,
+      0.6,
+      0.762
+     ],
+     "board_share": {
+      "主板": 0.511,
+      "北交所": 0.26,
+      "创业板": 0.206,
+      "科创板": 0.023
+     },
+     "days_with_ge3_stocks": 0.891,
+     "days_with_ge3_same_board": 0.639,
+     "net_buy_records_with_d1": 343,
+     "next_day_ret_mean_pct": -2.11,
+     "next_day_ret_median_pct": -2.58,
+     "next_day_up_prob": 0.373,
+     "median_buy_amt_wan": 642.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨东环路第一"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.7,
+   "next_day_ret_mean_pct(net_buy,6m)": -2.11,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y29",
+  "youzi_name": "拉萨东城区江苏大道",
+  "nicknames": [
+   "拉萨天团"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司拉萨东城区江苏大道证券营业部",
+    "lhb_records_1y": 376,
+    "last_on_list": "2026-10-15",
+    "stats_6m": {
+     "records_6m": 251,
+     "active_days": 99,
+     "two_way_share": 0.59,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.306,
+      0.517,
+      0.785
+     ],
+     "board_share": {
+      "主板": 0.697,
+      "北交所": 0.151,
+      "创业板": 0.116,
+      "科创板": 0.036
+     },
+     "days_with_ge3_stocks": 0.404,
+     "days_with_ge3_same_board": 0.283,
+     "net_buy_records_with_d1": 145,
+     "next_day_ret_mean_pct": -1.85,
+     "next_day_ret_median_pct": -2.63,
+     "next_day_up_prob": 0.338,
+     "median_buy_amt_wan": 626.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "拉萨东城区江苏大道"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.62,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.85,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y30",
+  "youzi_name": "山南香曲东路",
+  "nicknames": [
+   "东财藏区"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司山南香曲东路证券营业部",
+    "lhb_records_1y": 1474,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 960,
+     "active_days": 122,
+     "two_way_share": 0.548,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.417,
+      0.675,
+      0.853
+     ],
+     "board_share": {
+      "主板": 0.84,
+      "北交所": 0.101,
+      "创业板": 0.041,
+      "科创板": 0.019
+     },
+     "days_with_ge3_stocks": 0.943,
+     "days_with_ge3_same_board": 0.91,
+     "net_buy_records_with_d1": 553,
+     "next_day_ret_mean_pct": -1.99,
+     "next_day_ret_median_pct": -2.5,
+     "next_day_up_prob": 0.356,
+     "median_buy_amt_wan": 1008.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "山南香曲东路"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.66,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.99,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y31",
+  "youzi_name": "昌都两江大道",
+  "nicknames": [
+   "东财藏区"
+  ],
+  "branch_names": [
+   {
+    "full_name": "东方财富证券股份有限公司昌都两江大道证券营业部",
+    "lhb_records_1y": 1191,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 515,
+     "active_days": 117,
+     "two_way_share": 0.658,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.309,
+      0.536,
+      0.778
+     ],
+     "board_share": {
+      "主板": 0.796,
+      "北交所": 0.117,
+      "创业板": 0.066,
+      "科创板": 0.021
+     },
+     "days_with_ge3_stocks": 0.795,
+     "days_with_ge3_same_board": 0.701,
+     "net_buy_records_with_d1": 287,
+     "next_day_ret_mean_pct": -1.42,
+     "next_day_ret_median_pct": -1.94,
+     "next_day_up_prob": 0.418,
+     "median_buy_amt_wan": 687.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "昌都两江大道"
+   }
+  ],
+  "category": "retail_camp",
+  "style_tags": [
+   "散户集合"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": -0.47,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.42,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：拉萨系净买入占比高=散户接力，次日偏弱"
+  },
+  "verification": "东财证券西藏营业部为散户集中席位，属社区共识(东方财富证券开户默认挂靠)，数据显示次日均值为负"
+ },
+ {
+  "seat_id": "Y32",
+  "youzi_name": "银河北京学院南路(数据识别)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "中国银河证券股份有限公司北京学院南路证券营业部",
+    "lhb_records_1y": 257,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 127,
+     "active_days": 67,
+     "two_way_share": 0.811,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.005,
+      0.063,
+      0.303
+     ],
+     "board_share": {
+      "主板": 0.732,
+      "创业板": 0.244,
+      "科创板": 0.024
+     },
+     "days_with_ge3_stocks": 0.224,
+     "days_with_ge3_same_board": 0.194,
+     "net_buy_records_with_d1": 74,
+     "next_day_ret_mean_pct": -1.83,
+     "next_day_ret_median_pct": -3.16,
+     "next_day_up_prob": 0.351,
+     "median_buy_amt_wan": 1830.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "银河北京学院南路(数据识别)"
+   }
+  ],
+  "category": "one_day_dump",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": -0.61,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.83,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：数据显示次日偏弱，上榜买入时不追"
+  },
+  "verification": "纯数据识别：近6月≥100条且净买入次日均值<-1.5%，无游资名"
+ },
+ {
+  "seat_id": "Y33",
+  "youzi_name": "华泰北京东三环北路(数据识别)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "华泰证券股份有限公司北京东三环北路证券营业部",
+    "lhb_records_1y": 165,
+    "last_on_list": "2026-10-09",
+    "stats_6m": {
+     "records_6m": 101,
+     "active_days": 61,
+     "two_way_share": 0.307,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.001,
+      0.003,
+      0.007
+     ],
+     "board_share": {
+      "主板": 0.713,
+      "科创板": 0.129,
+      "创业板": 0.099,
+      "北交所": 0.059
+     },
+     "days_with_ge3_stocks": 0.082,
+     "days_with_ge3_same_board": 0.049,
+     "net_buy_records_with_d1": 58,
+     "next_day_ret_mean_pct": -3.42,
+     "next_day_ret_median_pct": -2.42,
+     "next_day_up_prob": 0.414,
+     "median_buy_amt_wan": 1453.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "华泰北京东三环北路(数据识别)"
+   }
+  ],
+  "category": "one_day_dump",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": -1,
+   "next_day_ret_mean_pct(net_buy,6m)": -3.42,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：数据显示次日偏弱，上榜买入时不追"
+  },
+  "verification": "纯数据识别：近6月≥100条且净买入次日均值<-1.5%，无游资名"
+ },
+ {
+  "seat_id": "Y34",
+  "youzi_name": "华泰上海武定路(数据识别)",
+  "nicknames": [],
+  "branch_names": [
+   {
+    "full_name": "华泰证券股份有限公司上海武定路证券营业部",
+    "lhb_records_1y": 246,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 117,
+     "active_days": 68,
+     "two_way_share": 0.538,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.015,
+      0.042,
+      0.139
+     ],
+     "board_share": {
+      "主板": 0.607,
+      "科创板": 0.137,
+      "北交所": 0.128,
+      "创业板": 0.103,
+      "其他": 0.026
+     },
+     "days_with_ge3_stocks": 0.191,
+     "days_with_ge3_same_board": 0.162,
+     "net_buy_records_with_d1": 44,
+     "next_day_ret_mean_pct": -1.97,
+     "next_day_ret_median_pct": -2.63,
+     "next_day_up_prob": 0.273,
+     "median_buy_amt_wan": 429.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "华泰上海武定路(数据识别)"
+   }
+  ],
+  "category": "one_day_dump",
+  "style_tags": [],
+  "style_tags_status": "无",
+  "next_day_premium_bias": {
+   "score": -0.66,
+   "next_day_ret_mean_pct(net_buy,6m)": -1.97,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：数据显示次日偏弱，上榜买入时不追"
+  },
+  "verification": "纯数据识别：近6月≥100条且净买入次日均值<-1.5%，无游资名"
+ },
+ {
+  "seat_id": "Y35",
+  "youzi_name": "深股通专用",
+  "nicknames": [
+   "北向",
+   "外资"
+  ],
+  "branch_names": [
+   {
+    "full_name": "深股通专用",
+    "lhb_records_1y": 5053,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 2761,
+     "active_days": 122,
+     "two_way_share": 0.984,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.482,
+      0.677,
+      0.841
+     ],
+     "board_share": {
+      "主板": 0.741,
+      "创业板": 0.259
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 1.0,
+     "net_buy_records_with_d1": 1517,
+     "next_day_ret_mean_pct": 0.55,
+     "next_day_ret_median_pct": 0,
+     "next_day_up_prob": 0.5,
+     "median_buy_amt_wan": 10815.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "深股通专用"
+   }
+  ],
+  "category": "institution_alias",
+  "style_tags": [
+   "北向资金"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.18,
+   "next_day_ret_mean_pct(net_buy,6m)": 0.55,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：北向/机构净买入需看是否双向接近(T0/调仓)"
+  },
+  "verification": "交易所席位类别"
+ },
+ {
+  "seat_id": "Y36",
+  "youzi_name": "沪股通专用",
+  "nicknames": [
+   "北向",
+   "外资"
+  ],
+  "branch_names": [
+   {
+    "full_name": "沪股通专用",
+    "lhb_records_1y": 3902,
+    "last_on_list": "2026-10-16",
+    "stats_6m": {
+     "records_6m": 2231,
+     "active_days": 122,
+     "two_way_share": 0.875,
+     "two_way_min_max_ratio_p25_p50_p75": [
+      0.532,
+      0.714,
+      0.856
+     ],
+     "board_share": {
+      "主板": 0.825,
+      "科创板": 0.175
+     },
+     "days_with_ge3_stocks": 1.0,
+     "days_with_ge3_same_board": 1.0,
+     "net_buy_records_with_d1": 1216,
+     "next_day_ret_mean_pct": 1.1,
+     "next_day_ret_median_pct": 0.74,
+     "next_day_up_prob": 0.541,
+     "median_buy_amt_wan": 8902.0
+    },
+    "status": "真实请求验证(东财RPT_OPERATEDEPT_TRADE_DETAILS)",
+    "role": "主/唯一",
+    "short": "沪股通专用"
+   }
+  ],
+  "category": "institution_alias",
+  "style_tags": [
+   "北向资金"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.37,
+   "next_day_ret_mean_pct(net_buy,6m)": 1.1,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：北向/机构净买入需看是否双向接近(T0/调仓)"
+  },
+  "verification": "交易所席位类别"
+ },
+ {
+  "seat_id": "Y37",
+  "youzi_name": "机构专用",
+  "nicknames": [
+   "机构"
+  ],
+  "branch_names": [
+   {
+    "full_name": "机构专用",
+    "lhb_records_1y": null,
+    "last_on_list": null,
+    "stats_6m": "见 stats_institution_6m.json",
+    "status": "真实请求验证(东财RPT_ORGANIZATION_TRADE_DETAILS，近6月6463条)",
+    "role": "主/唯一",
+    "short": "机构专用"
+   }
+  ],
+  "category": "institution_alias",
+  "style_tags": [
+   "真机构/假机构需结合结构判断"
+  ],
+  "style_tags_status": "社区经验",
+  "next_day_premium_bias": {
+   "score": 0.1,
+   "next_day_ret_mean_pct(net_buy,6m)": 0.29,
+   "score_method": "clip(均值/3,-1,1) 数据推导；样本<30时可靠性低",
+   "playbook": "主观：北向/机构净买入需看是否双向接近(T0/调仓)"
+  },
+  "verification": "交易所席位类别"
+ }
+]

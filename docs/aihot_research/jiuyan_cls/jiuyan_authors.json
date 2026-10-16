@@ -1,0 +1,402 @@
+[
+ {
+  "nickname": "Vin7的大",
+  "user_id": "1b901ff42def4190abb8abfc5ab8187d",
+  "homepage": "https://www.jiuyangongshe.com/u/1b901ff42def4190abb8abfc5ab8187d",
+  "track_style": "综合题材/产业热点(机器人、低空、军工、GLP-1、固态电池)",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "特斯拉Optimus V3即将进入量产周期，人形机器人产业链震荡反弹",
+    "url": "https://www.jiuyangongshe.com/a/2guhwdbtxs9"
+   },
+   {
+    "title": "特斯拉Roadster带飞A股飞行汽车概念，低空经济的投资逻辑变了吗？",
+    "url": "https://www.jiuyangongshe.com/a/2zah06m7mr0"
+   },
+   {
+    "title": "三大指数冲高回落，军工凭什么批量涨停？",
+    "url": "https://www.jiuyangongshe.com/a/4eqef65nzfr"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "钱里马",
+  "user_id": "02d4a651cd944edd8a666a658737c1f0",
+  "homepage": "https://www.jiuyangongshe.com/u/02d4a651cd944edd8a666a658737c1f0",
+  "track_style": "题材正宗性",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "真科幻片，特斯拉飞行汽车",
+    "url": "https://www.jiuyangongshe.com/a/3y8ezuu93m2"
+   },
+   {
+    "title": "要比比看看谁最正宗了",
+    "url": "https://www.jiuyangongshe.com/a/3y8f2dfxqpl"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "炒谷养娃2007",
+  "user_id": "df1e445526de466a93f1a0b16a204fe4",
+  "homepage": "https://www.jiuyangongshe.com/u/df1e445526de466a93f1a0b16a204fe4",
+  "track_style": "题材核心梳理(飞行汽车、航天军工)",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "飞行汽车核心梳理 特斯拉发布能“飞”的‌第二代Roadster超跑‌",
+    "url": "https://www.jiuyangongshe.com/a/4eqe7w42gun"
+   },
+   {
+    "title": "航天军工核心梳理 第十六届中国航展公众日门票将于10月19日起发售",
+    "url": "https://www.jiuyangongshe.com/a/20cjefmu1s2"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "飞火资讯",
+  "user_id": "967b824fef4b4c4b9a20fbf2a54dbcc8",
+  "homepage": "https://www.jiuyangongshe.com/u/967b824fef4b4c4b9a20fbf2a54dbcc8",
+  "track_style": "个股信息差/题材",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "10.16个股信息差（抱起来摔）",
+    "url": "https://www.jiuyangongshe.com/a/3y8fd7q177c"
+   },
+   {
+    "title": "短剧引爆新影视，赋能AI迎新催化",
+    "url": "https://www.jiuyangongshe.com/a/jybl5gsgan"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "木炭一箩筐",
+  "user_id": "b2ca0848ef46427488687d60b74cc403",
+  "homepage": "https://www.jiuyangongshe.com/u/b2ca0848ef46427488687d60b74cc403",
+  "track_style": "个股正宗性拆解",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "紫江企业 600210｜特斯拉 Roadster 冷气推进 + 负压风扇，低空飞控正宗标的",
+    "url": "https://www.jiuyangongshe.com/a/20cjkwy70em"
+   },
+   {
+    "title": "紫江企业 600210｜特斯拉 Roadster 冷气推进 + 负压风扇，低空飞控正宗标的",
+    "url": "https://www.jiuyangongshe.com/a/3y8f6caq4xu"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "盘前纪要",
+  "user_id": "4df747be1bf143a998171ef03559b517",
+  "homepage": "https://www.jiuyangongshe.com/u/4df747be1bf143a998171ef03559b517",
+  "track_style": "每日盘前纪要",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "10月16日盘前纪要",
+    "url": "https://www.jiuyangongshe.com/a/3y8es997lb8"
+   },
+   {
+    "title": "9月23日盘前纪要",
+    "url": "https://www.jiuyangongshe.com/a/1hvf6ax95lm"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "种太阳",
+  "user_id": "53a66da6769e46db8ee8bd1a061238d4",
+  "homepage": "https://www.jiuyangongshe.com/u/53a66da6769e46db8ee8bd1a061238d4",
+  "track_style": "医药/AI4S 个股挖掘",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "威尔药业：莱美药业上游最大价值量辅料",
+    "url": "https://www.jiuyangongshe.com/a/1hwk9d0rznk"
+   },
+   {
+    "title": "谷歌新模型引爆AI4S，关注泓博医药",
+    "url": "https://www.jiuyangongshe.com/a/2z73nsypkt4"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "吾道不孤的研究员",
+  "user_id": "4d57853c60ce4ff69b29dfbad6213346",
+  "homepage": "https://www.jiuyangongshe.com/u/4d57853c60ce4ff69b29dfbad6213346",
+  "track_style": "传感器等细分环节",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "特斯拉飞行汽车，技惊四座，MEMS传感器成为不可或缺环节---先锋电子",
+    "url": "https://www.jiuyangongshe.com/a/20cjk3tj3zg"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "最新作文精选❤️❤️❤️",
+  "user_id": "83c69112e1b24aa4b44227688fe525e2",
+  "homepage": "https://www.jiuyangongshe.com/u/83c69112e1b24aa4b44227688fe525e2",
+  "track_style": "产业链转载/材料(PTFE)",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "PTFE 应用进展更新：英伟达在 OCP 展示 PTFE英伟达在 OCP",
+    "url": "https://www.jiuyangongshe.com/a/3fsg3t2ngpg"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "低位玩家🥇",
+  "user_id": "ab5ec74ce0174a899385301728cb5f30",
+  "homepage": "https://www.jiuyangongshe.com/u/ab5ec74ce0174a899385301728cb5f30",
+  "track_style": "医药产业链/低位挖掘",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "🔥伟哥抗癌顶刊实锤！这条产业链上，五张“王牌”全部浮出水面！",
+    "url": "https://www.jiuyangongshe.com/a/3y8f44xb8xe"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "土拨鼠",
+  "user_id": "de3b39535098425fae12e6efbd39387e",
+  "homepage": "https://www.jiuyangongshe.com/u/de3b39535098425fae12e6efbd39387e",
+  "track_style": "个股题材挖掘",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "旭升集团：特斯拉Roadster飞行汽车",
+    "url": "https://www.jiuyangongshe.com/a/11el624mjlx"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "一思一记",
+  "user_id": "21b6c92b728c4b6fa3ba20ee7aa385a8",
+  "homepage": "https://www.jiuyangongshe.com/u/21b6c92b728c4b6fa3ba20ee7aa385a8",
+  "track_style": "每日复盘笔记",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "10月16日复盘笔记：低空经济/军工/人形机器人/碳纤维/传媒/芯片/福建本地股等",
+    "url": "https://www.jiuyangongshe.com/a/3fsg6rwlw1n"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "韭妹",
+  "user_id": "2eaf08adc8944ecfbb79a7ac3c29b966",
+  "homepage": "https://www.jiuyangongshe.com/u/2eaf08adc8944ecfbb79a7ac3c29b966",
+  "track_style": "题材增量梳理",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "划重点！特斯拉飞行汽车真正的新增量",
+    "url": "https://www.jiuyangongshe.com/a/1hwkgr7uhyl"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "异动特工小队",
+  "user_id": "d43f96f71f5a4ef986911c5f726b4169",
+  "homepage": "https://www.jiuyangongshe.com/u/d43f96f71f5a4ef986911c5f726b4169",
+  "track_style": "全天涨停简图/异动",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "韭研公社全天涨停简图（10.16)",
+    "url": "https://www.jiuyangongshe.com/a/2guhneymumk"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "飞火挖掘社",
+  "user_id": "a22e430b27e4451b8d57f9bbb27ec39a",
+  "homepage": "https://www.jiuyangongshe.com/u/a22e430b27e4451b8d57f9bbb27ec39a",
+  "track_style": "晚间研报精选",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "10.15晚间研报精选",
+    "url": "https://www.jiuyangongshe.com/a/20chkehpett"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "大A消息汇总",
+  "user_id": "e7b3d7ac11ab4670b641077df4aad602",
+  "homepage": "https://www.jiuyangongshe.com/u/e7b3d7ac11ab4670b641077df4aad602",
+  "track_style": "消息汇总+个股拆解",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "特斯拉飞行跑车“飞起来会不会撞墙”的，是那几颗不被镜头对准的摄像头。（同兴达）",
+    "url": "https://www.jiuyangongshe.com/a/2zagtl3jksc"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "一只羚牛",
+  "user_id": "62d3d7ed4a8047d4bca1a674c6270c8d",
+  "homepage": "https://www.jiuyangongshe.com/u/62d3d7ed4a8047d4bca1a674c6270c8d",
+  "track_style": "个股预期差",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "永安行——特斯拉汽车COPV 碳纤维气瓶预期差",
+    "url": "https://www.jiuyangongshe.com/a/1hwkgnufqkg"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "题材早知道",
+  "user_id": "7f3178b4ee4e4a51afde022187c85ac6",
+  "homepage": "https://www.jiuyangongshe.com/u/7f3178b4ee4e4a51afde022187c85ac6",
+  "track_style": "题材库图解",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "四图看懂题材库：铁死亡抗癌药",
+    "url": "https://www.jiuyangongshe.com/a/20cjfauclmc"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "大势所至",
+  "user_id": "a8bb5b0033c242b8b213476b895e53fa",
+  "homepage": "https://www.jiuyangongshe.com/u/a8bb5b0033c242b8b213476b895e53fa",
+  "track_style": "产业链上市公司梳理",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "缠绕气瓶(COPV):碳纤维缠绕压力容器 相关上市公司",
+    "url": "https://www.jiuyangongshe.com/a/3fsg49595cm"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "韭菜韭菜非韭菜",
+  "user_id": "90ae329471984b0e8cbdecb60e879c95",
+  "homepage": "https://www.jiuyangongshe.com/u/90ae329471984b0e8cbdecb60e879c95",
+  "track_style": "概念股梳理",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "特斯拉超跑飞起来了，飞行汽车概念股及核心公司",
+    "url": "https://www.jiuyangongshe.com/a/20cjl2ffp2s"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "价值推动",
+  "user_id": "ca804aa712c24356a3326f0065764001",
+  "homepage": "https://www.jiuyangongshe.com/u/ca804aa712c24356a3326f0065764001",
+  "track_style": "细分环节预期差",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "Roadster 全世界都在看它飞，我只盯它那个&quot;会呼吸的鼻子&quot;",
+    "url": "https://www.jiuyangongshe.com/a/jym4z9nyju"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "听风的韭菜",
+  "user_id": "49d90faaf91c47c9a62ed992feb34175",
+  "homepage": "https://www.jiuyangongshe.com/u/49d90faaf91c47c9a62ed992feb34175",
+  "track_style": "市场波动点评",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "【20261015-市场波动点评】",
+    "url": "https://www.jiuyangongshe.com/a/1hwk4cwlecc"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "财闻私享",
+  "user_id": "06ba6cc884784961b7112545e98c8e0b",
+  "homepage": "https://www.jiuyangongshe.com/u/06ba6cc884784961b7112545e98c8e0b",
+  "track_style": "晚间资讯汇总",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "晚间 A股值得关注的资讯",
+    "url": "https://www.jiuyangongshe.com/a/3fr9gwn7qfn"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "概念百科",
+  "user_id": "d438ab7459cc4592bc68068c5212d55b",
+  "homepage": "https://www.jiuyangongshe.com/u/d438ab7459cc4592bc68068c5212d55b",
+  "track_style": "概念股百科(医药等)",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "诺贝医学奖揭晓！光遗传学概念股及三条医药产业化路径",
+    "url": "https://www.jiuyangongshe.com/a/20c1msx1szl"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "逻辑挖掘王",
+  "user_id": "d93d6835b2de41cc8a27404cdbe01f88",
+  "homepage": "https://www.jiuyangongshe.com/u/d93d6835b2de41cc8a27404cdbe01f88",
+  "track_style": "(首页榜单第2，赛道待核实)",
+  "track_basis": "首页榜单出现，代表作未抓取—待核实",
+  "representative_works": [],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "超前一步",
+  "user_id": "811e08d8deec471a9a91ba8c4a353495",
+  "homepage": "https://www.jiuyangongshe.com/u/811e08d8deec471a9a91ba8c4a353495",
+  "track_style": "(首页榜单第9，赛道待核实)",
+  "track_basis": "首页榜单出现，代表作未抓取—待核实",
+  "representative_works": [],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ },
+ {
+  "nickname": "四灵将—凤",
+  "user_id": "b1dd712914b04efead9c4ac3ed1753af",
+  "homepage": "https://www.jiuyangongshe.com/u/b1dd712914b04efead9c4ac3ed1753af",
+  "track_style": "医药赛道挖掘",
+  "track_basis": "据 2026-10-16 首页抽样文章标题归纳",
+  "representative_works": [
+   {
+    "title": "诺奖风向标拉斯克奖颁给食欲素：赛道爆发前夜，津药药业手里的那张“旧船票”有多值钱？",
+    "url": "https://www.jiuyangongshe.com/a/3frlcwyasa1"
+   }
+  ],
+  "verification": "主页 HTTP 200 真实请求验证(title 匹配昵称)"
+ }
+]
