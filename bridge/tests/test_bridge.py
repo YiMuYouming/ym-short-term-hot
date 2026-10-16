@@ -73,6 +73,8 @@ from bridge.sentiment_engine import (  # noqa: E402
 )
 
 FIXTURE_BASE = datetime(2026, 10, 16, 10, 30, tzinfo=BEIJING)
+# 推送批次时间（ISO 8601 带 +08:00），与后端 decideTimeline 的「不晚于入库时刻」约束一致
+BATCH_TIME = datetime(2026, 10, 16, 10, 30, tzinfo=BEIJING).isoformat()
 
 
 def fixture(name: str) -> str:
@@ -381,6 +383,27 @@ class TestTaoguba(unittest.TestCase):
         self.assertTrue(byala.youzi_style, "实盘游资带风格标签，便于复盘时区分打法")
         self.assertFalse(posts[2].is_vip_youzi)
 
+    def test_yearless_timestamps_take_the_current_year_not_1900(self) -> None:
+        """「10-16 10:05」补年份：不能变成 1900（会被判 stale-on-discovery 历史回填）。"""
+        from bridge.collectors.taoguba import _normalize_time
+
+        reference = datetime(2026, 10, 16, 16, 30, tzinfo=BEIJING)
+        parsed = _normalize_time("10-16 10:05", reference)
+        self.assertIsNotNone(parsed)
+        moment = datetime.fromisoformat(parsed)
+        self.assertEqual((moment.year, moment.month, moment.day, moment.hour, moment.minute), (2026, 10, 16, 10, 5))
+        self.assertGreaterEqual(moment.year, 2026)
+
+    def test_yearless_timestamps_from_the_future_fall_back_one_year(self) -> None:
+        """跨年：「12-31 23:30」在 10 月看到时应属于去年，而不是明年。"""
+        from bridge.collectors.taoguba import _normalize_time
+
+        reference = datetime(2026, 10, 16, 16, 30, tzinfo=BEIJING)
+        moment = datetime.fromisoformat(_normalize_time("12-31 23:30", reference))
+        self.assertEqual(moment.year, 2025)
+        past = datetime.fromisoformat(_normalize_time("09-28 10:05", reference))
+        self.assertEqual(past.year, 2026)
+
     def test_parse_jinghua_extracts_title_counts_and_author(self) -> None:
         posts = taoguba.parse_jinghua(fixture("tgb_jinghua_hot.html"), self.vip_by_id, self.vip_by_name)
         self.assertEqual(len(posts), 2)
@@ -500,22 +523,22 @@ class TestPushPlan(unittest.TestCase):
 
     def test_pipeline_report_body_carries_facts_and_is_pushed_as_body_text(self) -> None:
         stock = next(s for s in self.pool if s.code == "300308")
-        item = pipeline_report_item(stock, self.summaries["300308"])
+        item = pipeline_report_item(stock, self.summaries["300308"], BATCH_TIME)
         payload = item.to_payload()
         self.assertEqual(item.source_id, SOURCE_PIPELINE)
         self.assertIn("300308", payload["title"])
         self.assertIn(stock.role_label, payload["bodyText"])
         self.assertIn(f"跨平台共振分：{stock.resonance_score}", payload["bodyText"])
         self.assertIn(payload["excerpt"], payload["title"] + payload["bodyText"] + payload["excerpt"])
-        self.assertTrue(payload["publishedAt"] if "publishedAt" in payload else True)
+
 
     def test_community_item_drops_spam_and_shortens_excerpt(self) -> None:
         engine = SentimentEngine.load(self.config.research["sentiment"])
         spam = engine.score_post(CommunityPost(platform="taoguba", post_id="x", url="u", title="加微信：abc12345", content="带肉"))
         self.assertTrue(spam.is_spam)
-        self.assertIsNone(community_item(spam, SOURCE_TAOGUBA, True))
+        self.assertIsNone(community_item(spam, SOURCE_TAOGUBA, True, BATCH_TIME))
         long_post = CommunityPost(platform="xueqiu", post_id="y", url="u", title="长文", content="内容" * 500)
-        item = community_item(long_post, SOURCE_XUEQIU, True)
+        item = community_item(long_post, SOURCE_XUEQIU, True, BATCH_TIME)
         self.assertIsNotNone(item)
         self.assertIsNotNone(item)
         assert item is not None
@@ -523,7 +546,7 @@ class TestPushPlan(unittest.TestCase):
         self.assertLessEqual(len(item.body_text or ""), 4000)
 
     def test_push_batches_at_50_and_reports_dry_run(self) -> None:
-        items = [pipeline_report_item(s, self.summaries.get(s.code) or list(self.summaries.values())[0]) for s in self.pool]
+        items = [pipeline_report_item(s, self.summaries.get(s.code) or list(self.summaries.values())[0], BATCH_TIME) for s in self.pool]
         report = push_items(SOURCE_PIPELINE, items, self.config)
         self.assertEqual(report["status"], "dry_run")
         self.assertEqual(report["planned"], len(items))
@@ -537,16 +560,63 @@ class TestPushPlan(unittest.TestCase):
             assert headers["Authorization"].startswith("Bearer ")
             return 200, '{"ok":true}'
         config = replace(self.config, dry_run=False, ingest_token="tok")
-        items = [pipeline_report_item(s, self.summaries[s.code]) for s in self.pool[:60] if s.code in self.summaries]
+        items = [pipeline_report_item(s, self.summaries[s.code], BATCH_TIME) for s in self.pool[:60] if s.code in self.summaries]
         report = push_items(SOURCE_PIPELINE, items * 3, config, post=post)
         self.assertEqual(report["status"], "pushed")
         self.assertTrue(all(size <= 50 for _, size in sent), "单批不超过后端 MAX_ITEMS=50")
         self.assertEqual(report["sent"], len(items) * 3)
         self.assertTrue(all(size <= 50 for _, size in sent), "60 条应拆成 50 + 10 两批")
 
+    def test_every_track_payload_survives_the_backend_url_and_time_contract(self) -> None:
+        """跨语言契约（谷米审计 R1 的 P0-1/P0-2 回归锁）。
+
+        后端 `normalizeUrl()` 只认 http/https，`decideTimeline()` 见到空 publishedAt 就判历史回填。
+        这里逐条检查四轨 payload，避免再出现「推送成功但入库 created=0」或「全是 backfill」。
+        """
+        plan = build_push_plan(self.pool, self.summaries, self.platforms)
+        checked = 0
+        for source_id, items in plan.items():
+            for item in items:
+                payload = item.to_payload()
+                self.assertTrue(
+                    payload["url"].startswith("https://"),
+                    f"{source_id} 的 {payload['url']!r} 不是 http(s)，会被 normalizeUrl 静默丢弃",
+                )
+                self.assertTrue(payload.get("publishedAt"), f"{source_id} 缺 publishedAt，会被判 backfill")
+                moment = datetime.fromisoformat(payload["publishedAt"])
+                self.assertGreaterEqual(moment.year, 2026, f"{source_id} 的发布时间 {payload['publishedAt']} 早于今年，会被判 stale-on-discovery")
+                self.assertIsNotNone(moment.tzinfo, "publishedAt 必须带时区")
+                checked += 1
+        self.assertGreater(checked, 0, "四轨都没产出条目，契约测试会空转")
+
+    def test_pipeline_url_carries_the_trade_date_and_survives_normalisation(self) -> None:
+        """战报 URL 带交易日（不同交易日的同票战报不撞身份），且参数不被后端剥掉。"""
+        stock = next(s for s in self.pool if s.code == "300308")
+        item = pipeline_report_item(stock, self.summaries["300308"], BATCH_TIME)
+        self.assertEqual(item.url, "https://quote.eastmoney.com/sz300308.html?date=2026-10-16")
+        self.assertIn("date=2026-10-16", item.url)
+        # 后端 normalizeUrl 会剥掉 TRACKING_PARAMS（utm_*/from/ref/source/...）；date 不在其中
+        tracking = {"utm_source", "spm", "from", "ref", "source", "share_token", "srcid", "clicktime", "mkt_tok"}
+        self.assertNotIn("date", tracking)
+        self.assertEqual(item.published_at, BATCH_TIME)
+
+    def test_community_item_falls_back_to_batch_time_when_post_time_is_missing(self) -> None:
+        dated = community_item(
+            CommunityPost(platform="taoguba", post_id="a", url="https://www.tgb.cn/a/x",
+                          title="有时间的帖", published_at="2026-10-16T10:05:00+08:00"),
+            SOURCE_TAOGUBA, True, BATCH_TIME,
+        )
+        undated = community_item(
+            CommunityPost(platform="taoguba", post_id="b", url="https://www.tgb.cn/a/y", title="没有时间的帖"),
+            SOURCE_TAOGUBA, True, BATCH_TIME,
+        )
+        assert dated is not None and undated is not None
+        self.assertEqual(dated.published_at, "2026-10-16T10:05:00+08:00", "帖子自己的发帖时间优先")
+        self.assertEqual(undated.published_at, BATCH_TIME, "解析不出时间时退回批次时间，绝不留空")
+
     def test_push_without_token_reports_no_token(self) -> None:
         config = replace(self.config, dry_run=False, ingest_token="")
-        report = push_items(SOURCE_PIPELINE, [pipeline_report_item(self.pool[0], list(self.summaries.values())[0])], config)
+        report = push_items(SOURCE_PIPELINE, [pipeline_report_item(self.pool[0], list(self.summaries.values())[0], BATCH_TIME)], config)
         self.assertEqual(report["status"], "no_token")
 
 

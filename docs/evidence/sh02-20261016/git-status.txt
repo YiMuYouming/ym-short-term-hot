@@ -1,17 +1,25 @@
-=== 门禁 4：git status / diff --check / 敏感信息自检 @ 2026-10-16 15:38:15 CST ===
+=== SH-02 返工门禁 6：git 状态与敏感信息自检 @ 2026-10-16 16:24:47 CST ===
 --- git status --short ---
- M packages/backend/src/ingest/items.ts
+ M .gitignore
+ M bridge/collectors/taoguba.py
+ M bridge/config.py
+ M bridge/push_to_aihot.py
+ M bridge/run_bridge.py
+ M bridge/tests/test_bridge.py
+ M docs/evidence/sh02-20261016/bridge-run.txt
+ M docs/evidence/sh02-20261016/bridge-tests.txt
+ M docs/evidence/sh02-20261016/git-status.txt
+ M docs/evidence/sh02-20261016/node-tests.txt
+ M docs/evidence/sh02-20261016/typecheck.txt
  M tests/ingest.test.ts
-?? bridge/
-?? docs/evidence/sh02-20261016/
+?? docs/evidence/sh02-20261016/bridge-contract.txt
+?? scripts/verify-bridge-contract.ts
+--- __pycache__ 是否被忽略 ---
+bridge/collectors/__pycache__
+bridge/tests/__pycache__
+bridge/__pycache__
+.gitignore:11:__pycache__/	bridge/collectors/__pycache__/taoguba.cpython-314.pyc
 --- git diff --check ---
 diff-check exit=0
---- 密钥/令牌自检（应无命中） ---
-bridge/push_to_aihot.py:292:        report["error"] = "缺少 INGEST_TOKEN（只推送需要；离线 dry-run 不需要）"
-bridge/config.py:88:        """推送令牌：命令行 > 环境变量 INGEST_TOKEN。空串表示未配置（dry-run 下允许）。"""
-bridge/config.py:89:        return self.ingest_token or os.environ.get("INGEST_TOKEN", "")
-bridge/run_bridge.py:5:    python3 -m bridge.run_bridge --push                                     # 真推送（需 INGEST_TOKEN）
-bridge/run_bridge.py:219:    parser.add_argument("--token", default="", help="推送令牌（默认取环境 INGEST_TOKEN）")
+--- 硬编码密钥自检（应无命中） ---
 (自检结束)
---- .data 是否被忽略 ---
-.gitignore:8:.data/	.data/short-term-radar-snapshot.json

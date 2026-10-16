@@ -53,3 +53,9 @@
 | --- | --- | --- |
 | 2026-10-16 / `SH-01` 结项 | [`docs/evidence/sh01-20261016/`](docs/evidence/sh01-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md) | 完成 AIHOT 站点与 A 股短线 6 大分类/提示词/测试适配，谷米独立复测通过。 |
 | 2026-10-16 / 基线建立 | [`docs/upstream/`](docs/upstream/) · [`docs/实施与验收计划.md`](docs/实施与验收计划.md) | 克隆 AIHOT 上游 `c8704e5`，确立三阶段（`SH-01`~`SH-03`）滚动开发与谷米审计机制。 |
+
+- **2026-10-16 16:30 CST | `SH-02` R1 返工提交 | 稳米**
+  - **结果**：逐条修复审计报告的 4 个缺陷。P0-1：战报 `url` 由 `ymhot://radar/stock/{symbol}`（被 `normalizeUrl()` 静默丢弃、`created=0`）改为 `https://quote.eastmoney.com/{symbol}.html?date={trade_date}`；`date` 经核对不在后端 `TRACKING_PARAMS` 内，不会被规范化剥掉，且能区分不同交易日的同票战报。P0-2：`pipeline_report_item` 接收批次时间、`community_item` 取 `post.published_at or fallback`，四轨不再有空 `publishedAt`（否则 `decideTimeline()` 一律判 `backfill=true`，hot_signal 轨 `settleNonEditorial` 恒返回 `{group:false}`）。P1-3：淘股吧「10-16 10:05」按基准年份补齐（晚于当前超 1 天退一年），并改用显式正则，规避 Python 3.12+ 对无年份 `strptime` 的弃用与 3.15 行为变更。P1-4：`.gitignore` 忽略 `__pycache__/` 与 `*.py[cod]`；bridge 侧新增三条契约断言；`tests/ingest.test.ts` 新增真实格式 payload 的端到端入库断言。
+  - **验证范围**：bridge 单测 56/56；端到端演练 exit 0；`npm run typecheck` exit 0；`ingest/provenance/architecture` 22/22；新增 `scripts/verify-bridge-contract.ts` 在一次性干净库上跑真实 payload——四轨 `created` 30/5/2/4 与计划数完全相等、`backfill=0`、`undated=0`，editorial 轨 `body_status=ok` 且正文入库，`hot_signal` 轨 `settleNonEditorial → {group:true}`。
+  - **返工中发现并修正的两个自身问题**：① 契约测试最初把固定 URL 写死，重跑时会命中既有行导致 `created=0` 假失败 → 补唯一标记；② 推送语义是**URL 全局身份**（重推即修订而非新建），因此校验脚本改用自建一次性干净库，`created` 才是可信信号——这一条同时也是盘中 15m 重推战报的设计依据（同一 URL 修订而非重复入库）。
+  - **下一步**：交谷米二次复审；通过前不跨阶段开 `SH-03`。

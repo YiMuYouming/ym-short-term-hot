@@ -42,6 +42,27 @@ from .schema import (
 # 梯队分组的展示顺序（与 schema 的 ROLE_* 一致）
 LADDER_ORDER = ("空间板", "20cm弹性", "容量中军", "首板发酵", "人气热股")
 
+# 战报卡片指向该股的行情页。必须是真实可抓的 http(s) 地址：后端 `normalizeUrl()` 只认
+# http/https，非 http 协议会被静默丢成 null，整条战报在 ingest 阶段凭空消失（created=0）。
+# `date` 参数区分不同交易日的同票战报；它不在后端 `TRACKING_PARAMS` 里，不会被规范化剥掉。
+QUOTE_URL = "https://quote.eastmoney.com/{symbol}.html?date={trade_date}"
+
+
+def _trade_date(published_at: str | None = None) -> str:
+    """批次时间对应的北京时间交易日（战报 URL 的区分键）。"""
+    from .sentiment_engine import BEIJING, now_beijing
+
+    moment = now_beijing()
+    if published_at:
+        try:
+            from datetime import datetime
+
+            parsed = datetime.fromisoformat(published_at)
+            moment = parsed if parsed.tzinfo else parsed.replace(tzinfo=BEIJING)
+        except ValueError:
+            pass
+    return moment.strftime("%Y-%m-%d")
+
 
 def _fmt(value: float | None, suffix: str = "%") -> str:
     return "—" if value is None else f"{value:+.2f}{suffix}" if suffix == "%" else f"{value:.1f}{suffix}"
@@ -52,11 +73,15 @@ def _post_excerpt(post: CommunityPost, limit: int = 220) -> str:
     return text if len(text) <= limit else text[: limit - 1] + "…"
 
 
-def pipeline_report_item(stock: FocusStock, summary: SentimentSummary) -> IngestItem:
+def pipeline_report_item(stock: FocusStock, summary: SentimentSummary, published_at: str) -> IngestItem:
     """一只焦点股 → 一条结构化战报（editorial 轨）。
 
     正文是固定格式的 Markdown：身位、题材、三端热度、情绪温度条、盖楼流速。
     这类战报有真实数字、结论清楚，模型只需要照实写标题摘要，不需要它去发现事实。
+
+    `published_at` 必须是本批次时间（ISO 8601 带 +08:00）：后端 `decideTimeline()` 见到
+    `publishedAt=null` 就一律判 `backfill=true`（unknown-publication-time），战报会被当成
+    历史旧闻，既不建事件也不进今日热榜与日报。
     """
     themes = "、".join(stock.themes) or "未归题材"
     nicknames = "、".join(stock.nicknames) or "无"
@@ -74,7 +99,8 @@ def pipeline_report_item(stock: FocusStock, summary: SentimentSummary) -> Ingest
     return IngestItem(
         source_id=SOURCE_PIPELINE,
         title=f"{stock.name}({stock.code}) {stock.role_label}｜{summary.label}｜共振 {stock.resonance_score}",
-        url=f"ymhot://radar/stock/{stock.symbol}",
+        url=QUOTE_URL.format(symbol=stock.symbol.lower(), trade_date=_trade_date(published_at)),
+        published_at=published_at,
         author="YM-data-pipeline",
         excerpt=f"{themes}；{stock.role_label}；社区情绪{summary.label}，15 分钟 {summary.posts_15m} 条新帖",
         body_text=body,
@@ -93,8 +119,12 @@ def pipeline_report_item(stock: FocusStock, summary: SentimentSummary) -> Ingest
     )
 
 
-def community_item(post: CommunityPost, source_id: str, with_body: bool) -> IngestItem | None:
-    """一条社区帖 → 一条 ingest 条目。水贴直接丢弃（不占推送额度）。"""
+def community_item(post: CommunityPost, source_id: str, with_body: bool, fallback_published_at: str) -> IngestItem | None:
+    """一条社区帖 → 一条 ingest 条目。水贴直接丢弃（不占推送额度）。
+
+    `published_at` 取帖子自己的发帖时间；采集器没解析出来时退回批次时间。**不能留空**：
+    空值会被后端判成历史回填，`hot_signal` 轨的股吧脉冲因此进不了事件热度归组。
+    """
     if post.is_spam or not post.title.strip():
         return None
     title = post.title if len(post.title) <= 90 else post.title[:89] + "…"
@@ -105,6 +135,7 @@ def community_item(post: CommunityPost, source_id: str, with_body: bool) -> Inge
         source_id=source_id,
         title=title,
         url=post.url,
+        published_at=post.published_at or fallback_published_at,
         author=author,
         excerpt=_post_excerpt(post, 160),
         body_text=_post_excerpt(post, 4000) if with_body else None,
@@ -128,8 +159,16 @@ def build_push_plan(
     summaries: dict[str, SentimentSummary],
     posts_by_platform: Mapping[str, list[CommunityPost]],
     top_n: int = 30,
+    published_at: str | None = None,
 ) -> dict[str, list[IngestItem]]:
-    """把焦点股与三社区帖子分装成四条轨的推送清单。"""
+    """把焦点股与三社区帖子分装成四条轨的推送清单。
+
+    `published_at` 是本批次时间（默认取当前北京时间，ISO 8601 带 +08:00）：
+    战报直接用它，帖子优先用自己的发帖时间，解析不出来时退回它——后端不允许空发布时间。
+    """
+    from .sentiment_engine import now_beijing
+
+    batch_time = published_at or now_beijing().isoformat()
     plan: dict[str, list[IngestItem]] = {
         SOURCE_PIPELINE: [], SOURCE_TAOGUBA: [], SOURCE_XUEQIU: [], SOURCE_GUBA: [],
     }
@@ -138,24 +177,24 @@ def build_push_plan(
     for stock in ranked:
         summary = summaries.get(stock.code)
         if summary:
-            plan[SOURCE_PIPELINE].append(pipeline_report_item(stock, summary))
+            plan[SOURCE_PIPELINE].append(pipeline_report_item(stock, summary, batch_time))
 
     for post in posts_by_platform.get("taoguba", []):
         # 淘股吧只推游资复盘与高热帖：无名小号的高赞闲聊不占 editorial 额度
         if post.is_vip_youzi or post.comment_count >= 30:
-            item = community_item(post, SOURCE_TAOGUBA, with_body=True)
+            item = community_item(post, SOURCE_TAOGUBA, with_body=True, fallback_published_at=batch_time)
             if item:
                 plan[SOURCE_TAOGUBA].append(item)
 
     for post in posts_by_platform.get("xueqiu", []):
         if post.is_deep_logic:
-            item = community_item(post, SOURCE_XUEQIU, with_body=True)
+            item = community_item(post, SOURCE_XUEQIU, with_body=True, fallback_published_at=batch_time)
             if item:
                 plan[SOURCE_XUEQIU].append(item)
 
     for post in posts_by_platform.get("eastmoney_guba", []):
         # hot_signal 轨：只留标题与摘要，不带正文，worker 不为它做正文抽取
-        item = community_item(post, SOURCE_GUBA, with_body=False)
+        item = community_item(post, SOURCE_GUBA, with_body=False, fallback_published_at=batch_time)
         if item:
             plan[SOURCE_GUBA].append(item)
 

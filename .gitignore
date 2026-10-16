@@ -7,6 +7,10 @@ dist/
 .DS_Store
 .data/
 
+# Python（bridge/ 采集器与测试的字节码）
+__pycache__/
+*.py[cod]
+
 # Web production build
 apps/web/build/
 apps/web/.react-router/

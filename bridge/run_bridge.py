@@ -186,6 +186,21 @@ def run(config: BridgeConfig, out=sys.stdout) -> int:
         print(f"[bridge] 金标集已同步 {GOLD_PATH}（{count} 条）", file=out)
 
     plan = build_push_plan(pool, summaries, posts_by_platform, top_n=config.top_resonance_limit)
+
+    if config.dump_payloads:
+        # 原样落盘，跨语言契约脚本（scripts/verify-bridge-contract.ts）拿它去打真实 ingestItems。
+        dump_path = Path(config.dump_payloads)
+        dump_path.parent.mkdir(parents=True, exist_ok=True)
+        dump_path.write_text(
+            json.dumps(
+                {source_id: {"sourceId": source_id, "items": [item.to_payload() for item in items]}
+                 for source_id, items in plan.items() if items},
+                ensure_ascii=False, indent=2,
+            ) + "\n",
+            encoding="utf-8",
+        )
+        print(f"[bridge] 四轨 payload 已落 {dump_path}（供 scripts/verify-bridge-contract.ts 校验）", file=out)
+
     reports: dict[str, Any] = {}
     for source_id, items in plan.items():
         if not items:
@@ -213,6 +228,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--push", action="store_true", help="真推送（默认只 dry-run）")
     parser.add_argument("--dry-run", action="store_true", help="显式声明不推送（默认行为）")
     parser.add_argument("--sync-gold", action="store_true", help="同步 docs/aihot_research/gold 到 .data/gold.jsonl")
+    parser.add_argument("--dump-payloads", default="", metavar="PATH", help="把四轨 push payload 落盘（供跨语言契约校验）")
     parser.add_argument("--focus-limit", type=int, default=50, help="焦点股池上限")
     parser.add_argument("--top", type=int, default=30, help="共振榜条数")
     parser.add_argument("--base-url", default=None, help="AIHOT 实例地址（默认 http://127.0.0.1:3088）")
@@ -228,6 +244,7 @@ def main(argv: list[str] | None = None) -> int:
         push=args.push,
         sync_gold=args.sync_gold,
         live_smoke=args.live_smoke,
+        dump_payloads=args.dump_payloads,
         max_stocks=args.max_stocks,
         focus_limit=args.focus_limit,
         top_resonance_limit=args.top,

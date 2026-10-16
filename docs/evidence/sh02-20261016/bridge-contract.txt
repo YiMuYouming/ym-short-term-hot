@@ -1,0 +1,11 @@
+=== SH-02 返工门禁 5：跨语言契约（真实 payload → 真实 ingestItems，一次性干净库） @ 2026-10-16 16:24:07 CST ===
+步骤 1：python3 -m bridge.run_bridge --offline-fixtures --dry-run --dump-payloads /tmp/bridge-payloads.json（见 bridge-run.txt）
+步骤 2：DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node --import ./tests/databases.ts scripts/verify-bridge-contract.ts
+
+external-ym-pipeline（editorial） {"planned":30,"created":30,"backfill":0,"undated":0,"bodyChars":173}
+external-taoguba-hot（editorial） {"planned":5,"created":5,"backfill":0,"undated":0,"bodyChars":10}
+external-xueqiu-hot（editorial） {"planned":2,"created":2,"backfill":0,"undated":0,"bodyChars":42}
+external-eastmoney-guba（hot_signal） {"planned":4,"created":4,"backfill":0,"undated":0,"settleNonEditorial":{"group":true}}
+
+跨语言契约校验通过：四轨 payload 全部被后端接受，且都是当日新闻而非历史回填。
+verify-bridge-contract exit=0

@@ -58,6 +58,7 @@ class BridgeConfig:
     push: bool = False
     sync_gold: bool = False
     live_smoke: bool = False
+    dump_payloads: str = ""     # 把四轨 push payload 落盘，供 scripts/verify-bridge-contract.ts 跨语言校验
     max_stocks: int = 0  # 0 = 不限；--live-smoke --max-stocks 3 时只取 3 只
     focus_limit: int = 50
     top_resonance_limit: int = 30

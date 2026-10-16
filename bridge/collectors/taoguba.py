@@ -13,11 +13,14 @@
 
 from __future__ import annotations
 
+import re
+from datetime import datetime, timedelta
 from html.parser import HTMLParser
 from typing import Any
 
 from ..config import load_json
 from ..schema import CommunityPost
+from ..sentiment_engine import BEIJING
 from . import FetchError, HttpClient, build_url
 
 MZH_URL = "https://m.tgb.cn/getMZh"
@@ -31,6 +34,9 @@ USER_URL = "https://www.tgb.cn/blog/{user_id}"
 FORBIDDEN_ROUTES = ("https://www.tgb.cn/hot", "https://www.tgb.cn/hotTopic")
 
 XHR_HEADERS = {"X-Requested-With": "XMLHttpRequest", "Referer": "https://m.tgb.cn/"}
+
+# 列表页上的时间常写成「10-16 10:05」（没有年份），年份要按当前基准补齐
+_YEARLESS_TIME = re.compile(r"^(\d{1,2})-(\d{1,2})[ T](\d{1,2}):(\d{2})$")
 
 
 def _int(value: Any) -> int:
@@ -246,16 +252,18 @@ def parse_ticai_ranking(html: str) -> list[dict[str, Any]]:
     return [{"name": item["name"], "stocks": [stock for stock in item["stocks"] if stock]} for item in parser.themes if item["name"]]
 
 
-def _normalize_time(value: Any) -> str | None:
-    """淘股吧时间字段形态不一：统一成 ISO；认不出就返回 None（不猜时间）。"""
+def _normalize_time(value: Any, now: datetime | None = None) -> str | None:
+    """淘股吧时间字段形态不一：统一成 ISO；认不出就返回 None（不猜时间）。
+
+    「10-16 10:05」这类省略年份的写法不能直接 `strptime`（默认 year=1900）：那样送到后端
+    会因距今超过 48 小时被判 `stale-on-discovery` 历史回填，等于把昨天的复盘当古董丢掉。
+    所以按「不晚于当前」的年份补齐——若补出来的时刻比现在还晚超过 1 天，说明是去年的贴。
+    """
     if value in (None, ""):
         return None
+    reference = now or datetime.now(tz=BEIJING)
     if isinstance(value, (int, float)):
         try:
-            from datetime import datetime
-
-            from ..sentiment_engine import BEIJING
-
             seconds = float(value)
             if seconds > 1e11:
                 seconds /= 1000.0
@@ -264,22 +272,37 @@ def _normalize_time(value: Any) -> str | None:
             return None
     text = str(value).strip()
     if text.isdigit():
-        return _normalize_time(int(text))
-    from datetime import datetime
-
-    from ..sentiment_engine import BEIJING
-
-    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%m-%d %H:%M", "%Y/%m/%d %H:%M"):
+        return _normalize_time(int(text), reference)
+    # 省略年份的写法（"10-16 10:05"）不用 strptime：Python 3.12 起它对无年份格式发弃用警告，
+    # 3.15 起行为还会变。显式解析再补年份，结果稳定也不会误导后来人。
+    yearless = _YEARLESS_TIME.match(text)
+    if yearless:
+        month, day, hour, minute = (int(part) for part in yearless.groups())
+        try:
+            return _fill_year(datetime(year=reference.year, month=month, day=day, hour=hour, minute=minute), reference).isoformat()
+        except ValueError:
+            return None
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y/%m/%d %H:%M"):
         try:
             parsed = datetime.strptime(text, fmt)
-            return parsed.replace(tzinfo=BEIJING).isoformat()
         except ValueError:
             continue
+        return parsed.replace(tzinfo=BEIJING).isoformat()
     try:
         parsed = datetime.fromisoformat(text)
         return parsed.replace(tzinfo=BEIJING).isoformat() if parsed.tzinfo is None else parsed.isoformat()
     except ValueError:
         return None
+
+
+def _fill_year(parsed: datetime, reference: datetime) -> datetime:
+    """给省略年份的时刻补上不晚于当前的那一年。"""
+    if reference.tzinfo is not None:
+        parsed = parsed.replace(tzinfo=reference.tzinfo)
+    candidate = parsed.replace(year=reference.year)
+    if candidate - reference > timedelta(days=1):
+        candidate = candidate.replace(year=reference.year - 1)
+    return candidate
 
 
 def fetch_hot(client: HttpClient, page: int = 1, vip_by_id: dict | None = None, vip_by_name: dict | None = None) -> list[CommunityPost]:
