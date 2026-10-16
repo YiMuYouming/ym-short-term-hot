@@ -1,26 +1,9 @@
-=== SH-03 门禁 3：npm run build -w @aihot/web @ 2026-10-16 18:14:21 CST ===
-（React Router 生产构建；/radar 路由由 site/modules/index.ts 装配）
-✓ 5 assets cleaned from React Router server build.
-build/client/assets/daily-BymySltl.svg
-build/client/assets/weekly-lZtLQUiY.svg
-build/client/assets/monthly-D8-liJEq.svg
-build/client/assets/archive-DBCwyhNh.svg
-build/server/assets/server-build-CBd36sAY.css
-
-computing gzip size...
-build/server/.vite/manifest.json                 1.66 kB │ gzip:   0.43 kB
-build/server/assets/daily-BymySltl.svg           2.52 kB │ gzip:   1.10 kB
-build/server/assets/monthly-D8-liJEq.svg         3.08 kB │ gzip:   1.34 kB
-build/server/assets/weekly-lZtLQUiY.svg          3.25 kB │ gzip:   1.37 kB
-build/server/assets/archive-DBCwyhNh.svg         4.71 kB │ gzip:   1.97 kB
-build/server/assets/server-build-CBd36sAY.css  105.33 kB │ gzip:  19.55 kB
+=== R1 返工门禁 2：npm run build -w @aihot/web @ 2026-10-16 18:38:17 CST ===
 build/server/assets/highlight-B-T3fBmX.js        1.64 kB │ gzip:   0.70 kB
 build/server/assets/PosterSheet-AOrBvlYx.js      3.18 kB │ gzip:   1.42 kB
 build/server/assets/shared-D9YQ23Ut.js          33.72 kB │ gzip:  12.46 kB
-build/server/index.js                          744.85 kB │ gzip: 189.68 kB
+build/server/index.js                          746.12 kB │ gzip: 189.98 kB
 
-✓ built in 533ms
-web build exit=0
-
---- 产物中的雷达路由 chunk ---
-radar-route-AsP1mE57.js
+✓ built in 578ms
+--- 雷达路由 chunk ---
+radar-route-D9rqjvdd.js

@@ -72,8 +72,17 @@ test("the view, the nickname query and the drawer are all addressable by URL", a
   const resonance = await (await fetch(`${web.origin}/radar?view=resonance`)).text();
   assert.ok(resonance.includes("人气共振"), "共振榜视图未按 ?view= 切换");
 
+  // The nickname query filters the first paint, not just later keystrokes (audit R1, P1-2). The
+  // negative assertion matters: the unfiltered page also contains the word "易中天" in the search
+  // box's placeholder, which is what made the original assertion pass without any filtering.
   const nickname = await (await fetch(`${web.origin}/radar?q=${encodeURIComponent("易中天")}`)).text();
-  assert.ok(nickname.includes("易中天"), "黑话外号未命中");
+  assert.ok(nickname.includes("中际旭创"), "?q=易中天 应命中中际旭创");
+  assert.ok(!nickname.includes("宁德时代"), "?q=易中天 应过滤掉无关股票宁德时代");
+
+  // The same for the theme filter, which used to apply to the board but not to the ladders.
+  const themed = await (await fetch(`${web.origin}/radar?theme=${encodeURIComponent("消费电子")}`)).text();
+  assert.ok(themed.includes("立讯精密"), "?theme=消费电子 应命中立讯精密");
+  assert.ok(!themed.includes("光模块"), "?theme=消费电子 不应出现光模块梯队");
 
   const drawer = await (await fetch(`${web.origin}/radar?stock=300308`)).text();
   assert.ok(drawer.includes("社区舆情"), "?stock= 未打开个股舆情抽屉");

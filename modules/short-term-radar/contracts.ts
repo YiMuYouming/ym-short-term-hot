@@ -182,6 +182,11 @@ function ratio(value: number | undefined): number {
   return Math.max(0, Math.min(1, value / 100));
 }
 
+/** `SZ300308` → `SZ`; anything else stays undefined so the code is left bare rather than guessed. */
+function exchangeOfSymbol(symbol: string | undefined): string | undefined {
+  return symbol?.match(/^(SH|SZ|BJ)/i)?.[1]?.toUpperCase();
+}
+
 function num(value: number | null | undefined): number {
   return typeof value === "number" && Number.isFinite(value) ? value : 0;
 }
@@ -257,13 +262,46 @@ export function mapSnapshot(file: RadarSnapshotFile | null | undefined): ShortTe
     if (stock?.code) byCode.set(stock.code, stock);
   }
 
+  // The resonance board holds the top 30, but the theme ladders reach across the whole focus pool
+  // (50). Everything outside the board is described only by its ladder bucket, so collect from all
+  // of them which themes a stock belongs to: without this the tail stocks arrive with no themes at
+  // all, which both drops them from `?theme=` and makes a ladder's summary contradict its cards.
+  const themesByCode = new Map<string, string[]>();
+  for (const theme of file.themeLadders ?? []) {
+    const name = theme?.theme;
+    if (!name) continue;
+    for (const bucket of Object.values(theme.ladders ?? {})) {
+      for (const entry of bucket ?? []) {
+        if (!entry?.code) continue;
+        const list = themesByCode.get(entry.code) ?? [];
+        if (!list.includes(name)) list.push(name);
+        themesByCode.set(entry.code, list);
+      }
+    }
+  }
+
   const ladders = (file.themeLadders ?? []).map((theme) => {
-    // The buckets hold only identity + a few numbers; the full item comes from the resonance board.
+    // The buckets hold only identity + a few numbers; the full item comes from the resonance board
+    // when it is there, and from the bucket (role, themes, exchange) when it is not.
     const ordered: FileStock[] = [];
     const buckets = theme.ladders ?? {};
     for (const role of ROLE_ORDER) {
       for (const entry of buckets[role] ?? []) {
-        if (entry?.code) ordered.push(byCode.get(entry.code) ?? { code: entry.code, name: entry.name, symbol: entry.symbol, boardCount: entry.boardCount, resonanceScore: entry.resonanceScore });
+        if (!entry?.code) continue;
+        const base = byCode.get(entry.code);
+        ordered.push({
+          ...base,
+          code: entry.code,
+          name: base?.name ?? entry.name,
+          symbol: base?.symbol ?? entry.symbol,
+          // The bucket is where the stock's ladder position lives; a board stock carries its own, and
+          // they agree, but the bucket is authoritative for the ladder it is rendered under.
+          exchange: base?.exchange ?? exchangeOfSymbol(entry.symbol),
+          themes: Array.from(new Set([...(base?.themes ?? []), ...(themesByCode.get(entry.code) ?? [])])),
+          roleLabel: base?.roleLabel ?? role,
+          boardCount: base?.boardCount ?? entry.boardCount,
+          resonanceScore: base?.resonanceScore ?? entry.resonanceScore,
+        });
       }
     }
     const stocks = ordered.map(mapStock);

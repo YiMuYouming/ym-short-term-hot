@@ -95,6 +95,41 @@ test("theme, role and nickname queries filter both views", async () => {
   assert.ok(byCode.topResonanceStocks.some((stock) => stock.bareCode === STOCK_CODE));
 });
 
+test("every ladder stock carries its own theme, a qualified code and the role its summary promises", async () => {
+  // The resonance board holds 30 of the 50 focus-pool stocks; the ladders reach the other 20, which
+  // arrive with nothing but their bucket. Without the role, the themes and the exchange carried
+  // through, a ladder's summary said "容量中军 1 只" while its card read 人气热股, `?theme=` dropped
+  // the stock, and `/stock/601127.SH` was a 404 (audit R1, P1-1).
+  const snapshot = JSON.parse((await get("/api/site/radar")).body) as ShortTermRadarSnapshot;
+  const outsideBoard = snapshot.themeLadders.flatMap((ladder) =>
+    ladder.stocks.filter((stock) => !snapshot.topResonanceStocks.some((board) => board.code === stock.code)));
+  assert.ok(outsideBoard.length >= 5, `样本应包含未进共振榜的梯队股，实得 ${outsideBoard.length}`);
+
+  for (const ladder of snapshot.themeLadders) {
+    for (const stock of ladder.stocks) {
+      assert.ok(stock.themes.includes(ladder.theme), `${stock.name} 缺题材 ${ladder.theme}：${JSON.stringify(stock.themes)}`);
+      assert.ok(stock.code.includes("."), `${stock.name} 的 code 缺交易所后缀：${stock.code}`);
+    }
+    if (ladder.summary.includes("容量中军")) {
+      assert.ok(ladder.stocks.some((stock) => stock.role === "容量中军"), `${ladder.theme} 摘要写容量中军却没有该身位的股票：${ladder.summary}`);
+    }
+  }
+
+  // A stock that only exists as a bucket entry is still addressable in all three forms.
+  const tail = outsideBoard[0]!;
+  const detail = JSON.parse((await get(`/api/site/radar/stock/${tail.code}`)).body) as RadarStockDetail;
+  assert.equal(detail.stock.code, tail.code);
+  assert.equal(detail.stock.role, tail.role);
+  assert.ok(detail.stock.themes.length > 0);
+
+  // And a ladder-level theme filter keeps it.
+  const filtered = JSON.parse((await get(`/api/site/radar?theme=${encodeURIComponent(tail.themes[0]!)}`)).body) as ShortTermRadarSnapshot;
+  assert.ok(
+    filtered.themeLadders.some((ladder) => ladder.stocks.some((stock) => stock.code === tail.code)),
+    `${tail.name} 应在 ?theme=${tail.themes[0]} 的结果里`,
+  );
+});
+
 test("one stock answers by bare code, dotted code and symbol; an unknown code is a 404", async () => {
   const byCode = await get(`/api/site/radar/stock/${STOCK_CODE}`);
   assert.equal(byCode.statusCode, 200, byCode.body);

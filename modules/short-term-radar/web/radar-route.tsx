@@ -28,8 +28,22 @@ import {
 
 export { pageHeaders as headers } from "@aihot/web/lib/api.server";
 
+/** The filters the api understands. `view` and `stock` are the page's own state and stay here. */
+const SERVER_FILTERS = ["q", "theme", "role"] as const;
+
 export async function loader({ request }: { request: Request }) {
-  return cachedPage(60, await apiGet<ShortTermRadarSnapshot>("/api/site/radar", { signal: request.signal }));
+  // Filtering happens on the server, not only in the component: React Router inlines the loader's
+  // data into the document, so a link like /radar?q=易中天 must arrive pre-filtered or the unfiltered
+  // payload is what ships to the browser (audit R1, P1-2).
+  const url = new URL(request.url);
+  const filters = new URLSearchParams();
+  for (const key of SERVER_FILTERS) {
+    const value = url.searchParams.get(key);
+    if (value) filters.set(key, value);
+  }
+  const query = filters.toString();
+  const path = query ? `/api/site/radar?${query}` : "/api/site/radar";
+  return cachedPage(60, await apiGet<ShortTermRadarSnapshot>(path, { signal: request.signal }));
 }
 
 export const meta: MetaFunction = () => [
@@ -164,10 +178,11 @@ function StockRow({ stock, rank, onOpen }: { stock: RadarStockItem; rank?: numbe
 
 // ── 视图一：题材主线梯队 ───────────────────────────────────────────────────────
 
-function Ladder({ ladder, query, role, onOpen }: { ladder: RadarThemeLadder; query: string; role: string | null; onOpen: (code: string) => void }) {
+function Ladder({ ladder, query, role, theme, onOpen }: { ladder: RadarThemeLadder; query: string; role: string | null; theme: string | null; onOpen: (code: string) => void }) {
   const stocks = useMemo(
-    () => ladder.stocks.filter((stock) => (!role || stock.role === role) && matchesQuery(stock, query)),
-    [ladder.stocks, query, role],
+    () => ladder.stocks.filter((stock) =>
+      (!theme || stock.themes.some((name) => name.includes(theme))) && (!role || stock.role === role) && matchesQuery(stock, query)),
+    [ladder.stocks, query, role, theme],
   );
   if (!stocks.length) return null;
   return (
@@ -341,10 +356,14 @@ function StockDrawer({ stock, themes, onClose }: { stock: RadarStockItem | null;
 export default function RadarRoute({ loaderData }: { loaderData: { snapshot?: ShortTermRadarSnapshot } & Record<string, unknown> }) {
   const snapshot = (loaderData?.snapshot ?? loaderData) as ShortTermRadarSnapshot;
   const [params, setParams] = useSearchParams();
-  const [query, setQuery] = useState("");
   const view = (params.get("view") === "resonance" ? "resonance" : "ladders") as ViewKey;
   const role = params.get("role");
+  const theme = params.get("theme");
   const openCode = params.get("stock");
+  // The search lives in the URL so a filtered radar can be shared and survives a reload: typing keeps
+  // `?q=` in step, and arriving with `?q=易中天` filters the first paint instead of only after a
+  // keystroke.
+  const query = params.get("q") ?? "";
 
   const setParam = (key: string, value: string | null) => {
     const next = new URLSearchParams(params);
@@ -367,7 +386,8 @@ export default function RadarRoute({ loaderData }: { loaderData: { snapshot?: Sh
     [snapshot, stock],
   );
 
-  const boards = snapshot.topResonanceStocks.filter((item) => (!role || item.role === role) && matchesQuery(item, query));
+  const inTheme = (item: RadarStockItem) => !theme || item.themes.some((name) => name.includes(theme));
+  const boards = snapshot.topResonanceStocks.filter((item) => inTheme(item) && (!role || item.role === role) && matchesQuery(item, query));
   const isEmpty = snapshot.themeLadders.length === 0 && snapshot.topResonanceStocks.length === 0;
 
   return (
@@ -380,6 +400,13 @@ export default function RadarRoute({ loaderData }: { loaderData: { snapshot?: Sh
         <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] text-ink-4">
           <span>{snapshot.generatedAt ? `快照 ${snapshot.generatedAt.slice(0, 16).replace("T", " ")}` : "暂无快照"}</span>
           <span className="num">焦点股池 {snapshot.focusPoolSize} 只</span>
+          {theme && (
+            <span className="inline-flex items-center gap-1">
+              题材
+              <button type="button" onClick={() => setParam("theme", null)} className="text-accent hover:underline">#{theme} ✕</button>
+            </span>
+          )}
+          {query && <span className="inline-flex items-center gap-1">搜索 <b className="text-ink-3">{query}</b></span>}
           {sourceBadges(snapshot).map((badge) => (
             <span key={badge.label} className="inline-flex items-center gap-1">
               {badge.label}
@@ -392,7 +419,7 @@ export default function RadarRoute({ loaderData }: { loaderData: { snapshot?: Sh
       <div className="mb-4 flex flex-wrap items-center gap-2">
         <input
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => setParam("q", event.target.value || null)}
           placeholder="搜代码 / 名称 / 黑话外号（易中天、寒王）"
           aria-label="搜索短线雷达"
           className="h-9 min-w-[220px] flex-1 rounded-full bg-bg-sunk px-3 text-[13px] outline-none ring-1 ring-inset ring-line-soft focus:ring-2 focus:ring-accent"
@@ -444,7 +471,7 @@ export default function RadarRoute({ loaderData }: { loaderData: { snapshot?: Sh
       ) : view === "ladders" ? (
         <div className="space-y-3">
           {snapshot.themeLadders.map((ladder) => (
-            <Ladder key={ladder.theme} ladder={ladder} query={query} role={role} onOpen={(code) => setParam("stock", code)} />
+            <Ladder key={ladder.theme} ladder={ladder} query={query} role={role} theme={theme} onOpen={(code) => setParam("stock", code)} />
           ))}
         </div>
       ) : (

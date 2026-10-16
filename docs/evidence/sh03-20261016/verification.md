@@ -2,20 +2,31 @@
 
 - 工单：`WO-SH03-20261016`（双视图短线雷达模块与端到端联调）
 - 基线提交：`e40875c`（SH-02 R2 复审通过）
-- 交付提交：见 `git log -1`（提交信息 `feat(sh03): add short-term-radar module with dual views and stock drawer`）
-- 验证时间：2026-10-16 17:30~19:10（Asia/Shanghai）
+- 交付提交：`387686a`（首交）→ `834d9c5`（R1 审计记录）→ **R1 返工提交见 `git log -1`**
+- 验证时间：2026-10-16 17:30~19:10（首交）／18:35~19:20（R1 返工）（Asia/Shanghai）
 - 环境：Node v26.11.0（Homebrew）、CPython 3.14.5、PostgreSQL `@embedded-postgres/darwin-arm64` @127.0.0.1:5432
 
-## 0. 结论速览
+## 0. 结论速览（R1 返工后复跑）
 
 | 门禁 | 命令 | 结果 |
 | --- | --- | --- |
-| 1 | `python3 -m unittest discover -s bridge/tests -p "test_*.py"` | **56/56 通过**，exit 0（`bridge-tests.txt`） |
-| 2 | `npm run typecheck` | **exit 0**，七个工程（contracts/backend/api/worker/tests/modules/web）零报错（`typecheck.txt`） |
-| 3 | `npm run build -w @aihot/web` | **exit 0**，`/radar` 打包为 `radar-route-*.js`（`web-build.txt`） |
-| 4a | 模块单测 `modules/short-term-radar/tests/radar.test.ts` | **4/4 通过**，exit 0（`radar-tests.txt`） |
-| 4b | 架构红线 + 引擎回归 + 页面 SSR | **19/19 + 2/2 通过**，exit 0（`node-tests.txt`） |
-| 5 | 全量 `npm test`（干净模板库） | **737 通过 / 16 失败**；失败集与 SH-01 上游基线**完全一致**（14 项环境类），**新增回归 0**（`full-test.log`） |
+| 1 | `npm run typecheck` | **exit 0**，七个工程零报错（`typecheck.txt`） |
+| 2 | `npm run build -w @aihot/web` | **exit 0**，`/radar` 打包为 `radar-route-D9rqjvdd.js`（`web-build.txt`） |
+| 3 | 模块单测 `modules/short-term-radar/tests/radar.test.ts` | **5/5 通过**（新增 1 条梯队一致性回归锁）（`node-tests.txt`） |
+| 4 | 架构红线 `tests/architecture.test.ts` | **8/8 通过**，四条红线逐条绿灯（`node-tests.txt`） |
+| 5 | 页面 SSR `modules/short-term-radar/scripts/radar-page.test.ts` | **2/2 通过**（含 `?q=` 负向断言）（`node-tests.txt`） |
+| — | 首交时的 bridge 单测 / 引擎回归 / 全量差集 | 56/56、19/19、737 通过且新增回归 0（`bridge-tests.txt`、`full-test.log`，本轮未改 Python 侧，故不重跑） |
+
+### R1 返工实测（一次性验收脚本的输出）
+
+```
+?q=易中天          → 中际旭创 true / 宁德时代 false / 33982 bytes
+?theme=消费电子     → 立讯精密 true / 光模块 false / 24292 bytes
+全量页              → 含消费电子 true / 含赛力斯 true
+摘要/身位矛盾梯队数: 0
+消费电子: 立讯精密(容量中军/002475.SZ)
+/stock/601127.SH  → 200 赛力斯 容量中军
+```
 
 架构四条红线逐条通过：`the web reaches the backend only over HTTP`、`every environment variable the code reads is listed in a template`、`every table and column is used by the code that reads and writes the database`、`modules do not import other modules`。
 
@@ -114,3 +125,30 @@ DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node \
 ```
 
 本地访问：`npm run dev:api`（3001）+ `npm run dev:web`（3000）后打开 <http://localhost:3000/radar>。
+
+---
+
+## 8. R1 返工记录（`AUDIT-SH03-20261016-R1`，2026-10-16 18:30 谷米）
+
+### P1-1 梯队尾部队列丢字段（`contracts.ts` 的 `mapSnapshot()`）
+
+焦点股池 50 只、共振榜只有前 30 只，梯队里的第 31~50 名（赛力斯、立讯精密、阳光电源、英维克、完美世界、芒果超媒、兆易创新等 20 只）在 `byCode.get(entry.code)` 未命中时走了 fallback，而 fallback 漏了三个字段：身位（于是「摘要写容量中军 1 只、卡片标人气热股」，6 个梯队自相矛盾）、题材（于是 `?theme=` 把它们过滤成空）、交易所（于是 `stock/601127.SH` 404）。
+
+修法（按审计方案）：先遍历 `file.themeLadders` 汇总 `themesByCode`，再在构造桶内 `FileStock` 时补 `roleLabel: base?.roleLabel ?? role`、`themes`（base 与汇总合并去重）、`exchange`（`base?.exchange ?? entry.symbol?.match(/^(SH|SZ|BJ)/i)`）。
+
+回归锁（`radar.test.ts` 新增第 3 项）：遍历全部梯队断言 `stock.themes.includes(ladder.theme)`、`stock.code` 含 `.`、摘要含「容量中军」时必有该身位股票；并断言「只以桶形式存在的股票」三种写法都能查、`?theme=` 不丢它。修复前后自检：矛盾条目 **27 → 0**。
+
+### P1-2 直链过滤未生效 + 假阳性断言（`radar-route.tsx`）
+
+`query` 初值硬编码 `""`，既不读 `?q=` 也不读 `?theme=`，直链 `/radar?q=易中天` 与 `/radar?theme=光模块` 实际不筛选；原断言 `nickname.includes("易中天")` 因搜索框 placeholder 与全量列表里都含该词而假阳性通过。
+
+修法分两层：
+
+1. **组件层**：`query` 改为派生自 `params.get("q")`，输入框 `onChange` 写回 `?q=`；新增 `theme = params.get("theme")`，在梯队视图（`Ladder` 组件）与共振榜同时生效；页头显示当前题材/搜索并可一键清除。
+2. **loader 层（关键）**：React Router 会把 loader 数据内联进 HTML，只在组件里过滤意味着**未过滤的完整数据仍然发给浏览器**，负向断言依然无法成立。因此 loader 把 `q`/`theme`/`role` 透传给 `/api/site/radar`，让服务端先过滤——直链、分享与刷新得到的是同一份已过滤的数据。
+
+回归锁：`radar-page.test.ts` 补 `assert.ok(!nickname.includes("宁德时代"))`（审计要求的负向断言）与 `?theme=` 的正负向断言。
+
+### 返工中确认的一个事实
+
+R1 报告给的行号与实测一致；两项缺陷都在首交时真实存在（本轮先复现再修：矛盾条目 27、`/stock/601127.SH` 404、`?q=` 不过滤均已实测确认），修复后同样实测确认。

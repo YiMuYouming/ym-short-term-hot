@@ -1,8 +1,4 @@
-=== SH-03 门禁 2：npm run typecheck @ 2026-10-16 18:14:21 CST ===
-（contracts / backend / api / worker / tests / modules / web 七个工程依次 tsc）
-
-> typecheck
-> tsc -p packages/contracts && tsc -p packages/backend && tsc -p apps/api && tsc -p apps/worker && tsc -p tests && tsc -p modules && npm run typecheck -w @aihot/web
+=== R1 返工门禁 1：npm run typecheck @ 2026-10-16 18:38:17 CST ===
 
 
 > typecheck
