@@ -1,0 +1,127 @@
+{
+  "workOrder": "SH-02-20261016",
+  "title": "YM-data-pipeline 桥接与三大短线社区靶向采集",
+  "completedAt": "2026-10-16T15:48:00+08:00",
+  "deliveredBy": "稳米",
+  "git": {
+    "commit": "411d694",
+    "commitMessage": "feat(sh02): build YM-data-pipeline bridge, 3-community collectors, and sentiment filter",
+    "workOrderBaseline": "2d30a64",
+    "upstreamBaseline": "c8704e5313e6b051560365226b3919d7e0ada5ea",
+    "changedFileCount": 32,
+    "changedFiles": [
+      "PROGRESS.md",
+      "bridge/__init__.py",
+      "bridge/collectors/__init__.py",
+      "bridge/collectors/eastmoney_guba.py",
+      "bridge/collectors/taoguba.py",
+      "bridge/collectors/xueqiu.py",
+      "bridge/config.py",
+      "bridge/pipeline_loader.py",
+      "bridge/push_to_aihot.py",
+      "bridge/run_bridge.py",
+      "bridge/schema.py",
+      "bridge/sentiment_engine.py",
+      "bridge/tests/fixtures/guba_articlelist.json",
+      "bridge/tests/fixtures/guba_mobile.html",
+      "bridge/tests/fixtures/pipeline_sample.json",
+      "bridge/tests/fixtures/tgb_getmzh.json",
+      "bridge/tests/fixtures/tgb_jinghua_hot.html",
+      "bridge/tests/fixtures/tgb_jinghua_time.html",
+      "bridge/tests/fixtures/tgb_ticai_ranking.html",
+      "bridge/tests/fixtures/xueqiu_home.html",
+      "bridge/tests/fixtures/xueqiu_hot_statuses.json",
+      "bridge/tests/fixtures/xueqiu_hot_stock.json",
+      "bridge/tests/fixtures/xueqiu_status_alpha.json",
+      "bridge/tests/fixtures/xueqiu_status_time.json",
+      "bridge/tests/test_bridge.py",
+      "docs/evidence/sh02-20261016/bridge-run.txt",
+      "docs/evidence/sh02-20261016/bridge-tests.txt",
+      "docs/evidence/sh02-20261016/git-status.txt",
+      "docs/evidence/sh02-20261016/node-tests.txt",
+      "docs/evidence/sh02-20261016/typecheck.txt",
+      "packages/backend/src/ingest/items.ts",
+      "tests/ingest.test.ts"
+    ]
+  },
+  "scope": {
+    "S1": "packages/backend/src/ingest/items.ts：ItemIn 增加可选 excerpt/bodyText，非空才透传（自动 body_status='ok'）；不传时行为不变；tests/ingest.test.ts 补 1 条单测",
+    "S2": "bridge 包骨架：config.py（路径/信源 id/批量上限/超时）、schema.py（FocusStock/CommunityPost/SentimentSummary/RadarSnapshot/IngestItem 不可变 dataclass）",
+    "S3": "pipeline_loader.py：YM-data-pipeline 公共入口（market_hot_rank ths/dc + market_intraday_state）+ themes.json 合成 Top 50 焦点股池，身位（空间板/20cm弹性/容量中军/首板发酵/人气热股）、黑话索引、StockMatcher 帖子归类",
+    "S4": "sentiment_engine.py：14 条水贴正则、三态情绪（最长匹配去重 + 强度取主类）、语境修正规则表、情绪温度条（三态和为 100）、15m 盖楼流速、跨平台共振分与 platforms_hit",
+    "S5": "collectors/：eastmoney_guba（免 Cookie Articlelist + hot_weight=评论×5+点击×0.1 本地重排 + 移动端正文）、taoguba（getMZh + /jinghua/1-1,1-2 + /ticai/ranking + tgb.json 游资提权）、xueqiu（首页匿名 cookie 预热 + hot_stock + symbol/search/status sort=time|alpha + xueqiu.json 深度作者提权）",
+    "S6": "push_to_aihot.py（四轨分装 + MAX_ITEMS=50 分批 + 快照落盘 + 金标同步）与 run_bridge.py（--offline-fixtures/--live-smoke/--max-stocks/--push/--dry-run/--sync-gold）",
+    "notDone": [
+      "未写 modules/short-term-radar 前端（归属 SH-03）",
+      "未做真实外网采集（仅离线 fixture；在线接口实测受限已如实记录）",
+      "未开启真实推送（默认 dry-run，需 INGEST_TOKEN）",
+      "未改 packages/backend 其他模块"
+    ]
+  },
+  "gates": [
+    {
+      "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\" -v",
+      "exitCode": 0,
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "coverage": [
+        "焦点股合成与身位",
+        "黑话映射（易中天/寒王/宁王）",
+        "14 条水贴正则逐条命中",
+        "三态情绪与语境修正",
+        "15m 流速",
+        "跨平台共振分",
+        "东财/淘股吧/雪球离线解析",
+        "游资与深度作者提权",
+        "双轨分装与分批",
+        "快照结构",
+        "金标同步",
+        "离线不开网"
+      ],
+      "evidence": "bridge-tests.txt"
+    },
+    {
+      "command": "python3 -m bridge.run_bridge --offline-fixtures --sync-gold --dry-run",
+      "exitCode": 0,
+      "result": "生成 .data/short-term-radar-snapshot.json（50 只焦点股 / 18 组题材梯队 / 共振 Top 30）与 .data/gold.jsonl（70 条）；四轨推送计划：pipeline 30、taoguba 5、xueqiu 2、guba 4（均 dry_run）",
+      "evidence": "bridge-run.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "通过",
+      "evidence": "typecheck.txt"
+    },
+    {
+      "command": "node --test tests/ingest.test.ts tests/provenance.test.ts tests/architecture.test.ts",
+      "exitCode": 0,
+      "tests": 21,
+      "failures": 0,
+      "result": "21/21 通过（含新增的 ingest 正文透传单测与 6 项架构门禁）",
+      "evidence": "node-tests.txt"
+    },
+    {
+      "command": "git status --short && git diff --check + 敏感信息自检",
+      "exitCode": 0,
+      "result": "diff --check 无空白错误；无硬编码密钥（INGEST_TOKEN 只从环境/命令行读）；.data/ 已被 .gitignore 忽略",
+      "evidence": "git-status.txt"
+    }
+  ],
+  "environment": {
+    "python": "CPython 3.14.5（/opt/homebrew/bin/python3），零第三方依赖：urllib + html.parser + json + re",
+    "pipeline": "/Users/yimu/Projects/YM_Capital/YM-data-pipeline；实测 market_hot_rank 与 market_intraday_state 在本沙箱返回 status=empty/degraded（StockToday 鉴权 + 外网受限），已如实记入快照 dataQuality 并由题材底座兜底",
+    "database": "postgres://127.0.0.1:5432/ymhot_test（@embedded-postgres/darwin-arm64）"
+  },
+  "findings": [
+    "同一 post_id 会被多只票重复采集（同一帖挂多个吧），原始实现会让热度虚高 → 采集器与离线样本均按票过滤 + 全局去重",
+    "情绪主类若按带符号和比较，『跌停+核按钮+被埋』会被偶然命中的看多词（如『板上』）翻成一致看多 → 改为按绝对强度取主类，并做最长匹配去重（核按钮不再重复计核）",
+    "词典把『出货』等泛词标为无条件生效，实测会把雪球深度长文判成恐慌出逃 → 增加语境门控（GATED_TERMS + CONTEXT_CUES）并留痕；词典本身未改动",
+    "题材梯队排序原按代表股数量，会让低分跟风题材排到当日最强主线前面 → 改为按成员共振分之和排序（SH-03 首屏直接消费）"
+  ],
+  "knownNuances": [
+    "离线 fixture 的时间基准为 2026-10-16 10:30 北京时间，因此端到端演练里 15m 盖楼流速为 0（真实时间已过样本时刻）；单测用固定 now 断言该逻辑",
+    "雪球深度作者名录为 UID 维度，接口返回的 user.id 可能为字符串或数字，已统一按字符串比较",
+    "context_dependent 语境修正规则表（吃面+反包、格局+被埋 等）为本仓工程补充，词典只给了布尔标记；规则集中在 sentiment_engine.CONTEXT_RULES，便于后续按实盘反馈调整"
+  ]
+}
