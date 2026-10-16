@@ -1,0 +1,27 @@
+=== SH-01 precheck 2026-10-16 13:23:44 CST ===
+--- git HEAD ---
+153b4600374601102793e918d019bcd55e1c5bab
+153b460 docs(init): initialize YM-ShortTerm-Hot handoff docs, PROGRESS, and SH-01 work order
+--- upstream baseline (origin/main) ---
+c8704e5313e6b051560365226b3919d7e0ada5ea
+--- git status (should be clean) ---
+?? docs/evidence/
+(clean)
+--- node/npm ---
+v26.11.0
+11.20.0
+--- postgres ---
+Connection to 127.0.0.1 port 5432 [tcp/postgresql] succeeded!
+PG 127.0.0.1:5432 listening
+--- npm ci ---
+completed earlier (npm registry reachable; fsevents optional install-scripts warning only)
+--- npm run typecheck (baseline, unmodified site/ industry/) ---
+
+> typecheck
+> tsc -p packages/contracts && tsc -p packages/backend && tsc -p apps/api && tsc -p apps/worker && tsc -p tests && tsc -p modules && npm run typecheck -w @aihot/web
+
+
+> typecheck
+> react-router typegen && tsc -p .
+
+typecheck exit code: 0

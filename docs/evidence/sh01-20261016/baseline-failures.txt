@@ -1,0 +1,29 @@
+上游基线 c8704e5（未改动）在同样本沙箱环境的 npm test 失败清单
+worktree: /Users/yimu/AgentScratch/workbuddy/ymhot-baseline-wt
+DATABASE_URL=postgres://127.0.0.1:5432/ymhot_base_test，已先 npm run build -w @aihot/web
+运行时间：2026-10-16（Asia/Shanghai）
+
+✖ API error logs keep database codes and frames without row values or query parameters
+✖ API startup is quiet and an unexpected error retains the request, stack and response contract
+✖ MCP normalizes only explicitly configured site and extra host authorities, and keeps an IPv6 site's matching Origin
+✖ OAuth rejects failed exchanges without logging the upstream response text
+✖ SIGKILL after responses are saved but before the business commit reuses all receipts on restart
+✖ a real paired restore opens a feedback screenshot when forwarding is disabled and uploads are absent
+✖ an unreadable upload directory cannot become a successful empty backup
+✖ both attachment roots restore nested paths and bytes, without caches or previous backups
+✖ local retention keeps three dump/archive pairs without deleting source attachments
+✖ missing/empty roots produce an extractable archive: neither
+✖ missing/empty roots produce an extractable archive: uploads+feedback-screenshots
+✖ outbound secure-proxy negotiates HTTP/1.1 and retains TLS identity
+✖ packing retries once and a successful retry preserves the screenshot
+✖ persistent packing failure still sends the database and reports incomplete backup
+
+归因（均为沙箱环境类，非代码缺陷）：
+- backup.test.ts（8 项）：spawnSync/ETIMEDOUT 与 macOS 目录权限语义（chmod 000 目录在本会话仍可读）
+- api-error-logging.test.ts（2 项）：spawnSync node ETIMEDOUT（子进程冷启动超过测试自带 10s 预算）
+- mcp-host.standalone.test.ts（1 项）：10s 超时（依赖本机网络/DNS 行为）
+- oauth（1 项）：上游 fetch failed（沙箱出网被拦）
+- outbound-protocol.standalone.test.ts（1 项）：TypeError: fetch failed（沙箱出网被拦）
+- analyze-kill.test.ts（1 项）：SIGKILL 重启场景 15s 超时（进程调度计时敏感）
+
+这些失败在上游基线同样复现，SH-01 不改动它们、也不通过删改测试绕过。

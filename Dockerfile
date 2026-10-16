@@ -26,5 +26,5 @@ ENV NODE_ENV=production
 COPY --from=build --chown=node:node /app /app
 RUN mkdir -p /data && chown node:node /data
 USER node
-EXPOSE 3000
+EXPOSE 3088
 CMD ["node", "apps/web/server.ts"]

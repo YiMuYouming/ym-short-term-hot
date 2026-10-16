@@ -6,7 +6,9 @@ import { closeDb, sql } from "@aihot/backend/db";
 import { getBoss, stopBoss } from "@aihot/backend/jobs/queue";
 import { checkAlerts, collectFindings } from "@aihot/backend/operations/alerts";
 
-const at = (date: string, time = "10:00") => beijingAt(date, time).getTime();
+// The missing-edition alert fires two hours after the daily edition time (site/site.ts EDITION_TIMES,
+// 08:30 for the A-share pre-market brief), so "now" values sit past 10:30 Beijing time.
+const at = (date: string, time = "10:35") => beijingAt(date, time).getTime();
 const key = (date: string) => `report.daily:${date}`;
 const daily = (keys: string[]) => keys.filter(k => k.startsWith("report.daily"));
 async function report(date: string) {
@@ -30,12 +32,12 @@ test("midnight preserves a missing edition; each date recovers only when its rep
   result = await checkAlerts(at("2026-10-07"));
   assert.deepEqual(daily(result.open).sort(), [key("2026-10-06"), key("2026-10-07")]);
   await report("2026-10-07");
-  result = await checkAlerts(at("2026-10-07", "10:10"));
+  result = await checkAlerts(at("2026-10-07", "10:35"));
   assert.deepEqual(daily(result.sent), [`${key("2026-10-07")}:recovered`]);
   assert.deepEqual(daily(result.open), [key("2026-10-06")]);
   await report("2026-10-06");
-  assert.deepEqual(daily((await checkAlerts(at("2026-10-07", "10:20"))).sent), [`${key("2026-10-06")}:recovered`]);
-  assert.deepEqual(daily((await checkAlerts(at("2026-10-07", "10:30"))).sent), []);
+  assert.deepEqual(daily((await checkAlerts(at("2026-10-07", "10:40"))).sent), [`${key("2026-10-06")}:recovered`]);
+  assert.deepEqual(daily((await checkAlerts(at("2026-10-07", "10:45"))).sent), []);
 });
 
 test("recent gap detection uses report activity and each edition's overdue time", async () => {

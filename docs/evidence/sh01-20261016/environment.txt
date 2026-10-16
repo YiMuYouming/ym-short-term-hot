@@ -1,0 +1,51 @@
+SH-01 环境与基线说明（稳米，2026-10-16）
+==================================================
+
+一、Git 基线核对（开工第一步）
+- 本仓 HEAD：153b4600374601102793e918d019bcd55e1c5bab（docs(init) 交接文档提交）
+- 上游基线：c8704e5313e6b051560365226b3919d7e0ada5ea（origin/main）
+- 开工时 git status 干净（仅后续产生的 docs/evidence/ 未跟踪目录）
+
+二、Node.js
+- package.json engines 要求 node >= 24.11；沙箱托管的 node 为 22.x 不满足。
+- 采用 Homebrew node v26.11.0（/opt/homebrew/bin/node，npm 11.20.0），
+  全程以 PATH="/opt/homebrew/bin:$PATH" 运行 npm/typecheck/test/build。
+
+三、PostgreSQL（ymhot_test）
+- 本机原先没有任何 PostgreSQL；Docker 未运行；brew install 在沙箱内
+  被内层 sandbox-exec 拒绝（sandbox_apply: Operation not permitted）。
+- 解决方案：npm 包 @embedded-postgres/darwin-arm64（自包含通用二进制，
+  arm64 slice，rpath 相对），落盘于：
+  /Users/yimu/AgentScratch/workbuddy/ymhot-pg/
+  - 包：package/native/{bin,lib,share}（initdb / postgres / pg_ctl）
+  - 数据目录：/Users/yimu/AgentScratch/workbuddy/ymhot-pg/data
+    （initdb -U yimu --auth=trust --encoding=UTF8 --locale=C）
+  - 启动：pg_ctl -D data -o "-c listen_addresses=127.0.0.1 -c port=5432" start
+  - 当前以守护进程方式监听 127.0.0.1:5432（仅本机回环，trust 认证，无对外暴露）。
+- 常驻化未完成：~/Library/LaunchAgents/cn.yimu.ymhot.postgresql.plist 已写好
+  （Label cn.yimu.ymhot.postgresql，RunAtLoad+KeepAlive），但 launchctl
+  bootstrap/load 在当前登录会话内恒报 "Bootstrap failed: 5: Input/output error"
+  （与 2026-10-15 记录的 launchd 会话级 EIO 陷阱一致，非沙箱、与 plist 内容无关）。
+  需要用户在自有终端执行一次即可常驻：
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/cn.yimu.ymhot.postgresql.plist
+  或重启登录后自动生效。SH-02/SH-03 开工前需确认该服务在跑。
+
+四、npm ci
+- registry 可达；npm ci 成功（仅有 fsevents 可选 install-scripts 警告，无害）。
+
+五、基线前测（precheck）
+- 未改 site/ industry/ 前：npm run typecheck 通过（exit 0）。
+  完整输出见同目录 precheck.txt。
+- 注意：npm test 依赖 apps/web 构建产物（tests/page-metadata.standalone.test.ts
+  经 apps/web/tests/web-server.ts 启动 web server），未先 build 时该文件会让
+  整个 node --test 进程崩溃、后续文件不执行。因此基线/主仓两次完整跑分均
+  先执行 npm run build -w @aihot/web。
+
+六、上游基线既有失败（与 SH-01 无关，沙箱环境所致）
+- 在同一台机器、同一 node/pg 环境下，以未改动的上游基线 c8704e5 建 worktree
+  （/Users/yimu/AgentScratch/workbuddy/ymhot-baseline-wt，已 npm ci + web build）
+  完整跑了一遍 npm test，失败清单见 baseline-failures.txt（14 项，全部为
+  沙箱环境类：spawn ETIMEDOUT、外部 fetch 被墙、备份目录权限语义、
+  SIGKILL 计时）。
+- SH-01 交付跑分与基线做差集：main-only = 0（新增失败为 0）。
+  基线失败的详细归因见 baseline-failures.txt 内备注。

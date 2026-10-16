@@ -1,6 +1,6 @@
-# docker compose up -d --build     → http://localhost:3000   (the admin is at /admin)
+# docker compose up -d --build     → http://localhost:3088   (the admin is at /admin)
 # docker compose --profile https up -d --build   → HTTPS for SITE_DOMAIN through Caddy
-name: aihot
+name: ym-hot
 
 x-app: &app
   build: .
@@ -73,13 +73,13 @@ services:
     environment:
       NODE_ENV: production
       API_BASE_URL: http://api:3001
-      SITE_URL: ${SITE_URL:-http://localhost:3000}
+      SITE_URL: ${SITE_URL:-http://localhost:3088}
       TRUST_PROXY: ${TRUST_PROXY:-false}
       AIHOT_RELEASE: ${AIHOT_RELEASE:-}
       WEB_HOST: 0.0.0.0
-      WEB_PORT: "3000"
+      WEB_PORT: "3088"
     ports:
-      - "${PORT:-3000}:3000"
+      - "${PORT:-3088}:3088"
     depends_on:
       api:
         condition: service_started

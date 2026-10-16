@@ -1,45 +1,36 @@
 
-【AI 领域翻译规则 — 本平台 100% 是 AI/ML/LLM 行业内容，严格遵守】
+【A 股短线术语规则 — 本平台 100% 是 A 股超短线内容，严格遵守】
 
-1. 歧义默认值：以下词在中文有非 AI 歧义，**一律按 AI 含义翻译**：
-   - LLM = 大语言模型（绝不译"法学硕士"/"Master of Laws"）
-   - Token / tokens = 模型 token（保留英文；绝不译"代币"/"令牌"）
-   - Transformer = Transformer 架构（保留英文；不译"变压器"）
-   - Diffusion = 扩散模型（AI 生成，不是物理扩散）
-   - Agent / Agentic = AI 智能体 / 智能体的（不译"代理人"/"中介"）
-   - Alignment = 对齐（AI 安全语境）
-   - Inference = 推理（模型生成）
-   - Reasoning = 推理（注意：与 inference 都译"推理"，必要时用"链式推理"区分 CoT；reasoning model 指 o1/o3/R1 这类思考型模型）
-   - Embedding = 嵌入向量（也可保留英文）
-   - Distillation = 知识蒸馏
-   - Hallucination = 模型幻觉
-   - Fine-tune / Fine-tuning = 微调
-   - Pretrain / Pretraining = 预训练
-   - Context window = 上下文窗口
-   - Prompt = 提示词
-   - Skill / Skills = 技能（Claude 等 Agent 框架的能力包，不译"特长"）
+1. 歧义默认值：以下词在中文有非交易歧义，**一律按 A 股短线含义处理**：
+   - 涨停 / 跌停 = 涨跌停板（A 股价格限制，不译"stop"以外的任何意）
+   - 炸板 = 涨停后开板（不是"爆炸"）
+   - 封板 = 封住涨停板；封板时间 = 当日封住涨停的时点
+   - 核按钮 = 竞价或盘中恐慌砸盘（社区行话，保留不译）
+   - 弱转强 = 竞价或分时由弱转强的经典战法表述，保留不译
+   - 反包 = 断板后重新涨停，保留不译
+   - 接力 / 卡位 / 挡刀 = 短线博弈行话，保留不译
+   - 空间板 = 市场连板高度最高的标的，保留不译
+   - 中军 = 板块内容量核心票，保留不译
+   - 首板 / 连板 = 第一个涨停板 / 连续涨停板，保留不译
+   - 主线 / 支线 = 有板块效应的题材 / 无板块效应的个股行情，保留不译
+   - 正宗 = 业务与题材的真实对应关系（"正宗性"），保留不译
 
-2. 以下专有名词**一律保留英文原文**，不翻译不加中文括注：
-   - AI 公司：OpenAI / Anthropic / Google DeepMind / xAI / Meta AI / Mistral / DeepSeek / Cohere / HuggingFace（HF）/ Runway / ElevenLabs / Suno / Pika / Midjourney / Perplexity
-   - 模型族（举例 + 通用规则）：GPT / Claude / Gemini / Llama / Qwen / Grok / o 系列 / DeepSeek / Mistral / Mixtral / Phi / Sora / Veo / Imagen
-     **规则**：任何大模型族名、产品代号一律保留英文
-   - 模型版本号（举例 + 通用规则）：GPT-5 / Claude 4.7 / Claude Sonnet 4.6 / Llama 4 / Gemini 3 / o3 / o4 / DeepSeek-V4 / Qwen3.7
-     **规则**：版本号一字不改（包括字母数字后缀如 4o / 4.7 / 405B / V4 / R1），绝不"翻译性扩写"（不要把 "405B" 译成 "4050 亿"，不要把 "V4" 译成 "第 4 代"）
-   - 技术缩写（举例 + 通用规则）：LLM / RAG / RLHF / DPO / LoRA / QLoRA / PEFT / MoE / CoT / ReAct / KV cache / SOTA / AGI / MCP / ADK / NPU / GPU / TPU
-     **规则**：任何 2-5 字母的全大写缩写，默认按 AI/ML 含义保留英文
-   - 评测基准（举例 + 通用规则）：MMLU / GPQA / HumanEval / SWE-bench / SWE-bench Verified / AIME / HLE / ARC-AGI / ARC-AGI 2 / MT-Bench / Chatbot Arena / Aider Polyglot / LiveCodeBench
-     **规则**：以 -bench / -eval 结尾或全大写的评测名一律保留英文
-   - AI 工具/产品：Cursor / Copilot / Codex / Aider / Devin / Cline / Claude Code / Windsurf / Zed / v0 / Bolt / Lovable / Replit Agent
-   - Agent 框架：LangChain / LangGraph / LlamaIndex / CrewAI / AutoGen / Pydantic AI / Vercel AI SDK / DSPy
-   - 推理/部署：Ollama / vLLM / SGLang / TensorRT / Triton / CUDA / ROCm
-   - 通用技术：API / SDK / CLI / IDE / SaaS / CDN / SSO / OAuth / JWT / WebSocket / SSE / gRPC
+2. 以下缩写与行话**一律保留英文或原样**，不翻译不加中文括注：
+   - 交易制度：T+1（不译"隔日交易"）、20cm / 10cm（创业板科创板 20% 涨跌幅、主板 10%，不译"百分之二十"）、ST（不译"特别处理"）、ETF、IPO、PE、PB、ROE
+   - 社区与数据平台：淘股吧（TGB）、雪球、东方财富股吧（东财股吧）、开盘啦（KPL）、财联社（CLS）、同花顺（THS）、选股宝
+   - 交易所与监管：上交所、深交所、北交所、证监会、上证e互动、深证易互动
+   - 席位与资金：龙虎榜、机构专用、知名游资席位、拉萨军团（如原文使用）、北向资金、融资融券（两融）
+   - 数据字段：ths_hot、dc_hot、kpl_list、limit_step、limit_list_ths、market_intraday_state（SH-02 管道字段名，照原样）
 
-3. 中国厂商**优先用官方中文品牌名**（首次出现可双标"千问（Qwen3）"，后续选一种保持一致）：
-   - 千问（Qwen）/ 文心一言 / 智谱（GLM）/ 月之暗面（Kimi）/ 深度求索（DeepSeek）/ 阶跃星辰（Step）/ 零一万物（Yi）/ 百川 / 豆包（字节）/ 混元（腾讯）/ 可灵（Kling，快手）/ 即梦（Jimeng，字节）/ MiniMax（不译）/ 美团 LongCat / 昆仑万维 Skywork / 面壁 MiniCPM / 华为昇腾 / 寒武纪
+3. 个股与公司名称处理：
+   - A 股上市公司名称、简称、代码照原文写（如"中际旭创""寒武纪""XX科技 300XXX"），代码保留六位数字格式
+   - 首次出现可双标"贵州茅台（600519）"，后续选一种保持一致
+   - 游资、大V、博主昵称照原文，不翻译不改写
 
-4. 代码 / 命令 / URL / 数字单位 **一字不改**保留：
-   - 反引号代码 `code` 不翻译
-   - 命令如 /code-review、pip install、npm run 不译（不要译"代码审查"）
-   - URL 原样
-   - 数字+单位：8k context / 175B params / 3.5x speedup / $3 per M tokens / 99.9%
-   - 金额、参数量、比例、区间必须保留原文的阿拉伯数字和单位；不要把 $10B-$100B 改写成“数百亿至数千亿美元”等中文数量词
+4. 数字 / 单位 / 时间 **一字不改**保留：
+   - 金额与涨幅：3.2 亿元、+9.98%、20cm 涨停、五连板、封单 1.2 亿
+   - 比例与倍数：换手率 18%、放量 2.3 倍、偏离值 30%
+   - 时间：09:25 集合竞价、14:36 封板、T 日、T+1 日（保留交易日表述，不换算成日历日）
+   - 不要把"3.2 亿"改写成"三亿二千万"，不要把"20cm"改写成"20%"
+
+5. 社区原话引用：股吧、淘股吧、雪球的评论与帖子在引用时保留原始口语（"明天弱转强""核按钮准备好了"），不要改写成书面语；情绪词（亢奋、恐慌、分歧、一致）按原文强度使用，不放大不淡化。

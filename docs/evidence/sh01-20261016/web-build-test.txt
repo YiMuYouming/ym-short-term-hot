@@ -1,0 +1,80 @@
+=== 门禁 3 说明（2026-10-16 15:06:31 CST）===
+
+[1] npm run build -w @aihot/web 的重跑被宿主安全删除守卫拦截（非代码错误）：
+    Error: [safe-delete][SAFE_DELETE_BULK_CONFIRM_REQUIRED] {"count":70,"threshold":50,"scope":"turn","targets":[".../apps/web/build"],"targetCount":1}
+    原因：react-router build 先整体清空 apps/web/build（70 个文件），超过单轮 50 个的批量删除阈值。
+    处理：未删除任何文件；采用同一份源码在 14:00 已成功产出的构建产物继续跑测试。
+
+[2] 构建产物与当前源码一致性核对：
+    - 源码最后修改：site/site.ts 13:26、industry/taxonomy.ts 13:33、industry/topics.json 13:33、industry/sources.json 13:35、industry/prompts/*.md 均早于 13:52；
+    - 交付前最后一次提交 4b7ab98 只改 tests/ 与 apps/web/tests/（不参与 web 构建）；
+    - 产物 apps/web/build 生成于 14:00，内容含新站名 YM-HOT 与新分类键 theme-catalyst。
+
+[3] node --test --test-concurrency=1 apps/web/tests/*.test.ts（串行：默认并发下多个文件同时起 SSR 服务与浏览器会超出 web-server.ts 内置的 15s 启动预算，表现为偶发全文件失败；串行下稳定）
+    前置补齐：Playwright 1.61.1 所需浏览器（chromium/webkit）本机缺失，已 npx playwright install 安装后通过。
+
+---- 完整测试输出 ----
+✔ admin HTML and navigation begin before delayed badges while remaining private (3087.571917ms)
+✔ admin streaming still verifies identity before returning the page (4.668584ms)
+✔ both admin navigations render before badges and update them after arriving (1415.767917ms)
+✔ hovering private navigation does not repeat the page's reads before clicking (616.643417ms)
+✔ admin numeric formatting keeps existing missing-value and rounding behavior (1.796ms)
+✔ a wrapping outline settles with classic scrollbars at a limited viewport height (3718.737625ms)
+✔ public route subsets produce the same complete navigation data; filters still differ (2390.5875ms)
+✔ navigation streams are plain text for download managers, including errors (5.983583ms)
+✔ HTML and navigation share freshness; cookies do not personalize public results (22.904458ms)
+✔ missing routes cannot be hidden by a root-only request; errors and redirects stay uncached (8.604917ms)
+✔ admin data and actions never become public cache entries (2.293167ms)
+✔ browser freshness shares the selected deadline, including slow sibling loaders (1926.530791ms)
+✔ a shared cache may keep an item page longer than browsers (3.156083ms)
+✔ a page without a loader still answers navigation with an empty result (4.487208ms)
+✔ browser caching preserves noindex and private sign-in responses (12.724667ms)
+✔ a visitor cannot name its own address to the api without a trusted proxy in front (1.98575ms)
+✔ import keeps bookmarks with invalid dates and persists displayable replacements (17.067459ms)
+✔ stored bookmarks with damaged dates remain readable, exportable and removable (6.506791ms)
+✔ valid dates are preserved and an import cannot replace an existing bookmark (6.150292ms)
+✔ a cached tab merges newer saved bookmarks and read marks before writing (6.129916ms)
+✔ failed bookmark writes and damaged existing data do not report a successful toggle (5.947083ms)
+✔ a link to the site's own address becomes an in-site path (0.854375ms)
+✔ any other address opens in a new tab (0.082958ms)
+✔ Chromium: native video waits for interaction, selects a supported source, plays and pauses (4342.65975ms)
+✔ WebKit: native video waits for interaction, selects a supported source, plays and pauses (5286.509083ms)
+✔ SSR list and visited query variants return offline without another read (5607.121584ms)
+✔ hover still fetches article data, touches that move do not, and failed prefetch does not replace the current page (1152.419334ms)
+✔ SSR all-pages and report kinds return offline with their own content (570.903833ms)
+✔ intent on a selected link preserves visited data and the next revisit starts no data request (807.650291ms)
+✔ a revisit never renews the original deadline; an expired read shows an error and a reload asks again (585.125042ms)
+✔ SSR freshness spent in an upstream cache is not renewed by HTML hydration (423.022292ms)
+✔ Agent tabs finish offline with matching canonical; invalid direct tabs and anchored links keep a panel (588.90525ms)
+✔ phone suggestions load only on opening, use one small read, retry failures and update on reopening (582.813417ms)
+✔ reader enhancements wait for visible code and update only the picture that loaded (983.202042ms)
+✔ deep reading returns to its anchor, including folded dates (1765.966292ms)
+✔ the rss panel exposes all report entry points (2683.051416ms)
+✔ the api panel exposes all report entry points (15.674042ms)
+✔ the mcp panel exposes all report entry points (10.048333ms)
+✔ the daily masthead numbers the newest of 405 issues 405, not the navigation's 400 (2890.288833ms)
+✔ the oldest daily issue, outside the navigation, keeps its number (14.762458ms)
+✔ the daily calendar labels this issue with its own number and makes up none for others (0.582666ms)
+✔ the weekly masthead numbers the newest of 405 issues 405, not the navigation's 400 (49.428709ms)
+✔ the oldest weekly issue, outside the navigation, keeps its number (39.396583ms)
+✔ the weekly calendar labels this issue with its own number and makes up none for others (1.001125ms)
+✔ the monthly masthead numbers the newest of 405 issues 405, not the navigation's 400 (15.877875ms)
+✔ the oldest monthly issue, outside the navigation, keeps its number (15.513417ms)
+✔ the monthly calendar labels this issue with its own number and makes up none for others (0.388042ms)
+✔ the daily archive counts every issue, as the masthead numbers them (19.620709ms)
+✔ origin-form slashes keep the router's homepage and unknown-route semantics (2839.95025ms)
+✔ history cache keeps the last anchor and survives eviction, expiry and storage denial (0.781083ms)
+✔ an all-read page keeps paging, then hides the read cards and shows the unread one (2920.912125ms)
+✔ a page that fails to load offers a retry that keeps the filter (429.776417ms)
+✔ returning to the list keeps the filter and finds the unread report again (696.401625ms)
+✔ a group stays while any selected report in it is unread, and goes once all are read (267.431625ms)
+✔ with everything read and no more pages, the filter says so instead of looking empty (278.803084ms)
+✔ all-read pages stop at the automatic bound and can continue manually without changing local records (426.040084ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53600.962875
