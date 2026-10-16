@@ -1,74 +1,63 @@
-# SH-02 阶段独立审计报告（谷米 · 第一次审计）
+# SH-02 阶段独立审计报告（谷米 · 第一次审计 + 第二次复审结项）
+
+- **当前结论**：✅ **PASS（第二次复审通过，4 项缺陷全部清零，准予 `SH-02` 结项并签发 `SH-03` 开工单）**
+- **复审单号**：`AUDIT-SH02-20261016-R2`
+- **复审提交**：`8991289`（代码修补） / `0fb7354`（证据与进度记录）
+- **复审时间**：2026-10-16 17:14 CST
+- **审计人**：谷米（规划与审查 Agent）
+- **实施人**：稳米（实施 Agent）
+
+---
+
+## 一、 第二次复审结论（`AUDIT-SH02-20261016-R2` · PASS）
+
+谷米对稳米返工提交 `8991289` / `0fb7354` 进行了逐行代码审查与独立命令复测，第一次审计（`R1`）指出的 **2 个 P0 阻断级跨语言契约缺陷 + 2 个 P1 缺陷已 100% 闭环清零**：
+
+### 1. 4 项缺陷修复逐一核验
+
+| 缺陷编号 | 返工前问题 | 稳米修复实现 | 谷米独立复核结果 |
+| --- | --- | --- | --- |
+| **P0-1** | `pipeline_report_item` 使用 `ymhot://radar/stock/{symbol}`，被后端 `normalizeUrl()` 拒绝返回 `null`，30 条战报 `created: 0` 全部静默丢弃 | [`bridge/push_to_aihot.py`](../../../bridge/push_to_aihot.py#L22-L99) 改为 `https://quote.eastmoney.com/{symbol.lower()}.html?date={trade_date}`；`date` 不在后端 `TRACKING_PARAMS` 剥离列表内，既保留交易日粒度又支持同日 15m 重推走 `reviseMaterial()` 原地修订 | ✅ **PASS**：`normalizeUrl()` 100% 放行，真实入库 `planned=30, created=30` |
+| **P0-2** | `pipeline_report_item` 与 `community_item` 漏传 `published_at`，导致后端 `decideTimeline()` 将 100% 条目判为 `backfill=true`（`unknown-publication-time`）且 `isHistorical()===true` | [`bridge/push_to_aihot.py`](../../../bridge/push_to_aihot.py#L75-L185) 统一生成批次基准时间 `batch_time`，战报显式传 `published_at=batch_time`，社区帖传 `published_at=post.published_at or fallback_published_at` | ✅ **PASS**：四轨 41 条 payload 全部带合法 ISO 时间，入库后 `backfill=0, undated=0`，`external-eastmoney-guba` 的 `settleNonEditorial()` 实测返回 `{"group": true}` |
+| **P1-3** | [`bridge/collectors/taoguba.py`](../../../bridge/collectors/taoguba.py) 解析 `"%m-%d %H:%M"` 时默认落到 `1900` 年，且触发 Python 3.12+ 无年份 `strptime` 弃用警告 | 改用显式正则 `_YEARLESS_TIME` 搭配 `_fill_year()` 按基准年份补齐（跨年边界若拼出时间晚于基准超过 1 天则自动退 1 年） | ✅ **PASS**：`"10-16 10:05"` 稳定解析为 `2026-10-16T10:05:00+08:00`，且消除 Python 3.15 弃用隐患 |
+| **P1-4** | 缺少 Python → TS `ingestItems()` 跨语言契约测试；`.gitignore` 未忽略 `__pycache__/` | 补齐 `.gitignore`；在 [`bridge/tests/test_bridge.py`](../../../bridge/tests/test_bridge.py#L438-L492) 新增 5 项契约单测；在 [`tests/ingest.test.ts`](../../../tests/ingest.test.ts#L172-L250) 新增真实四轨入库与 `settleNonEditorial` 断言；新增 [`scripts/verify-bridge-contract.ts`](../../../scripts/verify-bridge-contract.ts) 一次性干净库端到端校验脚本 | ✅ **PASS**：`git status --short` 干净无残留；56 项 Python 单测 + 22 项 Node 单测 + 跨语言管道实测全部绿灯 |
+
+### 2. 谷米独立执行的验证命令与实测输出
+
+1. **Python 桥接与采集单测套件（56 项）**：
+   ```bash
+   python3 -m unittest discover -s bridge/tests -p "test_*.py" -v
+   # Ran 56 tests in 0.136s — OK
+   ```
+2. **全仓 TypeScript 类型检查**：
+   ```bash
+   PATH="/opt/homebrew/bin:$PATH" npm run typecheck
+   # Exit 0 (packages/contracts, packages/backend, modules, apps/web 全部零报错)
+   ```
+3. **Node 后端核心测试（`ingest` / `provenance` / `architecture`）**：
+   ```bash
+   PATH="/opt/homebrew/bin:$PATH" DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test \
+     node --test --test-concurrency=1 --test-global-setup=tests/databases.ts --import ./tests/databases.ts \
+     tests/ingest.test.ts tests/provenance.test.ts tests/architecture.test.ts
+   # tests 22 | pass 22 | fail 0
+   ```
+4. **Python `run_bridge` 真实 Payload 导出 → TypeScript `ingestItems()` + `settleNonEditorial()` 端到端对账**：
+   ```bash
+   python3 -m bridge.run_bridge --offline-fixtures --dry-run --dump-payloads /tmp/bridge-payloads.json && \
+   PATH="/opt/homebrew/bin:$PATH" DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test \
+     node --import ./tests/databases.ts scripts/verify-bridge-contract.ts /tmp/bridge-payloads.json
+   ```
+   - `external-ym-pipeline (editorial)`: `{"planned":30,"created":30,"backfill":0,"undated":0,"bodyChars":173}`
+   - `external-taoguba-hot (editorial)`: `{"planned":5,"created":5,"backfill":0,"undated":0,"bodyChars":10}`
+   - `external-xueqiu-hot (editorial)`: `{"planned":2,"created":2,"backfill":0,"undated":0,"bodyChars":42}`
+   - `external-eastmoney-guba (hot_signal)`: `{"planned":4,"created":4,"backfill":0,"undated":0,"settleNonEditorial":{"group":true}}`
+   - `contract verified: 41 items ingested across 4 tracks, 0 backfill, hot_signal settles to group=true`
+
+---
+
+## 二、 第一次审计历史记录归档（`AUDIT-SH02-20261016-R1` · 已由 `8991289` 修复闭环）
 
 - **审计单号**：`AUDIT-SH02-20261016-R1`
 - **被审提交**：`411d694`（代码） / `57c44ad`（证据清单）
-- **审计人**：谷米（规划与审查 Agent）
-- **实施人**：稳米（实施 Agent）
 - **审计时间**：2026-10-16 16:03 CST
-- **审计结论**：❌ **REJECT / 需返工修补（发现 2 个跨语言契约阻断级 P0 缺陷 + 2 个 P1 缺陷，修完再放行 `SH-03`）**
-
----
-
-## 一、 亮点肯定（保留，无需重写）
-
-1. **Python 架构与算法质量高**：
-   - `bridge/pipeline_loader.py`（焦点股池合成、28 题材与“易中天/寒王/宁王”黑话双向索引、`StockMatcher`）、`bridge/sentiment_engine.py`（14 条反水贴正则、最长匹配去重、绝对强度判主类、`GATED_TERMS` 防止雪球长文“出货”误判、`CONTEXT_RULES` 语境修正）、三大社区采集器及 `.data/short-term-radar-snapshot.json` 生成逻辑非常扎实；
-   - 51 项 Python 离线单测全部通过（0.117s），`packages/backend/src/ingest/items.ts` 的 `bodyText`/`excerpt` 透传也已实现。
-
----
-
-## 二、 必须返工修补的 4 个缺陷（根因与定位）
-
-谷米在将 `bridge/push_to_aihot.py` 产出的真实 Payload 与 TypeScript 后端 `packages/backend/src/ingest/items.ts`、`packages/backend/src/lib/url.ts`、`packages/backend/src/content/materials.ts` 做跨语言契约对账时，抓出以下 **静默丢数/变质** 缺陷：
-
-### 🔴 [P0 阻断缺陷 1] `pipeline_report_item` 使用 `ymhot://` 协议，被后端 `normalizeUrl()` 100% 静默丢弃（`created: 0`）
-- **问题位置**：[`bridge/push_to_aihot.py`](../../../bridge/push_to_aihot.py#L77) 第 77 行：
-  ```python
-  url=f"ymhot://radar/stock/{stock.symbol}",
-  ```
-- **后端契约冲突**：
-  - 后端 [`packages/backend/src/ingest/items.ts`](../../../packages/backend/src/ingest/items.ts#L56-L57) 第 56–57 行执行：
-    `const url = normalizeUrl(rawUrl); if (!url || seen.has(url)) continue;`
-  - 而 [`packages/backend/src/lib/url.ts`](../../../packages/backend/src/lib/url.ts#L15) 第 15 行强制校验：
-    `if (u.protocol !== "http:" && u.protocol !== "https:") return null;`
-  - 谷米实测：`normalizeUrl("ymhot://radar/stock/SZ300308")` 返回 **`null`**！这意味着 `external-ym-pipeline` 轨计划推送的 30 条焦点股战报在真实推送时会 **100% 被静默跳过（`created: 0`），一条都进不了数据库**！
-- **修复要求**：
-  - 将 `pipeline_report_item` 的 `url` 改为合法的 `https://` 地址，并带上交易日或批次日期参数（注意：参数名不能用 `from`/`source`/`ref` 等会被 `TRACKING_PARAMS` 剥除的词，可用 `date=YYYY-MM-DD`），例如：
-    `https://quote.eastmoney.com/{stock.symbol.lower()}.html?date={trade_date}`
-    这样既 100% 通过 `normalizeUrl()`，读者在前端点击战报卡片原文链接时还能直接打开该股行情页。
-
----
-
-### 🔴 [P0 阻断缺陷 2] `pipeline_report_item` 与 `community_item` 均漏传 `published_at`，导致 100% 推送条目沦为 `backfill=true`（历史回填），不建事件、不计热度
-- **问题位置**：[`bridge/push_to_aihot.py`](../../../bridge/push_to_aihot.py#L74-L123) 第 74–93 行及第 104–123 行：
-  - `pipeline_report_item(...)` 返回 `IngestItem` 时未传 `published_at`（为 `None`）；
-  - `community_item(...)` 返回 `IngestItem` 时**也漏传了 `published_at=post.published_at`**（尽管 `CommunityPost.published_at` 已被采集器解析出来！）。
-- **后端契约冲突**：
-  - 后端 [`packages/backend/src/content/materials.ts`](../../../packages/backend/src/content/materials.ts#L80-L118) 的 `decideTimeline()` 规定：只要 `publishedAt` 为 `null`，一律标为 `backfillReason = "unknown-publication-time"`、`backfill = true`，且 `isHistorical()` 返回 `true`！
-  - 后果：
-    1. `external-eastmoney-guba`（`hot_signal` 轨）在 `settleNonEditorial()`（`packages/backend/src/jobs/content.ts` 第 99 行 `row.participation_mode === "hot_signal" && !isHistorical(row)`）中全部返回 `{ group: false }`，**所有股吧脉冲帖全部被丢弃，无法为事件贡献任何热度**！
-    2. 三条 `editorial` 轨（管道战报、淘股吧、雪球）全部被当成历史旧闻（`backfill = true`），**不创立新事件、不进今日热榜、不进盘前内参日报**！
-- **修复要求**：
-  - `pipeline_report_item(stock, summary, published_at=...)` 必须传入当前采集时间 ISO 字符串（如 `now_beijing().isoformat()` 或样本基准时间）；
-  - `community_item(post, source_id, with_body, fallback_published_at=...)` 必须传入 `published_at=post.published_at or fallback_published_at`，确保送到 `/api/ingest/items` 的每一条 item 都带有合法的 `publishedAt`。
-
----
-
-### 🟠 [P1 缺陷 3] `bridge/collectors/taoguba.py` 的 `_normalize_time()` 解析 `"%m-%d %H:%M"` 时年份变成 `1900` 年
-- **问题位置**：[`bridge/collectors/taoguba.py`](../../../bridge/collectors/taoguba.py#L272-L275) 第 272–275 行：
-  ```python
-  for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%m-%d %H:%M", "%Y/%m/%d %H:%M"):
-      parsed = datetime.strptime(text, fmt)
-  ```
-- **根因**：Python 的 `datetime.strptime("10-16 10:05", "%m-%d %H:%M")` 默认 `year = 1900`（产出 `1900-10-16T10:05:00+08:00`）。送到后端后因距今超过 48 小时（`STALE_ON_DISCOVERY_MS`）会被直接打成 `stale-on-discovery` 历史回填。
-- **修复要求**：当 `fmt == "%m-%d %H:%M"` 时，使用基准年份（默认 `now_beijing().year`，若拼出时间比当前晚超过 1 天则 `year - 1`）替换 `1900` 年，并在 `bridge/tests/test_bridge.py` 中补 1 条针对 `"10-16 10:05"` 的单测断言。
-
----
-
-### 🟠 [P1 缺陷 4] 补齐 Python → TypeScript `ingestItems()` 真实契约联调测试
-- **修复要求**：
-  1. 在 `bridge/tests/test_bridge.py` 中断言：`build_push_plan` 产出的四条轨道所有 `IngestItem.to_payload()`，其 `url` 必须以 `https://` 开头，且 `publishedAt` 必须非空、年份 $\ge 2026$；
-  2. 在 `tests/ingest.test.ts` 中补 1 条契约测试：用与 `bridge` 四轨一致的 payload（含 `https://quote.eastmoney.com/sz300308.html?date=2026-10-16`、`publishedAt: new Date().toISOString()`、`bodyText` 等）调用 `ingestItems()`，断言：
-     - `created === 1`；
-     - 入库行 `backfill === false` 且 `published_at IS NOT NULL`；
-     - `hot_signal` 信源入库后调用 `settleNonEditorial()` 返回 `{ group: true }`（证明真正能进事件热度归组）。
+- **当时结论**：❌ REJECT / 需返工修补（发现 P0-1 `ymhot://` URL 被 `normalizeUrl()` 丢弃、P0-2 漏传 `published_at` 致 100% 沦为 `backfill=true`、P1-3 淘股吧 `%m-%d %H:%M` 年份落回 `1900`、P1-4 缺跨语言契约单测与 `.gitignore` 规则）
