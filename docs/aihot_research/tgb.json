@@ -1,0 +1,444 @@
+[
+ {
+  "nickname": "炒股养家",
+  "user_id": "134434",
+  "homepage": "https://www.tgb.cn/blog/134434",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "情绪/交易心法(历史)"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页精华《养家心法论股市》(2012)；近年无新主帖（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "赵老哥",
+  "user_id": "154034",
+  "homepage": "https://www.tgb.cn/blog/154034",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "游资传奇(历史)"
+  ],
+  "style_status": "部分核实",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页精华《八年一万倍》(2015)；之后无新主帖，风格标签依外部口碑（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "作手新一",
+  "user_id": "827264",
+  "homepage": "https://www.tgb.cn/blog/827264",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "龙虎榜游资(历史)"
+  ],
+  "style_status": "部分核实",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页《第一次——龙虎榜买一》(2017)；最后主帖2017；首阴反包等标签未佐证，已删除（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "职业炒手",
+  "user_id": "4223",
+  "homepage": "https://www.tgb.cn/blog/4223",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "社区老ID/转载"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "近年主帖多为转载/社区话题(2023)（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "柏拉爱空",
+  "user_id": "252069",
+  "homepage": "https://www.tgb.cn/blog/252069",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "每日复盘",
+   "板块轮动"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "每日短复盘：10月15日众生皆苦、AI漫剧持续强势等（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "十万起家",
+  "user_id": "138280",
+  "homepage": "https://www.tgb.cn/blog/138280",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "盘中情绪观察"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "每日多帖盘口/竞价观察（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "龙飞虎",
+  "user_id": "103830",
+  "homepage": "https://www.tgb.cn/blog/103830",
+  "source": "tgb.cn 首页底部名人链接(taoguba.com.cn/blog/<id>) 实测",
+  "style_tags": [
+   "历史账号(套利)"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "淘股吧官方首页列为社区名人，短线圈公认的历史标杆，帖子/语录常被复盘引用",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页《低风险套利模式之600991》(2011)，已不活跃（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "延边刺客",
+  "user_id": "5894557",
+  "homepage": "https://www.tgb.cn/blog/5894557",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "每日复盘/实盘(高人气)"
+  ],
+  "style_status": "已核实(活跃度)；具体战法待核实",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "每日精华帖以日期命名(1015/1014…)，单帖浏览8万~15万（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "玫瑰抓龙头",
+  "user_id": "7826561",
+  "homepage": "https://www.tgb.cn/blog/7826561",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "龙头战法",
+   "连板空间龙接力",
+   "情绪周期"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "10.12复盘:新华继续加速晋级十板；系列《龙头战法第八课:龙头连板换手板》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "作手阿意",
+  "user_id": "13126346",
+  "homepage": "https://www.tgb.cn/blog/13126346",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "情绪周期推演",
+   "老龙反抽"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "系列《情绪流选手教你看盘》:定义周期、老龙反抽玩法（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "南山游龙",
+  "user_id": "8919260",
+  "homepage": "https://www.tgb.cn/blog/8919260",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "大盘/情绪周期",
+   "退潮规避"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《退潮三部曲》、弱势混沌期低位试错（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "zarili",
+  "user_id": "2577911",
+  "homepage": "https://www.tgb.cn/blog/2577911",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "周期节点",
+   "手动量化"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《分享一些手动量化的内容》、震荡磨底试错（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "杭城小七哥",
+  "user_id": "15145153",
+  "homepage": "https://www.tgb.cn/blog/15145153",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "情绪盘眼"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "小七哥每日复盘：盘眼思维（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "战神只做龙头",
+  "user_id": "13110396",
+  "homepage": "https://www.tgb.cn/blog/13110396",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "最强板块跟随",
+   "1进2"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《1进2就解锁市场最高楼的审美》；帖子带推广性质（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "小土堆爆金币",
+  "user_id": "9259508",
+  "homepage": "https://www.tgb.cn/blog/9259508",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "结构底/反预期",
+   "情绪载体二分套利"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "土帅训练营：结构底、识别反预期、二分套利情绪载体；带训练营推广性质（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "ttt小韭菜",
+  "user_id": "11157763",
+  "homepage": "https://www.tgb.cn/blog/11157763",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [
+   "每日复盘"
+  ],
+  "style_status": "已核实(活跃度)；战法待核实",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "按日期发帖(1014/1013…)（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "骚年凌云志",
+  "user_id": "8704352",
+  "homepage": "https://www.tgb.cn/blog/8704352",
+  "source": "tgb.cn 首页「本周上升」榜 实测抓取 2026-10-16",
+  "style_tags": [],
+  "style_status": "待核实",
+  "why_watch": "当前处于淘股吧首页『本周上升』榜，近期关注度增长最快",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页未解析出帖子列表（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "小宝1105",
+  "user_id": "9239701",
+  "homepage": "https://www.tgb.cn/blog/9239701",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "大盘见底判断",
+   "硬科技共振"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "10.15护盘的底能成为铁底吗？等，单帖浏览2~4万（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "酒馆老李",
+  "user_id": "15114043",
+  "homepage": "https://www.tgb.cn/blog/15114043",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "首板挖掘",
+   "低位新龙(三板内)"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《从首板就发掘九阳这类龙头》《想抓三板以内的低位新龙》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "朱雀路作手",
+  "user_id": "7105646",
+  "homepage": "https://www.tgb.cn/blog/7105646",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "连板接力",
+   "1进2"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《缩量…接力的天堂来了》《今天到了关注一进二的节点》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "主升龙头空空龙",
+  "user_id": "13186975",
+  "homepage": "https://www.tgb.cn/blog/13186975",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "情绪周期",
+   "炸板率/情绪先锋"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "复盘提到情绪盟主、炸板率、情绪先锋金健（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "冰点破局人ViTa",
+  "user_id": "13899761",
+  "homepage": "https://www.tgb.cn/blog/13899761",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "情绪周期(新周期确认)",
+   "龙空龙"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《以情绪为发令枪的三步确认法》《龙空龙关键时间窗口》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "连板龙头作手",
+  "user_id": "13987504",
+  "homepage": "https://www.tgb.cn/blog/13987504",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "连板接力",
+   "高度板"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《高度压制重回3板》，持有新华传媒/九阳（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "悟空一战成名",
+  "user_id": "2721689",
+  "homepage": "https://www.tgb.cn/blog/2721689",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [],
+  "style_status": "待核实",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "主页未解析出帖子列表（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "多维辩证交易体系",
+  "user_id": "12401099",
+  "homepage": "https://www.tgb.cn/blog/12401099",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "题材/抱团",
+   "周期节点"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《抱团极致》《题材纷争…谁能走出来》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "海氏战法",
+  "user_id": "14403453",
+  "homepage": "https://www.tgb.cn/blog/14403453",
+  "source": "tgb.cn/jinghua/ 精华帖作者 实测 2026-10-16",
+  "style_tags": [
+   "20cm创业板一进二套利",
+   "盘前策略"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "2026-10-16 精华区有新帖，活跃的复盘/实盘主帖作者",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《模式三：20cm一进二模式战法》《创业板一进二套利模式开启》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "定力",
+  "user_id": "301502",
+  "homepage": "https://www.tgb.cn/blog/301502",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "实盘赛组织者(非交易者)"
+  ],
+  "style_status": "已核实—建议作为赛事数据源而非大V",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "帖子均为梦想杯实盘赛年榜（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "镀金梦想",
+  "user_id": "6532082",
+  "homepage": "https://www.tgb.cn/blog/6532082",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "实盘赛组织者(非交易者)"
+  ],
+  "style_status": "已核实—赛事源",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "镀金梦想百万杯赛事帖（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "超短小妖女",
+  "user_id": "5677554",
+  "homepage": "https://www.tgb.cn/blog/5677554",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "实盘赛组织者(非交易者)"
+  ],
+  "style_status": "已核实—赛事源",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "赢家e万杯验证贴；原先据昵称推断的『超短』有误，已更正（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "西门口欠雪",
+  "user_id": "9086925",
+  "homepage": "https://www.tgb.cn/blog/9086925",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "每日实盘晒单"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "10.16实盘，极致纠错等；浏览量较低(数百)（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "涨停诗人",
+  "user_id": "12336535",
+  "homepage": "https://www.tgb.cn/blog/12336535",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "大资金风控/交易反思"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《聊聊大资金的风控与节奏》；原『打板』推断无佐证，已更正（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "深圳超短炒家",
+  "user_id": "13307557",
+  "homepage": "https://www.tgb.cn/blog/13307557",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "龙头信仰",
+   "明牌买卖点"
+  ],
+  "style_status": "已核实(主页帖子)",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "《龙头信仰，永不缺席》《给你们看我辽能的买卖点》（主页 2026-10-16 抓取）"
+ },
+ {
+  "nickname": "淘股吧实盘",
+  "user_id": "1032877",
+  "homepage": "https://www.tgb.cn/blog/1032877",
+  "source": "tgb.cn/spmatch/index/ 实盘比赛页 实测 2026-10-16",
+  "style_tags": [
+   "官方实盘赛账号"
+  ],
+  "style_status": "已核实—赛事源",
+  "why_watch": "出现在淘股吧实盘比赛页面，有实盘记录可对照",
+  "verify_status": "已核实(ID与主页链接实测存在)",
+  "style_evidence": "官方赛事/验证贴（主页 2026-10-16 抓取）"
+ }
+]

@@ -1,0 +1,1191 @@
+[
+ {
+  "standard_name": "光模块/CPO",
+  "aliases": [
+   "光模块",
+   "CPO",
+   "共封装光学",
+   "光通信",
+   "硅光",
+   "1.6T",
+   "800G",
+   "光引擎",
+   "光芯片",
+   "EML",
+   "LPO",
+   "OCS",
+   "光器件",
+   "易中天"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300308",
+    "name": "中际旭创",
+    "name_verified": "中际旭创",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "易中天",
+      "guba_hits_in_latest_100_titles": 0,
+      "status": "已佐证(全量抽样7401标题中出现4次)"
+     },
+     {
+      "term": "旭创",
+      "guba_hits_in_latest_100_titles": 9,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "300502",
+    "name": "新易盛",
+    "name_verified": "新易盛",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "易中天",
+      "guba_hits_in_latest_100_titles": 0,
+      "status": "已佐证(全量抽样7401标题中出现4次)"
+     },
+     {
+      "term": "易",
+      "guba_hits_in_latest_100_titles": 10,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "300394",
+    "name": "天孚通信",
+    "name_verified": "天孚通信",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "易中天",
+      "guba_hits_in_latest_100_titles": 0,
+      "status": "已佐证(全量抽样7401标题中出现4次)"
+     },
+     {
+      "term": "天孚",
+      "guba_hits_in_latest_100_titles": 9,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "002281",
+    "name": "光迅科技",
+    "name_verified": "光迅科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "AI算力芯片/GPU",
+  "aliases": [
+   "算力芯片",
+   "AI芯片",
+   "GPU",
+   "国产算力",
+   "昇腾",
+   "海光",
+   "寒武纪",
+   "ASIC",
+   "TPU",
+   "智算中心"
+  ],
+  "representative_stocks": [
+   {
+    "code": "688256",
+    "name": "寒武纪",
+    "name_verified": "寒武纪",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "寒王",
+      "guba_hits_in_latest_100_titles": 1,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     },
+     {
+      "term": "寒",
+      "guba_hits_in_latest_100_titles": 11,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "688041",
+    "name": "海光信息",
+    "name_verified": "海光信息",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "000977",
+    "name": "浪潮信息",
+    "name_verified": "浪潮信息",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "浪潮",
+      "guba_hits_in_latest_100_titles": 3,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "standard_name": "PCB/覆铜板",
+  "aliases": [
+   "PCB",
+   "AI PCB",
+   "覆铜板",
+   "CCL",
+   "HDI",
+   "高多层板",
+   "载板",
+   "ABF",
+   "M9",
+   "电子布"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300476",
+    "name": "胜宏科技",
+    "name_verified": "胜宏科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "胜宏",
+      "guba_hits_in_latest_100_titles": 12,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "002463",
+    "name": "沪电股份",
+    "name_verified": "沪电股份",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "沪电",
+      "guba_hits_in_latest_100_titles": 11,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "002916",
+    "name": "深南电路",
+    "name_verified": "深南电路",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "600183",
+    "name": "生益科技",
+    "name_verified": "生益科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "液冷/散热",
+  "aliases": [
+   "液冷",
+   "冷板",
+   "浸没式",
+   "CDU",
+   "散热",
+   "温控",
+   "数据中心散热"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002837",
+    "name": "英维克",
+    "name_verified": "英维克",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300499",
+    "name": "高澜股份",
+    "name_verified": "高澜股份",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "存储芯片/HBM",
+  "aliases": [
+   "存储",
+   "存储芯片",
+   "HBM",
+   "DRAM",
+   "NAND",
+   "DDR5",
+   "闪存",
+   "长鑫",
+   "存储涨价"
+  ],
+  "representative_stocks": [
+   {
+    "code": "603986",
+    "name": "兆易创新",
+    "name_verified": "兆易创新",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "688525",
+    "name": "佰维存储",
+    "name_verified": "佰维存储",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "301308",
+    "name": "江波龙",
+    "name_verified": "江波龙",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "半导体设备/材料",
+  "aliases": [
+   "半导体设备",
+   "半导体材料",
+   "国产替代",
+   "刻蚀",
+   "薄膜沉积",
+   "光刻机",
+   "光刻胶",
+   "先进封装",
+   "Chiplet",
+   "晶圆"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002371",
+    "name": "北方华创",
+    "name_verified": "北方华创",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "北方",
+      "guba_hits_in_latest_100_titles": 8,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "688012",
+    "name": "中微公司",
+    "name_verified": "中微公司",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "603005",
+    "name": "晶方科技",
+    "name_verified": "晶方科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "人形机器人",
+  "aliases": [
+   "人形机器人",
+   "具身智能",
+   "机器人",
+   "Optimus",
+   "擎天柱",
+   "灵巧手",
+   "丝杠",
+   "行星滚柱丝杠",
+   "减速器",
+   "谐波减速器",
+   "无框电机",
+   "空心杯",
+   "T链",
+   "执行器"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002050",
+    "name": "三花智控",
+    "name_verified": "三花智控",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601689",
+    "name": "拓普集团",
+    "name_verified": "拓普集团",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "688017",
+    "name": "绿的谐波",
+    "name_verified": "绿的谐波",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "603728",
+    "name": "鸣志电器",
+    "name_verified": "鸣志电器",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300124",
+    "name": "汇川技术",
+    "name_verified": "汇川技术",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "低空经济/eVTOL",
+  "aliases": [
+   "低空经济",
+   "低空",
+   "eVTOL",
+   "飞行汽车",
+   "无人机",
+   "通航",
+   "空管"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002085",
+    "name": "万丰奥威",
+    "name_verified": "万丰奥威",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "001696",
+    "name": "宗申动力",
+    "name_verified": "宗申动力",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "商业航天/卫星互联网",
+  "aliases": [
+   "商业航天",
+   "卫星互联网",
+   "低轨卫星",
+   "星链",
+   "千帆星座",
+   "火箭",
+   "可回收火箭",
+   "星网",
+   "卫星通信"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600118",
+    "name": "中国卫星",
+    "name_verified": "中国卫星",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300342",
+    "name": "天银机电",
+    "name_verified": "天银机电",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "688102",
+    "name": "斯瑞新材",
+    "name_verified": "斯瑞新材",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002149",
+    "name": "西部材料",
+    "name_verified": "西部材料",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "固态电池",
+  "aliases": [
+   "固态电池",
+   "半固态",
+   "全固态",
+   "硫化物",
+   "氧化物电解质",
+   "固态电解质",
+   "硫化锂",
+   "锂金属负极"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300750",
+    "name": "宁德时代",
+    "name_verified": "宁德时代",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "宁王",
+      "guba_hits_in_latest_100_titles": 1,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "002074",
+    "name": "国轩高科",
+    "name_verified": "国轩高科",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300073",
+    "name": "当升科技",
+    "name_verified": "当升科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "锂电/锂矿",
+  "aliases": [
+   "锂电",
+   "锂矿",
+   "碳酸锂",
+   "锂电池",
+   "六氟磷酸锂",
+   "电解液",
+   "储能电池"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002460",
+    "name": "赣锋锂业",
+    "name_verified": "赣锋锂业",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002466",
+    "name": "天齐锂业",
+    "name_verified": "天齐锂业",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002709",
+    "name": "天赐材料",
+    "name_verified": "天赐材料",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "储能",
+  "aliases": [
+   "储能",
+   "大储",
+   "户储",
+   "储能逆变器",
+   "PCS",
+   "构网型"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300274",
+    "name": "阳光电源",
+    "name_verified": "阳光电源",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300763",
+    "name": "锦浪科技",
+    "name_verified": "锦浪科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "华为/鸿蒙",
+  "aliases": [
+   "华为",
+   "鸿蒙",
+   "HarmonyOS",
+   "昇腾",
+   "华为概念",
+   "欧拉",
+   "华为汽车"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300339",
+    "name": "润和软件",
+    "name_verified": "润和软件",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002261",
+    "name": "拓维信息",
+    "name_verified": "拓维信息",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601127",
+    "name": "赛力斯",
+    "name_verified": "赛力斯",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "AI应用/大模型",
+  "aliases": [
+   "AI应用",
+   "大模型",
+   "AIGC",
+   "智能体",
+   "Agent",
+   "多模态",
+   "Sora",
+   "DeepSeek",
+   "豆包",
+   "Kimi"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300229",
+    "name": "拓尔思",
+    "name_verified": "拓尔思",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300364",
+    "name": "中文在线",
+    "name_verified": "中文在线",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002230",
+    "name": "科大讯飞",
+    "name_verified": "科大讯飞",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "讯飞",
+      "guba_hits_in_latest_100_titles": 4,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "standard_name": "传媒/AI短剧/影视",
+  "aliases": [
+   "传媒",
+   "短剧",
+   "AI短剧",
+   "AI漫剧",
+   "影视",
+   "游戏",
+   "IP",
+   "院线"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600825",
+    "name": "新华传媒",
+    "name_verified": "新华传媒",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300413",
+    "name": "芒果超媒",
+    "name_verified": "芒果超媒",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002624",
+    "name": "完美世界",
+    "name_verified": "完美世界",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "消费电子/苹果链",
+  "aliases": [
+   "消费电子",
+   "苹果链",
+   "果链",
+   "AI手机",
+   "AI眼镜",
+   "AR",
+   "MR",
+   "折叠屏"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002475",
+    "name": "立讯精密",
+    "name_verified": "立讯精密",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "立讯",
+      "guba_hits_in_latest_100_titles": 8,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "300433",
+    "name": "蓝思科技",
+    "name_verified": "蓝思科技",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002241",
+    "name": "歌尔股份",
+    "name_verified": "歌尔股份",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "军工",
+  "aliases": [
+   "军工",
+   "国防",
+   "军工信息化",
+   "大飞机",
+   "航发",
+   "导弹",
+   "阅兵"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600760",
+    "name": "中航沈飞",
+    "name_verified": "中航沈飞",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "600893",
+    "name": "航发动力",
+    "name_verified": "航发动力",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "券商/金融科技",
+  "aliases": [
+   "券商",
+   "证券",
+   "牛市旗手",
+   "互联网券商",
+   "金融科技",
+   "跨境支付"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600030",
+    "name": "中信证券",
+    "name_verified": "中信证券",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300059",
+    "name": "东方财富",
+    "name_verified": "东方财富",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "东财",
+      "guba_hits_in_latest_100_titles": 3,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "300033",
+    "name": "同花顺",
+    "name_verified": "同花顺",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "稀土永磁",
+  "aliases": [
+   "稀土",
+   "稀土永磁",
+   "磁材",
+   "钕铁硼",
+   "出口管制",
+   "战略金属"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600111",
+    "name": "北方稀土",
+    "name_verified": "北方稀土",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "000831",
+    "name": "中国稀土",
+    "name_verified": "中国稀土",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "黄金/有色",
+  "aliases": [
+   "黄金",
+   "贵金属",
+   "有色",
+   "铜",
+   "铝",
+   "白银",
+   "小金属"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600547",
+    "name": "山东黄金",
+    "name_verified": "山东黄金",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601899",
+    "name": "紫金矿业",
+    "name_verified": "紫金矿业",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "创新药/CXO",
+  "aliases": [
+   "创新药",
+   "医药",
+   "CXO",
+   "CRO",
+   "ADC",
+   "GLP-1",
+   "减肥药",
+   "双抗",
+   "License-out",
+   "出海BD"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600276",
+    "name": "恒瑞医药",
+    "name_verified": "恒瑞医药",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "603259",
+    "name": "药明康德",
+    "name_verified": "药明康德",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "可控核聚变/核电",
+  "aliases": [
+   "可控核聚变",
+   "核聚变",
+   "托卡马克",
+   "超导",
+   "核电",
+   "小堆",
+   "钍基"
+  ],
+  "representative_stocks": [
+   {
+    "code": "603011",
+    "name": "合锻智能",
+    "name_verified": "合锻智能",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601985",
+    "name": "中国核电",
+    "name_verified": "中国核电",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "电力/算电协同",
+  "aliases": [
+   "电力",
+   "绿电",
+   "算电协同",
+   "特高压",
+   "电网",
+   "虚拟电厂",
+   "电力改革"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600900",
+    "name": "长江电力",
+    "name_verified": "长江电力",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "600406",
+    "name": "国电南瑞",
+    "name_verified": "国电南瑞",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "量子科技",
+  "aliases": [
+   "量子",
+   "量子计算",
+   "量子通信",
+   "量子加密"
+  ],
+  "representative_stocks": [
+   {
+    "code": "688027",
+    "name": "国盾量子",
+    "name_verified": "国盾量子",
+    "code_name_status": "已核实(东财suggest,科创板)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "国企改革/中字头",
+  "aliases": [
+   "国企改革",
+   "中字头",
+   "央企",
+   "市值管理",
+   "一带一路",
+   "基建"
+  ],
+  "representative_stocks": [
+   {
+    "code": "601668",
+    "name": "中国建筑",
+    "name_verified": "中国建筑",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601390",
+    "name": "中国中铁",
+    "name_verified": "中国中铁",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "智能驾驶/汽车",
+  "aliases": [
+   "智能驾驶",
+   "无人驾驶",
+   "自动驾驶",
+   "Robotaxi",
+   "车路云",
+   "激光雷达",
+   "汽车零部件"
+  ],
+  "representative_stocks": [
+   {
+    "code": "002594",
+    "name": "比亚迪",
+    "name_verified": "比亚迪",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002920",
+    "name": "德赛西威",
+    "name_verified": "德赛西威",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "数字货币/稳定币",
+  "aliases": [
+   "稳定币",
+   "数字货币",
+   "数字人民币",
+   "跨境支付",
+   "区块链",
+   "RWA"
+  ],
+  "representative_stocks": [
+   {
+    "code": "300468",
+    "name": "四方精创",
+    "name_verified": "四方精创",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002152",
+    "name": "广电运通",
+    "name_verified": "广电运通",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ },
+ {
+  "standard_name": "白酒/大消费",
+  "aliases": [
+   "白酒",
+   "消费",
+   "大消费",
+   "食品饮料",
+   "免税",
+   "零售",
+   "小家电"
+  ],
+  "representative_stocks": [
+   {
+    "code": "600519",
+    "name": "贵州茅台",
+    "name_verified": "贵州茅台",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": [
+     {
+      "term": "茅台",
+      "guba_hits_in_latest_100_titles": 27,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     },
+     {
+      "term": "茅子",
+      "guba_hits_in_latest_100_titles": 1,
+      "status": "已佐证(本股吧最新100帖标题出现)"
+     }
+    ]
+   },
+   {
+    "code": "002242",
+    "name": "九阳股份",
+    "name_verified": "九阳股份",
+    "code_name_status": "已核实(东财suggest)",
+    "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,226 @@
+[
+ {
+  "handle": "DeItaone",
+  "name": "*Walter Bloomberg",
+  "tier": "T1",
+  "focus": "7x24宏观/个股快讯",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "FirstSquawk",
+  "name": "First Squawk",
+  "tier": "T1",
+  "focus": "7x24快讯",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "LiveSquawk",
+  "name": "LiveSquawk",
+  "tier": "T1_5",
+  "focus": "7x24快讯",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "Newsquawk",
+  "name": "Newsquawk",
+  "tier": "T1_5",
+  "focus": "7x24快讯",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "WalterBloomberg",
+  "name": "Walter Bloomberg",
+  "tier": "T1_5",
+  "focus": "快讯(DeItaone同源备号)",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "zerohedge",
+  "name": "zerohedge",
+  "tier": "T2",
+  "focus": "宏观/市场情绪",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "unusual_whales",
+  "name": "unusual_whales",
+  "tier": "T1_5",
+  "focus": "美股异动/期权流",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "ChinaBizWatch",
+  "name": "China Business Watch",
+  "tier": "T2",
+  "focus": "中国商业新闻",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "nvidia",
+  "name": "NVIDIA",
+  "tier": "T1",
+  "focus": "英伟达官方→算力/光模块/PCB/液冷",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "Tesla",
+  "name": "Tesla",
+  "tier": "T1",
+  "focus": "特斯拉官方→汽车/机器人链",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "elonmusk",
+  "name": "Elon Musk",
+  "tier": "T1",
+  "focus": "特斯拉/Optimus/SpaceX/xAI→机器人、商业航天",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "Figure_robot",
+  "name": "Figure",
+  "tier": "T1_5",
+  "focus": "人形机器人",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "tier": "T1_5",
+  "focus": "特斯拉/SpaceX新闻聚合",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "Teslarati",
+  "name": "TESLARATI",
+  "tier": "T2",
+  "focus": "特斯拉新闻",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "OpenAI",
+  "name": "OpenAI",
+  "tier": "T1",
+  "focus": "大模型→AI应用/算力",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "sama",
+  "name": "Sam Altman",
+  "tier": "T1",
+  "focus": "OpenAI动态→算力需求",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "SemiAnalysis_",
+  "name": "SemiAnalysis",
+  "tier": "T1",
+  "focus": "半导体/算力深度拆解→光模块、CPO、HBM",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "dylan522p",
+  "name": "Dylan Patel",
+  "tier": "T1",
+  "focus": "SemiAnalysis创始人，算力供应链",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "mingchikuo",
+  "name": "郭明錤｜Ming-Chi Kuo",
+  "tier": "T1",
+  "focus": "苹果/AI硬件供应链→消费电子链",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "trendforce",
+  "name": "TrendForce",
+  "tier": "T1_5",
+  "focus": "存储/面板/晶圆价格→存储、半导体",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "jukan05",
+  "name": "Jukan",
+  "tier": "T1_5",
+  "focus": "韩台半导体/存储供应链传闻",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "kakashiii111",
+  "name": "Kakashii",
+  "tier": "T2",
+  "focus": "半导体/AI供应链评论",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "firstadopter",
+  "name": "tae kim",
+  "tier": "T2",
+  "focus": "科技股/英伟达评论",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "IanCutress",
+  "name": "Dr. Ian Cutress",
+  "tier": "T2",
+  "focus": "芯片技术分析",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "techinsightsinc",
+  "name": "TechInsights",
+  "tier": "T2",
+  "focus": "芯片拆解",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "ServeTheHome",
+  "name": "STH",
+  "tier": "T2",
+  "focus": "服务器/数据中心硬件",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "PatrickMoorhead",
+  "name": "Patrick Moorhead",
+  "tier": "T2",
+  "focus": "半导体/数据中心分析",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ },
+ {
+  "handle": "BrianRoemmele",
+  "name": "Brian Roemmele",
+  "tier": "T2",
+  "focus": "AI/科技(观点激进，噪声较大)",
+  "verify_status": "已核实(X API get_users_by_usernames 2026-10-16)",
+  "tier_note": "tier为主观分级"
+ }
+]

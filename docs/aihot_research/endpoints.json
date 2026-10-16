@@ -1,0 +1,164 @@
+{
+ "eastmoney_guba": {
+  "list_default": {
+   "url": "https://guba.eastmoney.com/list,{code}.html",
+   "test": "200 实测",
+   "note": "按最后回复时间排序(第2页 list,{code}_2.html 实测 post_last_time 倒序)；第1页前几条为置顶/推荐帖；页面内嵌 var article_list={...}"
+  },
+  "list_f": {
+   "url": "https://guba.eastmoney.com/list,{code},f.html",
+   "paging": "list,{code},f_{page}.html",
+   "test": "实测：f_2 按发帖时间倒序 → f=按发帖时间",
+   "note": "第1页置顶帖与默认页相同"
+  },
+  "list_99": {
+   "url": "https://guba.eastmoney.com/list,{code},99.html",
+   "paging": "list,{code},99_{page}.html",
+   "test": "实测 count=37999(总帖977480的子集)，99_2 时间倒序",
+   "note": "是精选/资讯类子集，具体含义待核实；不是『最热』"
+  },
+  "api_articlelist": {
+   "url": "https://gbapi.eastmoney.com/webarticlelist/api/Article/Articlelist",
+   "params": {
+    "code": "600519",
+    "sorttype": "实测：0=按发帖时间倒序(post_publish_time)；1~8 结果一致=按最后回复时间倒序(post_last_time)。无『最热』取值",
+    "ps": "每页条数",
+    "p": "页码",
+    "from": "CommonBaPost",
+    "deviceid": "任意",
+    "version": "200",
+    "product": "Guba",
+    "plat": "Web"
+   },
+   "test": "200 无需cookie；sorttype 0~8 逐一实测 2026-10-16；count=977480(600519)",
+   "top_keys": [
+    "re",
+    "count",
+    "bar_name",
+    "bar_code",
+    "bar_info",
+    "rc",
+    "me",
+    "time"
+   ],
+   "post_fields": [
+    "post_id",
+    "post_title",
+    "stockbar_code",
+    "stockbar_name",
+    "user_id",
+    "user_nickname",
+    "post_click_count",
+    "post_forward_count",
+    "post_comment_count",
+    "post_publish_time",
+    "post_last_time",
+    "post_type",
+    "post_has_pic",
+    "post_ip",
+    "bullish_bearish",
+    "art_unique_url"
+   ]
+  },
+  "post_detail": {
+   "url": "https://guba.eastmoney.com/news,{code},{post_id}.html",
+   "test": "200 实测；页面内嵌 var post_article={...}，含 post_content"
+  },
+  "mobile": {
+   "list": "https://mguba.eastmoney.com/mguba/list/{code} 200 实测(约300KB，内嵌含 post_content 的 JSON)",
+   "article": "https://mguba.eastmoney.com/mguba/article/0/{post_id} 200 但只有 6KB 壳页(SPA)，正文接口待核实",
+   "alt": "https://guba.eastmoney.com/o/list,{code}.html 200"
+  },
+  "list_1_f": {
+   "url": "list,{code},1,f.html",
+   "test": "count=5000，含义待核实"
+  },
+  "hot_note": "未发现按热度排序的 URL 或 sorttype；热度要自己用 post_click_count / post_comment_count 排"
+ },
+ "taoguba": {
+  "domain": "www.tgb.cn (旧域 taoguba.com.cn 仍被引用)",
+  "jinghua": {
+   "url": "https://www.tgb.cn/jinghua/",
+   "paging": "实测：/jinghua/{page}-{sort}，例如 2-1=第2页(title含『第2页』)，1-1、1-2=第1页的两种排序(1-1 按发帖日期；1-2 内容为旧帖，推测按热度/回复排序，待核实)；/jinghua/2 返回404",
+   "money_rank": "/jinghua/topTopicMoney?stageNum={n}"
+  },
+  "newIndex": {
+   "url": "https://www.tgb.cn/newIndex/{page}",
+   "test": "200 实测(首页信息流)",
+   "note": "/newIndex/2 的标题是『股票复盘』频道"
+  },
+  "post": {
+   "url": "https://www.tgb.cn/a/{短码}",
+   "example": "/a/2vUNIn9W0UH",
+   "test": "从精华页提取"
+  },
+  "user": {
+   "url": "https://www.tgb.cn/blog/{userId}"
+  },
+  "stock_bar": {
+   "url": "https://www.tgb.cn/quotes/{sz002343|sh600869}",
+   "test": "200 实测",
+   "note": "帖子DOM待细化"
+  },
+  "other": [
+   "https://www.tgb.cn/spmatch/index/ 实盘比赛",
+   "https://www.tgb.cn/weblive/liveList?pageNo=1 直播",
+   "https://shuo.tgb.cn/newsFlash/ 快讯",
+   "https://www.tgb.cn/feeds/qryFeedsViewPointView 观点",
+   "https://www.tgb.cn/stock/moreStockInfo 热股(未实测内容)",
+   "https://www.tgb.cn/user/getMoreListAction 302需登录"
+  ],
+  "dom": {
+   "post_row": "div.Nbbs-tiezi-lists",
+   "title": "div.middle-list-tittle > a[href^='/a/'] (含[精]标记, title属性)",
+   "reply_view": "div.middle-list-talk 文本『回复 / 浏览』",
+   "last_time": "div.middle-list-reply",
+   "author": "a[href^='/blog/'][data-user-id][data-topic-id][data-last-reply-date]",
+   "home_weekup": "a.defaultContainerRight-weekUp-userName",
+   "home_hotstock": "div.defaultContainerRight-stock-item / -stock-name / -stock-Rate / -stock-7discuss"
+  },
+  "24h_hot": {
+   "result": "没有找到独立的 24 小时热帖榜 URL",
+   "tested": {
+    "/hot": "200 但内容就是首页(回退)",
+    "/hot/": "404",
+    "/hotTopic": "200 首页回退",
+    "m.tgb.cn": "200，首页信息流由 XHR /getMZh?pageNo={n} 加载"
+   },
+   "best_substitute": "移动端 XHR https://m.tgb.cn/getMZh?pageNo=1 (实测返回 JSON：dto.indexList.listData[]{userID,userName,topicID,newTopicID,subject,subinfo…}，是首页推荐流)；另有 /ticai/ranking (题材淘金，200)、首页『热门研股』模块"
+  }
+ },
+ "xueqiu": {
+  "status": "浏览器已实测 2026-10-16（父代理提供）",
+  "cookie": "访问 xueqiu.com 会跳到 www.xueqiu.com。未登录也会设置 xq_a_token/xq_r_token/xq_id_token/xqat/acw_tc/device_id；在浏览器里没有遇到 WAF。纯 curl 会被阿里云 WAF 拦截(本代理实测)，所以服务端要先用浏览器访问首页拿 cookie",
+  "hot_stock": {
+   "url": "https://stock.xueqiu.com/v5/stock/hot_stock/list.json?size=8&_type=10&type=10",
+   "fields": "data.items[]: type,code,name,value,increment,rank_change,symbol,percent,current,chg,exchange,stock_type,sub_type,ad",
+   "curl_no_cookie": "400 / 400016"
+  },
+  "symbol_status_new": {
+   "url": "https://www.xueqiu.com/query/v1/symbol/search/status.json?count=10&comment=0&symbol=SH600519&hl=0&source=all&sort=time&page=1&q=&type=11",
+   "note": "个股页『新帖』真实 XHR",
+   "fields": "about,count,key,list[]: id,created_at(ms),timeBefore,source,target(/uid/id),like_count,reply_count,retweet_count,fav_count,description/text,user{id,city,followers_count…}"
+  },
+  "symbol_status_hot": {
+   "url": "同上，sort=alpha",
+   "note": "推测对应『热帖』(切换时的 XHR 未抓到)；多 excellent_comments[]{id,likeCount,text,pic,statusId,time_before}"
+  },
+  "hot_timeline": {
+   "url": "https://www.xueqiu.com/statuses/hot/listV2.json?since_id=-1&max_id=-1&size=15",
+   "fields": "next_max_id, items[]{id,category,original_status{id,user_id,source,created_at,fav_count,type,description,user{screen_name,followers_count}}}"
+  },
+  "stock_tabs": "全部讨论/交易/资讯/公告；新帖/热帖",
+  "other_xhr": [
+   "/statuses/interview/search.json?symbol=&count=3",
+   "stock.xueqiu.com/v5/stock/quote.json?symbol=&extend=detail",
+   "/v5/stock/realtime/pankou.json",
+   "/v5/stock/chart/minute.json?period=1d",
+   "/v5/stock/history/trade.json",
+   "/v5/stock/quote/relevant.json",
+   "/v5/stock/event/entry.json"
+  ],
+  "user_page": "https://xueqiu.com/u/{uid}"
+ }
+}

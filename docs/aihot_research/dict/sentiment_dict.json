@@ -1,0 +1,1531 @@
+{
+ "meta": {
+  "weight_range": "-3~+3（主观，仅供参考）",
+  "sample": "东财 Articlelist sorttype=0，58个股吧×最新100帖 = 7401 条标题，2026-10-16 13:45~13:48 台北时间",
+  "note": "context_dependent=true 的单字/泛词误伤多，建议跟股票名或语境一起用"
+ },
+ "extreme_bull_consistent": [
+  {
+   "term": "一字板",
+   "weight": 3,
+   "meaning": "开盘即封涨停全天不开",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "一字",
+   "weight": 3,
+   "meaning": "一字涨停",
+   "guba_hits_7401_titles": 10,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "秒板",
+   "weight": 3,
+   "meaning": "开盘秒封涨停",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "连板",
+   "weight": 2,
+   "meaning": "连续涨停",
+   "guba_hits_7401_titles": 13,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "晋级",
+   "weight": 2,
+   "meaning": "连板晋级",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "加速",
+   "weight": 2,
+   "meaning": "走势加速",
+   "guba_hits_7401_titles": 10,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "主升",
+   "weight": 3,
+   "meaning": "主升浪",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "主升浪",
+   "weight": 3,
+   "meaning": "主升浪",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "妖股",
+   "weight": 2,
+   "meaning": "连续暴涨个股",
+   "guba_hits_7401_titles": 8,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "龙头",
+   "weight": 2,
+   "meaning": "板块最强股",
+   "guba_hits_7401_titles": 74,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "总龙头",
+   "weight": 3,
+   "meaning": "市场最高标",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "空间板",
+   "weight": 2,
+   "meaning": "市场高度板",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "最高板",
+   "weight": 2,
+   "meaning": "市场最高连板",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "新高",
+   "weight": 2,
+   "meaning": "创新高",
+   "guba_hits_7401_titles": 15,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "翻倍",
+   "weight": 2,
+   "meaning": "涨幅翻倍",
+   "guba_hits_7401_titles": 21,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "封死",
+   "weight": 2,
+   "meaning": "涨停封死",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "封单",
+   "weight": 1,
+   "meaning": "涨停封单",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "顶一字",
+   "weight": 3,
+   "meaning": "一字封死",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "吃肉",
+   "weight": 2,
+   "meaning": "盈利",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "大肉",
+   "weight": 3,
+   "meaning": "大幅盈利",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "起飞",
+   "weight": 2,
+   "meaning": "大涨",
+   "guba_hits_7401_titles": 28,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "拉升",
+   "weight": 1,
+   "meaning": "股价拉升",
+   "guba_hits_7401_titles": 38,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "涨停",
+   "weight": 2,
+   "meaning": "涨停",
+   "guba_hits_7401_titles": 227,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "板上",
+   "weight": 1,
+   "meaning": "在涨停板上",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "排板",
+   "weight": 1,
+   "meaning": "挂涨停买入",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "打板",
+   "weight": 1,
+   "meaning": "涨停买入",
+   "guba_hits_7401_titles": 7,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "扫板",
+   "weight": 1,
+   "meaning": "扫涨停",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "满仓",
+   "weight": 2,
+   "meaning": "满仓看多",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "梭哈",
+   "weight": 2,
+   "meaning": "全仓买入",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "all in",
+   "weight": 2,
+   "meaning": "全仓",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "格局",
+   "weight": 1,
+   "meaning": "坚定持有",
+   "guba_hits_7401_titles": 12,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "拿住",
+   "weight": 1,
+   "meaning": "持有",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "锁仓",
+   "weight": 2,
+   "meaning": "不卖",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "躺赢",
+   "weight": 2,
+   "meaning": "持有盈利",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "躺",
+   "weight": 1,
+   "meaning": "持股不动",
+   "guba_hits_7401_titles": 18,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "上车",
+   "weight": 1,
+   "meaning": "买入",
+   "guba_hits_7401_titles": 13,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "抢筹",
+   "weight": 2,
+   "meaning": "资金抢买",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "爆量",
+   "weight": 1,
+   "meaning": "放量上涨语境",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "超预期",
+   "weight": 2,
+   "meaning": "强于预期",
+   "guba_hits_7401_titles": 13,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "弱转强",
+   "weight": 2,
+   "meaning": "由弱转强",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "反包",
+   "weight": 2,
+   "meaning": "阴线后再涨停",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "地天板",
+   "weight": 3,
+   "meaning": "跌停翻涨停",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "天量封单",
+   "weight": 3,
+   "meaning": "巨额封单",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "主力进场",
+   "weight": 1,
+   "meaning": "资金买入",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "机构抱团",
+   "weight": 1,
+   "meaning": "机构集中持有",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "牛市",
+   "weight": 2,
+   "meaning": "牛市",
+   "guba_hits_7401_titles": 8,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "满屏涨停",
+   "weight": 3,
+   "meaning": "普涨",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "赚钱效应",
+   "weight": 2,
+   "meaning": "市场赚钱效应好",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "高潮",
+   "weight": 2,
+   "meaning": "情绪高潮",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "一致",
+   "weight": 1,
+   "meaning": "市场一致看多(高位需警惕)",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "十倍股",
+   "weight": 2,
+   "meaning": "十倍股",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "看多",
+   "weight": 1,
+   "meaning": "看多",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "必涨",
+   "weight": 2,
+   "meaning": "强烈看涨",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "干到",
+   "weight": 1,
+   "meaning": "目标价语境",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "冲冲冲",
+   "weight": 2,
+   "meaning": "喊涨",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "yyds",
+   "weight": 2,
+   "meaning": "喊涨",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  }
+ ],
+ "divergence_gaming": [
+  {
+   "term": "分歧",
+   "weight": 0,
+   "meaning": "多空分歧",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "换手",
+   "weight": 0,
+   "meaning": "换手板/充分换手",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "换手板",
+   "weight": 1,
+   "meaning": "放量换手封板",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "烂板",
+   "weight": -1,
+   "meaning": "反复开板封板",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "炸板",
+   "weight": -1,
+   "meaning": "涨停打开",
+   "guba_hits_7401_titles": 8,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "回封",
+   "weight": 1,
+   "meaning": "炸板后重新封板",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "开板",
+   "weight": -1,
+   "meaning": "涨停打开",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "首阴",
+   "weight": 0,
+   "meaning": "连板后第一根阴线",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "断板",
+   "weight": -1,
+   "meaning": "连板中断",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "反抽",
+   "weight": 0,
+   "meaning": "下跌后反弹",
+   "guba_hits_7401_titles": 7,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "弱转强",
+   "weight": 1,
+   "meaning": "竞价/盘中转强",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "强转弱",
+   "weight": -1,
+   "meaning": "转弱",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "高低切",
+   "weight": 0,
+   "meaning": "高位切低位",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "低位",
+   "weight": 0,
+   "meaning": "低位股",
+   "guba_hits_7401_titles": 16,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "补涨",
+   "weight": 1,
+   "meaning": "跟风补涨",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "跟风",
+   "weight": 0,
+   "meaning": "跟风股",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "卡位",
+   "weight": 1,
+   "meaning": "后排卡位成新龙",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "轮动",
+   "weight": 0,
+   "meaning": "板块轮动",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "试错",
+   "weight": 0,
+   "meaning": "小仓位试错",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "低吸",
+   "weight": 0,
+   "meaning": "逢低买入",
+   "guba_hits_7401_titles": 10,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "半路",
+   "weight": 0,
+   "meaning": "盘中半路追入",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "竞价",
+   "weight": 0,
+   "meaning": "集合竞价",
+   "guba_hits_7401_titles": 12,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "一进二",
+   "weight": 0,
+   "meaning": "首板进二板",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "二进三",
+   "weight": 0,
+   "meaning": "二板进三板",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "1进2",
+   "weight": 0,
+   "meaning": "同上",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "套利",
+   "weight": 0,
+   "meaning": "短线套利",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "接力",
+   "weight": 0,
+   "meaning": "连板接力",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "博弈",
+   "weight": 0,
+   "meaning": "博弈",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "震荡",
+   "weight": 0,
+   "meaning": "震荡",
+   "guba_hits_7401_titles": 17,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "洗盘",
+   "weight": 1,
+   "meaning": "主力洗盘说",
+   "guba_hits_7401_titles": 13,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "回踩",
+   "weight": 0,
+   "meaning": "回调",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "缩量",
+   "weight": 0,
+   "meaning": "成交缩量",
+   "guba_hits_7401_titles": 22,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "放量",
+   "weight": 0,
+   "meaning": "成交放量",
+   "guba_hits_7401_titles": 42,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "观望",
+   "weight": 0,
+   "meaning": "观望",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "调整",
+   "weight": -1,
+   "meaning": "调整",
+   "guba_hits_7401_titles": 25,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "T",
+   "weight": 0,
+   "meaning": "做T",
+   "guba_hits_7401_titles": 112,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "做T",
+   "weight": 0,
+   "meaning": "日内高抛低吸",
+   "guba_hits_7401_titles": 26,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "高抛",
+   "weight": 0,
+   "meaning": "高位卖出",
+   "guba_hits_7401_titles": 7,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "减仓",
+   "weight": -1,
+   "meaning": "减仓",
+   "guba_hits_7401_titles": 17,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "加仓",
+   "weight": 1,
+   "meaning": "加仓",
+   "guba_hits_7401_titles": 47,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "止盈",
+   "weight": 0,
+   "meaning": "止盈",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "冰点",
+   "weight": 0,
+   "meaning": "情绪冰点(可能见底)",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "修复",
+   "weight": 1,
+   "meaning": "情绪修复",
+   "guba_hits_7401_titles": 25,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "退潮",
+   "weight": -1,
+   "meaning": "情绪退潮",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "分化",
+   "weight": 0,
+   "meaning": "板块分化",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "抱团",
+   "weight": 0,
+   "meaning": "资金抱团",
+   "guba_hits_7401_titles": 7,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "混沌",
+   "weight": 0,
+   "meaning": "混沌期",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "节点",
+   "weight": 0,
+   "meaning": "情绪节点",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "轮回",
+   "weight": 0,
+   "meaning": "周期轮回",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "预期差",
+   "weight": 0,
+   "meaning": "预期与现实差异",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "见光死",
+   "weight": -1,
+   "meaning": "利好兑现下跌",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "兑现",
+   "weight": -1,
+   "meaning": "获利兑现",
+   "guba_hits_7401_titles": 13,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "龙空龙",
+   "weight": 0,
+   "meaning": "龙头空窗期",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  }
+ ],
+ "panic_bear_nuke": [
+  {
+   "term": "跌停",
+   "weight": -3,
+   "meaning": "跌停",
+   "guba_hits_7401_titles": 65,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "核按钮",
+   "weight": -3,
+   "meaning": "跌停价挂单砸盘",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "按核按钮",
+   "weight": -3,
+   "meaning": "同上",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "大面",
+   "weight": -3,
+   "meaning": "大幅亏损",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "吃面",
+   "weight": -2,
+   "meaning": "亏损",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "面",
+   "weight": -1,
+   "meaning": "亏损(语境依赖)",
+   "guba_hits_7401_titles": 144,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "天地板",
+   "weight": -3,
+   "meaning": "涨停翻跌停",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "A杀",
+   "weight": -3,
+   "meaning": "直线杀跌",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "闷杀",
+   "weight": -3,
+   "meaning": "突然大跌",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "一字跌停",
+   "weight": -3,
+   "meaning": "开盘封死跌停",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "跌停板",
+   "weight": -3,
+   "meaning": "跌停",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "核",
+   "weight": -2,
+   "meaning": "核按钮简称",
+   "guba_hits_7401_titles": 62,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": true
+  },
+  {
+   "term": "崩",
+   "weight": -3,
+   "meaning": "暴跌",
+   "guba_hits_7401_titles": 16,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "崩盘",
+   "weight": -3,
+   "meaning": "市场崩溃",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "暴跌",
+   "weight": -3,
+   "meaning": "暴跌",
+   "guba_hits_7401_titles": 22,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "跳水",
+   "weight": -2,
+   "meaning": "快速下跌",
+   "guba_hits_7401_titles": 42,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "闪崩",
+   "weight": -3,
+   "meaning": "瞬间暴跌",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "割肉",
+   "weight": -2,
+   "meaning": "止损卖出",
+   "guba_hits_7401_titles": 58,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "止损",
+   "weight": -1,
+   "meaning": "止损",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "清仓",
+   "weight": -2,
+   "meaning": "全部卖出",
+   "guba_hits_7401_titles": 43,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "跑路",
+   "weight": -2,
+   "meaning": "卖出逃离",
+   "guba_hits_7401_titles": 16,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "快跑",
+   "weight": -2,
+   "meaning": "劝卖",
+   "guba_hits_7401_titles": 27,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "出货",
+   "weight": -2,
+   "meaning": "主力出货",
+   "guba_hits_7401_titles": 59,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "砸盘",
+   "weight": -2,
+   "meaning": "大单卖压",
+   "guba_hits_7401_titles": 38,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "套牢",
+   "weight": -2,
+   "meaning": "被套",
+   "guba_hits_7401_titles": 20,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "被套",
+   "weight": -2,
+   "meaning": "被套",
+   "guba_hits_7401_titles": 22,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "站岗",
+   "weight": -2,
+   "meaning": "高位被套",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "接盘侠",
+   "weight": -2,
+   "meaning": "高位接盘",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "韭菜",
+   "weight": -1,
+   "meaning": "散户自嘲",
+   "guba_hits_7401_titles": 31,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "割韭菜",
+   "weight": -2,
+   "meaning": "收割散户",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "凉凉",
+   "weight": -2,
+   "meaning": "完蛋",
+   "guba_hits_7401_titles": 5,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "完了",
+   "weight": -2,
+   "meaning": "完蛋",
+   "guba_hits_7401_titles": 39,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "没救",
+   "weight": -2,
+   "meaning": "绝望",
+   "guba_hits_7401_titles": 14,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "绝望",
+   "weight": -3,
+   "meaning": "绝望",
+   "guba_hits_7401_titles": 9,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "亏麻",
+   "weight": -3,
+   "meaning": "亏损严重",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "腰斩",
+   "weight": -3,
+   "meaning": "跌一半",
+   "guba_hits_7401_titles": 26,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "退市",
+   "weight": -3,
+   "meaning": "退市风险",
+   "guba_hits_7401_titles": 18,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "ST",
+   "weight": -2,
+   "meaning": "风险警示",
+   "guba_hits_7401_titles": 11,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "利空",
+   "weight": -2,
+   "meaning": "利空",
+   "guba_hits_7401_titles": 19,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "减持",
+   "weight": -2,
+   "meaning": "股东减持",
+   "guba_hits_7401_titles": 10,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "暴雷",
+   "weight": -3,
+   "meaning": "业绩/财务雷",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "爆雷",
+   "weight": -3,
+   "meaning": "同上",
+   "guba_hits_7401_titles": 6,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "立案",
+   "weight": -3,
+   "meaning": "被证监会立案",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "问询函",
+   "weight": -1,
+   "meaning": "监管问询",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "监管",
+   "weight": -1,
+   "meaning": "监管关注",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "关小黑屋",
+   "weight": -2,
+   "meaning": "异动停牌/监管限制",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "停牌核查",
+   "weight": -2,
+   "meaning": "异动停牌核查",
+   "guba_hits_7401_titles": 1,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "退潮",
+   "weight": -2,
+   "meaning": "情绪退潮",
+   "guba_hits_7401_titles": 2,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "杀跌",
+   "weight": -2,
+   "meaning": "杀跌",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "恐慌",
+   "weight": -2,
+   "meaning": "恐慌",
+   "guba_hits_7401_titles": 9,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "踩踏",
+   "weight": -3,
+   "meaning": "踩踏式下跌",
+   "guba_hits_7401_titles": 3,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "流动性危机",
+   "weight": -3,
+   "meaning": "流动性危机",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "熊市",
+   "weight": -2,
+   "meaning": "熊市",
+   "guba_hits_7401_titles": 17,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "阴跌",
+   "weight": -2,
+   "meaning": "持续小跌",
+   "guba_hits_7401_titles": 11,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "破位",
+   "weight": -2,
+   "meaning": "跌破关键位",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "新低",
+   "weight": -2,
+   "meaning": "创新低",
+   "guba_hits_7401_titles": 42,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "血亏",
+   "weight": -3,
+   "meaning": "严重亏损",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "芭比Q",
+   "weight": -2,
+   "meaning": "完蛋(网络语)",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  },
+  {
+   "term": "绿油油",
+   "weight": -2,
+   "meaning": "满屏下跌",
+   "guba_hits_7401_titles": 4,
+   "evidence": "东财股吧抽样出现",
+   "context_dependent": false
+  },
+  {
+   "term": "满屏绿",
+   "weight": -2,
+   "meaning": "普跌",
+   "guba_hits_7401_titles": 0,
+   "evidence": "未在抽样中出现—常见短线用语，待核实",
+   "context_dependent": false
+  }
+ ],
+ "spam_noise_patterns": [
+  {
+   "id": "ad_contact",
+   "regex": "(加|\\+|➕)\\s*(微信|v信|V信|vx|VX|薇信|微❤)|微\\s*信\\s*[号:：]|(vx|wx|VX|WX|V)\\s*[:：]\\s*[A-Za-z0-9_-]{5,}|QQ\\s*[:：]?\\s*\\d{5,}|扣扣\\s*\\d{5,}",
+   "example": "加微信：abc12345 带你吃肉",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 0,
+   "guba_samples": []
+  },
+  {
+   "id": "ad_group",
+   "regex": "(进|加|入)\\s*(群|圈子|粉丝群|交流群|内参群|VIP群)|群号\\s*[:：]?\\s*\\d{5,}|私信(我|领|获取)|主页(有|看)?(联系|方式|群)",
+   "example": "想要明天的票进群领取",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 0,
+   "guba_samples": []
+  },
+  {
+   "id": "ad_teacher",
+   "regex": "(老师|导师|大师|股神)(带|指导|推荐|布局|内参|免费)|跟着?(老师|导师)|(免费|内部)(荐股|诊股|领取|送票)|牛股(推荐|内参|领取)",
+   "example": "跟着老师布局三天两板",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 0,
+   "guba_samples": []
+  },
+  {
+   "id": "ad_promo",
+   "regex": "(稳赚|保本|翻倍|月入\\d+|日赚\\d+)(不亏)?.*(带|跟|加)|(开户|佣金)(万[0-9.]+|低至)|扫码|二维码|点击链接|https?://\\S+",
+   "example": "万0.8佣金开户 扫码立领",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 2,
+   "guba_samples": [
+    "【翻倍牛股绩优市盈率低博俊科技｜先上25元长线35元｜名字带科技常出翻倍牛股】",
+    "【市盈率低翻倍牛股博俊｜先上25长线35元｜名字带科技常出翻倍牛股】"
+   ]
+  },
+  {
+   "id": "repeat_char",
+   "regex": "(.)\\1{5,}",
+   "example": "涨涨涨涨涨涨涨",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 32,
+   "guba_samples": [
+    "真的是66666666666666666666666666666666666",
+    "增发2亿股？？？？？？？",
+    "NV确认采用PTFE方案，重视相关供应链-1014———————————今日，O"
+   ]
+  },
+  {
+   "id": "repeat_word",
+   "regex": "(.{2,6}?)\\1{3,}",
+   "example": "冲啊冲啊冲啊冲啊",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 28,
+   "guba_samples": [
+    "真的是66666666666666666666666666666666666",
+    "cscscscs",
+    "NV确认采用PTFE方案，重视相关供应链-1014———————————今日，O"
+   ]
+  },
+  {
+   "id": "tmpl_margin",
+   "regex": "融资(净)?(买入|偿还|余额)[^，。]{0,20}(亿|万)元|融资融券(余额|信息)|融券(卖出|余量|余额)",
+   "example": "10月15日贵州茅台融资净买入1.23亿元，融资余额...",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 70,
+   "guba_samples": [
+    "光迅科技：融资净偿还1.42亿元，融资余额33.88亿元",
+    "寒武纪：融资净偿还7.44亿元，融资余额157.89亿元",
+    "深南电路：融资净偿还1523.11万元，融资余额13.6亿元"
+   ]
+  },
+  {
+   "id": "tmpl_lhb",
+   "regex": "龙虎榜|营业部(净)?(买入|卖出)|机构专用席位|沪股通专用|深股通专用|上榜原因|日涨幅偏离值达",
+   "example": "龙虎榜数据：机构专用席位净买入5000万元",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 4,
+   "guba_samples": [
+    "刀锋早评｜转融券没了，龙虎榜却更狠了",
+    "听我口令，涨进龙虎榜",
+    "2026期货龙虎榜与资金流向怎么看：量价仓三角与席位集中度拆解"
+   ]
+  },
+  {
+   "id": "tmpl_fundflow",
+   "regex": "主力资金(净)?(流入|流出)|(超大单|大单|中单|小单)(净)?(流入|流出)|资金流向|北向资金(净)?(买入|卖出)",
+   "example": "今日主力资金净流出2.1亿元，超大单净流出1.5亿元",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 4,
+   "guba_samples": [
+    "中际旭创获融资资金买入近15亿元丨资金流向日报",
+    "共封装光学(CPO)主力资金流向",
+    "短剧游戏主力资金流向"
+   ]
+  },
+  {
+   "id": "tmpl_auto_quote",
+   "regex": "(盘中|早盘|午后|尾盘)?(快速(拉升|回调|下跌)|涨速|急速(拉升|下跌)).{0,10}\\d+(\\.\\d+)?%|(股价|报)\\s*\\d+(\\.\\d+)?元.{0,6}(涨|跌)\\s*\\d+(\\.\\d+)?%|触及涨停|封涨停板|打开涨停",
+   "example": "盘中快速拉升，5分钟涨幅超2%，报12.35元",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 0,
+   "guba_samples": []
+  },
+  {
+   "id": "tmpl_holder",
+   "regex": "股东户数|户均持股|筹码(集中|分散)",
+   "example": "截至9月30日股东户数为12.3万户，较上期减少5%",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 2,
+   "guba_samples": [
+    "从75元左右开始90%筹码集中度已经翻倍，也就是说里面的庄基本都跑光了",
+    "股东户数比六月底不降反升啊，家人们就是这么看好吗？"
+   ]
+  },
+  {
+   "id": "tmpl_announce",
+   "regex": "^(关于|.*?关于).{0,30}(的)?公告$|董秘回复|投资者关系活动|互动平台",
+   "example": "关于公司股东减持股份的公告",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 3,
+   "guba_samples": [
+    "斯瑞新材:688102_投资者关系活动记录表-2026-005(2026年10月13-14日)",
+    "斯瑞新材:关于2023年股票期权激励计划限制行权期间的提示性公告",
+    "斯瑞新材:关于调整“液体火箭发动机推力室材料、零件、组件产业化项目”的公告"
+   ]
+  },
+  {
+   "id": "shill_tuo",
+   "regex": "(主力|庄家)(在)?(洗盘|吸筹|建仓|震仓)|(洗盘|吸筹)(结束|完毕)|明天(必|一定|肯定)(涨停|大涨|拉升)|目标价\\s*\\d+|错过(再)?等(十|一)年|最后(一次)?上车(机会)?|散户(快)?(跑|出局)了?主力",
+   "example": "主力洗盘结束，明天必涨停，最后上车机会",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 8,
+   "guba_samples": [
+    "寒武纪目标价172元，才与行业平均水平持平——现价泡沫巨大！如果寒武纪市净率由4",
+    "目标价25到28，静待花开",
+    "洗盘结束开始拉了两点半涨停"
+   ]
+  },
+  {
+   "id": "shill_fud",
+   "regex": "(赶紧|快)(跑|卖|割)|(必|肯定)(跌停|暴跌)|(庄家|主力)(出货|跑路)了",
+   "example": "主力出货了，赶紧跑，明天必跌停",
+   "compiles": true,
+   "matches_example": true,
+   "guba_hits_7401_titles": 41,
+   "guba_samples": [
+    "快跑，主力还在减",
+    "还不快跑每次上涨都是给你逃跑的机会",
+    "假的快跑谁慢谁死"
+   ]
+  }
+ ]
+}
