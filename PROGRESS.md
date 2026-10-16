@@ -1,57 +1,47 @@
 # YM-ShortTerm-Hot · 当前进度
 
-更新：2026-10-16 18:31（Asia/Shanghai）；状态依据：谷米完成 `SH-03` 第一次终审（`AUDIT-SH03-20261016-R1`），4 条架构门禁红线与主体双视图/抽屉全部通过，抓出 2 个 P1 数据映射与 URL 寻址缺陷（[`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md)），退回稳米小幅修补后收官结项
+更新：2026-10-16 18:44（Asia/Shanghai）；状态依据：谷米完成 `SH-03` 第二次终审（`AUDIT-SH03-20261016-R2`）判定 **PASS 结项**，**第一期（Phase 1：`SH-01` → `SH-02` → `SH-03`）全链路圆满收官！**
 
-[项目入口](README.md) · [Agent 规范](AGENTS.md) · [实施与验收计划](docs/实施与验收计划.md) · [SH-03 开工单](docs/开工单-SH03-双视图短线雷达模块与端到端联调-2026-10-16.md) · [SH-03 审计报告（待修补 2 项 P1）](docs/evidence/sh03-20261016/audit-by-gumi.md) · [进度维护规则](../shared/progress-workflow.md)
+[项目入口](README.md) · [Agent 规范](AGENTS.md) · [实施与验收计划](docs/实施与验收计划.md) · [SH-01 审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) · [SH-02 审计报告](docs/evidence/sh02-20261016/audit-by-gumi.md) · [SH-03 终审收官报告](docs/evidence/sh03-20261016/audit-by-gumi.md) · [进度维护规则](../shared/progress-workflow.md)
 
 ## 当前摘要
 
-- **当前阶段**：第一期（Phase 1）拆分为三个顺序审计阶段（`SH-01` → `SH-02` → `SH-03`）；`SH-01` 与 `SH-02` 均已通过审计结项（`done`）；**`SH-03` 主体已由稳米交付（`387686a`），经谷米第一次终审发现 2 个 P1 缺陷（状态：`rework_required`，约 25 行代码可修完）**，修完二次复审通过即宣告第一期圆满收官。
-- **已完成范围**：
-  1. `SH-01`（基座与短线 KnowHow）与 `SH-02`（`bridge/` 焦点股池、三社区采集与四轨契约）均已结项；
-  2. `SH-03` 主体模块 `modules/short-term-radar/` 已落地并通过 4 条架构门禁红线、`npm run typecheck`、`npm run build -w @aihot/web` 与 API/SSR 测试。
-- **尚未完成**：`SH-03` 的 2 项 P1 缺陷修补与二次终审（详见 [`docs/evidence/sh03-20261016/audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md)）。
-- **下一步唯一任务**：**稳米**按 [`docs/evidence/sh03-20261016/audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md) 定点修补 `contracts.ts`（第 31~50 名梯队股补齐 `roleLabel`/`themes`/`exchange`）与 `radar-route.tsx`（响应 URL `?q=` 与 `?theme=` 寻址过滤并消除 `radar-page.test.ts` 假阳性断言），提交后交谷米二次终审结项。
+- **当前阶段**：**第一期（Phase 1）三个顺序阶段（`SH-01` → `SH-02` → `SH-03`）已全部完工并通过谷米独立审计结项（`done`）！** 下一阶段为第二期扩展（`SH-04`，当前 Grok 正在并行深挖第四~第六波二期弹药库）。
+- **第一期已完成范围**：
+  1. **`SH-01`（`done`）**：基座环境与 A 股短线 6 大分类/提示词/测试适配（[`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md)）；
+  2. **`SH-02`（`done`）**：`YM-data-pipeline` 焦点股池桥接、三大社区（东财股吧/淘股吧/雪球）采集器、System 1 反水贴与三色情绪引擎、四轨跨语言入库契约（[`audit-by-gumi.md`](docs/evidence/sh02-20261016/audit-by-gumi.md)）；
+  3. **`SH-03`（`done`）**：`@aihot/short-term-radar` 扩展模块（[`modules/short-term-radar/`](modules/short-term-radar/)）——四条雷达 API + Agent/MCP `get_radar` 能力 + 前端 **「🧩 题材主线梯队 ⇄ 🔥 人气共振 Top 30」** 双视图切换 + 三色情绪温度条 + 右侧 **「个股社区舆情与游资逻辑侧滑抽屉」**，经 R1 返工（`3bedb0d`）与谷米 R2 复审（[`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md)）全绿通过。
+- **下一步任务**：待 Grok 完成第四~第六波调研（龙虎榜量化席位 vs 主观游资图谱、韭研公社与财联社快讯接口、60 题材扩容与海外映射字典）后，由谷米验收并规划第二期 `SH-04` 工单。
 
 ## 有效边界与决定
 
-- **协作模式（2026-10-16 弈沐拍板）**：**谷米**负责规划、写开工单与阶段审查；**稳米**负责按单实施。**完成一个阶段、审计一个阶段**，未获上一阶段审计通过前不跨阶段施工。
+- **协作模式（2026-10-16 弈沐拍板）**：**谷米**负责规划、写开工单与阶段审查；**稳米**负责按单实施；**Grok**负责并行搜索与词典/席位/样本整理。**完成一个阶段、审计一个阶段**。
 - **独立工程边界（2026-10-16 弈沐拍板）**：作为 `YM_Capital` 下的独立项目建设，不与 `live-dashboard`（8088）混用代码、数据库或端口；本站默认端口为 `3088`。
-- **数据源与第一批社区范围（2026-10-16 弈沐拍板）**：
-  - 结构化热榜（同花顺 `ths_hot`、东财 `dc_hot`）、涨跌停池 (`market_intraday_state`)、开盘啦题材 (`kpl_list`/`kpl_concept`)、同花顺涨停原因 (`limit_list_ths`) 已在 `SH-02` 通过 `/Users/yimu/Projects/YM_Capital/YM-data-pipeline` 公共入口打通；
-  - 第一批社区评论范围固定为：**① 东方财富股吧**、**② 淘股吧 TGB**、**③ 雪球**。
-- **产品视图与架构红线（2026-10-16 弈沐拍板 + 谷米预审）**：
-  - 在 `SH-03` 通过 `modules/short-term-radar/` 实现双视图切换：默认 **「🧩 题材主线梯队视图」**，一键切换 **「🔥 跨平台人气共振 Top 30 榜」** + 个股社区舆情侧滑抽屉；
-  - `modules/short-term-radar/web/**` 严禁引用 `@aihot/backend`（遵守 `tests/architecture.test.ts` HTTP 边界），`server.ts` 统一通过 `config.dataDir` 读取 `.data/short-term-radar-snapshot.json`。
+- **数据源与社区范围（2026-10-16 弈沐拍板）**：
+  - 第一期已打通 `YM-data-pipeline` + **① 东方财富股吧**、**② 淘股吧 TGB**、**③ 雪球**；
+  - 第二期（`SH-04`）重点扩展：**龙虎榜量化基金席位识别 vs 主观游资图谱**、**韭研公社 + 财联社电报**、**60 题材扩容与隔夜海外催化映射**。
 
-## 未完成队列
+## 阶段队列
 
-| ID | 状态 | 下一动作 / 退出条件 | 依据 |
+| ID | 状态 | 阶段成果 / 下一动作 | 依据 |
 | --- | --- | --- | --- |
-| `SH-01` | `done` | **【已通过谷米审计】基座环境与 A 股短线 KnowHow 改造**：`site/`、`industry/` 与 39 个测试文件适配完成。 | [SH-01 开工单](docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md) · [谷米审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) |
-| `SH-02` | `done` | **【已通过谷米二次复审】`YM-data-pipeline` 桥接与三大社区靶向采集 (`bridge/`)**：56 项 Python 单测 + 四轨跨语言入库契约（41/41 入库，`backfill=0`）全部绿灯。 | [SH-02 开工单](docs/开工单-SH02-数据管道桥接与三社区采集-2026-10-16.md) · [谷米复审报告](docs/evidence/sh02-20261016/audit-by-gumi.md) |
-| `SH-03` | `rework_submitted` | **【R1 返工已提交，待谷米二次终审】`@aihot/short-term-radar` 双视图模块 (`modules/short-term-radar/`)**：两项 P1 已定点修复——① `contracts.ts` 的 `mapSnapshot()` 给梯队里未进 Top 30 的 20 只股票补上身位、题材与交易所（矛盾条目 27 → 0，`/stock/601127.SH` 恢复 200）；② `radar-route.tsx` 的直链过滤打通，`?q=`/`?theme=` 由 loader 透传给 API 做服务端过滤，并补负向断言消除假阳性。门禁：typecheck exit 0、web build exit 0、模块单测 5/5、架构红线 8/8、页面 SSR 2/2。 | [R1 审计](docs/evidence/sh03-20261016/audit-by-gumi.md) · [返工记录](docs/evidence/sh03-20261016/verification.md) |
-| `SH-04` | `backlog` | **二期扩展**：接入韭研公社题材逻辑帖、用 `.data/gold.jsonl`（70 条已就位）跑 `eval-selection.ts` 校准门槛、联动游资与量化龙虎榜席位 (`hm_detail`) 与互动易 (`irm_qa`)。 | [实施与验收计划 §二期](docs/实施与验收计划.md) |
+| `SH-01` | `done` | **【已结项】基座环境与 A 股短线 KnowHow 改造**：`site/`、`industry/` 与 39 个测试文件适配完成。 | [SH-01 开工单](docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md) · [谷米审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) |
+| `SH-02` | `done` | **【已结项】`YM-data-pipeline` 桥接与三大社区靶向采集 (`bridge/`)**：56 项 Python 单测 + 四轨跨语言入库契约（41/41 入库，`backfill=0`）全部绿灯。 | [SH-02 开工单](docs/开工单-SH02-数据管道桥接与三社区采集-2026-10-16.md) · [谷米复审报告](docs/evidence/sh02-20261016/audit-by-gumi.md) |
+| `SH-03` | `done` | **【已结项 · 第一期收官】`@aihot/short-term-radar` 双视图模块与端到端联调 (`modules/short-term-radar/`)**：4 条架构红线、56 项 Python 单测、`typecheck`、`web build`、5 项模块 API 单测与 2 项真实 SSR 端到端测试全部绿灯，梯队矛盾清零（`27 → 0`）。 | [SH-03 开工单](docs/开工单-SH03-双视图短线雷达模块与端到端联调-2026-10-16.md) · [谷米终审报告](docs/evidence/sh03-20261016/audit-by-gumi.md) |
+| `SH-04` | `backlog` | **二期扩展**：吸收 Grok 第四~第六波成果（量化席位 vs 游资龙虎榜识别、韭研公社与快讯电报、60 题材与海外映射），并用 `.data/gold.jsonl` 校准精选门槛。 | [实施与验收计划 §二期](docs/实施与验收计划.md) |
 
 ## 最近记录
 
-- **2026-10-16 18:31 CST | `SH-03` 第一次终审（退回小幅修补） | 谷米**
-  - **结果**：审查稳米提交 `387686a`。4 条架构门禁红线、`typecheck`、`web build` 及模块主体质量优秀，但独立对账抓出 2 个 P1 缺陷：① `contracts.ts` 的 `mapSnapshot()` 对未进 Top 30 的 20 只梯队股 fallback 时漏填 `roleLabel: role`、`themes` 与 `exchange`，导致 6 个题材梯队（如华为/鸿蒙的赛力斯、苹果链的立讯精密、储能的阳光电源等）出现“抬头摘要写容量中军 1 只、下方卡片却标为人气热股”的自相矛盾，且按 `?theme=消费电子` 过滤会丢失股票、按 `601127.SH` 查单股会 404；② `radar-route.tsx` 未从 `useSearchParams()` 读取 `?q=` 与 `?theme=`，导致 `/radar?q=易中天` 实际未过滤（`radar-page.test.ts` 因搜索框 placeholder 含“易中天”产生假阳性通过）。
-  - **下一步**：出具 [`docs/evidence/sh03-20261016/audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md)，交稳米定点修补后二次复审收官。
-
-- **2026-10-16 18:24 CST | `SH-03` 实施交付 | 稳米**
-  - **结果**：提交 `387686a`，新增 `modules/short-term-radar/` 并完成双视图、舆情抽屉、四条路由与 Agent/MCP 能力。
+- **2026-10-16 18:44 CST | `SH-03` 二次终审通过（第一期全链路收官） | 谷米**
+  - **结果**：独立复测稳米提交 `3bedb0d`。全量梯队一致性诊断 `{ missingThemeCount: 0, unqualCodeCount: 0, roleMismatch: 0 }`（27 处不一致全部清零）；Python 单测 56/56、`npm run typecheck`、`npm run build -w @aihot/web`、架构红线 + 入库契约 + 模块单测 + 真实 SSR 测试 18/18 全部绿灯（含 `/radar?q=易中天` 过滤掉 `宁德时代`、`/radar?theme=消费电子` 命中 `立讯精密` 且过滤掉 `光模块` 的正负向断言）。出具 [`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md) R2 PASS 结论，第一期圆满收官。
+- **2026-10-16 18:39 CST | `SH-03` R1 返工提交 | 稳米**
+  - **结果**：提交 `3bedb0d`，修复 `contracts.ts` 尾部 20 只梯队股字段补齐与 `radar-route.tsx` SSR/客户端 `?q=`、`?theme=` 直链过滤，新增 `radar.test.ts` 与 `radar-page.test.ts` 回归锁。
 
 ## 历史索引
 
 | 日期 / 阶段 | 归档与证据 | 该批结论 |
 | --- | --- | --- |
+| 2026-10-16 / `SH-03` 结项（一期收官） | [`docs/evidence/sh03-20261016/`](docs/evidence/sh03-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md) | 完成 `@aihot/short-term-radar` 双视图模块、舆情侧滑抽屉、Agent/MCP 能力及全链路契约验证，谷米二次终审通过。 |
 | 2026-10-16 / `SH-02` 结项 | [`docs/evidence/sh02-20261016/`](docs/evidence/sh02-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh02-20261016/audit-by-gumi.md) | 完成 `bridge/` 焦点股池、三社区采集、System 1 情绪引擎及四轨跨语言契约对齐，谷米二次复审通过。 |
 | 2026-10-16 / `SH-01` 结项 | [`docs/evidence/sh01-20261016/`](docs/evidence/sh01-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md) | 完成 AIHOT 站点与 A 股短线 6 大分类/提示词/测试适配，谷米独立复测通过。 |
 | 2026-10-16 / 基线建立 | [`docs/upstream/`](docs/upstream/) · [`docs/实施与验收计划.md`](docs/实施与验收计划.md) | 克隆 AIHOT 上游 `c8704e5`，确立三阶段（`SH-01`~`SH-03`）滚动开发与谷米审计机制。 |
-
-- **2026-10-16 19:25 CST | `SH-03` R1 返工提交 | 稳米**
-  - **结果**：定点修复 R1 的 2 个 P1。**P1-1**（`contracts.ts` `mapSnapshot()`）：梯队覆盖 50 只焦点股而共振榜只有 30 只，第 31~50 名走 fallback 时丢了 `roleLabel`/`themes`/`exchange`；改为先汇总 `themesByCode`，再补桶的身位、合并题材、从 `symbol` 前缀推断交易所。**P1-2**（`radar-route.tsx`）：`query` 改为派生自 `?q=` 并与输入框双向同步，新增 `?theme=` 对梯队与共振榜同时生效；更关键的是 **loader 把 `q`/`theme`/`role` 透传给 API**——React Router 会把 loader 数据内联进 HTML，只在组件里过滤等于把未过滤数据发给浏览器，负向断言无法成立。
-  - **回归锁**：`radar.test.ts` 新增梯队一致性断言（题材归属、带后缀 code、摘要与身位一致，矛盾条目 **27 → 0**）；`radar-page.test.ts` 补 `!nickname.includes("宁德时代")` 与 `?theme=` 正负向断言。
-  - **验证范围**：typecheck exit 0；`npm run build -w @aihot/web` exit 0；模块单测 5/5；架构红线 8/8（四条逐条）；页面 SSR 2/2；一次性实测 `/stock/601127.SH` 返回 200（赛力斯·容量中军）、`?q=易中天` 页不再含宁德时代。
-  - **下一步**：交谷米二次终审收官。
