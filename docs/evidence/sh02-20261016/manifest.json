@@ -123,5 +123,89 @@
     "离线 fixture 的时间基准为 2026-10-16 10:30 北京时间，因此端到端演练里 15m 盖楼流速为 0（真实时间已过样本时刻）；单测用固定 now 断言该逻辑",
     "雪球深度作者名录为 UID 维度，接口返回的 user.id 可能为字符串或数字，已统一按字符串比较",
     "context_dependent 语境修正规则表（吃面+反包、格局+被埋 等）为本仓工程补充，词典只给了布尔标记；规则集中在 sentiment_engine.CONTEXT_RULES，便于后续按实盘反馈调整"
-  ]
+  ],
+  "rework": {
+    "auditRound": "R1（谷米 AUDIT-SH02-20261016-R1，结论 REJECT / rework_required）",
+    "reworkCommit": "89912899610ddf4134b6fa7491bc668a0c14ab16",
+    "reworkCompletedAt": "2026-10-16T16:30:00+08:00",
+    "findings": [
+      {
+        "id": "P0-1",
+        "severity": "P0",
+        "status": "fixed",
+        "defect": "pipeline_report_item 用 ymhot://radar/stock/{symbol}，后端 normalizeUrl() 只认 http/https，返回 null 后 ingestItems 静默 continue → 30 条战报真实推送 created=0",
+        "backendContract": "packages/backend/src/lib/url.ts:15 `if (u.protocol !== \"http:\" && u.protocol !== \"https:\") return null;`；items.ts:56-57 静默跳过",
+        "fix": "改用 https://quote.eastmoney.com/{symbol}.html?date={trade_date}；date 已逐条核对不在 TRACKING_PARAMS（utm_*/spm/from/ref/ref_src/ref_url/source/share_source/share_token/fbclid/gclid/igshid/mc_cid/mc_eid/_hsenc/_hsmi/scene/chksm/sessionid/srcid/clicktime/enterid/mkt_tok）内",
+        "regressionLock": "bridge/tests/test_bridge.py::test_every_track_payload_survives_the_backend_url_and_time_contract + test_pipeline_url_carries_the_trade_date_and_survives_normalisation；scripts/verify-bridge-contract.ts 实测 30/30 入库"
+      },
+      {
+        "id": "P0-2",
+        "severity": "P0",
+        "status": "fixed",
+        "defect": "payload 全部漏传 publishedAt → decideTimeline() 记 backfill=unknown-publication-time、isHistorical=true；hot_signal 轨 settleNonEditorial() 恒返回 {group:false}，editorial 三轨不建事件、不进热榜与日报",
+        "backendContract": "materials.ts:82-89 decideTimeline；materials.ts:116-118 isHistorical；jobs/content.ts:92-100 settleNonEditorial",
+        "fix": "pipeline_report_item(stock, summary, published_at) 用批次时间；community_item(..., fallback_published_at) 取 post.published_at or fallback；build_push_plan 默认注入 now_beijing().isoformat()",
+        "regressionLock": "同上 bridge 契约测试（publishedAt 非空、带时区、年份≥2026）；tests/ingest.test.ts 断言 backfill=false + published_at 非空；契约脚本实测 backfill=0/undated=0 且 settleNonEditorial→{group:true}"
+      },
+      {
+        "id": "P1-3",
+        "severity": "P1",
+        "status": "fixed",
+        "defect": "taoguba._normalize_time 用 strptime('%m-%d %H:%M') 把年份补成 1900 → 距今超 48h 被判 stale-on-discovery 历史回填",
+        "fix": "改用显式正则解析无年份时刻后按基准年份补齐（晚于当前超过 1 天退一年）；顺带规避 Python 3.12+ 对无年份 strptime 的弃用警告与 3.15 行为变更",
+        "regressionLock": "bridge/tests/test_bridge.py::test_yearless_timestamps_take_the_current_year_not_1900 / test_yearless_timestamps_from_the_future_fall_back_one_year"
+      },
+      {
+        "id": "P1-4",
+        "severity": "P1",
+        "status": "fixed",
+        "defect": "缺跨语言契约单测；.gitignore 未忽略 __pycache__/",
+        "fix": ".gitignore 增加 __pycache__/ 与 *.py[cod]；bridge 侧新增三条 payload 契约断言；tests/ingest.test.ts 新增真实格式 payload 端到端入库断言；新增 scripts/verify-bridge-contract.ts 做真实 payload → 真实 ingestItems 的跨语言校验",
+        "regressionLock": "全量单测 56 项 + node 测试 22 项 + 契约脚本"
+      }
+    ],
+    "gates": [
+      {
+        "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\" -v",
+        "exitCode": 0,
+        "tests": 56,
+        "failures": 0,
+        "evidence": "bridge-tests.txt"
+      },
+      {
+        "command": "python3 -m bridge.run_bridge --offline-fixtures --sync-gold --dry-run --dump-payloads /tmp/bridge-payloads.json",
+        "exitCode": 0,
+        "evidence": "bridge-run.txt"
+      },
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "evidence": "typecheck.txt"
+      },
+      {
+        "command": "node --test tests/ingest.test.ts tests/provenance.test.ts tests/architecture.test.ts",
+        "exitCode": 0,
+        "tests": 22,
+        "failures": 0,
+        "evidence": "node-tests.txt"
+      },
+      {
+        "command": "node --import ./tests/databases.ts scripts/verify-bridge-contract.ts",
+        "exitCode": 0,
+        "result": "一次性干净库上，四轨真实 payload created=30/5/2/4 与计划数完全相等，backfill=0、undated=0，editorial 轨 body_status=ok 且正文入库，hot_signal 轨 settleNonEditorial → { group: true }",
+        "evidence": "bridge-contract.txt"
+      },
+      {
+        "command": "git status --short && git diff --check + 密钥自检",
+        "exitCode": 0,
+        "result": "diff --check 干净；__pycache__ 已被忽略（.gitignore:11）；无硬编码密钥",
+        "evidence": "git-status.txt"
+      }
+    ],
+    "reworkFindings": [
+      "推送语义是「URL 全局身份」：同一 payload 重推走修订而非新建，created 只在首次为真——因此契约校验改用自建一次性干净库，否则会读到上一次残留并误判为 0 条",
+      "契约测试最初把 URL 写死，重跑时命中既有行造成 created=0 假失败；已补唯一标记并在注释里说明原因"
+    ],
+    "note": "SH-03 未开工；本次仅修审计列出的跨语言契约缺陷，未扩大范围。"
+  }
 }
