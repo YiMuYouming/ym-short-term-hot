@@ -1,0 +1,58 @@
+=== 门禁 1：bridge 离线单测 @ 2026-10-16 15:37:33 CST ===
+test_attaches_bodies_from_mobile_page (test_bridge.TestEastmoneyGuba.test_attaches_bodies_from_mobile_page) ... ok
+test_counts_15m_posts (test_bridge.TestEastmoneyGuba.test_counts_15m_posts) ... ok
+test_fetch_failure_is_recorded_not_raised (test_bridge.TestEastmoneyGuba.test_fetch_failure_is_recorded_not_raised) ... ok
+test_fetch_stock_uses_injected_fetcher (test_bridge.TestEastmoneyGuba.test_fetch_stock_uses_injected_fetcher) ... ok
+test_parses_fields_and_computes_hot_weight (test_bridge.TestEastmoneyGuba.test_parses_fields_and_computes_hot_weight) ... ok
+test_ranks_locally_by_comments_and_clicks (test_bridge.TestEastmoneyGuba.test_ranks_locally_by_comments_and_clicks) ... ok
+test_offline_run_produces_snapshot_and_gold (test_bridge.TestEndToEnd.test_offline_run_produces_snapshot_and_gold) ... ok
+test_run_never_opens_a_socket_when_offline (test_bridge.TestEndToEnd.test_run_never_opens_a_socket_when_offline) ... ok
+test_catalog_indexes_28_themes_and_nicknames (test_bridge.TestFocusPool.test_catalog_indexes_28_themes_and_nicknames) ... ok
+test_exchange_and_symbol_mapping (test_bridge.TestFocusPool.test_exchange_and_symbol_mapping) ... ok
+test_focus_pool_applies_role_labels_from_live_signals (test_bridge.TestFocusPool.test_focus_pool_applies_role_labels_from_live_signals) ... ok
+test_offline_pipeline_reports_fixture_status (test_bridge.TestFocusPool.test_offline_pipeline_reports_fixture_status) ... ok
+test_online_mode_records_pipeline_degradation_honestly (test_bridge.TestFocusPool.test_online_mode_records_pipeline_degradation_honestly) ... ok
+test_pool_falls_back_to_theme_base_when_pipeline_is_empty (test_bridge.TestFocusPool.test_pool_falls_back_to_theme_base_when_pipeline_is_empty) ... ok
+test_pool_is_sorted_by_role_then_hot_rank (test_bridge.TestFocusPool.test_pool_is_sorted_by_role_then_hot_rank) ... ok
+test_stock_matcher_maps_nicknames_and_names (test_bridge.TestFocusPool.test_stock_matcher_maps_nicknames_and_names) ... ok
+test_gold_source_has_70_cases_and_syncs (test_bridge.TestGoldSync.test_gold_source_has_70_cases_and_syncs) ... ok
+test_community_item_drops_spam_and_shortens_excerpt (test_bridge.TestPushPlan.test_community_item_drops_spam_and_shortens_excerpt) ... ok
+test_pipeline_report_body_carries_facts_and_is_pushed_as_body_text (test_bridge.TestPushPlan.test_pipeline_report_body_carries_facts_and_is_pushed_as_body_text) ... ok
+test_plan_splits_four_tracks_and_respects_participation_mode (test_bridge.TestPushPlan.test_plan_splits_four_tracks_and_respects_participation_mode) ... ok
+test_push_batches_at_50_and_reports_dry_run (test_bridge.TestPushPlan.test_push_batches_at_50_and_reports_dry_run) ... ok
+test_push_uses_injected_transport_and_batches (test_bridge.TestPushPlan.test_push_uses_injected_transport_and_batches) ... ok
+test_push_without_token_reports_no_token (test_bridge.TestPushPlan.test_push_without_token_reports_no_token) ... ok
+test_spam_never_enters_the_push_plan (test_bridge.TestPushPlan.test_spam_never_enters_the_push_plan) ... ok
+test_15m_posting_velocity_counts_only_recent_posts (test_bridge.TestSentimentEngine.test_15m_posting_velocity_counts_only_recent_posts) ... ok
+test_all_14_spam_patterns_match_their_own_examples (test_bridge.TestSentimentEngine.test_all_14_spam_patterns_match_their_own_examples) ... ok
+test_apply_to_stocks_writes_scores_back (test_bridge.TestSentimentEngine.test_apply_to_stocks_writes_scores_back) ... ok
+test_bearish_post_scores_panic_bear (test_bridge.TestSentimentEngine.test_bearish_post_scores_panic_bear) ... ok
+test_bullish_post_scores_extreme_bull (test_bridge.TestSentimentEngine.test_bullish_post_scores_extreme_bull) ... ok
+test_context_rule_flips_chi_mian_with_reversal_context (test_bridge.TestSentimentEngine.test_context_rule_flips_chi_mian_with_reversal_context) ... ok
+test_context_rule_flips_ge_ju_with_burial_context (test_bridge.TestSentimentEngine.test_context_rule_flips_ge_ju_with_burial_context) ... ok
+test_context_rule_records_source_notes_for_audit (test_bridge.TestSentimentEngine.test_context_rule_records_source_notes_for_audit) ... ok
+test_ordinary_post_is_not_spam (test_bridge.TestSentimentEngine.test_ordinary_post_is_not_spam) ... ok
+test_resonance_score_combines_platforms_and_ranks (test_bridge.TestSentimentEngine.test_resonance_score_combines_platforms_and_ranks) ... ok
+test_spam_post_is_flagged_and_never_scored (test_bridge.TestSentimentEngine.test_spam_post_is_flagged_and_never_scored) ... ok
+test_summary_label_needs_enough_evidence (test_bridge.TestSentimentEngine.test_summary_label_needs_enough_evidence) ... ok
+test_summary_ratios_sum_to_100 (test_bridge.TestSentimentEngine.test_summary_ratios_sum_to_100) ... ok
+test_ladder_groups_hold_role_buckets (test_bridge.TestSnapshot.test_ladder_groups_hold_role_buckets) ... ok
+test_resonance_board_sorted_desc_and_carries_sentiment (test_bridge.TestSnapshot.test_resonance_board_sorted_desc_and_carries_sentiment) ... ok
+test_snapshot_has_ladders_and_resonance_board (test_bridge.TestSnapshot.test_snapshot_has_ladders_and_resonance_board) ... ok
+test_snapshot_is_json_serialisable (test_bridge.TestSnapshot.test_snapshot_is_json_serialisable) ... ok
+test_collect_ranks_vip_first (test_bridge.TestTaoguba.test_collect_ranks_vip_first) ... ok
+test_forbidden_routes_are_documented_not_called (test_bridge.TestTaoguba.test_forbidden_routes_are_documented_not_called) ... ok
+test_parse_getmzh_reads_dto_index_list (test_bridge.TestTaoguba.test_parse_getmzh_reads_dto_index_list) ... ok
+test_parse_jinghua_extracts_title_counts_and_author (test_bridge.TestTaoguba.test_parse_jinghua_extracts_title_counts_and_author) ... ok
+test_vip_youzi_flagged_by_user_id (test_bridge.TestTaoguba.test_vip_youzi_flagged_by_user_id) ... ok
+test_collect_warms_up_before_json_calls (test_bridge.TestXueqiu.test_collect_warms_up_before_json_calls) ... ok
+test_deep_logic_needs_length_and_industry_words (test_bridge.TestXueqiu.test_deep_logic_needs_length_and_industry_words) ... ok
+test_excellent_comments_are_attached_with_distinct_ids (test_bridge.TestXueqiu.test_excellent_comments_are_attached_with_distinct_ids) ... ok
+test_hot_stock_ranks_and_symbols (test_bridge.TestXueqiu.test_hot_stock_ranks_and_symbols) ... ok
+test_symbol_status_marks_known_authors_and_long_form (test_bridge.TestXueqiu.test_symbol_status_marks_known_authors_and_long_form) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 4.405s
+
+OK
+unittest exit=0

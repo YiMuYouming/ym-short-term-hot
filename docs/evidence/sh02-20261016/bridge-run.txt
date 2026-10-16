@@ -1,0 +1,11 @@
+=== 门禁 2：离线端到端演练 @ 2026-10-16 15:37:38 CST ===
+[bridge] 模式=offline_fixtures dry_run=True push=False
+[bridge] 焦点股池 50 只（题材词典 28 个题材）
+[bridge] 归类帖子 14 条，覆盖 6 只票；词典情绪词 169 条、水贴正则 14 条
+[bridge] 快照已写 /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data/short-term-radar-snapshot.json（梯队 18 组、共振榜 30 只）
+[bridge] 金标集已同步 /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data/gold.jsonl（70 条）
+[bridge] 推送 external-ym-pipeline：计划 30 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-taoguba-hot：计划 5 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-xueqiu-hot：计划 2 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-eastmoney-guba：计划 4 条 / 批次 1 / 已发 0 / 状态 dry_run
+run_bridge exit=0

@@ -1,0 +1,41 @@
+{
+  "dto": {
+    "indexList": {
+      "listData": [
+        {
+          "userID": "252069",
+          "userName": "柏拉爱空",
+          "topicID": "778899001",
+          "newTopicID": "778899001",
+          "subject": "算力主线复盘：光模块三连板，明日竞价弱转强预期",
+          "subinfo": "今天光模块整体大长腿，中际旭创三连板带动板块，易中天集体走强。明日竞价看承接，弱转强可低吸，炸板则放弃。",
+          "replyNum": 186,
+          "viewNum": 21400,
+          "createTime": "2026-10-16 10:05"
+        },
+        {
+          "userID": "138280",
+          "userName": "十万起家",
+          "topicID": "778899002",
+          "newTopicID": "778899002",
+          "subject": "情绪冰点了，明日修复概率大",
+          "subinfo": "连板高度五板，情绪处于冰点附近，明日看修复强度。",
+          "replyNum": 92,
+          "viewNum": 9800,
+          "createTime": "2026-10-16 09:40"
+        },
+        {
+          "userID": "333333",
+          "userName": "散户小张",
+          "topicID": "778899003",
+          "newTopicID": "778899003",
+          "subject": "今天好累，不想看盘了",
+          "subinfo": "随便说说。",
+          "replyNum": 3,
+          "viewNum": 120,
+          "createTime": "2026-10-16 10:20"
+        }
+      ]
+    }
+  }
+}

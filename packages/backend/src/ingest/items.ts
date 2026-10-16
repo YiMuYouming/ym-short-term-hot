@@ -21,6 +21,14 @@ interface ItemIn {
   url?: unknown;
   publishedAt?: unknown;
   author?: unknown;
+  /**
+   * Text the pusher already has. A collector that read the page itself (a WAF-served API, a
+   * synthetic pipeline report) passes it so the worker never crawls a URL that answers nothing:
+   * a non-empty bodyText lands as body_status 'ok'. Left out, nothing changes: the item waits
+   * for its page (body_status 'pending').
+   */
+  excerpt?: unknown;
+  bodyText?: unknown;
   raw?: { _aihot?: { backfill?: boolean; baseline?: boolean } } & Record<string, unknown>;
 }
 
@@ -49,6 +57,7 @@ export async function ingestItems(body: { sourceId?: unknown; sourceName?: unkno
     if (!url || seen.has(url)) continue;
     seen.add(url);
     const published = typeof it.publishedAt === "string" ? new Date(it.publishedAt) : null;
+    const text = (value: unknown) => (typeof value === "string" && value.trim() ? value.trim() : undefined);
     const flags = it.raw?._aihot ?? {};
     const res = await upsertMaterial({
       sourceId: source!.id,
@@ -58,6 +67,8 @@ export async function ingestItems(body: { sourceId?: unknown; sourceName?: unkno
       title,
       author: typeof it.author === "string" ? it.author.slice(0, 200) : null,
       publishedAt: published && Number.isFinite(published.getTime()) ? published : null,
+      excerpt: text(it.excerpt),
+      bodyText: text(it.bodyText),
       raw: it.raw ?? null,
       via: "ingest",
       backfill: flags.backfill ? "reported-backfill" : flags.baseline ? "reported-baseline" : null,

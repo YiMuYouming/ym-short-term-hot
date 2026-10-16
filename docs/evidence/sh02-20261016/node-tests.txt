@@ -1,0 +1,35 @@
+=== 门禁 3b：ingest / provenance / architecture 测试 @ 2026-10-16 15:37:54 CST ===
+✔ the web reaches the backend only over HTTP (907.859541ms)
+✔ packages never import the apps, and nothing below the admin imports it (1624.590292ms)
+✔ public routes read content only through the public read layer (72.678208ms)
+✔ the tables that carry a rule are written only by the code that owns it (969.099958ms)
+✔ the public scope and the composite rule are spelled once, in publication/scope.ts (842.761667ms)
+✔ every table and column is used by the code that reads and writes the database (977.701959ms)
+✔ every environment variable the code reads is listed in a template, and every listed one is read (3843.967375ms)
+✔ modules do not import other modules (0.200417ms)
+✔ a paused external source rejects pushed items without recording a successful fetch (58.854334ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ pushed bodyText lands as read content; an item without one still waits for its page (10.860208ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ the first external discovery uses a paused verified publisher, keeps the real discovery and queues extraction once (64.440875ms)
+✔ a repeated signal discovery adopts a newly registered publisher and resumes editorial processing without revising material (16.477666ms)
+✔ publisher promotion cannot reuse a signal-only grouping as news confirmation (19.286042ms)
+✔ source-mode promotion cannot reuse a signal-only grouping as news confirmation (14.516583ms)
+✔ a T1 channel linking another publisher is still a discovery, not that URL's publisher (3.438708ms)
+✔ attribution reuses an existing current-revision editorial judgement even after the source became a signal (5.377792ms)
+✔ only an observed web-list path supplies implicit ownership; non-T1 and RSS domains never do (3.7125ms)
+✔ a later verified publisher repairs source and author, preserving judgement, content and time (8.657083ms)
+✔ publisher-first discovery remains the publisher, and an unrelated T1 URL cannot take ownership (3.393625ms)
+✔ ambiguous registered publishers do not silently choose a source (2.09375ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a non-T1 flag cannot enter the first-party channel, and source edits derive the flag from tier (8.61125ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11060.360875
+node --test exit=0

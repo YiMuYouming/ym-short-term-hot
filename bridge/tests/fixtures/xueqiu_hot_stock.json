@@ -1,0 +1,30 @@
+{
+  "data": {
+    "items": [
+      {
+        "symbol": "SH600519",
+        "name": "贵州茅台",
+        "percent": 0.0121,
+        "rank": 1
+      },
+      {
+        "symbol": "SZ300308",
+        "name": "中际旭创",
+        "percent": 0.2001,
+        "rank": 2
+      },
+      {
+        "symbol": "SH688256",
+        "name": "寒武纪",
+        "percent": 0.123,
+        "rank": 4
+      },
+      {
+        "symbol": "SZ300750",
+        "name": "宁德时代",
+        "percent": 0.0321,
+        "rank": 6
+      }
+    ]
+  }
+}

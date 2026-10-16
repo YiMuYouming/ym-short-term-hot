@@ -1,0 +1,133 @@
+{
+  "_comment": "离线管道样本：结构对齐 YM-data-pipeline contract 1.0 的 items/indicators 形状",
+  "ths_hot": {
+    "_meta": {
+      "status": "ok",
+      "provider": "fixture",
+      "data_as_of": "2026-10-16T10:30:00+08:00"
+    },
+    "items": [
+      {
+        "code": "300308",
+        "name": "中际旭创",
+        "rank": 1,
+        "zdpct": 20.01,
+        "amount": 8260000000
+      },
+      {
+        "code": "300502",
+        "name": "新易盛",
+        "rank": 2,
+        "zdpct": 19.98,
+        "amount": 5140000000
+      },
+      {
+        "code": "688256",
+        "name": "寒武纪",
+        "rank": 3,
+        "zdpct": 12.3,
+        "amount": 4020000000
+      },
+      {
+        "code": "300750",
+        "name": "宁德时代",
+        "rank": 4,
+        "zdpct": 3.21,
+        "amount": 6300000000
+      },
+      {
+        "code": "002261",
+        "name": "拓维信息",
+        "rank": 5,
+        "zdpct": 10.02,
+        "amount": 2100000000
+      },
+      {
+        "code": "600410",
+        "name": "华胜天成",
+        "rank": 6,
+        "zdpct": 10.0,
+        "amount": 860000000
+      }
+    ]
+  },
+  "dc_hot": {
+    "_meta": {
+      "status": "ok",
+      "provider": "fixture",
+      "data_as_of": "2026-10-16T10:30:00+08:00"
+    },
+    "items": [
+      {
+        "code": "300308",
+        "name": "中际旭创",
+        "rank": 1,
+        "zdpct": 20.01
+      },
+      {
+        "code": "688256",
+        "name": "寒武纪",
+        "rank": 4,
+        "zdpct": 12.3
+      },
+      {
+        "code": "600519",
+        "name": "贵州茅台",
+        "rank": 9,
+        "zdpct": 1.12
+      }
+    ]
+  },
+  "intraday": {
+    "_meta": {
+      "status": "ok",
+      "provider": "fixture",
+      "data_as_of": "2026-10-16T10:30:00+08:00"
+    },
+    "trade_date": "2026-10-16",
+    "indicators": {
+      "zt_count": 62,
+      "zb_count": 11,
+      "dt_count": 4,
+      "break_rate": 0.177,
+      "max_board": 5
+    },
+    "limit_up_pool": [
+      {
+        "code": "300308",
+        "name": "中际旭创",
+        "boards": 3,
+        "zdpct": 20.01,
+        "amount": 8260000000
+      },
+      {
+        "code": "300502",
+        "name": "新易盛",
+        "boards": 2,
+        "zdpct": 19.98,
+        "amount": 5140000000
+      },
+      {
+        "code": "688256",
+        "name": "寒武纪",
+        "boards": 4,
+        "zdpct": 12.3,
+        "amount": 4020000000
+      },
+      {
+        "code": "600410",
+        "name": "华胜天成",
+        "boards": 1,
+        "zdpct": 10.0,
+        "amount": 860000000
+      },
+      {
+        "code": "002261",
+        "name": "拓维信息",
+        "boards": 1,
+        "zdpct": 10.02,
+        "amount": 2100000000
+      }
+    ]
+  }
+}
