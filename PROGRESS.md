@@ -32,7 +32,7 @@
 | --- | --- | --- | --- |
 | `SH-01` | `done` | **【已通过谷米审计】基座环境与 A 股短线 KnowHow 改造**：`site/`、`industry/` 与 39 个测试文件适配完成。 | [SH-01 开工单](docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md) · [谷米审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) |
 | `SH-02` | `done` | **【已通过谷米二次复审】`YM-data-pipeline` 桥接与三大社区靶向采集 (`bridge/`)**：56 项 Python 单测 + 四轨跨语言入库契约（41/41 入库，`backfill=0`）全部绿灯。 | [SH-02 开工单](docs/开工单-SH02-数据管道桥接与三社区采集-2026-10-16.md) · [谷米复审报告](docs/evidence/sh02-20261016/audit-by-gumi.md) |
-| `SH-03` | `ready` | **`@aihot/short-term-radar` 双视图模块与端到端联调 (`modules/short-term-radar/`)**：稳米按 `WO-SH03-20261016` 实现 S1 模块注册、S2 `/api/site/radar` + `/api/v1/radar` + AgentAbility、S3 双视图看板与侧滑舆情抽屉、S4 全套自动化测试与 Web 构建门禁。 | [SH-03 开工单](docs/开工单-SH03-双视图短线雷达模块与端到端联调-2026-10-16.md) |
+| `SH-03` | `in_review` | **【已交付，待谷米第一期终审】`@aihot/short-term-radar` 双视图模块 (`modules/short-term-radar/`)**：`module.ts` 声明 `/radar` 页面与 `/api/(site|v1)/radar`；`server.ts` 只读 `config.dataDir` 下的快照（**零新增数据库表**），提供四条 API + Agent/MCP `get_radar`，快照缺失或损坏降级为 `mode: "empty"`；`web/radar-route.tsx` 双视图 + 三色情绪条 + 身位/黑话徽章 + 个股舆情抽屉（仅走 HTTP）。门禁：bridge 56/56、typecheck、web build、模块单测 4/4、架构与引擎回归 19/19、页面 SSR 2/2，全量 `npm test` 737 通过且新增回归 0。 | [SH-03 开工单](docs/开工单-SH03-双视图短线雷达模块与端到端联调-2026-10-16.md) · [验证记录](docs/evidence/sh03-20261016/verification.md) |
 | `SH-04` | `backlog` | **二期扩展**：接入韭研公社题材逻辑帖、用 `.data/gold.jsonl`（70 条已就位）跑 `eval-selection.ts` 校准门槛、联动游资龙虎榜 (`hm_detail`) 与互动易 (`irm_qa`)。 | [实施与验收计划 §二期](docs/实施与验收计划.md) |
 
 ## 最近记录
@@ -51,3 +51,10 @@
 | 2026-10-16 / `SH-02` 结项 | [`docs/evidence/sh02-20261016/`](docs/evidence/sh02-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh02-20261016/audit-by-gumi.md) | 完成 `bridge/` 焦点股池、三社区采集、System 1 情绪引擎及四轨跨语言契约对齐，谷米二次复审通过。 |
 | 2026-10-16 / `SH-01` 结项 | [`docs/evidence/sh01-20261016/`](docs/evidence/sh01-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md) | 完成 AIHOT 站点与 A 股短线 6 大分类/提示词/测试适配，谷米独立复测通过。 |
 | 2026-10-16 / 基线建立 | [`docs/upstream/`](docs/upstream/) · [`docs/实施与验收计划.md`](docs/实施与验收计划.md) | 克隆 AIHOT 上游 `c8704e5`，确立三阶段（`SH-01`~`SH-03`）滚动开发与谷米审计机制。 |
+
+- **2026-10-16 19:20 CST | `SH-03` 实施交付（第一期收官）| 稳米**
+  - **结果**：新增 `modules/short-term-radar/`（约 1200 行）并注册进 `site/modules/{index,server,web}.ts`。后端只读 `.data/short-term-radar-snapshot.json`（`config.dataDir`，**零新增数据库表**），提供 `GET /api/site/radar`、`/api/v1/radar`、`/api/site/radar/stock/:code`、`/api/v1/radar/stock/:code`，支持 `?theme= &role= &q=`（`q` 支持「易中天」「寒王」等社区黑话），以及 Agent/MCP 能力 `/api/v1/agent/radar` 与 `get_radar`。前端 `/radar` 提供「🧩 题材主线梯队 ⇄ 🔥 人气共振 Top 30」双视图（`?view=` 同步）、搜索与身位快筛、三色社区情绪温度条（红/琥珀/绿）、身位与黑话徽章，以及点击个股滑出的社区舆情与游资逻辑抽屉（游资复盘/雪球深度/股吧热评 + 原帖外链，Esc 与遮罩关闭）。
+  - **契约处置**：工单 §二 的输入 schema 与 SH-02 实产快照有字段漂移（`roleLabel` vs `role`、占比 0~100 vs 0~1、梯队按身位分桶 vs 拍平列表，以及快照中不存在的 `turnoverRate`/`kplTag`/`limitReason`）。处置原则是不改 Python 产物，把漂移集中在 `modules/short-term-radar/contracts.ts` 一处映射，后端与前端只认映射后的契约；缺失字段置空并在页面优雅隐藏。
+  - **验证范围**：bridge 单测 56/56；`npm run typecheck` 与 `npm run build -w @aihot/web` 均 exit 0（`/radar` 打包为独立 chunk）；架构四条红线逐条通过；模块单测 4/4；页面 SSR 测试 2/2（真 api + 生产 web server 渲染出题材、身位、黑话、情绪与抽屉）；干净模板库全量 `npm test` 737 通过 / 16 失败，失败集与 SH-01 上游基线完全一致（14 项环境类），**新增回归 0**。
+  - **两个环境问题（非代码缺陷）已处置**：① `ymhot_test` 是全仓测试的模板库，SH-02 旧版契约脚本曾写入 20 条 `contract-*` 信源导致计数类测试连锁失败——脚本已改为自建一次性库，重建模板库后全量干净；② 并行使用同一模板库会触发 `source database is being accessed by other users`，门禁改为串行、SSR 测试用独立库。
+  - **下一步**：交谷米做第一期终审（证据 `docs/evidence/sh03-20261016/verification.md`）。

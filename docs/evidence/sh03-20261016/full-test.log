@@ -1,0 +1,1258 @@
+
+> test
+> node --test-global-setup=tests/databases.ts --import ./tests/databases.ts --test --test-concurrency=6 --test-timeout=120000 "tests/*.test.ts" "modules/*/tests/*.test.ts"
+
+✖ the radar page renders the ladders view with themes, roles, nicknames and sentiment (17608.902125ms)
+✖ the view, the nickname query and the drawer are all addressable by URL (0.309209ms)
+✔ both views answer 200 with ladders, the board, sentiment and highlights (2772.2775ms)
+✔ theme, role and nickname queries filter both views (79.988292ms)
+✔ one stock answers by bare code, dotted code and symbol; an unknown code is a 404 (71.504208ms)
+✔ a missing or unreadable snapshot degrades to an empty snapshot instead of failing (80.282875ms)
+✔ concurrent source intake creates one source for the same feed (27.259542ms)
+✔ a source transaction rolled back at commit leaves no successful audit entry (52.380958ms)
+✔ content corrections, public projection and audit either commit together or remain retryable (48.578667ms)
+✔ repeating a completed command returns its job without resetting newer processing or a manual detach (36.151208ms)
+✔ a rejected SEO correction leaves both the decision and public indexing unchanged (22.795667ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ bad admin input is a client error and never starts processing (158.485375ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ releasing an unknown receipt of an analysis step puts the article back (56.681333ms)
+✔ a report grouped into a fact already sent to a group is not sent there again (28.833958ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ the content group gets first-party and near-first-party sources only (7.487583ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ source pages retain order and count selected history regardless of public visibility (25.990417ms)
+✔ session binding migration keeps its established unique filename (0.380916ms)
+✔ session binding migration preserves an already-installed binding and legacy rows (13.377625ms)
+✔ effective password replacement revokes old cookies at actual read/write/check guards (34.501042ms)
+✔ password removal revokes existing sessions (2.823417ms)
+✔ password invalid-short config revokes existing sessions (2.45ms)
+✔ unchanged sessions preserve CSRF, and neither the password nor the token is stored (3.041167ms)
+✔ Feishu original union or normalized email remains authorized under OR semantics (7.805375ms)
+✔ a coalesced older profile email cannot keep a newly verified identity authorized (3.92325ms)
+✔ new profile claims cannot replace the original verified session claims (3.455541ms)
+✔ password and Feishu sessions sharing admin@local retain independent authority (8.039167ms)
+✔ Feishu app ID revokes only federated sessions (3.918708ms)
+✔ Feishu missing ID revokes only federated sessions (3.561583ms)
+✔ Feishu missing secret revokes only federated sessions (3.516291ms)
+✔ Feishu app-secret-only rotation preserves same-app authorized sessions (1.723083ms)
+✔ session-secret rotation revokes both methods (4.446333ms)
+✔ session-secret removal revokes both methods (4.69375ms)
+✔ legacy unbound sessions fail closed and are deleted (2.540917ms)
+✔ malformed bindings and Feishu claims fail closed (20.656209ms)
+✔ expiry, unknown token, logout isolation and explicit development mode retain their guards (5.162875ms)
+✔ Agent discovery uses the configured identity, address and categories (158.856833ms)
+✔ empty answers are explicit and fixed reports include their flash section (0.443125ms)
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 新内容卡住了，进不了网站","lines":["影响：11 篇新文章等了 2 小时以上还没处理完，精选和热点会缺内容","会自己好吗：服务恢复后会自动补处理","你需要：转给 AI 处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-16 的日报还没生成","lines":["影响：读者看不到 2026-10-16 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：新内容卡住了，进不了网站（已持续 1 小时 1 分钟）","lines":["影响：11 篇新文章等了 2 小时以上还没处理完，精选和热点会缺内容","会自己好吗：服务恢复后会自动补处理","你需要：转给 AI 处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：2026-10-16 的日报还没生成（已持续 1 小时 1 分钟）","lines":["影响：读者看不到 2026-10-16 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"✅ 已恢复：新内容卡住了，进不了网站","lines":["持续 1 小时 10 分钟（10月16日 18:14 起）"]}
+✔ an outage is announced once, repeated hourly, and closed with one recovery (90.743291ms)
+✔ a model service's outage names the steps that call it, not the wording step while the word list is empty (0.717084ms)
+✔ provider impacts follow the current model choice, including overrides, fallback and module steps (2.230292ms)
+✔ refusal and exhausted-budget findings name the currently selected provider's steps (3.476ms)
+✔ backup failures still escalate after fifty hours without a success (4.180292ms)
+✔ selected identity delays show reader impact, recovery state and the affected articles (48.557875ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ the ops digest does not describe unknown paid work as harmless or already retried (2.820625ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a late successful analysis preserves newer input awaiting processing (62.463041ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a failed analysis commit rolls back its judgement and receipt completion; retry reuses the saved responses (79.243625ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ SIGKILL after the provider accepted a request leaves an unknown outcome, released only once (101286.973167ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✖ SIGKILL after responses are saved but before the business commit reuses all receipts on restart (15008.340792ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+▶ title-only articles wait for evidence regardless of the prefilter label
+  ✔ PASS (27.900458ms)
+  ✔ UNKNOWN (3.20125ms)
+  ✔ BLOCK (3.565875ms)
+✔ title-only articles wait for evidence regardless of the prefilter label (35.294834ms)
+▶ real body, feed excerpt and quoted text still receive both scores and writing
+  ✔ {"bodyText":"来源确认模型发布。"} (18.465167ms)
+  ✔ {"excerpt":"来源确认模型发布。"} (11.450167ms)
+  ✔ {"xPost":{"text":"支持","quoted":{"text":"来源确认模型发布。"}}} (8.792833ms)
+✔ real body, feed excerpt and quoted text still receive both scores and writing (39.147416ms)
+▶ an empty or link-only original post keeps scoring and verbatim publication
+  ✔ media-only (6.344167ms)
+  ✔ https://example.org/launch (6.021708ms)
+✔ an empty or link-only original post keeps scoring and verbatim publication (12.658417ms)
+✔ a later material revision can be scored after the title-only revision waits (9.75575ms)
+✔ an unresolved current identity does not start a separate writing request (37.971041ms)
+✔ SIGTERM during the final paid writing call still commits the complete analysis and publication (20519.689333ms)
+✔ SIGTERM during successful first score drains slower structure and leaves a retryable job (40931.176875ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ SIGTERM during failed first score drains slower structure and leaves a retryable job (42762.847209ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ a selected item: prefilter, two scores, the content understanding and the structure (51.731459ms)
+✔ a word the site keeps from readers goes back once to be changed; copy without one is not sent (19.764584ms)
+✔ the first copy stands when the provider refuses the mend, the mend changes a number or leaves as many such words (45.167166ms)
+✔ structure retains grounded conditions, rejects invented or unseen quotes, and does not infer missing scope (4.399167ms)
+✔ a near-selected item is written like a selected one; below the floor it is translated (26.242541ms)
+✔ the prefilter's BLOCK stops everything; UNKNOWN with material goes on like PASS (19.209292ms)
+✔ a feed summary alone: the article page is fetched first, then the whole article is judged (49.318125ms)
+✔ a short post in Chinese is its own copy; a content-filter refusal is translated instead (25.326209ms)
+✔ guards: a platform the input does not name is not written in; long summaries are cut at sentences (0.58275ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ analysing the same revision again reuses every paid answer (14.316875ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✖ API startup is quiet and an unexpected error retains the request, stack and response contract (15006.796416ms)
+✔ the web reaches the backend only over HTTP (2277.707125ms)
+✔ packages never import the apps, and nothing below the admin imports it (3475.793959ms)
+✔ public routes read content only through the public read layer (149.972834ms)
+✔ the tables that carry a rule are written only by the code that owns it (1908.197292ms)
+✔ the public scope and the composite rule are spelled once, in publication/scope.ts (1671.442625ms)
+✔ every table and column is used by the code that reads and writes the database (1878.544875ms)
+✔ every environment variable the code reads is listed in a template, and every listed one is read (7922.42475ms)
+✔ modules do not import other modules (105.539917ms)
+✔ a cold read that finds nothing yet does not stick: later reads see the first published ranking (15.376792ms)
+✖ a real paired restore opens a feedback screenshot when forwarding is disabled and uploads are absent (100.747084ms)
+✖ both attachment roots restore nested paths and bytes, without caches or previous backups (282.713042ms)
+✖ missing/empty roots produce an extractable archive: neither (28.72225ms)
+✖ missing/empty roots produce an extractable archive: uploads+feedback-screenshots (80.225375ms)
+✖ an unreadable upload directory cannot become a successful empty backup (28.236959ms)
+✖ packing retries once and a successful retry preserves the screenshot (133.449834ms)
+✖ persistent packing failure still sends the database and reports incomplete backup (135.152333ms)
+✖ local retention keeps three dump/archive pairs without deleting source attachments (80.773125ms)
+✔ new catalysts require a launch classification as well as an official, new catalyst event (0.454917ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ category corrections revise every standard report atomically without selecting, rewriting or notifying (79.68725ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ publication metadata recovery keeps a confirmed body and only fills an unconfirmed body (89.528458ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ the minute budget stops unsent details, retains the listing and recovers the tail on later runs (103.979791ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ shutdown during detail work escapes collection without recording source failures (6.373417ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ later listing runs fill missing detail fields left beyond the existing budget (111.895917ms)
+✔ a failed detail read stays observable and can recover on a later listing run (17.354ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ successful detail pages without dates do not consume every later run's budget (26.301042ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ detail enrichment shares material identity across duplicate cards and changing tracking parameters (82.877ms)
+✔ html sections explicitly configured as posts retain distinct identities (12.883458ms)
+✔ markdown sections explicitly configured as posts retain distinct identities (11.10825ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a podcast episode without a page links to its media file, keeps its guid's identity and is not sent to fetch a page (19.503542ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ rss applies the fixed publication window in preview, on the first and all subsequent runs (84.980334ms)
+✔ web_list applies the fixed publication window in preview, on the first and all subsequent runs (21.439708ms)
+✔ json_list applies the fixed publication window in preview, on the first and all subsequent runs (13.293875ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ previews keep exactly what collection stores, under the source's URL, category and noise rules (5.609917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ the 61st entry of a known feed is stored before its validator answers 304 (165.874709ms)
+✔ a regular JSON run keeps all 0 entries it was given (2.358459ms)
+✔ a regular JSON run keeps all 61 entries it was given (79.379125ms)
+✔ a listing longer than a query's parameter limit is still deduplicated and its new tail stored (423.855542ms)
+✔ with the first 60 known, the tail is still created and revised, and queued for processing once (137.702708ms)
+✔ a web list of 61 entries loses none, newest first (78.078208ms)
+✔ a web list of 61 entries loses none, oldest first (78.545834ms)
+✔ the first import keeps its count and age limits; later runs take what was published since, and undated entries, before accepting 304 (132.242125ms)
+✔ a listing repairs an existing old article without admitting a new old archive item (6.018125ms)
+✔ in the tail an alias of a known URL keeps the first record, and URL, category and noise filters still apply (105.4115ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a storage failure in the tail does not advance the feed's validator; the retry fills in without new revisions (108.36425ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a known real headline does not buy a new detail read merely because it is long and the listing says Read the Blog (36.600458ms)
+✔ a new CTA obtains its title and date from one existing detail rendering path, and does not reread on the next run (50.297458ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ an explicit authoritative title rule still replaces a known headline (9.462792ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ an X search longer than one run is read to the old watermark over the next runs (188.881292ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ latest scope stays correlated to an outer x membership and candidate counts (31.233708ms)
+✔ a previously unseen, undated tail cannot become selected news, heat, a report or a queued push (402.653292ms)
+✔ an original source can supply a missing date without changing the text; discovery and explicit backfill are preserved (46.663667ms)
+✔ body extraction uses page publication metadata, never its updated time or a model release in the prose (19.902333ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ the second fetch of an initial catalogue still archives its undated remainder (14.057041ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ source tier and event ownership are separate; mentions of an entity do not establish authority (1.106875ms)
+✔ mentions cannot choose a timeline origin, anchor, representative, or a latest-progress link (60.425209ms)
+✔ item detail counts the same fact evidence as its expanded group (11.536708ms)
+✔ website and machine stories choose the same latest development and archive fallback (17.066916ms)
+✔ digest input excludes mentions, preserves scoped conditions, and ignores generated latest (51.537167ms)
+✔ rewriting a story digest uses the current reports and prompt and is audited (16.332458ms)
+✔ a cleared digest recovers from matching saved evidence without another model call (22.533625ms)
+✔ all story exits hide a digest whose title input changed (68.570167ms)
+✔ all story exits hide a digest whose summary input changed (30.202584ms)
+✔ all story exits hide a digest whose source input changed (20.531292ms)
+✔ all story exits hide a digest whose time input changed (18.731083ms)
+✔ all story exits hide a digest whose conditions input changed (17.107875ms)
+✔ all story exits hide a digest whose evidence input changed (16.840125ms)
+✔ all story exits hide a digest whose unlisted input changed (17.199042ms)
+✔ story text without no-hash never republishes unverifiable historical claims (33.96425ms)
+✔ story text without no-ids never republishes unverifiable historical claims (40.249625ms)
+✔ story text without no-version never republishes unverifiable historical claims (26.384417ms)
+✔ story text without different-text never republishes unverifiable historical claims (26.468708ms)
+✔ a story summary is visible only while a current public report supports those exact words (10.595584ms)
+✔ the hot board shows an event under its own title, linked to the fact most sources report (12.677584ms)
+✔ hot exits date latest progress by current event evidence after a withdrawal (20.043833ms)
+✔ an editor moves a report into the fact it repeats: no false development remains and the membership is the editor's (16.356833ms)
+✔ an in-flight digest cannot overwrite an editor revision or a merge, and its paid response remains reusable (10.984583ms)
+✔ an in-flight digest rejects changed report inputs after correction (13.089292ms)
+✔ an in-flight digest rejects changed report inputs after withdrawal (7.889292ms)
+✔ an in-flight digest rejects changed report inputs after detach (9.334584ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ an in-flight digest rejects changed report inputs after addition (8.883542ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-06 的日报还没生成","lines":["影响：读者看不到 2026-10-06 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：2026-10-06 的日报还没生成（已持续 11 小时 5 分钟）","lines":["影响：读者看不到 2026-10-06 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-07 的日报还没生成","lines":["影响：读者看不到 2026-10-07 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"✅ 已恢复：2026-10-07 的日报还没生成","lines":["持续 1 分钟（10月7日 10:35 起）"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"✅ 已恢复：2026-10-06 的日报还没生成","lines":["持续 11 小时 10 分钟（10月6日 23:30 起）"]}
+✔ midnight preserves a missing edition; each date recovers only when its report exists (63.120583ms)
+✔ recent gap detection uses report activity and each edition's overdue time (4.709709ms)
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-01 的日报还没生成","lines":["影响：读者看不到 2026-10-01 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：2026-10-01 的日报还没生成（已持续 6 天）","lines":["影响：读者看不到 2026-10-01 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-07 的日报还没生成","lines":["影响：读者看不到 2026-10-07 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"✅ 已恢复：2026-10-01 的日报还没生成","lines":["持续 5 天（10月1日 10:35 起）"]}
+✔ open dates outlive disabled generation or startup grace within the scan window (7.899291ms)
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-01 的日报还没生成","lines":["影响：读者看不到 2026-10-01 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 2026-10-08 的日报还没生成","lines":["影响：读者看不到 2026-10-08 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"2026-10-01 的日报没能补出，停止提醒","lines":["读者看不到 2026-10-01 的日报；缺期从 10月1日 10:35 起，已超出七天的检查范围"]}
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：2026-10-08 的日报还没生成（已持续 1 小时 25 分钟）","lines":["影响：读者看不到 2026-10-08 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+✔ an edition still missing past the scan window is closed once instead of reminded forever (5.7625ms)
+{"level":"warn","msg":"alert (not sent: FEISHU_INTERNAL_ENABLED is off)","title":"🔴 仍未恢复：2026-10-06 的日报还没生成（已持续 1 小时 1 分钟）","lines":["影响：读者看不到 2026-10-06 的日报","会自己好吗：尚未补齐；需查看运行记录确认是否需要人工补做","你需要：尽快发起一次维护处理"]}
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ legacy alert migrates its date and preserves reminder timing (4.291708ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a WeChat body that failed for a passing reason is fetched on the next check and analysed again (97.324625ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ the Dajiala key never follows a redirect to another origin; a same-origin redirect still works (7.792541ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ one model runs the prefilter, both scores, the writing and the structure (52.788625ms)
+✔ disabled pushes and missing credentials leave the retry available without sending (10.674667ms)
+✔ only an explicit webhook acknowledgement counts as delivered (13.7675ms)
+✔ a disabled target cannot receive a manual retry (1.415875ms)
+✔ a withdrawn selected item cannot be sent through manual recovery (6.370916ms)
+✔ a withdrawal while one target is sending stops the following mirror (5.074708ms)
+✔ a lost webhook reply still suppresses another report later grouped into the same fact (8.213625ms)
+✔ regrouping the same selected article cannot send it again under a new fact identity (19.565291ms)
+✔ enabling a group excludes earlier content and includes content arriving at its activation time (4.406833ms)
+✔ concurrent sibling claims reserve a target once, including the pending delivery (21.0405ms)
+✔ manual recovery requires an explicit valid outcome and a note before changing or sending a delivery (162.741292ms)
+{"level":50,"time":1792146386772,"pid":67874,"hostname":"YideMacBook-Pro.local","reqId":"19c6f38a-2f25-4258-8197-90e60726bc5a","method":"GET","path":"/sitemap.xml","err":{"type":"PostgresError","message":"PostgreSQL request failed","code":"42P01","stack":"    at ErrorResponse (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:815:30)\n    at handle (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:489:6)\n    at Socket.data (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:324:9)\n    at Socket.emit (node:events:514:20)\n    at addChunk (node:internal/streams/readable:605:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:556:3)\n    at Readable.push (node:internal/streams/readable:436:5)\n    at TCP.onStreamRead (node:internal/stream_base_commons:194:23)\n    at cachedError (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/query.js:170:23)\n    at new Query (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/query.js:36:24)\n    at sql (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/index.js:112:11)\n    at loadDiscoveryEntries (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/publication/sitemap.ts:43:95)"},"msg":"sitemap unavailable"}
+✔ sitemap responses and rebuild failures preserve the original freshness deadline (309.81675ms)
+✔ llms and sitemap build from current topic scope rather than a cached directory (274.807333ms)
+✔ discovery dates follow page content and publication scope (73.557875ms)
+✔ dry runs leave changes pending, corrections and disappeared URLs are submitted again (198.958166ms)
+✔ batches over the service limit make progress even when every change has the same timestamp (237.67375ms)
+✔ failed requests and failed inventories never acknowledge a batch (119.131958ms)
+✔ egress resolves independently of local DNS and pins CONNECT while preserving Host (28.67725ms)
+✔ internal, mixed, reserved, empty and malformed DNS answers never reach the proxy (3.654958ms)
+✔ configured public host uses the direct transport without consulting proxy DNS (6.167959ms)
+✔ a redirect recalculates routing for its destination instead of inheriting the exception (24.431917ms)
+✔ the host list matches exact hostnames and explicit direct callers still work (2.778792ms)
+✔ direct host exceptions never grant permission to fetch a private address (0.234667ms)
+✔ a stored vector of 2 dimensions is computed again at the configured 4 (28.476125ms)
+✔ a stored vector of 8 dimensions is computed again at the configured 4 (4.888375ms)
+✔ a restarted process with other dimensions pays for a request of its own (3823.977834ms)
+✔ the provider's own size keeps stored vectors, asks for no dimensions and never compares sizes (3971.423042ms)
+✔ unusable embedding responses retain the paid answer and never write partial vectors (45.87575ms)
+✔ out-of-order embeddings keep their inputs, and a rolled-back batch reuses its paid receipt (10.3765ms)
+✔ stored float32 coordinates retain their bits without asking the provider (10.813458ms)
+✔ unusable stored vectors still require a valid replacement (39.541084ms)
+✔ stored text hashes and model identities are still required for reuse (6.282083ms)
+✖ API error logs keep database codes and frames without row values or query parameters (10007.282208ms)
+✖ OAuth rejects failed exchanges without logging the upstream response text (10005.689208ms)
+✔ the queue's PostgreSQL driver also keeps values out of worker error logs (1928.622333ms)
+✔ explicitly insufficient original material cannot found an event or retain an automatic fact (51.314167ms)
+✔ a detach made while the model is deciding the report's fact stands (57.015542ms)
+✔ a report joins the fact the model names, and a revision keeps that membership without asking again (31.348917ms)
+✔ an explicit regroup drops the automatic membership and decides again (65.716458ms)
+✔ a development attaches to the story's earliest fact that still holds reports (24.250916ms)
+✔ a SAME_OCCURRENCE decision made before a merge is retried without writing into the retired story (37.9115ms)
+✔ a SAME_STORY decision made before a merge is retried without writing into the retired story (30.072125ms)
+✔ detaching a discussion post removes its signal even though it has no fact membership (12.373167ms)
+✔ a manual detach during a discussion judgement wins just as it does for an editorial report (20.236584ms)
+✔ fact dates survive candidate recall without a timezone shift and invalid dates stay unknown (32.020875ms)
+✔ a composite first, with no candidates, stays standalone and cannot become the later single report's root (16.925292ms)
+✔ a composite arriving after independent products only mentions them even when the model calls both the same occurrence (18.6015ms)
+✔ a newly identified composite loses automatic membership and cannot serve as an old root or redirect bridge (15.373ms)
+✔ composite classification never deletes an editor's explicit membership (6.938042ms)
+✔ ROUNDUP answers describe a pair, not the single query's identity; grounded conditions reach its new fact (13.441167ms)
+✔ a story's root is the fact reported first, not the one with the lowest number (15.792917ms)
+✔ two stories a report ties together merge when both models see one story in their roots (28.174667ms)
+✔ editor-confirmed identities skip automatic comparison and merging, while explicit editor merges work (9.875042ms)
+✔ an editor identity correction during comparison prevents merging and is not reported as a successful merge (8.852583ms)
+✔ two stories stay apart when their roots are different events, whatever the report ties them with (21.919584ms)
+✔ a story whose reports all moved away keeps its address: it redirects to where the last one went (31.545583ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ stories that reports keep tying together without merging list each other as related (37.078167ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a stale page successful response cannot change newer material (43.532667ms)
+✔ a stale page empty response cannot change newer material (14.865458ms)
+✔ a stale X Article successful response cannot change newer material (12.127209ms)
+✔ a stale X Article empty response cannot change newer material (7.18325ms)
+✔ overlapping page extractions and an unchanged admin retry create only one body revision (17.683083ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ an obsolete extraction failure cannot penalize a newer complete report (72.80625ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a 5 MiB multipart screenshot waits intact for forwarding (250.899333ms)
+✔ malformed multipart and screenshots above the existing backend limit are rejected (33.467167ms)
+✔ a picture sent without a type (some phones do) is taken by its bytes (55.067959ms)
+✔ erasing one feedback preserves an identical screenshot on another feedback (79.6045ms)
+✔ a failed screenshot upload keeps the feedback waiting, and the sweep sends it with the image (114.195333ms)
+✔ a send that fails after the upload goes out with the same image next time (78.086542ms)
+✔ a screenshot that cannot be uploaded for a day is dropped, and the text still goes (48.829791ms)
+✔ a picture Feishu refuses is dropped at once, and the text still goes (49.825541ms)
+✔ screenshots left behind are removed after a week, whether or not forwarding ran; without the chat they stay (85.206083ms)
+✔ imported feedback that was never forwarded is not sent now (1.161333ms)
+✔ grouping includes late evidence from both sides within its ten-thousand-character allowance (1.595083ms)
+✔ missing and invalid identity answers cannot silently assert unrelated (98.418125ms)
+✔ a single report with an incomplete answer stays unresolved and can recover (72.240792ms)
+✔ a roundup with an incomplete answer stays unresolved and can recover (39.008125ms)
+✔ receipt completion failure rolls back report grouping and recovery reuses the response (41.385833ms)
+✔ receipt completion failure rolls back roundup grouping and recovery reuses the response (29.519ms)
+✔ receipt completion failure rolls back kept grouping and recovery reuses the response (33.44925ms)
+✔ a native timeout fails its job with the receipt id, and the release wakes that same job (38.128708ms)
+✔ a spent budget leaves grouping pending and the repair sweep resumes it (24.290042ms)
+✔ a lost pending grouping job is repaired once, but a terminal failure waits for recovery (23.77925ms)
+✔ an old grouping answer cannot settle a changed material (18.718041ms)
+✔ an old grouping failure cannot settle a changed material (12.758666ms)
+✔ revision withdraws the old selected projection in the same transaction (20.418166ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ regroup withdraws the old selected projection in the same transaction (20.009084ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ whatever a browser hides by inline style stays out of the body (23.206417ms)
+✔ whatever a browser shows stays in the body (5.142125ms)
+✔ a hidden placeholder still lets its noscript image through (2.649917ms)
+✔ faces are 精选组 sources by tier (T1, T1.5, T2), at most 6; 氛围组 only counts in +N (54.605292ms)
+✔ hot cards send a Unicode-safe excerpt while the event keeps its complete public text (40.620625ms)
+✔ hot covers follow current visibility and full-text rights within one ranking (43.378459ms)
+✔ editorial heat follows factual membership; signal-only evidence survives without a fact (28.334ms)
+✔ withdrawn reports and changed roles are counted as they stand now (5.689167ms)
+✔ one company's channels are one participant; every community author is one (5.521041ms)
+✔ publisher attribution repairs participant identity without rewriting stored evidence (4.598666ms)
+✔ the change compares with the earlier time's full 48-hour window, without sources added since (9.658334ms)
+✔ hourly snapshots are idempotent and repair an incomplete hour after collection catches up (9.33825ms)
+✔ an hour taken again updates the cohort after a source changes role (3.759834ms)
+✔ cross-origin replay refuses sensitive header Authorization (15.79825ms)
+✔ cross-origin replay refuses sensitive header aUtHoRiZaTiOn (3.415875ms)
+✔ cross-origin replay refuses sensitive header Cookie (1.090583ms)
+✔ cross-origin replay refuses sensitive header Proxy-Authorization (0.753167ms)
+✔ cross-origin replay refuses sensitive header X-Unknown-Credential (0.714542ms)
+✔ body-bearing request stays origin-bound (JSON) (2.178417ms)
+✔ body-bearing request stays origin-bound (empty) (0.949166ms)
+✔ explicit query protection and late relative chain stay bound to the original origin (1.387459ms)
+✔ ordinary public headers allow a different-origin redirect (2.493584ms)
+✔ same-origin 301 preserves expected POST semantics (1.819917ms)
+✔ same-origin 301 preserves expected PUT semantics (1.398083ms)
+✔ same-origin 301 preserves expected GET semantics (1.008958ms)
+✔ same-origin 301 preserves expected HEAD semantics (2.691209ms)
+✔ same-origin 302 preserves expected POST semantics (2.011458ms)
+✔ same-origin 302 preserves expected PUT semantics (1.392083ms)
+✔ same-origin 302 preserves expected GET semantics (0.786458ms)
+✔ same-origin 302 preserves expected HEAD semantics (0.815541ms)
+✔ same-origin 303 preserves expected POST semantics (1.551167ms)
+✔ same-origin 303 preserves expected PUT semantics (1.129083ms)
+✔ same-origin 303 preserves expected GET semantics (0.995083ms)
+✔ same-origin 303 preserves expected HEAD semantics (0.9185ms)
+✔ same-origin 307 preserves expected POST semantics (1.402084ms)
+✔ same-origin 307 preserves expected PUT semantics (1.036959ms)
+✔ same-origin 307 preserves expected GET semantics (0.7875ms)
+✔ same-origin 307 preserves expected HEAD semantics (0.826958ms)
+✔ same-origin 308 preserves expected POST semantics (1.438875ms)
+✔ same-origin 308 preserves expected PUT semantics (0.893375ms)
+✔ same-origin 308 preserves expected GET semantics (0.734ms)
+✔ same-origin 308 preserves expected HEAD semantics (0.785959ms)
+✔ non-redirect 300 with Location is returned without another request (0.573416ms)
+✔ non-redirect 304 with Location is returned without another request (1.184875ms)
+✔ non-redirect 305 with Location is returned without another request (0.789125ms)
+✔ protected request remains bound after its body was removed by 303 (0.692125ms)
+✔ synthetic HTTPS downgrade is refused before target dispatch without TLS bypass (2.039666ms)
+✔ redirect limits do not expose query credentials (1.474708ms)
+✔ one deadline and response byte limit remain effective (103.118625ms)
+✔ normal private-network guards still refuse direct and redirect destinations (0.931833ms)
+✔ opaque JSON-source query configuration cannot redirect to another origin (0.762625ms)
+✔ opaque JSON query callers retain same-origin redirects (1.441667ms)
+✔ YouTube embed, /v/, and youtu.be pages are not article images (0.66825ms)
+✔ Vimeo watch and player pages are not article images (0.128375ms)
+✔ inline images retain image MIME types and reject documents across ingestion and reads (9.9315ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ independent selected sources retain identity and their own cards across publication outlets (321.691375ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a paused external source rejects pushed items without recording a successful fetch (58.964375ms)
+✔ pushed bodyText lands as read content; an item without one still waits for its page (12.917125ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ the bridge's four-track payload is accepted as today's news and joins event heat (20.389667ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":10,"count":0,"jobs":[]}
+✔ epoch_s collection keeps invalid middle claims and later articles, then repeats cleanly (95.7335ms)
+✔ epoch_ms collection keeps invalid middle claims and later articles, then repeats cleanly (21.963709ms)
+✔ text collection keeps invalid middle claims and later articles, then repeats cleanly (19.74475ms)
+✔ first-import sorting keeps unknown epoch dates and the normal backfill fallback (8.883792ms)
+✔ invalid claim does not break an existing identity's unchanged write (3.288041ms)
+✔ invalid claim does not break an existing identity's revised write (4.248875ms)
+✔ storage preserves finite future claims and existing timeline boundaries (4.374292ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ unrelated storage failures still fail collection visibly (6.152625ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a listing read whose outcome is unknown is not sent again; each later fetch is a paid read of its own (93.502583ms)
+✔ a listing parsed with selectors is read from Jina as rendered HTML, dates included (15.400875ms)
+✔ a listing page received before a storage failure stays on its receipt (15.180792ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ each admin preview is a paid read of its own (5.167041ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ RSS, HTML and JSON listings recover from a dropped connection, a second drop fails (19.160708ms)
+✔ YouTube's intermittent 404 is retried with the same validators and accepts a valid 304 (2.607375ms)
+✔ upstream 500 is retried once, but ordinary missing URLs and access/rate refusals are read once (2.282792ms)
+✔ an article a feed lists twice is stored once and stays put across fetches (77.290875ms)
+✔ sections of one page are separate articles when the source keeps fragments (16.025583ms)
+✔ a feed that garbles different characters on every load keeps one version (11.682ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a changelog's date headings date its updates and are no articles themselves (20.903375ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ appearance startup applies a saved browser font before rendering and safely handles invalid storage (1.533666ms)
+✔ font choices survive version-1 backups and denied writes without touching existing reader data (0.356958ms)
+✔ reader Markdown preserves block structure and still passes through the HTML whitelist (21.954125ms)
+✔ OpenAI Reader pages drop responsive navigation and recommendations, retaining captions and notes (19.301167ms)
+✔ a repeated article takes its actual headline after an earlier call to action (1.365834ms)
+✔ a clean headline replaces a repeated card label that swallowed its whole summary (0.173334ms)
+✔ the first clean headline stays stable and a lone call to action can still be enriched from its detail page (0.152125ms)
+✔ invalid source timestamps remain unknown on inserts and revisions (18.369083ms)
+✔ concurrent changes to one article each get a revision (26.419875ms)
+✔ a material revision resets old processing failures without resetting unchanged material (5.87525ms)
+✔ an imported article's first report records a baseline, not a revision (4.275959ms)
+✔ simultaneous first reports of one URL create one article (8.2025ms)
+✔ another source listing the same article records a discovery, not a revision (6.614208ms)
+✔ an article linking to a tweet is stored separately from the tweet (4.438333ms)
+✔ another source reporting an imported article first does not set its baseline (2.911667ms)
+✔ a return to an earlier version is not a revision (8.53ms)
+✔ an imported article that returns to its baseline is not revised again (3.746416ms)
+✔ characters lost in transit are no revision, lost or restored (7.736083ms)
+✔ MCP accepts a JSON body at its byte limit and refuses one byte over before parsing (149.583583ms)
+✔ MCP bounds UTF-8 bytes rather than JavaScript string length (0.471458ms)
+✔ MCP refuses an oversized chunked body without Content-Length (5.825875ms)
+✔ oversized MCP requests preserve JSON-RPC, no-store and the Origin policy (425.277709ms)
+▶ the MCP check uses module samples and keeps its failure assertions
+  ✔ a required sample and the default empty arguments both succeed (3339.614709ms)
+  ✔ a required tool without a sample is discovered without a false failure (3712.600125ms)
+  ✔ async input validation decides empty calls and preserves explicit samples (6906.982875ms)
+  ✔ an explicit invalid sample still fails SDK validation (3110.662291ms)
+  ✔ schema-valid arguments do not excuse a failed read (3227.303333ms)
+  ✔ every declared module tool must be listed (3190.193166ms)
+✔ the MCP check uses module samples and keeps its failure assertions (24977.14325ms)
+✔ MCP initializes through each of its hosts, with or without a port (132.271584ms)
+✔ MCP refuses malformed or other Host and forwarded authorities (7.285416ms)
+✔ MCP refuses an empty Host and a host named twice (8.41125ms)
+✔ an IPv6 host gets the same Origin answers as IPv4, and GET and DELETE check the Host too (6.672083ms)
+✔ MCP answers preflights for allowed origins only (0.505917ms)
+✖ MCP normalizes only explicitly configured site and extra host authorities, and keeps an IPv6 site's matching Origin (10007.493333ms)
+✔ an MCP client opens no listen stream, and one that asks is refused at once (1424.186792ms)
+✔ simultaneous modes share original bytes, preserve dimensions and use their disk caches (321.688166ms)
+✔ failed originals are not retried for every mode (37.49775ms)
+✔ cached oversized SVGs use current renditions without downloading them again (873.494583ms)
+✔ SVG preparation retains compact transfer and intrinsic display size (525.445583ms)
+✔ a retained large SVG still supplies the model's raster thumbnail (588.22775ms)
+✔ site media exposes responsive previews and full lightboxes while RSS retains thumb images (1.204834ms)
+✔ concurrent cold OG and poster requests all succeed with identical cached bytes (604.534917ms)
+✔ successive responsive candidates reuse the completed original download (667.572667ms)
+✔ responsive URLs and web body candidates retain exact signatures and stable expiry (1.067875ms)
+✔ image HTTP responses keep earlier URLs valid, reject tampering before fetching and do not vary on Accept (5901.468084ms)
+✔ image validators save unchanged bytes only after signature verification (365.314416ms)
+✔ image failures are cached for at most a minute and never beyond the signature (42.627333ms)
+✔ pending animations expire at caches, then publish the prepared disk rendition without refetching (1066.625833ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ binary-labelled real images work, but binary-labelled error pages still return 502 (445.707292ms)
+✔ tracking pixels are omitted from old and new bodies without removing article illustrations (1513.088583ms)
+✔ video pages mislabeled as images are excluded across ingestion and public image outputs (772.429958ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ unchanged history is accepted, but edits and deletions fail (231.587625ms)
+✔ new module migrations are checked even when untracked or named below the cutoff (403.1765ms)
+✔ online migrations reject writes, blocking indexes and table rewrites before execution (5.497083ms)
+✔ online migrations permit metadata changes and split constraint validation (0.2575ms)
+✔ online vacuum tuning accepts only bounded insert and dead-tuple scale factors (0.448541ms)
+✔ a table nothing uses can be dropped alone, never with its dependents (0.1565ms)
+✔ a column or a constraint nothing uses can be dropped alone, never with its dependents (0.169834ms)
+✔ concurrent indexes have one retriable statement per file, outside a transaction (0.402209ms)
+✔ comments and string literals cannot disguise dangerous statements or split safe defaults (0.10325ms)
+✔ online DDL cannot accumulate strong table locks across several otherwise safe statements (0.132333ms)
+✔ statistics maintenance names one table and its columns without skipping work or evaluating expressions (0.3035ms)
+✔ unsafe later files and duplicate module names fail before any change (337.83725ms)
+✔ an interrupted historical multi-statement transaction never commits its schema or ledger entry (81.553042ms)
+✔ a busy table aborts the migration promptly and leaves the serving schema alone (1096.717417ms)
+applied 9004_index.sql (1ms, index)
+applied 9005_column.sql (1ms, transaction)
+2 migration(s) applied
+database is up to date
+✔ concurrent module indexes apply and resume safely when only bookkeeping was interrupted (248.253334ms)
+✔ IF NOT EXISTS must not turn an invalid or wrong-table index into a successful migration (211.819792ms)
+applied 9008_vacuum.sql (0ms, transaction)
+1 migration(s) applied
+database is up to date
+✔ bounded vacuum settings apply without rewriting data or waiting for ordinary reads and writes (135.668667ms)
+✔ every step takes a model that reads images; only a step that needs images refuses a text model (19.801666ms)
+✔ runtime image attachment is explicit rather than probing presets with unspecified vision support (0.131916ms)
+✔ article extraction preserves lazy video resources and makes playback manual (13.734791ms)
+✔ video source candidates retain order, types and lazy URLs without opening picture sources (2.09725ms)
+✔ unsafe media cannot survive normalization and empty players keep only safe fallback content (2.798375ms)
+✔ a rejected poster never leaves an empty web or RSS player or hides its fallback link (1.576375ms)
+✔ translation, Markdown and public image outputs retain cleaned video candidates (35.603375ms)
+✔ value output is required and boolean, never a silent approval (8.528916ms)
+✔ same-fact reports remain eligible to replace the representative despite no new information (133.319083ms)
+✔ a same-fact copy cannot revive a low-increment fact without new value (53.0545ms)
+✔ a same-url copy cannot revive a low-increment fact without new value (43.099375ms)
+✔ a same-url report can be the first selected report of an unseen fact (23.175834ms)
+✔ a same-url report can replace a selected representative without a call (19.759042ms)
+✔ a low-increment follow-up stays a distinct fact in all content without a selected slot (27.303334ms)
+✔ a material revision rechecks value in the same batch while keeping its confirmed fact (45.287834ms)
+✔ an older confirmed membership with no value field keeps its existing eligibility (13.016583ms)
+✔ an independent evaluation remains selected as a new fact (21.551458ms)
+✔ a roundup can lose its selected slot while retaining only mention links (18.934625ms)
+✔ a selected composite supplies reading coverage for a retelling without becoming a fact (22.874083ms)
+✔ a selected composite supplies reading coverage for a new result without becoming a fact (22.571958ms)
+✔ reading-only context excludes unselected, nonpublic and old reports (55.473209ms)
+✔ unselected candidates are not prior selected coverage (20.540042ms)
+✔ value context uses the actually selected report without replacing the identity representative (25.675542ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a missing value answer remains failed and cannot settle a fact (21.209917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ outbound direct keeps larger response headers confined to one host (1808.181292ms)
+✔ outbound proxy keeps larger response headers confined to one host (1751.829292ms)
+✔ outbound direct negotiates HTTP/1.1 and retains TLS identity (1836.164417ms)
+✔ outbound proxy negotiates HTTP/1.1 and retains TLS identity (1743.601542ms)
+✖ outbound secure-proxy negotiates HTTP/1.1 and retains TLS identity (1767.731625ms)
+✔ outbound dns negotiates HTTP/1.1 and retains TLS identity (1776.798916ms)
+✔ indexing and sitemap require a readable source, while manual archive indexing remains available (284.972ms)
+✔ every search matches the source name readers see and excludes its internal notes (61.726042ms)
+✔ filtered feeds keep their exact content address but leave indexing to the public landing pages (13652.145834ms)
+✔ ordinary feed pages remain indexable and normalize ignored parameters (15.821417ms)
+✔ daily issue metadata describes its visible lead while the permanent entry keeps its title (15.469667ms)
+✔ weekly issue metadata describes its visible lead while the permanent entry keeps its title (14.780458ms)
+✔ monthly issue metadata describes its visible lead while the permanent entry keeps its title (11.795791ms)
+✔ a report without an edited lead uses only a still-public visible highlight (0.363625ms)
+✔ article metadata has a representative image and does not invent an update timestamp (7.315708ms)
+✔ story metadata describes the visible collection, current summary and report list (8.79725ms)
+✔ short and multi-term relevance keep cross-field AND and deterministic score ties (27.738209ms)
+✔ company relevance retains tag-only candidates, boosts and unique totals (10.151417ms)
+✔ relevance retains combined filters and literal LIKE characters (8.791917ms)
+✔ an unrelated malformed cookie leaves a real admin session usable without admitting invalid sessions (143.405666ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ ingest skips malformed entries and still accepts and deduplicates the valid entries in their batch (51.782917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ a failed audit rolls back the receipt release and the processing job (64.732625ms)
+✔ a manual re-evaluation survives extraction, a lost job, and receipt release with the same paid identity (9.963292ms)
+✔ an already released receipt wakes its failed grouping job once, with the original parameters (13.497625ms)
+✔ a temporary provider failure resumes the manual evaluation instead of reinstalling the old verdict (99.342542ms)
+✔ a late refusal for an old revision preserves the new revision's completed processing (38.932917ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ historical analysis queues a free identity confirmation behind live news (33.117375ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ the first external discovery uses a paused verified publisher, keeps the real discovery and queues extraction once (64.086417ms)
+✔ a repeated signal discovery adopts a newly registered publisher and resumes editorial processing without revising material (21.083375ms)
+✔ publisher promotion cannot reuse a signal-only grouping as news confirmation (22.299959ms)
+✔ source-mode promotion cannot reuse a signal-only grouping as news confirmation (16.672125ms)
+✔ a T1 channel linking another publisher is still a discovery, not that URL's publisher (3.881458ms)
+✔ attribution reuses an existing current-revision editorial judgement even after the source became a signal (6.435292ms)
+✔ only an observed web-list path supplies implicit ownership; non-T1 and RSS domains never do (3.899625ms)
+✔ a later verified publisher repairs source and author, preserving judgement, content and time (9.4525ms)
+✔ publisher-first discovery remains the publisher, and an unrelated T1 URL cannot take ownership (4.388916ms)
+✔ ambiguous registered publishers do not silently choose a source (2.468583ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a non-T1 flag cannot enter the first-party channel, and source edits derive the flag from tier (8.483875ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":13,"count":0,"jobs":[]}
+✔ mutable content never authorizes a reader to reuse stale data beyond the withdrawal window (1307.466625ms)
+✔ a public category takes in the categories the site publishes as it, and only those (65.138541ms)
+✔ the website filters by each of its own categories (8.377208ms)
+✔ HTTP, Agent, MCP and discovery agree on the public categories and returned items (198.087083ms)
+✔ public read-only endpoints reject methods before interpreting their bodies (116.21675ms)
+✔ verified old dates correct publication and its existing date-based sort without rejudging imported history (73.30075ms)
+✔ an independently recorded discovery sort remains unchanged (18.18425ms)
+✔ the request is idempotent and a reused request identity cannot approve a different date (14.599084ms)
+✔ malformed, recent or future dates and stale material metadata are refused (9.293333ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a failed audit or a changed publication decision rolls back the entire correction (16.7755ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ the Markdown export names the collection time as such when the publication time is unknown (152.07925ms)
+✔ RSS gives no pubDate for an item without a known publication time (1.771333ms)
+✔ manual score corrections, including no score, survive every public projection and rebuild (226.598291ms)
+✔ Markdown preserves a table's headings, caption, links, alignment and multiline cells in both languages (39.203875ms)
+✔ Markdown retains tables that cannot be represented without changing their meaning (10.078708ms)
+✔ Markdown retains numeric superscripts, subscripts and fenced code while respecting full-text permission (11.3025ms)
+✔ site reading sends one language while exports retain both, including after withdrawal (16.49375ms)
+✔ revoking a source's licence takes its articles off every exit (117.209583ms)
+✔ revoking only redistribution keeps the website body and removes it from full RSS (37.192292ms)
+✔ a withdrawn item leaves every report exit (16.758042ms)
+✔ story changes refresh share images and a withdrawal takes down only the stories citing it (518.91425ms)
+✔ a withdrawn item leaves the hot board and the hot APIs at once, not at the next ranking (38.086209ms)
+✔ item pages follow one rule: unsummarised editorial items keep one, hot_signal items have none (21.64325ms)
+✔ unresolved selection does not delay a withdrawal or its sync watermark (23.896292ms)
+✔ snapshots answer 304 to their own ETag (1.245875ms)
+✔ historical sync never redistributes withdrawn content, even on a one-entry page (57.261375ms)
+✔ v1 story matches the website's content and fallback ordering (17.674917ms)
+✔ event neighbors disappear when their last readable evidence is withdrawn (33.773584ms)
+✔ unchanged republishing preserves freshness, while URL-only changes still reach the projection and ledger (8.134417ms)
+{"level":50,"time":1792145931007,"pid":69654,"hostname":"YideMacBook-Pro.local","reqId":"3c148109-9b1e-4644-99ec-f637cfbf79b3","method":"GET","path":"/og/items/oo53wlv8b3m70nyx9zod3vjp3.png","err":{"type":"TypeError","message":"Cannot read properties of undefined (reading 'replace')","stack":"    at clamp (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:84:26)\n    at tree (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:112:103)\n    at async render (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:160:28)\n    at async renderOg (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:176:17)\n    at async send (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/routes/og.ts:31:40)"},"msg":"unhandled"}
+{"level":50,"time":1792145931040,"pid":69654,"hostname":"YideMacBook-Pro.local","reqId":"b67ceb6d-1064-4ea5-ac1c-4c57565a945a","method":"GET","path":"/og/posters/oo53wlv8b3m70nyx9zod3vjp3.png","err":{"type":"TypeError","message":"Cannot read properties of undefined (reading 'replace')","stack":"    at clamp (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:84:26)\n    at tree (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/poster.ts:52:103)\n    at async render (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:160:28)\n    at async renderPoster (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/poster.ts:85:17)\n    at async Object.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/routes/og.ts:76:42)"},"msg":"unhandled"}
+✔ a cached share-image validator never outlives the selected verdict or a withdrawal (226.04275ms)
+✔ summary-only detail and sharing keep neutral metadata without a selected verdict (12.705542ms)
+✔ minimal sync projection preserves snapshot fields, pagination bindings and ordered changes (18.119333ms)
+✔ a new selected snapshot includes corrections already covered by its watermark (7.031291ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a correction between snapshot pages arrives through changes after the fixed snapshot (9.475ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ shared-host ownership requires both the explicit scope and this source's actual discovery (28.785292ms)
+✔ an independent organization on the platform keeps its verified publisher (4.812292ms)
+✔ discovery ownership configuration must be a boolean with an explicit nonempty URL scope (0.433666ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a failed first database connection does not poison all later queue requests (59.545958ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ queue drain reports concurrent work and waits without exposing payloads or taking another job (1081.541291ms)
+✔ selected news keeps each fact at its first appearance under its representative (25.119417ms)
+✔ a folded card's other sources are those of the fact its representative reports (201.031583ms)
+✔ a query that names a platform also finds the articles about it (27.108333ms)
+✔ bare addresses in post text become safe links (0.581291ms)
+✔ relevance ranks all candidates, caps the public total at 2000 and keeps empty page totals (143.104958ms)
+✔ unfiltered single-term relevance combines direct/body scores and retains one-sided and empty matches (11.915917ms)
+✔ v1 search allows terms to match direct text and body, retaining time cursor order and public scope (8.618666ms)
+✔ RSS summary excludes bodies; full RSS includes only licensed items (3.321458ms)
+✔ report directories skip a withdrawn lead for the next citation, including absent historical ones (129.495875ms)
+✔ unchanged pool and timeline revalidate with 304 while a content change returns a new body (27.6715ms)
+▶ fact and reading recall agree across cold, full and overflowing vector caches
+  ✔ initial cache size 29999 (3957.108583ms)
+  ✔ initial cache size 30000 (4203.856625ms)
+  ✔ a changed revision cannot reuse the old matching vector (3998.469417ms)
+✔ fact and reading recall agree across cold, full and overflowing vector caches (16397.920208ms)
+✔ recall preserves window, live-story, membership and latest-analysis evidence (25.718584ms)
+✔ shutdown drains and reuses paid results while refusing new pages and retries before budget reservation (17.333667ms)
+✔ the migrations seed a budget for every paid service (11.765917ms)
+✔ an answer already received is reused instead of bought again (19.544083ms)
+✔ stale recovery waiting on a response transaction preserves its committed answer and attempt (28.48825ms)
+✔ a fully received non-object model response is unusable output, not an unknown paid outcome (6.908917ms)
+✔ an answer cut off at the output limit is a failed paid answer that says so (6.368958ms)
+✔ retries of unusable answers stop at the budget, and every request sent is counted (12.584792ms)
+✔ concurrent distinct requests cannot both spend the last service budget slot (14.852583ms)
+✔ the hour budget independently refuses a paid request until its attempt expires (4.11275ms)
+✔ the day budget independently refuses a paid request until its attempt expires (3.842125ms)
+✔ with the valve off nothing is sent (0.266ms)
+✔ an unknown outcome is released automatically once, so a lost answer costs at most one repeat (8.827375ms)
+✔ two bridges, one bridge, no bridges, and restoration agree on every public story read (253.161416ms)
+✔ natural ageing and a membership-preserving revision retain the association (36.467541ms)
+✔ a later explicit judgement invalidates the old bridge until the evidence is restored (35.595125ms)
+✔ an explicitly removed membership no longer supports a related event (22.391416ms)
+✔ correcting a bridge to a composite invalidates it even before republishing (19.860417ms)
+✔ a repeated judgement for one article does not count as two reports (20.264334ms)
+✔ storyline links and historical links without saved bridge judgements are retained (30.078583ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ bridges judged before a story merge follow their fact into the surviving story (116.141709ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ reports assign delayed and boundary releases to the period readers first see them (130.244333ms)
+✔ a release waiting for the article lock uses the time after the cutoff (22.464583ms)
+✔ a release waiting for the fact seat lock uses the time after the cutoff (26.744708ms)
+✔ a release waiting for the report snapshot lock uses the time after the cutoff (22.422708ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ daily composition waits for a pre-cutoff release to commit instead of losing it between issues (23.658583ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ an editors' lead is matched to the item it is written about (0.754417ms)
+✔ a lead that matches no item clearly has no item (0.34975ms)
+✔ without an editors' lead the first highlight leads (0.083458ms)
+✔ a withdrawn highlight never leads the front page (0.067042ms)
+▶ issue numbers count the whole series across the navigation's 400-issue limit
+  ✔ 405 dailies are numbered up to 405 while the navigation keeps 400 (9.325541ms)
+  ✔ the index, detail, navigation, latest page and month answers give the same number (140.604375ms)
+  ✔ new issues and revisions leave older numbers alone (11.263375ms)
+  ✔ weeklies and monthlies are numbered on their own (5.562875ms)
+  ✔ an issue added or deleted before another moves its number (6.626542ms)
+✔ issue numbers count the whole series across the navigation's 400-issue limit (198.597875ms)
+✔ withdrawing a named lead preserves the replacement headline and its own frozen paragraph everywhere (191.69975ms)
+✔ a historical written daily lead follows withdrawal of the citation it describes (16.688041ms)
+▶ daily, weekly and monthly citations share the public list release boundary
+  ✔ daily (11.691667ms)
+  ✔ weekly (10.523542ms)
+  ✔ monthly (8.046291ms)
+✔ daily, weekly and monthly citations share the public list release boundary (30.698375ms)
+✔ a daily citation without a frozen summary, and a flash with an earlier frozen date, read the same in JSON and website (6.839083ms)
+✔ discovery counts exactly the publicly indexed topics it lists (0.460209ms)
+✔ weekly prose drops unavailable evidence after withdrawn (10.188792ms)
+✔ weekly prose drops unavailable evidence after summary-only (8.370333ms)
+✔ weekly prose drops unavailable evidence after ineligible (6.953125ms)
+✔ monthly prose drops unavailable evidence after withdrawn (6.70825ms)
+✔ daily imported citations retain the same original link, source and date as the website (1.104ms)
+✔ weekly imported citations retain the same original link, source and date as the website (0.919042ms)
+✔ monthly imported citations retain the same original link, source and date as the website (0.696584ms)
+✔ a historical written weekly headline follows withdrawal of its matched citation (6.045417ms)
+✔ a historical written monthly headline follows withdrawal of its matched citation (6.335333ms)
+✔ an unmatched written weekly headline cannot restore an unavailable overview (3.35975ms)
+✔ an unmatched written monthly headline cannot restore an unavailable overview (2.6315ms)
+✔ an expired report index waits for the current withdrawal result (6.289292ms)
+✔ automatic retries preserve all three published issue kinds; explicit corrections keep a revision (80.189083ms)
+✔ report publication and its receipt commit together and recovery reuses the response (23.737333ms)
+{"level":"error","msg":"report failed","report":"daily:2024-01-24","error":{"type":"Error","message":"daily 2024-01-24: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-25","error":{"type":"Error","message":"daily 2024-01-25: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-26","error":{"type":"Error","message":"daily 2024-01-26: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-27","error":{"type":"Error","message":"daily 2024-01-27: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-28","error":{"type":"Error","message":"daily 2024-01-28: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-29","error":{"type":"Error","message":"daily 2024-01-29: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-30","error":{"type":"Error","message":"daily 2024-01-30: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-01-31","error":{"type":"Error","message":"daily 2024-01-31: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+{"level":"error","msg":"report failed","report":"daily:2024-02-01","error":{"type":"Error","message":"daily 2024-02-01: nothing judged in its window","stack":"    at Object.composeDaily [as compose] (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:96:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async composeDueReports (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/reports/compose.ts:314:9)\n    at async waitForActual (node:assert:615:5)\n    at async strict.rejects (node:assert:738:25)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/report-recovery.test.ts:84:3)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)"}}
+✔ empty older gaps cannot starve a later daily, weekly or monthly, and failures remain visible (42.191125ms)
+✔ a week or month that ended before the first daily is not due, so a site started mid-month runs clean (2.817792ms)
+✔ a late run writes the issue that was due, not today's (0.996042ms)
+✔ a daily with nothing judged in its window is refused, not published as a quiet day (17.763583ms)
+✔ a weekly that froze no summaries shows the articles' public summaries (30.893666ms)
+✔ RSS first backfill, ordinary window, 304, revision and config edits preserve collection behavior (220.680292ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ Last-Modified works without ETag and changing redirect targets cannot accept an unrelated 304 (12.223166ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ Atom article links honor absolute xml:base on feed, entry and link (20.188083ms)
+✔ relative xml:base values compose through feed, entry and link (1.275ms)
+✔ relative Atom links use the final document URL after redirects (1.930292ms)
+✔ absolute alternate links and the first-link fallback keep working (3.256416ms)
+✔ resolved Atom article URLs keep their fragments, which sources of page sections use as identity (1.398625ms)
+✔ Atom HTML and XHTML titles and summaries keep the article and its text in order (22.145375ms)
+✔ Atom XHTML bodies match escaped HTML and CDATA without losing mixed-content order (10.30725ms)
+✔ Atom XHTML still passes through HTML sanitization without decoding escaped markup twice (2.354583ms)
+✔ Atom default text preserves literal markup and entities without creating HTML or media (2.257042ms)
+✔ Atom default text summary is preserved both as an excerpt and an optional body (2.261167ms)
+✔ Atom explicit text preserves literal markup and entities without creating HTML or media (1.407917ms)
+✔ Atom explicit text summary is preserved both as an excerpt and an optional body (1.957667ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ retired schedules leave the current overview and execution queues while live jobs and history remain (115.580917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ a burst of identical searches completes without consuming the distinct-search queue (365.58475ms)
+✔ overlapping searches keep their category and explicit clock, and retain overload protection (324.890666ms)
+✔ completed work never hides a withdrawal and rejected work can be retried (11.162792ms)
+✔ unrelated completed or rejected searches cannot displace an unfinished shared read (2.010666ms)
+✔ search carries exactly the existing topic links and five visible hot links, including after a withdrawal (183.436709ms)
+✔ one fact holds one selected seat on v1, RSS and the sync ledger (254.792375ms)
+✔ a broken or empty snapshot page asks for a new snapshot (0.862667ms)
+✔ malformed cursor fields are client errors, never database errors or usable sync state (3.064333ms)
+{"level":50,"time":1792146000390,"pid":70124,"hostname":"YideMacBook-Pro.local","reqId":"ff27f41b-f283-4f03-8096-0bb0787e3a8d","method":"GET","path":"/api/v1/selected/changes","err":{"type":"PostgresError","message":"PostgreSQL request failed","code":"42P01","stack":"    at ErrorResponse (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:815:30)\n    at handle (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:489:6)\n    at Socket.data (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/connection.js:324:9)\n    at Socket.emit (node:events:514:20)\n    at addChunk (node:internal/streams/readable:605:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:556:3)\n    at Readable.push (node:internal/streams/readable:436:5)\n    at TCP.onStreamRead (node:internal/stream_base_commons:194:23)\n    at cachedError (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/query.js:170:23)\n    at new Query (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/query.js:36:24)\n    at sql (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/node_modules/postgres/src/index.js:112:11)\n    at ledgerWatermark (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/publication/v1.ts:111:43)"},"path":"/api/v1/selected/changes","msg":"public api error"}
+✔ a sync database failure is retryable without replacing the client snapshot (4.236709ms)
+▶ conflicting gold for a shared case returns 400 before any report writes
+  ✔ reject (155.427875ms)
+  ✔ either (1.669667ms)
+✔ conflicting gold for a shared case returns 400 before any report writes (157.667875ms)
+✔ shared gold keeps model disagreements and correct outcome filters comparable (12.154084ms)
+✔ an unresolved selection never leaks after the old deadline and completion publishes it everywhere (242.640292ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a confirmed but redundant explanation stays in all, and an editor can explicitly select it (18.444625ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ refreshing a saved payload preserves history and sends one audited update through the old cursor (28.824625ms)
+✔ refreshing after a withdrawal emits a removal and never revives the selection (4.645583ms)
+✔ selection metrics keep valid-output quality separate from decisive coverage (0.73025ms)
+✔ either cases do not lower decisive coverage or complete accuracy (0.089166ms)
+✔ threshold sweep uses the same decisive failure denominator (0.127042ms)
+✔ valid gold preserves comments, split and optional material (0.709041ms)
+✔ invalid gold is rejected with physical line numbers (0.200459ms)
+✔ CLI rejects invalid gold and empty splits before connecting to model or database (43040.456959ms)
+✔ invalid uploaded evidence is rejected before any run is inserted (10.445833ms)
+✔ valid multi-model and summary-only reports remain supported (14.524416ms)
+{"level":"warn","msg":"share image preparation failed","articleId":"ner2425r0fbe5szh8ucvyxwdb","err":{"type":"Error","message":"EEXIST: file already exists, mkdir '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-nTdJEw/tmp/share-image-warm-edDJq7/ogcache'","code":"CODEBUDDY_BROKER_DENY","stack":"    at createBrokerPolicyError (/Applications/WorkBuddy.app/Contents/Resources/app.asar.unpacked/cli/vendor/shim/node-brokered-fs-shim.cjs:253:19)\n    at handleBrokerHostOperationResponse (/Applications/WorkBuddy.app/Contents/Resources/app.asar.unpacked/cli/vendor/shim/node-brokered-fs-shim.cjs:275:11)\n    at tryBrokerHostOperation (/Applications/WorkBuddy.app/Contents/Resources/app.asar.unpacked/cli/vendor/shim/node-brokered-fs-shim.cjs:520:16)\n    at async wrappedPromisesMkdir (/Applications/WorkBuddy.app/Contents/Resources/app.asar.unpacked/cli/vendor/shim/node-brokered-fs-shim.cjs:886:9)\n    at async render (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:162:3)\n    at async renderOg (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/og.ts:176:17)\n    at async warmShareImage (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/packages/backend/src/media/prepare.ts:49:5)\n    at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/share-image-warm.test.ts:61:16)\n    at async Test.run (node:internal/test_runner/test:1409:7)\n    at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)"}}
+✔ the worker warms the API's current public PNG without an HTTP server (783.453666ms)
+✔ a discussion post that came before any report is grouped again when a report founds its fact (130.149292ms)
+✔ history waits behind live work and founds no event; a new source's post from today is news (33.839125ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a discussion post that quotes a post not yet collected joins its story when the original arrives (107.576917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ ordinary collector replacement retains source, history and admission boundaries and resets only collector validators (66.826209ms)
+✔ collector replacement refuses incomplete, incompatible, duplicate or special-kind inputs atomically (6.861542ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ publisher attribution changes queue re-derivation for role, URL ownership and discovery evidence (6.432708ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ ordinary listing sources accept an exact UTC publication boundary (1.867458ms)
+✔ a publication boundary rejects missing zones, incomplete and impossible dates, and non-string values (0.198584ms)
+✔ channels that do not apply the publication boundary refuse it instead of ignoring it (0.075334ms)
+✔ a listing uses the visible date when its tooltip is not a publication date (5.290625ms)
+✔ a detail date selector reads meta content and an invalid tooltip does not mask visible text (16.661709ms)
+✔ a date and time without a zone is in the source's offset, not the server's (2.708833ms)
+✔ a bare date is midnight in the source's offset; an ISO date alone stays UTC midnight (0.136375ms)
+✔ a date that carries its zone keeps it (0.092042ms)
+✔ no date at all is null (0.050542ms)
+✔ English wall-clock dates are not shifted by the host's daylight-saving gap (1.802208ms)
+✔ English times with explicit zones retain their zone on every host (1.283917ms)
+✔ CST, which Chinese pages print for China time, is read in the source's offset (0.097625ms)
+✔ an article page's publication time without a zone is the same moment across host zones (18.790209ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ stable external IDs revise the first material after URL changes without merging sources or deleting legacy duplicates (89.134167ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ hot-signal activity does not hide editorial collection stopping (54.752333ms)
+✔ daily follow-ups retain chronic failures after a successful run, separately by use (4.612541ms)
+✔ weekly totals count every silent source and include successful attributed discoveries (14.004ms)
+✔ quality follow-ups count undated editorial articles and edits without judging signal bodies (12.349458ms)
+✔ saved detail budget waits and shutdowns do not alert, while HTTP errors and timeouts do (7.134083ms)
+✔ a low-frequency source quiet for a week is not late, while a daily one is (10.0045ms)
+✔ a source without enough history to have a rhythm stays visible instead of being called fine (4.880417ms)
+✔ one first import is one output day, not one day per publication date (3.253916ms)
+✔ a first import spread over months cannot hide a source that has since gone quiet (2.775ms)
+✔ output older than the window is not comparable history, and reads apart from never receiving anything (5.547375ms)
+✔ collection failures stay reported on their own, also when the source is past its rhythm (7.240375ms)
+✔ an attributed discovery is historical output even without publisher-owned articles (5.408167ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ rhythm bounds publication days independently of discovery time (3.047416ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ dates require a real complete calendar day, never a product version or an impossible day (2.177791ms)
+✔ Intercom daily sections have independent URLs, dates and complete bodies without month headings or empty days (23.852292ms)
+✔ inserting a new help-center section does not change older identities or material hashes (6.929625ms)
+✔ undated listing applies its boundary after original article dates in both preview and storage (110.913ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ authoritative listing applies its boundary after original article dates in both preview and storage (30.246167ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ complete day-month-year dates accept the publisher's punctuation (1.9915ms)
+✔ compact publication timestamps retain wall-clock seconds without accepting version numbers or invalid dates (0.126542ms)
+✔ a config entry the collector does not implement fails the fetch instead of being ignored (15.283333ms)
+✔ feed entries outside the source's URL rules are skipped (59.605292ms)
+✔ detail rules fill what the listing lacks, and a detail title survives the next listing (33.040917ms)
+✔ a Jina listing is read on every fetch, and buys a detail rendering only where a regex rule needs it (24.852875ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ detail HTML supplies the ordinary extracted body once, while short pages keep extraction pending (0.80975ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ Jina card links become posts with their own titles (1.540417ms)
+✔ anchors into the listing page itself are navigation, not posts (3.350625ms)
+✔ posts addressed by a query on the listing's path are posts, its pages and filters are not (1.6835ms)
+✔ promotions a feed rotates inside its posts are left out of the body (2.755666ms)
+✔ a listing that links other articles in its teasers takes only the links that begin a line (0.370625ms)
+✔ feed text that only teases the article is a summary: the page is fetched before judging (23.738583ms)
+✔ a source that declares its feed summary the body keeps a short one, in RSS and Atom; a teaser is still a summary (6.640708ms)
+✔ hidden page parts are dropped whole, and a news page's closing blocks are trimmed (2.891584ms)
+✔ noise words match whatever their case (0.129458ms)
+✔ a time without a zone is read in the source's offset, in JSON lists and in detail page metadata (5.522667ms)
+✔ dates in yyyymmdd and in JSON-LD are read (1.752916ms)
+✔ a case exported from an event reaches the model exactly as the site's own digest request (15305.814667ms)
+✔ nothing is sent when the calls exceed the limit or the candidate cannot be compared (15687.213959ms)
+✔ completed streamed content replaces the fallback at its boundary (12.976542ms)
+✔ nested completed segments preserve article order and leave unrelated hidden text hidden (3.158416ms)
+✔ the inline runtime definition may end with a completion call (1.4985ms)
+✔ incomplete boundaries and calls inside data, strings, comments or examples do not expose hidden text (5.587042ms)
+✔ stripTags ignores > inside quoted HTML attributes (0.801625ms)
+✔ stripTags does not pair quotes inside unquoted attribute values (0.0845ms)
+✔ stripTags keeps existing comment handling without swallowing following text (0.082084ms)
+✔ stripTags preserves existing spacing, entities, and hidden-content handling (0.075584ms)
+✔ stripTags keeps existing handling of incomplete tags and unclosed attribute quotes (0.069416ms)
+✔ day counts retain exact Beijing midnight, leap-day and year boundaries (1.344084ms)
+✔ deterministic varied timelines match the full-scan reference (22.916ms)
+✔ real grouped timeline pagination keeps whole-day counts across midnight (55.386375ms)
+✔ timeline grouping preserves evidence scope and filter-local anchors (42.759875ms)
+✔ topic directory and pool counts stop reusing a withdrawn entry after one minute (33.277542ms)
+✔ topic lists and pool counts share the exact membership predicate (37.212584ms)
+✔ a topic page is a collection at its own address (0.491584ms)
+✔ a list the page shows keeps its ordered entry names and public story links (0.41075ms)
+✔ a withdrawn report leaves the topic page and the index while the topic index is still cached (52.798958ms)
+✔ a correction refreshes named content and its topic membership before the index expires (22.382541ms)
+✔ a platform topic takes the articles about it, not the ones that only mention it (232.174709ms)
+✔ a story page names the topics of its reports (12.342209ms)
+✔ withdrawn articles stay out of lists and counts (15.012375ms)
+✔ every topic has a page; unknown topics and pages past the end have none (3.280666ms)
+✔ SIGTERM finishes the sent normal batch and resumes from its receipt (22988.699542ms)
+✔ SIGTERM finishes the sent misaligned batch and resumes from its receipt (21015.730167ms)
+✔ a text corrected while its translation was running is translated again, and the old translation is not shown (244.055167ms)
+✔ links and images inside a paragraph survive the translation, or the paragraph stays in the original (17.989708ms)
+✔ translation storage and receipt completion commit together, then reuse the saved answer (16.305792ms)
+✔ the post a selected X post quotes is translated once and shown with the item (14.139166ms)
+✔ an unusable X translation gets a bounded fresh attempt instead of terminal skipped (15.081959ms)
+✔ fully unusable body translations stop after three recorded attempts (19.851333ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ a received alignment retry survives a failed translation commit without paying again (16.176583ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":13,"count":0,"jobs":[]}
+✔ X and Twitter status URL variants keep the same material identity (0.662291ms)
+✔ other sites containing a tweet URL keep their own material identity (0.603375ms)
+✔ only a complete status id at the expected path identifies a tweet (0.075625ms)
+✔ invalid and non-HTTP URLs cannot acquire a tweet identity (0.088875ms)
+✔ internal and reserved addresses are blocked in every spelling (1.127292ms)
+✔ URL literals that embed a loopback address are refused before any request (3.926209ms)
+✔ benchmark literals are refused without a local-debug override (0.211417ms)
+✔ blocked DNS names keep their boundary with a trailing root dot (0.55575ms)
+✔ the connection guard refuses private, mixed, reserved and empty DNS answers, including a changed answer (29.9095ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ RSS and web entries that point to videos skip body extraction even when full text was requested (62.466917ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ Atom and RSS Media descriptions survive as excerpts without pretending to be video body text (10.871167ms)
+✔ actual textual feed content stays usable, while a video summary never becomes a transcript (7.838208ms)
+✔ known video pages cannot pass the generic body reader or page-fetch policy (5.778417ms)
+✔ manual extraction makes no video request, and an ordinary link redirected to a player cannot save its controls (1.353875ms)
+✔ one alert when the worker stops, none while it stays stopped, one recovery when it is back (56.295833ms)
+✔ a failed send is tried again at the next check (12.677166ms)
+✔ expected route refusals and cancelled requests stay quiet; real errors keep request and stack (1.651958ms)
+✔ SSR fetch timeouts keep the upstream path and stack before the existing 503 mapping (0.551125ms)
+✔ SSR keeps ordinary upstream misses and caller cancellations quiet (1.326458ms)
+✔ an old document render failure checks fresh health and reloads its exact URL once (2.489583ms)
+✔ current releases and unsuccessful health checks keep the error page (1.145292ms)
+✔ route responses, admin and unversioned documents never probe health (0.158292ms)
+✔ blocked storage never risks an automatic reload loop (0.317875ms)
+✔ navigation while the version check is pending never reloads another page (0.269125ms)
+✔ withdrawn primary yields to an active report and does not count as evidence (23.923583ms)
+✔ all-withdrawn facts leave future recall and return when restored (8.120458ms)
+✔ summary-only and reports without publication retain existing recall eligibility (5.400375ms)
+✔ same URL cannot route directly through a withdrawn report (2.587417ms)
+✔ X reply and quote cannot boost a withdrawn report (3.353584ms)
+✔ a withdrawn-only earlier fact does not claim the root of an active candidate (3.771334ms)
+✔ withdrawn similarity hits do not consume a valid top candidate slot (5.279416ms)
+✔ later story comparison uses an active root report instead of its withdrawn primary (23.851541ms)
+✔ an all-withdrawn story supplies no material for a new paid story comparison (4.025667ms)
+✔ withdrawn bridge reports cannot create a new related link, while saved links remain (10.797375ms)
+✔ a post that links an X Article waits for extraction, which brings the article in as a new revision (87.39675ms)
+✔ extracting the same article again (an admin re-run) neither repeats it nor makes a revision (3.903125ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ an article that cannot be fetched is flagged to the model, not passed off as a complete body (3.557542ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":11,"count":0,"jobs":[]}
+✔ R01: X detail and original omit unlicensed text, translations, quotes and media (90.722375ms)
+✔ R02: Markdown exports only the licensed summary (9.292625ms)
+✔ R02: an unlicensed X post without a summary cannot enable Markdown (9.802375ms)
+✔ R03: every list projection retains the item without unlicensed X content (22.266083ms)
+✔ R04: revoking only site fulltext keeps editorial summaries after republishing (77.583875ms)
+✔ R05: revoking only syndication preserves licensed site reading and Markdown (17.989291ms)
+✔ R06/R07: x_search licence matrix site=false, syndicate=false (11.8245ms)
+✔ R06/R07: x_search licence matrix site=false, syndicate=true (13.109834ms)
+✔ R06/R07: x_search licence matrix site=true, syndicate=false (11.421834ms)
+✔ R06/R07: x_search licence matrix site=true, syndicate=true (9.716792ms)
+✔ R06/R07: rss licence matrix site=false, syndicate=false (9.751542ms)
+✔ R06/R07: rss licence matrix site=false, syndicate=true (10.616ms)
+✔ R06/R07: rss licence matrix site=true, syndicate=false (16.196084ms)
+✔ R06/R07: rss licence matrix site=true, syndicate=true (9.646541ms)
+✔ R08: an unlicensed missing X structure does not restore content (5.325375ms)
+✔ R08: an unlicensed quote-only X structure does not restore content (4.931ms)
+✔ R08: site permission does not override body status unconfirmed (4.542417ms)
+✔ R08: site permission does not override body status none (8.680584ms)
+✔ R09: missing translations retain existing licensed behavior and never bypass revocation (9.693917ms)
+✔ R09: stale translations retain existing licensed behavior and never bypass revocation (8.679416ms)
+✔ R09: same translations retain existing licensed behavior and never bypass revocation (8.082292ms)
+✔ R10: summary-only and withdrawn visibility retain stricter detail and export rules (5.795625ms)
+✔ R10: hot_signal sources keep detail and Markdown unavailable (6.215125ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ R10: isolated sources keep detail and Markdown unavailable (4.609666ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":10,"count":0,"jobs":[]}
+✔ empty and link-only posts preserve originals without calling either writer, even above the selection threshold (144.093167ms)
+✔ rebuilding an image-only post replaces historical model replies across public outputs and preserves its image and address (14.014917ms)
+✔ real text containing links and a fetched X Article keep their normal writing path (23.521625ms)
+✔ shards keep to the query length and account limits, per participation mode (10.452375ms)
+✔ one search reads a shard; each account gets its own posts, run and watermark (74.975458ms)
+✔ a page failing after the first keeps what was read and goes on from there next run (28.999584ms)
+✔ a quiet account's old newest post does not drag the shard's search back: its last check does (5.795666ms)
+✔ a failed search fails every account of the shard and moves no watermark (5.3725ms)
+✔ due accounts are scheduled by shard, not one by one (4.018125ms)
+✔ verified publishers include self-thread announcements in both single and shared searches (10.789583ms)
+✔ a shard storage failure closes all runs without advancing its coverage (22.948875ms)
+{"level":"info","msg":"queue drain","phase":"start","elapsedMs":0,"count":0,"jobs":[]}
+✔ paid search receipts and coverage commit together for single sources and shards (26.281167ms)
+{"level":"info","msg":"queue drain","phase":"complete","elapsedMs":12,"count":0,"jobs":[]}
+✔ post text decodes the provider's three HTML escapes exactly once without stripping code (0.536542ms)
+✔ the post title, body and quote share decoding while expanded links and media stay intact (0.838833ms)
+ℹ tests 780
+ℹ suites 0
+ℹ pass 764
+ℹ fail 16
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 496530.090542
+
+✖ failing tests:
+
+test at modules/short-term-radar/tests/radar-page.test.ts:44:1
+✖ the radar page renders the ladders view with themes, roles, nicknames and sentiment (17608.902125ms)
+  Error: web did not start: 
+      at Timeout.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/web/tests/web-server.ts:44:47)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+test at modules/short-term-radar/tests/radar-page.test.ts:65:1
+✖ the view, the nickname query and the drawer are all addressable by URL (0.309209ms)
+  Error: web did not start: 
+      at Timeout.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/web/tests/web-server.ts:44:47)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+test at tests/analyze-kill.test.ts:165:1
+✖ SIGKILL after responses are saved but before the business commit reuses all receipts on restart (15008.340792ms)
+  AssertionError [ERR_ASSERTION]: timeout waiting for all paid responses persisted
+      at until (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/analyze-kill.test.ts:76:39)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/analyze-kill.test.ts:181:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }
+
+test at tests/api-error-logging.test.ts:9:1
+✖ API startup is quiet and an unexpected error retains the request, stack and response contract (15006.796416ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 0
+  
+      at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/api-error-logging.test.ts:69:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/backup.test.ts:77:1
+✖ a real paired restore opens a feedback screenshot when forwarding is disabled and uploads are absent (100.747084ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-csp7uW/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-csp7uW/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:128:1
+✖ both attachment roots restore nested paths and bytes, without caches or previous backups (282.713042ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-EpaKbC/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-EpaKbC/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:146:3
+✖ missing/empty roots produce an extractable archive: neither (28.72225ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-WSPqED/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-WSPqED/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:146:3
+✖ missing/empty roots produce an extractable archive: uploads+feedback-screenshots (80.225375ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-YvhGqx/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-YvhGqx/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:156:1
+✖ an unreadable upload directory cannot become a successful empty backup (28.236959ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-26q2U7/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-26q2U7/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:191:1
+✖ packing retries once and a successful retry preserves the screenshot (133.449834ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-UVYZLq/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-UVYZLq/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/backup.test.ts:201:1
+✖ persistent packing failure still sends the database and reports incomplete backup (135.152333ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /database backed up, but the file archive failed: fictional packing failure/. Input:
+  
+  'Error: spawn pg_dump ENOENT'
+  
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/backup.test.ts:204:5
+      at async withPackingFailures (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/backup.test.ts:185:9)
+      at async TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/backup.test.ts:203:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: spawn pg_dump ENOENT
+        at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+        at onErrorNT (node:internal/child_process:553:16)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21),
+    expected: /database backed up, but the file archive failed: fictional packing failure/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup.test.ts:217:1
+✖ local retention keeps three dump/archive pairs without deleting source attachments (80.773125ms)
+  Error: spawn pg_dump ENOENT
+      at ChildProcess._handle.onexit (node:internal/child_process:315:19)
+      at onErrorNT (node:internal/child_process:553:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'spawn pg_dump',
+    path: 'pg_dump',
+    spawnargs: [ '--format=custom', '--compress=6', '--no-owner', '--file', '/var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-Mgbn6S/backups/ymhot-test-f66938-test-202611010400.dump', 'postgres://127.0.0.1:5432/ymhot_test_f66938_test' ],
+    cmd: 'pg_dump --format=custom --compress=6 --no-owner --file /var/folders/99/lddylp394r5dzlphgbxl87_40000gn/T/aihot-test-66283-R3fItT/tmp/aihot-backup-files-Mgbn6S/backups/ymhot-test-f66938-test-202611010400.dump postgres://127.0.0.1:5432/ymhot_test_f66938_test',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/error-logging.test.ts:18:1
+✖ API error logs keep database codes and frames without row values or query parameters (10007.282208ms)
+  Error: spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node ETIMEDOUT
+      at Object.spawnSync (node:internal/child_process:1175:20)
+      at spawnSync (node:child_process:974:24)
+      at execFileSync (node:child_process:1017:15)
+      at run (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:11:10)
+      at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:19:18)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    errno: -60,
+    code: 'ETIMEDOUT',
+    syscall: 'spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node',
+    path: '/opt/homebrew/Cellar/node/26.11.0_1/bin/node',
+    spawnargs: [ '--input-type=module', '-e', '\n    import { buildApp } from "file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/app.ts";\n    import { sql, closeDb } from \'@aihot/backend/db\';\n    const app = await buildApp();\n    const marker = "synthetic-private-person@example.test";\n    for (const kind of [\'unique\', \'input\']) {\n      try {\n        await sql.begin(async tx => {\n          if (kind === \'input\') return tx`SELECT ${marker}::integer`;\n          await tx`INSERT INTO admin_users(email,display_name) VALUES (${marker},\'Synthetic\')`;\n          await tx`INSERT INTO admin_users(email,display_name) VALUES (${marker},\'Synthetic\')`;\n        });\n      } catch (error) {\n        app.log.error({err:error}, \'database-boundary\');\n        app.log.error({err:new Error(\'database operation failed\', {cause:error})}, \'nested-database-boundary\');\n      }\n    }\n    await app.close(); await closeDb();\n  ' ],
+    error: Error: spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node ETIMEDOUT
+        at Object.spawnSync (node:internal/child_process:1175:20)
+        at spawnSync (node:child_process:974:24)
+        at execFileSync (node:child_process:1017:15)
+        at run (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:11:10)
+        at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:19:18)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.start (node:internal/test_runner/test:1262:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+        at process.processTicksAndRejections (node:internal/process/task_queues:104:5),
+    status: null,
+    signal: 'SIGTERM',
+    output: [ null, '', '' ],
+    pid: 68037,
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/error-logging.test.ts:47:1
+✖ OAuth rejects failed exchanges without logging the upstream response text (10005.689208ms)
+  Error: spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node ETIMEDOUT
+      at Object.spawnSync (node:internal/child_process:1175:20)
+      at spawnSync (node:child_process:974:24)
+      at execFileSync (node:child_process:1017:15)
+      at run (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:11:10)
+      at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:49:18)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12) {
+    errno: -60,
+    code: 'ETIMEDOUT',
+    syscall: 'spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node',
+    path: '/opt/homebrew/Cellar/node/26.11.0_1/bin/node',
+    spawnargs: [ '--input-type=module', '-e', `\n    import assert from 'node:assert/strict';\n    import { buildApp } from "file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/app.ts";\n    import { loginRedirect, STATE_COOKIE } from '@aihot/backend/admin/auth';\n    process.env.FEISHU_LOGIN_APP_ID = 'synthetic-app';\n    process.env.FEISHU_LOGIN_APP_SECRET = 'synthetic-secret';\n    const app = await buildApp();\n    const refused = async () => Response.json({error:"synthetic-private-person@example.test"}, {status:400});\n    const broken = (path) => async input => String(input).endsWith(path)\n      ? new Response("opaque-secret", {status:502}) : Response.json({access_token:'synthetic-token'});\n    for (const upstream of [refused, broken('/token'), broken('/userinfo')]) {\n      globalThis.fetch = upstream;\n      const redirect = loginRedirect('/admin');\n      const state = new URL(redirect.url).searchParams.get('state');\n      const response = await app.inject({url:'/api/auth/callback?'+new URLSearchParams({state,code:'synthetic'}),\n        headers:{cookie:STATE_COOKIE+'='+encodeURIComponent(redirect.stateCookie)}});\n      assert.equal(response.statusCode,403);\n      assert.ok(!response.body.includes("synthetic-private-person@example.test") && !response.body.includes("opaque-secret"));\n    }\n    await app.close();\n  ` ],
+    error: Error: spawnSync /opt/homebrew/Cellar/node/26.11.0_1/bin/node ETIMEDOUT
+        at Object.spawnSync (node:internal/child_process:1175:20)
+        at spawnSync (node:child_process:974:24)
+        at execFileSync (node:child_process:1017:15)
+        at run (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:11:10)
+        at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/error-logging.test.ts:49:18)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19)
+        at Test.run (node:internal/test_runner/test:1467:12),
+    status: null,
+    signal: 'SIGTERM',
+    output: [ null, '', '' ],
+    pid: 68221,
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/mcp-host.standalone.test.ts:184:1
+✖ MCP normalizes only explicitly configured site and extra host authorities, and keeps an IPv6 site's matching Origin (10007.493333ms)
+  Error: Command failed: /opt/homebrew/Cellar/node/26.11.0_1/bin/node --input-type=module -e 
+      import assert from "node:assert/strict";
+      import Fastify from "fastify";
+      import { registerMcp } from "file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/routes/mcp.ts";
+      const app = Fastify();
+      registerMcp(app);
+      try {
+        for (const { headers, status } of JSON.parse(process.argv[1])) {
+          const response = await app.inject({ method: "POST", url: "/api/mcp", payload: {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"host-test","version":"1.0.0"}}},
+            headers: { accept: "application/json, text/event-stream", ...headers } });
+          assert.equal(response.statusCode, status, JSON.stringify(headers) + ": " + response.body);
+          assert.equal(response.headers["cache-control"], "no-store");
+        }
+      } finally { await app.close(); }
+     [{"headers":{"host":"[::1]:3001","origin":"http://[::1]:3000"},"status":200},{"headers":{"host":"[0:0:0:0:0:0:0:1]:3001","origin":"http://[0:0:0:0:0:0:0:1]:3000"},"status":200},{"headers":{"host":"[::1]:3001","origin":"http://[::2]:3000"},"status":403}]
+  
+      at genericNodeError (node:internal/errors:999:15)
+      at wrappedFn (node:internal/errors:544:14)
+      at ChildProcess.exithandler (node:child_process:420:12)
+      at ChildProcess.emit (node:events:514:20)
+      at maybeClose (node:internal/child_process:1156:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:334:5) {
+    code: null,
+    killed: true,
+    signal: 'SIGTERM',
+    cmd: '/opt/homebrew/Cellar/node/26.11.0_1/bin/node --input-type=module -e \n    import assert from "node:assert/strict";\n    import Fastify from "fastify";\n    import { registerMcp } from "file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/apps/api/src/routes/mcp.ts";\n    const app = Fastify();\n    registerMcp(app);\n    try {\n      for (const { headers, status } of JSON.parse(process.argv[1])) {\n        const response = await app.inject({ method: "POST", url: "/api/mcp", payload: {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"host-test","version":"1.0.0"}}},\n          headers: { accept: "application/json, text/event-stream", ...headers } });\n        assert.equal(response.statusCode, status, JSON.stringify(headers) + ": " + response.body);\n        assert.equal(response.headers["cache-control"], "no-store");\n      }\n    } finally { await app.close(); }\n   [{"headers":{"host":"[::1]:3001","origin":"http://[::1]:3000"},"status":200},{"headers":{"host":"[0:0:0:0:0:0:0:1]:3001","origin":"http://[0:0:0:0:0:0:0:1]:3000"},"status":200},{"headers":{"host":"[::1]:3001","origin":"http://[::2]:3000"},"status":403}]',
+    stdout: '',
+    stderr: ''
+  }
+
+test at tests/outbound-protocol.standalone.test.ts:23:3
+✖ outbound secure-proxy negotiates HTTP/1.1 and retains TLS identity (1767.731625ms)
+  AssertionError [ERR_ASSERTION]: {"requests":[],"tunnels":[],"proxyProtocols":[],"error":"TypeError: fetch failed"}
+  + actual - expected
+  
+  + 'TypeError: fetch failed'
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/yimu/Projects/YM_Capital/ym-short-term-hot/tests/outbound-protocol.standalone.test.ts:99:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'TypeError: fetch failed',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+exit=1

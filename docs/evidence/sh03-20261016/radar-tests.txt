@@ -1,0 +1,14 @@
+=== SH-03 门禁 4a：模块单测（radar.test.ts）===
+✔ both views answer 200 with ladders, the board, sentiment and highlights (489.666584ms)
+✔ theme, role and nickname queries filter both views (17.850042ms)
+✔ one stock answers by bare code, dotted code and symbol; an unknown code is a 404 (16.664042ms)
+✔ a missing or unreadable snapshot degrades to an empty snapshot instead of failing (12.958167ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7172.097333
+radar test exit=0

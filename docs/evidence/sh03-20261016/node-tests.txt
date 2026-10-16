@@ -1,0 +1,26 @@
+=== SH-03 门禁 4b：架构红线 + 引擎回归 + 页面 SSR @ 2026-10-16 18:23:10 CST ===
+步骤 1/2：architecture（4 条红线）+ ingest + topics + 模块单测（--test-concurrency=1）
+✔ a platform topic takes the articles about it, not the ones that only mention it (122.597125ms)
+✔ a story page names the topics of its reports (13.073875ms)
+✔ withdrawn articles stay out of lists and counts (15.519458ms)
+✔ every topic has a page; unknown topics and pages past the end have none (3.499791ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22432.1615
+
+步骤 2/2：页面 SSR（需要 web build，故单跑）
+✔ the radar page renders the ladders view with themes, roles, nicknames and sentiment (3431.060083ms)
+✔ the view, the nickname query and the drawer are all addressable by URL (60.23575ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9533.032333
