@@ -39,3 +39,13 @@
 | 2026-10-17 / V2 `LITE-02`（前端极简双视角，AUDIT-LITE02-R1 PASS） | [`docs/evidence/lite02-20261017/`](docs/evidence/lite02-20261017/manifest.json) | 双视角 + 共用详情抽屉；typecheck/web build/node 17/17/3088 实测 4/4 全过，谷米 AUDIT-LITE02-R1 一次通过。 |
 | 2026-10-17 / V2 `LITE-03`（数据语义与板块社区精修，AUDIT-LITE03-R1 PASS） | [`docs/evidence/lite03-20261017/`](docs/evidence/lite03-20261017/manifest.json) | 五改造 + 采集器必要最小修；Python 77/77、node 19/19、3088 4/4、干跑 115→102 组/themes 50/50/publishedAt 139/139，谷米审计一次通过。 |
 | 2026-10-17 / V2 `LITE-04`（前端密度与抽屉交互精修，AUDIT-LITE04-R1 PASS） | [`docs/evidence/lite04-20261017/`](docs/evidence/lite04-20261017/manifest.json) | 缺失值诚实化 + 主线折叠/筛选 + 固定列宽表格 + 抽屉导航/折叠/平台计数 + CSS 清理；Python 77/77、node 21/21、3088 七项 7/7，谷米审计一次通过。 |
+
+## Git 远端拓扑（2026-10-18 起，弈沐决策）
+
+| Remote | 地址 | 角色 |
+| --- | --- | --- |
+| `origin` | https://github.com/YiMuYouming/ym-short-term-hot | **本仓自有 fork（YiMuYouming 账户下）**，唯一推送目标；本地 `main` 已设为跟踪 `origin/main` |
+| `upstream` | https://github.com/KKKKhazix/AIHOT | AIHOT 上游，只读合并来源（原 `origin` 改名而来；对上游无推送权限，403） |
+
+- 2026-10-18：本地全部工作（SH-01~SH-04 共 15 提交 + 合并前 WIP 快照 `3994abf`，合计 16 提交）已推送 `origin/main`，「仅存本机无备份」风险解除。
+- **待办（下次开工第一项，需先裁决再合）**：合并 `upstream/main`（上游 15 条提交：搜索相关性/插图说明/发布可靠性等）。2026-10-18 实测 `git merge upstream/main` 冲突 15 个文件：`AGENTS.md`、`apps/web/tests/{native-video,navigation-performance,timeline-unread}.test.ts`、`industry/prompts/{content-understanding,rules-self-contained-title}.md`、`industry/taxonomy.ts`（2 处）、`industry/topics.json`（25 处）、`packages/backend/src/ingest/items.ts`（2 处）、`tests/{content-publication,ingest,outlet-invariants,public-cache,search-sharing,translate}.test.ts`。冲突集中在 SH-01 改造过的 taxonomy/prompts/ingest 与上游搜索/版本修复的交叠区，须逐文件语义裁决并过全量测试门禁后方可合入，禁止 force 覆盖上游提交。
