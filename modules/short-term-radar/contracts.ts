@@ -59,6 +59,8 @@ export interface RadarStockItem {
   dcRank: number | null;
   kplTag: string;
   limitReason: string;
+  whyHot: string;
+  sealTime: string;
   resonanceScore: number;
   platformsHit: string[];
   sentiment: RadarStockSentiment;
@@ -70,6 +72,8 @@ export interface RadarThemeLadder {
   theme: string;
   heatScore: number;
   stockCount: number;
+  /** 板块涨停家数：同义子标签统计取 max 后再与桶内实际涨停数取大（LITE-03，别名计数不相加）。 */
+  limitUpCount: number | null;
   topBoardCount: number;
   summary: string;
   stocks: RadarStockItem[];
@@ -103,16 +107,33 @@ interface FileSentiment {
 
 interface FileHighlight {
   platform?: string;
+  source?: string;
+  postId?: string;
+  post_id?: string;
   title?: string;
+  content?: string;
   url?: string;
+  author?: string;
   authorName?: string;
+  author_name?: string;
+  publishedAt?: string;
+  published_at?: string;
+  commentCount?: number;
+  comment_count?: number;
+  likeCount?: number;
+  like_count?: number;
+  viewCount?: number;
+  view_count?: number;
+  isKol?: boolean;
   isVipYouzi?: boolean;
   isDeepLogic?: boolean;
-  commentCount?: number;
-  publishedAt?: string;
+  qualityTier?: string;
   sentiment?: string;
+  sentimentLabel?: string;
+  sentiment_label?: string;
   sentimentScore?: number;
   sentimentTerms?: string[];
+  sentiment_terms?: string[];
 }
 
 interface FileStock {
@@ -131,6 +152,9 @@ interface FileStock {
   hotRankXq?: number | null;
   resonanceScore?: number;
   platformsHit?: string[];
+  limitReason?: string;
+  whyHot?: string;
+  sealTime?: string;
   sentiment?: FileSentiment;
   highlights?: FileHighlight[];
 }
@@ -144,7 +168,11 @@ export interface RadarSnapshotFile {
   themeLadders?: Array<{
     theme?: string;
     summary?: string;
-    ladders?: Record<string, Array<{ code?: string; name?: string; symbol?: string; boardCount?: number; resonanceScore?: number }>>;
+    stockCount?: number;
+    limitUpCount?: number | null;
+    // LITE-01: a bucket entry is the stock's full dict (whyHot/limitReason/sealTime included),
+    // not just identity — the ladders reach stocks the resonance board never lists.
+    ladders?: Record<string, FileStock[]>;
   }>;
   topResonanceStocks?: FileStock[];
 }
@@ -204,23 +232,25 @@ function mapSentiment(file: FileSentiment | undefined): RadarStockSentiment {
 }
 
 function mapHighlight(file: FileHighlight, index: number): RadarHighlightPost {
-  const source = PLATFORM_SOURCE[file.platform ?? ""] ?? file.platform ?? "unknown";
+  const platform = file.platform ?? file.source ?? "";
+  const source = PLATFORM_SOURCE[platform] ?? platform ?? "unknown";
   return {
     source,
-    postId: file.url ?? `${source}-${index}`,
+    postId: file.postId ?? file.post_id ?? file.url ?? `${source}-${index}`,
     title: file.title ?? "",
-    excerpt: file.title ?? "",
+    // LITE-03: the body when the bridge serialized it, the title otherwise (old snapshots).
+    excerpt: file.content ?? file.title ?? "",
     url: file.url ?? "",
-    author: file.authorName ?? "",
-    publishedAt: file.publishedAt ?? "",
-    readCount: 0,
-    replyCount: num(file.commentCount),
-    likeCount: 0,
-    isVipYouzi: file.isVipYouzi === true,
+    author: file.author ?? file.authorName ?? file.author_name ?? "",
+    publishedAt: file.publishedAt ?? file.published_at ?? "",
+    readCount: num(file.viewCount ?? file.view_count),
+    replyCount: num(file.commentCount ?? file.comment_count),
+    likeCount: num(file.likeCount ?? file.like_count),
+    isVipYouzi: (file.isKol ?? file.isVipYouzi) === true,
     isDeepLogic: file.isDeepLogic === true,
-    sentimentLabel: file.sentiment ?? "neutral",
+    sentimentLabel: file.sentiment ?? file.sentimentLabel ?? file.sentiment_label ?? "neutral",
     sentimentScore: num(file.sentimentScore),
-    matchedTerms: file.sentimentTerms ?? [],
+    matchedTerms: file.sentimentTerms ?? file.sentiment_terms ?? [],
   };
 }
 
@@ -246,7 +276,9 @@ function mapStock(file: FileStock): RadarStockItem {
     thsRank: file.hotRankThs ?? null,
     dcRank: file.hotRankDc ?? null,
     kplTag: "", // 开盘啦标签本阶段无来源（kpl intent 在 pipeline 中不存在）
-    limitReason: "",
+    limitReason: file.limitReason ?? "",
+    whyHot: file.whyHot ?? "",
+    sealTime: file.sealTime ?? "",
     resonanceScore: num(file.resonanceScore),
     platformsHit: file.platformsHit ?? [],
     sentiment: mapSentiment(file.sentiment),
@@ -281,8 +313,11 @@ export function mapSnapshot(file: RadarSnapshotFile | null | undefined): ShortTe
   }
 
   const ladders = (file.themeLadders ?? []).map((theme) => {
-    // The buckets hold only identity + a few numbers; the full item comes from the resonance board
-    // when it is there, and from the bucket (role, themes, exchange) when it is not.
+    // A bucket entry is the stock's full dict (LITE-03: sentiment + highlights included), and the
+    // resonance board holds the same stock with its community data when it made the top N. Either
+    // way the stock is mapped once, by mapStock, so no field is silently dropped for the tail
+    // (audit P0-4: changePct/amountYi/sentiment/highlights used to collapse to 0/empty for the
+    // stocks outside the board).
     const ordered: FileStock[] = [];
     const buckets = theme.ladders ?? {};
     for (const role of ROLE_ORDER) {
@@ -290,17 +325,14 @@ export function mapSnapshot(file: RadarSnapshotFile | null | undefined): ShortTe
         if (!entry?.code) continue;
         const base = byCode.get(entry.code);
         ordered.push({
-          ...base,
+          ...entry,
+          ...(base ?? {}),
           code: entry.code,
-          name: base?.name ?? entry.name,
-          symbol: base?.symbol ?? entry.symbol,
           // The bucket is where the stock's ladder position lives; a board stock carries its own, and
           // they agree, but the bucket is authoritative for the ladder it is rendered under.
-          exchange: base?.exchange ?? exchangeOfSymbol(entry.symbol),
-          themes: Array.from(new Set([...(base?.themes ?? []), ...(themesByCode.get(entry.code) ?? [])])),
-          roleLabel: base?.roleLabel ?? role,
-          boardCount: base?.boardCount ?? entry.boardCount,
-          resonanceScore: base?.resonanceScore ?? entry.resonanceScore,
+          exchange: base?.exchange ?? entry.exchange ?? exchangeOfSymbol(entry.symbol),
+          themes: Array.from(new Set([...(base?.themes ?? []), ...(entry.themes ?? []), ...(themesByCode.get(entry.code) ?? [])])),
+          roleLabel: base?.roleLabel ?? entry.roleLabel ?? role,
         });
       }
     }
@@ -309,6 +341,7 @@ export function mapSnapshot(file: RadarSnapshotFile | null | undefined): ShortTe
       theme: theme.theme ?? "",
       heatScore: Math.round(stocks.reduce((sum, stock) => sum + stock.resonanceScore, 0) * 10) / 10,
       stockCount: stocks.length,
+      limitUpCount: theme.limitUpCount ?? null,
       topBoardCount: stocks.reduce((top, stock) => Math.max(top, stock.boardCount), 0),
       summary: theme.summary ?? "",
       stocks,
@@ -329,6 +362,32 @@ export interface RadarFilter {
   theme?: string | null;
   role?: string | null;
   q?: string | null;
+}
+
+/** 板块内当日涨停家数（连板数 ≥1 即涨停在池）：热门板块列表的「涨停 N 家」。 */
+export function sealedCount(ladder: RadarThemeLadder): number {
+  return ladder.stocks.filter((stock) => stock.boardCount >= 1).length;
+}
+
+/**
+ * 领涨股（LITE-03）：板块内有涨幅的，按 (涨跌幅, 连板, 共振分) 取最高——不能把 -3.67% 的票
+ * 写成「领涨」；全绿时才按 (共振分, 涨跌幅) 取代表股。空板块返回 null。
+ */
+export function leaderStock(ladder: RadarThemeLadder): RadarStockItem | null {
+  if (!ladder.stocks.length) return null;
+  const rising = ladder.stocks.filter((stock) => stock.changePct > 0);
+  if (rising.length) {
+    return rising.reduce((best, stock) => {
+      if (stock.changePct !== best.changePct) return stock.changePct > best.changePct ? stock : best;
+      if (stock.boardCount !== best.boardCount) return stock.boardCount > best.boardCount ? stock : best;
+      return stock.resonanceScore > best.resonanceScore ? stock : best;
+    });
+  }
+  return ladder.stocks.reduce((best, stock) =>
+    stock.resonanceScore !== best.resonanceScore
+      ? stock.resonanceScore > best.resonanceScore ? stock : best
+      : stock.changePct > best.changePct ? stock : best,
+  );
 }
 
 /** `q` 命中代码、名称、黑话外号（易中天 / 寒王 / 宁王）或题材名。 */

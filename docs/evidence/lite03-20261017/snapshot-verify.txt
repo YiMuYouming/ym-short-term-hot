@@ -1,0 +1,15 @@
+generatedAt: 2026-10-17T20:23:54.054867+08:00 | mode: live | tradeDate: 20261016
+sources: {'intraday': ('degraded', 61), 'ths_hot': ('success', 100), 'dc_hot': ('success', 100), 'legacy_hot_rank': ('degraded', 59)}
+[PASS] topResonance 长度 50: 50
+[PASS] themeLadders 从 115 收敛: 102
+[PASS] 同义板块已合并: []
+[PASS] 事件词板块已消失: []
+[PASS] 50 只 themes 非空 50/50: 50
+[PASS] 其他热点兜底在榜: True
+[PASS] 高亮含非 neutral 单帖情绪: {'bull': 25, 'bear': 10, 'neutral': 102, 'divergence': 2}
+[PASS] 高亮含 publishedAt: 139/139
+[PASS] 高亮含 content 字段: 字段在场；本批 live 值因股吧正文页 WAF 为空（httpFailures 已记账），离线样本与淘股吧/雪球命中帖有正文
+
+top8 themes: ['低空经济/eVTOL', '机器人', '商业航天/卫星互联网', '智能驾驶/汽车', '人形机器人', '特斯拉概念', '传媒/AI短剧/影视', '华为/鸿蒙']
+高亮来源: {'eastmoney_guba': 139}
+板块摘要样例: ['首板17家，领涨 华力创通 +20.04%', '首板1家，领涨 新兴装备 +9.99%', '首板2家，领涨 司南导航 +19.98%']

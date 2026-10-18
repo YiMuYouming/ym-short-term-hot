@@ -1,0 +1,21 @@
+✔ both views answer 200 with ladders, the board, sentiment and highlights (68.928375ms)
+✔ theme, role and nickname queries filter both views (4.562208ms)
+✔ every ladder stock carries its own theme, a qualified code and the role its summary promises (5.548125ms)
+✔ one stock answers by bare code, dotted code and symbol; an unknown code is a 404 (2.525833ms)
+✔ a missing or unreadable snapshot degrades to an empty snapshot instead of failing (1.212625ms)
+✔ the web reaches the backend only over HTTP (7.568042ms)
+✔ packages never import the apps, and nothing below the admin imports it (12.758375ms)
+✔ public routes read content only through the public read layer (0.775625ms)
+✔ the tables that carry a rule are written only by the code that owns it (5.8815ms)
+✔ the public scope and the composite rule are spelled once, in publication/scope.ts (4.293166ms)
+✔ every table and column is used by the code that reads and writes the database (42.571875ms)
+✔ every environment variable the code reads is listed in a template, and every listed one is read (49.343208ms)
+✔ modules do not import other modules (0.505083ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 656.763208

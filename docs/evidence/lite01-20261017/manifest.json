@@ -1,0 +1,100 @@
+{
+  "workOrder": "LITE-01-20261017",
+  "title": "极简热门板块与热股 Top 50 数据底座打通（bridge/ + modules/short-term-radar/contracts.ts）",
+  "completedAt": "2026-10-17T11:05:00+08:00",
+  "deliveredBy": "稳米",
+  "git": {
+    "commit": "45b1d36",
+    "commitMessage": "chore(handover): archive Grok waves 4-6 research and record Phase 1 closeout + SH-04 checklist in PROGRESS.md",
+    "workOrderBaseline": "45b1d36",
+    "committed": false,
+    "note": "按谷米审计惯例保留工作区 diff 待审，未自行提交；changedFiles 仅列 LITE-01 文件，git status 里其余条目（AGENTS.md/PROGRESS.md/实施与验收计划.md、SH01~03 开工单删除、docs/archive/、LITE01/LITE02 开工单）为谷米派单前已在工作区的归档改动",
+    "changedFileCount": 7,
+    "changedFiles": [
+      "bridge/config.py",
+      "bridge/schema.py",
+      "bridge/pipeline_loader.py",
+      "bridge/run_bridge.py",
+      "bridge/tests/fixtures/pipeline_sample.json",
+      "bridge/tests/test_bridge.py",
+      "modules/short-term-radar/contracts.ts"
+    ]
+  },
+  "scope": {
+    "S1": "bridge/config.py：research[themes] 指向 docs/aihot_research/dict/themes_v2.json（Grok 第六波核验 60 题材/191 只代表股/别名表）",
+    "S2": "bridge/schema.py：FocusStock 与 to_dict() 增加 limit_reason/why_hot/seal_time（快照键 limitReason/whyHot/sealTime）",
+    "S3": "bridge/pipeline_loader.py：ThemeCatalog 索引 themes_v2 aliases 并提供 normalize_theme 归一；parse_hot_rank 兼容真实形状（data 包装、ts_code/ts_name/pct_change、concept JSON 数组、rank_reason）；新增 parse_legacy 与 _trade_date_of；load_pipeline 先取 market_intraday_state 拿 trade_date，两路 market_hot_rank 无参空时按 trade_date 重试，新增 legacy_hot_rank（涨停原因归因 + reason_stats）；build_focus_pool 整合 ths/dc/legacy/intraday.limit_up，题材按「词典命中→reason 拆分→concept→industry 兜底」合并（别名归一、保序去重），合成 limitReason/whyHot，涨停池读取 board/pct/industry/seal_time",
+    "S4": "bridge/run_bridge.py：新增 build_theme_ladders——热门板块按真实热度排序（归一后涨停原因统计家数→上榜热股数→涨停家数→共振分），板块内热门股按身位分桶且每只为完整 to_dict()（带 whyHot/limitReason/sealTime）；run() 用其覆盖快照 theme_ladders；load_focus_pool 将 reason_stats 透传进 dataQuality 供排序与对账",
+    "S5": "bridge/tests：fixture/pipeline_sample.json 重写为 2026-10-17 实测真实字段形状（ts_code/board/pct/rank_reason/legacy_hot_rank，data 包装与在线一致）；test_bridge.py 更新 v2 断言并新增 TestPipelineV2Shapes（真实形状解析、别名归一、题材合并、whyHot 合成、万元换算、梯队热度排序）",
+    "S6": "modules/short-term-radar/contracts.ts：RadarStockItem/FileStock 增加 limitReason/whyHot/sealTime，mapStock 透传；梯队桶条目类型放宽为 FileStock（LITE-01 起桶内即完整股票字典），mapSnapshot 梯队合并非榜单股同样带出三个字段与 exchange/themes/roleLabel",
+    "notDone": [
+      "前端消费（LITE-02：双视角与个股详情重构）未动",
+      "未开启真实推送（全程 dry_run，0 条外发）",
+      "未改 packages/backend 与 radar.test.ts（不在本单文件边界）"
+    ]
+  },
+  "gates": [
+    {
+      "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\" -v",
+      "exitCode": 0,
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "result": "65/65 通过，全程离线（0 外部网络请求）",
+      "evidence": "bridge-tests.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "通过（含 modules 与 @aihot/web）",
+      "evidence": "typecheck.txt"
+    },
+    {
+      "command": "DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node --test modules/short-term-radar/tests/radar.test.ts tests/architecture.test.ts",
+      "exitCode": 0,
+      "tests": 13,
+      "failures": 0,
+      "result": "13/13 通过（radar 6 项双视图/详情/降级 + architecture 7 项分层门禁）；本项在真实干跑前执行，读的是离线快照（mode=offline_fixtures）",
+      "evidence": "node-tests.txt"
+    },
+    {
+      "command": "python3 -m bridge.run_bridge --dry-run --focus-limit 50 --top 50",
+      "exitCode": 0,
+      "result": "真实管道只读干跑（0 推送）：焦点股池 50 只、社区帖 364 条覆盖 50 只、梯队 115 组、共振榜 50 只；ths_hot 100 行 success、dc_hot 100 行 success（无参 empty 后按 trade_date 重试成功）、intraday 61 行涨停池（degraded 但有数）、legacy_hot_rank 59 项 + 154 条 reason_stats（degraded 但有数）；dataQuality.warnings 为空；httpFailures 10 条均为雪球个别 symbol 的 WAF 非 JSON 返回，已如实记账不阻断",
+      "evidence": "dry-run.txt"
+    },
+    {
+      "command": "快照核验（snapshot-verify.txt 逐项断言）",
+      "exitCode": 0,
+      "result": "[PASS] topResonanceStocks 30~50：50；[PASS] themeLadders 按真实热度排名：低空经济/eVTOL(17)、人形机器人(8)、智能驾驶/汽车(5)、商业航天/卫星互联网(4)…；[PASS] 未归题材占比 0；[PASS] limitReason 非空 47/50；[PASS] whyHot 非空 48/50；[PASS] 社区评论 47/50；[PASS] 社区帖 50/50。空 whyHot/limitReason 的 2~3 只为 dc 独榜股（如 300900 广联航空/301230 泓博医药：无概念、无原因、无行业、无词典归属，如实留空不编造）；每轮干跑社区帖数随线上数据自然波动（365→364），快照以 evidence 副本（2026-10-17T11:09:26+08:00）为准",
+      "evidence": "snapshot-verify.txt"
+    },
+    {
+      "command": "git status --short && git diff --check + 凭据自检",
+      "exitCode": 0,
+      "result": "diff --check 干净；INGEST_TOKEN 只从环境/命令行读取（config.resolve_token），无硬编码密钥；证据目录与快照副本无凭据",
+      "evidence": "git-status.txt"
+    }
+  ],
+  "environment": {
+    "python": "CPython 3.14.5（/opt/homebrew/bin/python3），零第三方依赖",
+    "pipeline": "/Users/yimu/Projects/YM_Capital/YM-data-pipeline；from ym_stock_data import query；2026-10-17 实测：market_hot_rank(ths) success、market_hot_rank(dc) 无参 empty/带 trade_date=20261016 success、market_intraday_state 与 legacy_hot_rank 自述 degraded 但均返回完整数据",
+    "database": "postgres://127.0.0.1:5432/ymhot_test",
+    "snapshot": ".data/short-term-radar-snapshot.json（live，2026-10-17T11:09:26+08:00，副本见 short-term-radar-snapshot.json）"
+  },
+  "findings": [
+    "管道响应外层是 {_meta, data}：旧 parse_hot_rank 只读顶层 items，在线模式实际一条都解析不到——这正是 pipeline_loader 文档串里「在线取不到数据是常态」的真实根因；新增 _unwrap 后 ths/dc 各 100 行全部落地",
+    "market_hot_rank(dc) 无参返回 empty，带 trade_date 即 success；ths 两种方式都成功。取数策略改为「先 market_intraday_state 拿 trade_date，热榜无参空时按日期重试一次」",
+    "同花顺 rank_reason 的换行是字面反斜杠+n（API 双倍转义），且末尾带免责声明；入库时替换为真换行并截掉免责声明",
+    "legacy_hot_rank 的 chengjiaoe 单位为万元（84557.0 万元=8.46 亿），按 /1e4 换算成亿元，与 limit_up 的 amount（元）口径对齐",
+    "东财人气榜行 concept 恒为 null 且无 rank_reason：这批票的为什么火靠概念/题材归属兜底，2 只完全无归因的 dc 独榜股（300900/301230）如实留空，不编造",
+    "themes_v2 的别名表把 reason_stats 原始原因串归一到标准题材（飞行汽车→低空经济/eVTOL 合计 16 家），热门板块第一梯队即当日真实最强主线",
+    "雪球对个别 symbol 间歇返回非 JSON（阿里云 WAF），本干跑 10 条 httpFailures，已如实记入 dataQuality，不影响快照产出"
+  ],
+  "knownNuances": [
+    "radar.test.ts 断言 snapshot.mode=offline_fixtures 且直接读 .data/short-term-radar-snapshot.json：按开工单门禁顺序，node 测试跑在真实干跑之前（离线快照），干跑后快照为 live；若需重跑该测试，先执行 python3 -m bridge.run_bridge --offline-fixtures --sync-gold --dry-run（测试文件头注释已说明）",
+    "legacy_hot_rank 的 trade_date 是 2026-10-16（带横线），market_intraday_state 的是 20261016；_trade_date_of 统一抽 YYYYMMDD",
+    "build_theme_ladders 的梯队桶现在是完整股票字典（to_dict），contracts.ts 的桶条目类型随之放宽为 FileStock；未进共振榜的梯队股因此也能带出 whyHot/limitReason/sealTime",
+    "离线 fixture 的 15m 盖楼流速为 0（样本时间 2026-10-16 已过），单测用固定 now 断言；真实干跑不受影响"
+  ]
+}

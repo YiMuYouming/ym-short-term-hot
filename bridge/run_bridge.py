@@ -20,8 +20,16 @@ from typing import Any, Mapping
 from .collectors import FetchError, HttpClient, build_url
 from .collectors import eastmoney_guba, taoguba, xueqiu
 from .config import BridgeConfig, GOLD_PATH, SNAPSHOT_PATH, load_json
-from .pipeline_loader import StockMatcher, load_focus_pool
-from .push_to_aihot import build_push_plan, build_snapshot, push_items, sync_gold, write_snapshot
+from .pipeline_loader import StockMatcher, ThemeCatalog, load_focus_pool
+from .push_to_aihot import (
+    LADDER_ORDER,
+    build_push_plan,
+    build_snapshot,
+    push_items,
+    serialize_highlights,
+    sync_gold,
+    write_snapshot,
+)
 from .schema import CommunityPost
 from .sentiment_engine import SentimentEngine, apply_to_stocks, now_beijing
 
@@ -138,6 +146,104 @@ def with_xq_ranks(stocks: list, hot_rows: list[dict[str, Any]]) -> list:
     ]
 
 
+def _leader_stock(members: list):
+    """领涨股（LITE-03）：板块内有涨幅的，按 (涨跌幅, 连板, 共振分) 取最高——不能再把
+    -3.67% 的票写成「领涨」；全绿时才按 (共振分, 涨跌幅) 取代表股。"""
+    if not members:
+        return None
+    rising = [stock for stock in members if (stock.change_pct or 0) > 0]
+    if rising:
+        return max(rising, key=lambda stock: (stock.change_pct or 0, stock.board_count, stock.resonance_score))
+    return max(members, key=lambda stock: (stock.resonance_score, stock.change_pct or 0))
+
+
+def _ladder_summary(members: list, leader) -> str:
+    """精炼的板块内部结构摘要：「最高4板(冰山冷热)，首板3家，领涨 莱美药业 +19.93%」。
+
+    不再重复拼接板块热股数与涨停数——那由 stockCount / limitUpCount 字段承载（LITE-03）。
+    """
+    parts: list[str] = []
+    top_board = max((stock.board_count for stock in members), default=0)
+    if top_board >= 2:
+        top_stock = max(members, key=lambda stock: (stock.board_count, stock.resonance_score))
+        parts.append(f"最高{top_board}板({top_stock.name})")
+    first_boards = sum(1 for stock in members if stock.board_count == 1)
+    if first_boards:
+        parts.append(f"首板{first_boards}家")
+    if leader is not None and (leader.change_pct or 0) > 0:
+        parts.append(f"领涨 {leader.name} {leader.change_pct:+.2f}%")
+    return "，".join(parts) or "热榜在榜"
+
+
+def build_theme_ladders(
+    pool: list,
+    catalog: ThemeCatalog,
+    reason_stats: dict[str, int] | None = None,
+    summaries: dict | None = None,
+    posts_by_code: dict | None = None,
+) -> list[dict[str, Any]]:
+    """热门板块梯队（LITE-01 建 / LITE-03 精修）：按当日真实热度排序的完整板块内热门股列表。
+
+    热度口径（从强到弱）：
+    1. `limit_up_count`：同义子标签的涨停原因统计取 `max()`（低空经济 11 / 飞行汽车 5 不相加），
+       再与桶内实际涨停数取大——别名计数不再冒充分散股票的家数；
+    2. 板块内上榜热股数（同花顺/东财热榜有名次）；
+    3. 板块内涨停家数（涨停池连板股）；
+    4. 板块共振分总和。
+
+    板块内热门股按身位分桶（空间板 → 20cm弹性 → 容量中军 → 首板发酵 → 人气热股）、桶内按共振分，
+    每只票是完整的 `FocusStock.to_dict()`（带 `limitReason`/`whyHot`/`sealTime`），
+    传了 `summaries`/`posts_by_code` 时还带社区情绪与 highlights（LITE-03：梯队股不再只有身份字段，
+    未进共振榜的股票从板块入口也能拿到同样的社区详情）。
+    """
+    groups: dict[str, list] = {}
+    for stock in pool:
+        for theme in stock.themes:
+            groups.setdefault(theme, []).append(stock)
+
+    # reason_stats 的原始原因串按别名归一到标准题材后取最大值（「飞行汽车」并入「低空经济/eVTOL」）
+    stat_by_theme: dict[str, int] = {}
+    for reason, count in (reason_stats or {}).items():
+        name = catalog.normalize_theme(reason)
+        if name:
+            stat_by_theme[name] = max(stat_by_theme.get(name, 0), count)
+
+    def limit_up_count(name: str, members: list) -> int:
+        sealed = sum(1 for stock in members if stock.board_count >= 1)
+        return max(stat_by_theme.get(name, 0), sealed)
+
+    def sort_key(item: tuple[str, list]) -> tuple[int, int, int, float, str]:
+        name, members = item
+        listed = sum(1 for stock in members if stock.hot_rank_ths or stock.hot_rank_dc)
+        sealed = sum(1 for stock in members if stock.board_count >= 1)
+        resonance = round(sum(stock.resonance_score for stock in members), 1)
+        return (-limit_up_count(name, members), -listed, -sealed, -resonance, name)
+
+    ladders: list[dict[str, Any]] = []
+    for theme, members in sorted(groups.items(), key=sort_key):
+        grouped: dict[str, list[dict[str, Any]]] = {}
+        for stock in sorted(members, key=lambda item: -item.resonance_score):
+            entry = stock.to_dict()
+            summary = (summaries or {}).get(stock.code)
+            if summary is not None:
+                entry["sentiment"] = summary.to_dict()
+            entry["highlights"] = serialize_highlights((posts_by_code or {}).get(stock.code) or [])
+            grouped.setdefault(stock.role_label, []).append(entry)
+        ordered = {role: grouped.get(role, []) for role in LADDER_ORDER if grouped.get(role)}
+        if not ordered:
+            continue
+        ladders.append(
+            {
+                "theme": theme,
+                "stockCount": len(members),
+                "limitUpCount": limit_up_count(theme, members),
+                "summary": _ladder_summary(members, _leader_stock(members)),
+                "ladders": ordered,
+            }
+        )
+    return ladders
+
+
 def run(config: BridgeConfig, out=sys.stdout) -> int:
     """跑完整一轮，返回进程退出码。"""
     print(f"[bridge] 模式={config.mode} dry_run={config.dry_run} push={config.push}", file=out)
@@ -177,7 +283,15 @@ def run(config: BridgeConfig, out=sys.stdout) -> int:
     print(f"[bridge] 归类帖子 {scored} 条，覆盖 {len(posts_by_code)} 只票；词典情绪词 "
           f"{sum(len(v) for v in engine.entries.values())} 条、水贴正则 {len(engine.spam_rules)} 条", file=out)
 
-    snapshot = build_snapshot(pool, summaries, posts_by_platform, config, quality, top_n=config.top_resonance_limit)
+    snapshot = build_snapshot(
+        pool, summaries, posts_by_platform, config, quality,
+        top_n=config.top_resonance_limit, posts_by_code=posts_by_code,
+    )
+    # LITE-01：热门板块按当日真实热度排序；LITE-03：同义子标签计数取 max、领涨按涨幅口径、
+    # 桶内股票带情绪与 highlights（未进共振榜的梯队股从板块入口也拿得到社区详情）
+    snapshot.theme_ladders = build_theme_ladders(
+        pool, catalog, quality.get("reasonStats") or {}, summaries, posts_by_code
+    )
     snapshot_path = write_snapshot(snapshot, SNAPSHOT_PATH)
     print(f"[bridge] 快照已写 {snapshot_path}（梯队 {len(snapshot.theme_ladders)} 组、共振榜 {len(snapshot.top_resonance_stocks)} 只）", file=out)
 
@@ -230,7 +344,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--sync-gold", action="store_true", help="同步 docs/aihot_research/gold 到 .data/gold.jsonl")
     parser.add_argument("--dump-payloads", default="", metavar="PATH", help="把四轨 push payload 落盘（供跨语言契约校验）")
     parser.add_argument("--focus-limit", type=int, default=50, help="焦点股池上限")
-    parser.add_argument("--top", type=int, default=30, help="共振榜条数")
+    parser.add_argument("--top", type=int, default=None, help="共振榜条数（默认取 BridgeConfig.top_resonance_limit，LITE-03 起为 50）")
     parser.add_argument("--base-url", default=None, help="AIHOT 实例地址（默认 http://127.0.0.1:3088）")
     parser.add_argument("--token", default="", help="推送令牌（默认取环境 INGEST_TOKEN）")
     return parser
@@ -253,6 +367,8 @@ def main(argv: list[str] | None = None) -> int:
         config = replace(config, aihot_base_url=args.base_url)
     if args.token:
         config = replace(config, ingest_token=args.token)
+    if args.top is not None:
+        config = replace(config, top_resonance_limit=args.top)  # 显式指定才覆盖，否则用 config 默认（LITE-03：50）
     return run(config)
 
 

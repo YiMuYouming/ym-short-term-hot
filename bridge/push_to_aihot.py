@@ -31,6 +31,9 @@ from .config import (
     BridgeConfig,
 )
 from .schema import (
+    SENTIMENT_BEAR,
+    SENTIMENT_BULL,
+    SENTIMENT_DIVERGENCE,
     CommunityPost,
     FocusStock,
     IngestItem,
@@ -38,6 +41,13 @@ from .schema import (
     RadarSnapshot,
     SentimentSummary,
 )
+
+# 单帖情绪标签：引擎内部三态 → 契约四值（LITE-03 高亮透传；None=无方向词，记 neutral）
+POST_SENTIMENT_LABELS = {
+    SENTIMENT_BULL: "bull",
+    SENTIMENT_DIVERGENCE: "divergence",
+    SENTIMENT_BEAR: "bear",
+}
 
 # 梯队分组的展示顺序（与 schema 的 ROLE_* 一致）
 LADDER_ORDER = ("空间板", "20cm弹性", "容量中军", "首板发酵", "人气热股")
@@ -201,6 +211,43 @@ def build_push_plan(
     return plan
 
 
+def serialize_highlights(posts: list[CommunityPost], limit: int = 3) -> list[dict[str, Any]]:
+    """一只票的高价值帖 → 快照 highlights 条目（LITE-03：字段全量透传）。
+
+    水贴剔除，按 评论+点赞 排序取前 limit。每条带帖子原始 ID、平台、正文摘要、互动分量、
+    单帖情绪与命中词——前端不再拿到「七字段假中性」；帖子情绪由 summarize 阶段的
+    score_post 就地回填，这里只读不重算。
+    """
+    picked = sorted(
+        (post for post in posts if not post.is_spam),
+        key=lambda post: -(post.comment_count + post.like_count),
+    )[:limit]
+    return [
+        {
+            "postId": post.post_id,
+            "source": post.platform,
+            "platform": post.platform,  # 旧读取兼容
+            "title": post.title,
+            "content": (post.content or "")[:280],
+            "url": post.url,
+            "author": post.author_name,
+            "authorName": post.author_name,  # 旧读取兼容
+            "publishedAt": post.published_at,
+            "commentCount": post.comment_count,
+            "likeCount": post.like_count,
+            "viewCount": post.view_count,
+            "isKol": post.is_vip_youzi,
+            "isVipYouzi": post.is_vip_youzi,  # 旧读取兼容
+            "isDeepLogic": post.is_deep_logic,
+            "qualityTier": "deep_logic" if post.is_deep_logic else "vip_youzi" if post.is_vip_youzi else "normal",
+            "sentiment": POST_SENTIMENT_LABELS.get(post.sentiment, "neutral"),
+            "sentimentScore": post.sentiment_score,
+            "sentimentTerms": list(post.sentiment_terms),
+        }
+        for post in picked
+    ]
+
+
 def build_snapshot(
     stocks: list[FocusStock],
     summaries: dict[str, SentimentSummary],
@@ -208,31 +255,30 @@ def build_snapshot(
     config: BridgeConfig,
     quality: dict[str, Any],
     top_n: int = 30,
+    posts_by_code: Mapping[str, list[CommunityPost]] | None = None,
 ) -> RadarSnapshot:
-    """生成 SH-03 直接消费的双视图快照：题材主线梯队 + 跨平台人气共振 Top 30。"""
+    """生成双视图快照：题材主线梯队 + 跨平台人气共振 Top N。
+
+    posts_by_code 是 StockMatcher.group 的归股结果（LITE-03）：按股票名/黑话别名命中的
+    淘股吧、雪球帖（post.code 为空）与显式带代码的帖子一样进入 highlights，归股与精选
+    从此共用同一链路；不传时退回旧的「仅显式 code」派生，兼容直接调用方。
+    """
     from .sentiment_engine import now_beijing
 
-    highlights_by_code: dict[str, list[CommunityPost]] = {}
-    for posts in posts_by_platform.values():
-        for post in posts:
-            if post.is_spam or not post.code:
-                continue
-            highlights_by_code.setdefault(post.code, []).append(post)
+    if posts_by_code is not None:
+        highlights_by_code: dict[str, list[CommunityPost]] = {
+            code: list(posts) for code, posts in posts_by_code.items()
+        }
+    else:
+        highlights_by_code = {}
+        for posts in posts_by_platform.values():
+            for post in posts:
+                if post.is_spam or not post.code:
+                    continue
+                highlights_by_code.setdefault(post.code, []).append(post)
 
     def highlights(code: str, limit: int = 3) -> list[dict[str, Any]]:
-        picked = sorted(highlights_by_code.get(code, []), key=lambda post: -(post.comment_count + post.like_count))[:limit]
-        return [
-            {
-                "platform": post.platform,
-                "title": post.title,
-                "authorName": post.author_name,
-                "isVipYouzi": post.is_vip_youzi,
-                "isDeepLogic": post.is_deep_logic,
-                "commentCount": post.comment_count,
-                "url": post.url,
-            }
-            for post in picked
-        ]
+        return serialize_highlights(highlights_by_code.get(code, []), limit)
 
     themes: dict[str, list[FocusStock]] = {}
     for stock in stocks:

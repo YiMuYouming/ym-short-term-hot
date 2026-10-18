@@ -1,58 +1,41 @@
-# YM-ShortTerm-Hot · 当前进度
+# YM-ShortTerm-Hot · 当前进度（V2 极简减法重构）
 
-更新：2026-10-16 18:54（Asia/Shanghai）；状态依据：**第一期（Phase 1：`SH-01` → `SH-02` → `SH-03`）全链路开发与谷米终审已 100% 收官结项**；**Grok 第四~第六波二期调研弹药库已全部落盘入库（[`docs/aihot_research/INDEX.md`](docs/aihot_research/INDEX.md)）**；当前暂停休整，待额度恢复后直接启动第二期 `SH-04`
+更新：2026-10-17 21:45（Asia/Shanghai）；状态依据：**旧版 V1（`SH-01`~`SH-03` 复杂 AIHOT 外壳）已全部封存归档至 [`docs/archive/v1-aihot-heavy/`](docs/archive/v1-aihot-heavy/)；V2「极简减法重构」全部四阶段（`LITE-01`、`LITE-02`、`LITE-03`、`LITE-04`）均已通过谷米审计 PASS（完整收官，证据：[`docs/evidence/lite04-20261017/`](docs/evidence/lite04-20261017/manifest.json)）**
 
-[项目入口](README.md) · [Agent 规范](AGENTS.md) · [实施与验收计划](docs/实施与验收计划.md) · [SH-01 审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) · [SH-02 审计报告](docs/evidence/sh02-20261016/audit-by-gumi.md) · [SH-03 终审收官报告](docs/evidence/sh03-20261016/audit-by-gumi.md) · [Grok 六波调研总索引](docs/aihot_research/INDEX.md) · [进度维护规则](../shared/progress-workflow.md)
+[项目入口](README.md) · [Agent 规范](AGENTS.md) · [V2 极简实施与验收计划](docs/实施与验收计划.md) · [Grok 调研词典索引](docs/aihot_research/INDEX.md) · [旧版 V1 归档](docs/archive/v1-aihot-heavy/)
 
 ## 当前摘要
 
-- **当前阶段**：**第一期（Phase 1：`SH-01` ~ `SH-03`）已全部完工并通过谷米独立审计收官（`done`）！Grok 第一~第六波全量调研数据已全部提交入库！** 当前停机保额度，下次恢复后直接由谷米签发 **`SH-04`（第二期：真实盘中字段对齐 + 60 题材 v2 切换 + 龙虎榜量化/游资席位识别 + 韭研公社/快讯 + 海外映射）**。
-- **已完成范围**：
-  1. **`SH-01`（`done`）**：基座环境与 A 股短线 6 大分类/提示词/39 个测试文件适配（[`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md)）；
-  2. **`SH-02`（`done`）**：`YM-data-pipeline` 焦点股池桥接、三社区（东财股吧/淘股吧/雪球）靶向采集、System 1 反水贴与三色情绪引擎、四轨跨语言入库契约（[`audit-by-gumi.md`](docs/evidence/sh02-20261016/audit-by-gumi.md)）；
-  3. **`SH-03`（`done`）**：`@aihot/short-term-radar` 扩展模块（[`modules/short-term-radar/`](modules/short-term-radar/)）——四条雷达 API + Agent/MCP `get_radar` 能力 + 前端 **「🧩 题材主线梯队 ⇄ 🔥 人气共振 Top 30」** 双视图看板 + 三色情绪温度条 + 右侧 **「个股社区舆情与游资逻辑侧滑抽屉」**（[`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md)）；
-  4. **Grok 六波调研弹药库全部就位（[`docs/aihot_research/INDEX.md`](docs/aihot_research/INDEX.md)）**：
-     - 第一~三波：淘股吧 33 人 / 雪球 23 人 / X 28 账号、28 题材 `themes.json` + 169 词 `sentiment_dict.json`、70 条 `gold.jsonl`；
-     - **第四波（`docs/aihot_research/seats/`）**：`quant_seats.json`（27 个量化/外资/PB 席位 + 假机构识别模式，基于近 1 年东财龙虎榜实测统计）+ `youzi_seats.json`（37 条主观游资/一日游/散户大本营）+ 算法判据指南；
-     - **第五波（`docs/aihot_research/jiuyan_cls/`）**：韭研公社与财联社/选股宝/同花顺 7×24 快讯 27 条实测接口 `fast_news_endpoints.json` + 韭研公社高赞作者库 `jiuyan_authors.json`；
-     - **第六波（`docs/aihot_research/global_mapping/` & `dict/themes_v2.json`）**：跨市场「海外催化 → A股题材与龙头」传导字典 `overseas_to_ashare.json` + 扩充并经东财接口核验的 60 大高频题材库 `dict/themes_v2.json`。
-- **尚未完成（下次恢复后 `SH-04` 直接做）**：
-  1. **真实盘中数据 3 处字段对齐（18:50 Live Smoke 实测发现）**：
-     - `YM-data-pipeline` 的 `market_intraday_state` 返回的 `data.limit_up` 行字段名为 `board`（连板数）、`pct`（涨跌幅）、`industry`（所属行业）、`seal_time`（封板时间），需在 [`bridge/pipeline_loader.py`](bridge/pipeline_loader.py#L373-L409) 的 `_first()` 中把 `"board"`、`"pct"` 加进候选键，并在词典未命中时用 `row.get("industry")` 兜底题材（避免新涨停股落入“未归题材”）；
-     - 将 [`bridge/config.py`](bridge/config.py) 的题材词典路径从 `dict/themes.json`（28 题材 74 股）切换升级为 Grok 第六波刚交付的 `dict/themes_v2.json`（60 题材 200+ 股）；
-     - 雪球 `status.json` 实时抓取补齐首页预热 Cookie（或走浏览器/移动端免 WAF 端点），以及当 `market_hot_rank` 当日为空时用东财股吧人气榜/涨停池热度兜底。
-  2. **接入龙虎榜量化席位 vs 游资识别（`seats/quant_seats.json` + `youzi_seats.json`）、韭研公社/快讯（`jiuyan_cls/`）与海外映射（`global_mapping/`）**。
+- **当前定位与方向（V2 减法重构已收官）**：
+  - 停止并归档旧版 V1 照搬 AIHOT 大楼的繁琐规划，**做极致减法**，回归直观、克制、一打开就知道怎么用的看盘工具；
+  - 保留 `bridge/` 已跑通的 `YM-data-pipeline` 桥接与三社区（东财股吧/淘股吧/雪球）采集底座，砍掉冗余概念，**第一版只聚焦两个事情**：
+    1. **热门板块视角**：按当日真实热度/涨停家数排热门板块 → 点开板块看到里面的热门股 → 点开热门股看到**它为什么火（涨停/热榜原因、连板、硬数据）+ 各社区平台对它的真实评价**；
+    2. **热门股视角**：展示同花顺/东财等平台前 30~50 的热门股榜单 → 点开任意股票同样看**它为什么火 + 各社区平台评论**。
+- **真实数据源摸底（2026-10-17 已实测验证通过）**：
+  - `query("legacy_hot_rank")`：直接返回同花顺热点股（含 `reason` 涨停原因串，如 `"卫星通信芯片+低空经济"`）及 `reason_stats`（当日热门板块涨停家数排行）；
+  - `query("market_intraday_state")`：返回真实 `trade_date` 与涨停池 `limit_up`（含 `board` 连板数、`pct`、`industry`、`seal_time`）；
+  - `query("market_hot_rank", source="ths", trade_date=..., limit=50)`：传入最近交易日即可拿到同花顺热榜 Top 50，且每只票自带 **`rank_reason`（完整的「行业原因 + 公司原因」文本，直接回答“为什么火”）** 与 `concept` 概念标签；
+  - `query("market_hot_rank", source="dc", limit=50)`：实时返回东方财富人气榜 Top 50。
+- **`LITE-01` 数据底座已完工并通过谷米审计（2026-10-17，稳米实施 / 谷米 AUDIT-LITE01-R1 PASS）**：`bridge/` 切换 `themes_v2.json`（60 题材 + 别名归一），四源融合（ths/dc 热榜 + `legacy_hot_rank` 涨停原因归因 + `market_intraday_state` 涨停池）产出 50 只真实热门股，每只带 `limitReason`/`whyHot`/`sealTime`；热门板块按真实热度排序（归一后涨停原因统计 → 上榜热股数 → 涨停数 → 共振分）。真实干跑（dry-run 零推送）：ths/dc 各 100 行、涨停池 61 行、legacy 59 项 + 154 条板块统计，共振榜 50 只、梯队 115 组、未归题材 0、whyHot 48/50、社区帖 50/50。证据：[`docs/evidence/lite01-20261017/`](docs/evidence/lite01-20261017/manifest.json)（含谷米审计报告 [`audit-by-gumi.md`](docs/evidence/lite01-20261017/audit-by-gumi.md)）。
+- **`LITE-02` 前端极简减法已完工并通过谷米审计（2026-10-17，稳米实施 / 谷米 AUDIT-LITE02-R1 PASS）**：`radar-route.tsx` 重写为「[🔥 热门板块] ⇄ [📈 热门股 Top 50]」双视角 + 共用个股详情抽屉——板块按热度排列、点板块出板块内热门股、Top 50 干净表格（排名/股票/涨跌连板/所属板块/为什么火/社区热度）、点任意股票抽屉置顶展示 `whyHot`/`limitReason` 与连板封板硬信息、下方按平台（全部/淘股吧/雪球/东财股吧）切换三社区真实评价；五分身位桶/身位筛选/搜索框按开工单砍掉（API 过滤与 agent 视图保留）。门禁：typecheck、web build、node 三文件合跑 17/17、3088 端口四路径实测 4/4、Python 65/65 全绿。证据：[`docs/evidence/lite02-20261017/`](docs/evidence/lite02-20261017/manifest.json)（含谷米审计报告 [`audit-by-gumi.md`](docs/evidence/lite02-20261017/audit-by-gumi.md)）。
+- **`LITE-03` 数据语义与板块社区精修已完工并通过谷米审计（2026-10-17，稳米实施 / 谷米 AUDIT-LITE03-R1 PASS）**：共振榜默认 50 与焦点池对齐；`StockMatcher.group` 归股结果直通 highlights 与梯队桶，按名/黑话命中的淘股吧/雪球帖不再丢失，单帖全量透传 `postId`/`publishedAt`/`content`/`likeCount`/`viewCount`/`qualityTier`/四值 `sentiment`/`sentimentTerms`；`score_post` 增加句否定前缀修正；`themes_v2.json` 同义板块归并（59 题材）+ 事件/公司/车型词只留 `whyHot` 不建板块 + 四级兜底实现 50 股 100% 板块归属；板块涨停数取 `max` 去重、领涨按涨幅口径；`contracts.ts` 梯队股统一 `mapStock`。干跑：梯队 115→102 组、themes 50/50、publishedAt 139/139。证据：[`docs/evidence/lite03-20261017/`](docs/evidence/lite03-20261017/manifest.json)（含谷米审计报告）。
+- **`LITE-04` 前端密度与抽屉交互精修已完工并通过谷米审计（2026-10-17，稳米实施 / 谷米 AUDIT-LITE04-R1 PASS）**：`radar-route.tsx` 重写——缺失值诚实化（`boardCount===1` 显示「首板」、连板股缺封板时间显示「封板时间待补」消灭「4 连板+未封板」矛盾、0 板涨幅够显示「涨停/待核连板」、降级显示「连板待补」、页头「交易日 2026-10-16 · 更新」）；视角 1 主线板块默认展示（102 组中 79 个单股长尾折叠进「展开其余 N 个单股异动概念」）+ 板块/成分股筛选框 + 负涨幅领头羊改称「代表」+ 成分股双行紧凑行（移除全宽情绪条）；视角 2 `table-layout:fixed` + colgroup 固定列宽 + 股票名原生 button 可键盘聚焦 + 板块胶囊 2 个 +`+N` + 小样本情绪条（有帖即真实三色比例、0 帖才灰占位）；抽屉上一只/下一只 + 键盘左右切换 + 切股自动重置平台筛选/滚回顶部 + whyHot 超 110 字折叠 + 平台 Tab 带计数 + 单帖情绪徽章/发布时间/正文摘要；清理未定义的 `--page-max-board` 与 `fadeIn/fadeOut`；顺带修复 LITE-03 后高亮帖情绪全部退化为「中性」的陈旧映射。门禁：Python 77/77、typecheck、web build、node 21/21、3088 七项 7/7 全绿。证据：[`docs/evidence/lite04-20261017/`](docs/evidence/lite04-20261017/manifest.json)（含谷米审计报告 [`audit-by-gumi.md`](docs/evidence/lite04-20261017/audit-by-gumi.md)）。
 
-## 阶段队列
+## 阶段队列（PM 谷米 ⇄ 实施 稳米）
 
 | ID | 状态 | 阶段成果 / 下一动作 | 依据 |
 | --- | --- | --- | --- |
-| `SH-01` | `done` | **【已结项】基座环境与 A 股短线 KnowHow 改造**：`site/`、`industry/` 与 39 个测试文件适配完成。 | [SH-01 开工单](docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md) · [谷米审计报告](docs/evidence/sh01-20261016/audit-by-gumi.md) |
-| `SH-02` | `done` | **【已结项】`YM-data-pipeline` 桥接与三大社区靶向采集 (`bridge/`)**：56 项 Python 单测 + 四轨跨语言入库契约（41/41 入库，`backfill=0`）全部绿灯。 | [SH-02 开工单](docs/开工单-SH02-数据管道桥接与三社区采集-2026-10-16.md) · [谷米复审报告](docs/evidence/sh02-20261016/audit-by-gumi.md) |
-| `SH-03` | `done` | **【已结项 · 第一期收官】`@aihot/short-term-radar` 双视图模块与端到端联调 (`modules/short-term-radar/`)**：4 条架构红线、56 项 Python 单测、`typecheck`、`web build`、5 项模块 API 单测与 2 项真实 SSR 端到端测试全部绿灯，梯队矛盾清零（`27 → 0`）。 | [SH-03 开工单](docs/开工单-SH03-双视图短线雷达模块与端到端联调-2026-10-16.md) · [谷米终审报告](docs/evidence/sh03-20261016/audit-by-gumi.md) |
-| `SH-04` | `ready_next` | **【待额度恢复后启动】第二期扩展与真实盘中深度对齐**：① 对齐 `market_intraday_state` 的 `board`/`pct`/`industry` 字段并切换 `dict/themes_v2.json`；② 接入 `seats/quant_seats.json` + `youzi_seats.json` 实现个股「🤖 量化席位浓度 vs 🦁 顶级游资主封」标签；③ 接入 `jiuyan_cls/` 快讯与 `global_mapping/overseas_to_ashare.json` 海外映射。 | [Grok 六波调研总索引](docs/aihot_research/INDEX.md) · [实施与验收计划 §二期](docs/实施与验收计划.md) |
+| `LITE-01` | `done` | **已通过谷米审计（AUDIT-LITE01-R1 PASS）**：四源融合 + 真实热度板块排序 + `whyHot`/`limitReason`/`sealTime` + `contracts.ts` 透传；Python 65/65、typecheck、node 13/13、真实管道干跑全过。证据：[docs/evidence/lite01-20261017/](docs/evidence/lite01-20261017/manifest.json) | [LITE-01 开工单](docs/开工单-LITE01-极简热门板块与热股数据底座-2026-10-17.md) · [谷米审计](docs/evidence/lite01-20261017/audit-by-gumi.md) |
+| `LITE-02` | `done` | **已通过谷米审计（AUDIT-LITE02-R1 PASS）**：极简双视角（热门板块 ⇄ 热门股 Top 50）+ 共用个股详情抽屉；typecheck / web build / node 17/17 / 3088 实测 4/4 / Python 65/65 全过。证据：[docs/evidence/lite02-20261017/](docs/evidence/lite02-20261017/manifest.json) | [LITE-02 开工单](docs/开工单-LITE02-前端极简双视角与个股详情重构-2026-10-17.md) · [谷米审计](docs/evidence/lite02-20261017/audit-by-gumi.md) |
+| `LITE-03` | `done` | **已通过谷米审计（AUDIT-LITE03-R1 PASS）**：共振榜默认 50 + 高亮纳管无代码帖与单帖全字段 + 分句否定前缀修正 + 同义板块归并/事件词剥离/50 股 100% 板块归属 + 涨停数去重与领涨按涨幅 + `contracts.ts` 梯队股统一 `mapStock`；Python 77/77、node 19/19、3088 4/4、干跑 115→102 组/themes 50/50/publishedAt 139/139 全过。证据：[docs/evidence/lite03-20261017/](docs/evidence/lite03-20261017/manifest.json) | [LITE-03 开工单](docs/开工单-LITE03-数据语义与板块社区精修-2026-10-17.md) · [谷米审计](docs/evidence/lite03-20261017/audit-by-gumi.md) |
+| `LITE-04` | `done` | **已通过谷米审计（AUDIT-LITE04-R1 PASS）**：缺失值诚实化（首板术语/封板时间待补/涨停待核/连板待补 + 页头交易日）、视角 1 主线默认展示与单股长尾折叠 + 筛选框 + 代表股改称 + 双行紧凑行、视角 2 固定列宽 + 股票 button 可聚焦 + 板块胶囊 2+N + 小样本情绪条、抽屉上一只/下一只与键盘导航 + 切股状态重置 + whyHot 折叠 + 平台 Tab 计数 + 单帖卡片升级 + CSS 变量/动画清理；Python 77/77、typecheck、web build、node 21/21、3088 七项 7/7 全绿。证据：[docs/evidence/lite04-20261017/](docs/evidence/lite04-20261017/manifest.json) | [LITE-04 开工单](docs/开工单-LITE04-前端密度与抽屉交互精修-2026-10-17.md) · [谷米审计](docs/evidence/lite04-20261017/audit-by-gumi.md) |
 
-## 本地快速启动看板命令（随开随看）
+## 历史归档索引
 
-```bash
-# 1. 在项目根目录生成快照（离线样本或 --live-smoke）
-cd /Users/yimu/Projects/YM_Capital/ym-short-term-hot
-python3 -m bridge.run_bridge --offline-fixtures --sync-gold --dry-run
-
-# 2. 启动 API (3089) + Web (3088)
-PATH="/opt/homebrew/bin:$PATH" DATABASE_URL=postgres://127.0.0.1:5432/ymhot_dev \
-  API_PORT=3089 WEB_PORT=3088 API_BASE_URL=http://127.0.0.1:3089 INGEST_TOKEN=ymhot-local-dev-token \
-  sh -c 'node apps/api/src/main.ts & node apps/web/server.ts'
-
-# 3. 浏览器打开
-open http://127.0.0.1:3088/radar
-```
-
-## 历史索引
-
-| 日期 / 阶段 | 归档与证据 | 该批结论 |
+| 日期 / 阶段 | 归档位置 | 说明 |
 | --- | --- | --- |
-| 2026-10-16 / Grok 第四~六波入库 | [`docs/aihot_research/INDEX.md`](docs/aihot_research/INDEX.md) | 完成 27 量化席位 + 37 游资席位（含 1 年龙虎榜统计）、韭研公社与快讯 27 端点、海外映射与 60 题材 `themes_v2.json`。 |
-| 2026-10-16 / `SH-03` 结项（一期收官） | [`docs/evidence/sh03-20261016/`](docs/evidence/sh03-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh03-20261016/audit-by-gumi.md) | 完成 `@aihot/short-term-radar` 双视图模块、舆情侧滑抽屉、Agent/MCP 能力及全链路契约验证，谷米二次终审通过。 |
-| 2026-10-16 / `SH-02` 结项 | [`docs/evidence/sh02-20261016/`](docs/evidence/sh02-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh02-20261016/audit-by-gumi.md) | 完成 `bridge/` 焦点股池、三社区采集、System 1 情绪引擎及四轨跨语言契约对齐，谷米二次复审通过。 |
-| 2026-10-16 / `SH-01` 结项 | [`docs/evidence/sh01-20261016/`](docs/evidence/sh01-20261016/) · [`audit-by-gumi.md`](docs/evidence/sh01-20261016/audit-by-gumi.md) | 完成 AIHOT 站点与 A 股短线 6 大分类/提示词/测试适配，谷米独立复测通过。 |
+| 2026-10-16 / 旧版 V1（`SH-01`~`SH-03`） | [`docs/archive/v1-aihot-heavy/`](docs/archive/v1-aihot-heavy/) · [`docs/evidence/`](docs/evidence/) | 旧版重型 AIHOT 外壳与三阶段开工单、进度记录已整体封存归档，不再作为当前迭代依据。 |
+| 2026-10-17 / V2 `LITE-01`（数据底座，AUDIT-LITE01-R1 PASS） | [`docs/evidence/lite01-20261017/`](docs/evidence/lite01-20261017/manifest.json) | 四源融合 + 真实热度板块排序 + whyHot/limitReason/sealTime；谷米 AUDIT-LITE01-R1 一次通过。 |
+| 2026-10-17 / V2 `LITE-02`（前端极简双视角，AUDIT-LITE02-R1 PASS） | [`docs/evidence/lite02-20261017/`](docs/evidence/lite02-20261017/manifest.json) | 双视角 + 共用详情抽屉；typecheck/web build/node 17/17/3088 实测 4/4 全过，谷米 AUDIT-LITE02-R1 一次通过。 |
+| 2026-10-17 / V2 `LITE-03`（数据语义与板块社区精修，AUDIT-LITE03-R1 PASS） | [`docs/evidence/lite03-20261017/`](docs/evidence/lite03-20261017/manifest.json) | 五改造 + 采集器必要最小修；Python 77/77、node 19/19、3088 4/4、干跑 115→102 组/themes 50/50/publishedAt 139/139，谷米审计一次通过。 |
+| 2026-10-17 / V2 `LITE-04`（前端密度与抽屉交互精修，AUDIT-LITE04-R1 PASS） | [`docs/evidence/lite04-20261017/`](docs/evidence/lite04-20261017/manifest.json) | 缺失值诚实化 + 主线折叠/筛选 + 固定列宽表格 + 抽屉导航/折叠/平台计数 + CSS 清理；Python 77/77、node 21/21、3088 七项 7/7，谷米审计一次通过。 |

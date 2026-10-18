@@ -1,0 +1,102 @@
+
+> build
+> react-router build
+
+Using Vite Environment API
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 684 modules transformed.
+rendering chunks...
+computing gzip size...
+build/client/assets/daily-BymySltl.svg              2.52 kB │ gzip:   1.10 kB
+build/client/assets/monthly-D8-liJEq.svg            3.08 kB │ gzip:   1.34 kB
+build/client/assets/weekly-lZtLQUiY.svg             3.25 kB │ gzip:   1.37 kB
+build/client/assets/archive-DBCwyhNh.svg            4.71 kB │ gzip:   1.97 kB
+build/client/.vite/manifest.json                   19.45 kB │ gzip:   2.10 kB
+build/client/assets/root-CzRaSkxU.css             105.70 kB │ gzip:  19.64 kB
+build/client/assets/index-CgKuvw-l.js               0.09 kB │ gzip:   0.11 kB
+build/client/assets/item-Dc0DjIeO.js                0.14 kB │ gzip:   0.13 kB
+build/client/assets/item-original-DazfVlMx.js       0.21 kB │ gzip:   0.16 kB
+build/client/assets/labels-vA-4i93T.js              0.54 kB │ gzip:   0.47 kB
+build/client/assets/rolldown-runtime-CbXtAM7H.js    0.58 kB │ gzip:   0.36 kB
+build/client/assets/curve-jUqyzcIU.js               0.74 kB │ gzip:   0.40 kB
+build/client/assets/entry.client-B-9nxEst.js        0.93 kB │ gzip:   0.60 kB
+build/client/assets/report-latest-BBv3clKp.js       0.95 kB │ gzip:   0.63 kB
+build/client/assets/report-detail-BedzAIQn.js       0.96 kB │ gzip:   0.61 kB
+build/client/assets/toast-D533KumY.js               1.14 kB │ gzip:   0.70 kB
+build/client/assets/action-CvUQHAlf.js              1.27 kB │ gzip:   0.86 kB
+build/client/assets/audit-K24e8dpg.js               1.90 kB │ gzip:   0.99 kB
+build/client/assets/admin-login-D_srEEKi.js         2.01 kB │ gzip:   1.11 kB
+build/client/assets/search-busy-DMBpSPy_.js         2.06 kB │ gzip:   1.15 kB
+build/client/assets/terms-Cb7JcG7u.js               2.07 kB │ gzip:   1.41 kB
+build/client/assets/content-CsZUqFne.js             2.20 kB │ gzip:   1.29 kB
+build/client/assets/DayList-T0It3RpZ.js             2.21 kB │ gzip:   1.06 kB
+build/client/assets/PosterSheet-RtnO1bgf.js         2.37 kB │ gzip:   1.22 kB
+build/client/assets/CopyPage-CYwMalTo.js            2.63 kB │ gzip:   1.12 kB
+build/client/assets/privacy-BJfdpVB8.js             2.68 kB │ gzip:   1.75 kB
+build/client/assets/daily-archive-jh-ESfDm.js       2.69 kB │ gzip:   1.23 kB
+build/client/assets/Faces-Djln6ezc.js               3.21 kB │ gzip:   1.42 kB
+build/client/assets/sources-Coe6xML1.js             3.86 kB │ gzip:   1.83 kB
+build/client/assets/selectbench-tFJiXKqA.js         3.94 kB │ gzip:   1.82 kB
+build/client/assets/topics-CZVQoWEW.js              4.07 kB │ gzip:   1.79 kB
+build/client/assets/all-B6_4-h9z.js                 4.09 kB │ gzip:   2.13 kB
+build/client/assets/more-BSKHGhSn.js                4.19 kB │ gzip:   1.70 kB
+build/client/assets/topic-BhvlTvsS.js               4.39 kB │ gzip:   1.94 kB
+build/client/assets/layout-CQRSF6Sk.js              4.56 kB │ gzip:   1.82 kB
+build/client/assets/home-c7LNe55Z.js                4.57 kB │ gzip:   1.88 kB
+build/client/assets/format-CKXHRcRj.js              4.73 kB │ gzip:   2.07 kB
+build/client/assets/SearchOverlay-DGNhAtNs.js       5.53 kB │ gzip:   2.38 kB
+build/client/assets/Filters-Fght5OTV.js             5.56 kB │ gzip:   2.45 kB
+build/client/assets/source-new-sJWIMcu2.js          5.65 kB │ gzip:   2.62 kB
+build/client/assets/feedback-CbNhePie.js            5.75 kB │ gzip:   2.59 kB
+build/client/assets/settings-CY5WFk4_.js            5.77 kB │ gzip:   2.54 kB
+build/client/assets/models-Cs8Y0zM7.js              5.94 kB │ gzip:   2.58 kB
+build/client/assets/changelog-CNKDEifT.js           6.05 kB │ gzip:   2.50 kB
+build/client/assets/selectbench-run-DzZweR83.js     6.08 kB │ gzip:   2.38 kB
+build/client/assets/starred-CAcuavRs.js             6.31 kB │ gzip:   2.97 kB
+build/client/assets/root-BSF01CT0.js                8.27 kB │ gzip:   3.65 kB
+build/client/assets/feedback-CcYBiDFg.js            9.89 kB │ gzip:   4.26 kB
+build/client/assets/preview-DtOBegFB.js            10.19 kB │ gzip:   3.73 kB
+build/client/assets/source-CwMnQnwW.js             11.08 kB │ gzip:   4.44 kB
+build/client/assets/ui-D3UHramy.js                 11.78 kB │ gzip:   4.37 kB
+build/client/assets/Timeline-Ca_R3UEn.js           12.31 kB │ gzip:   4.54 kB
+build/client/assets/runs-CkgHPMfL.js               13.17 kB │ gzip:   4.42 kB
+build/client/assets/hot-C3DONl1v.js                16.12 kB │ gzip:   5.27 kB
+build/client/assets/about-pZnY9SsF.js              18.96 kB │ gzip:   8.04 kB
+build/client/assets/content-item-Da1yV0la.js       19.10 kB │ gzip:   6.32 kB
+build/client/assets/radar-route-DR3fci5k.js        20.18 kB │ gzip:   6.21 kB
+build/client/assets/story-CFhUieiY.js              24.09 kB │ gzip:   8.24 kB
+build/client/assets/item-DNvdrelX.js               28.00 kB │ gzip:   9.25 kB
+build/client/assets/agent-BnBlJXeu.js              28.72 kB │ gzip:  10.45 kB
+build/client/assets/ReportPaper-Bjz-05gN.js        32.80 kB │ gzip:  10.62 kB
+build/client/assets/highlight-BA1Ad04v.js          64.90 kB │ gzip:  21.72 kB
+build/client/assets/shared-Bu31fGr7.js             70.97 kB │ gzip:  25.71 kB
+build/client/assets/motion-BU6wCM5b.js            127.74 kB │ gzip:  41.69 kB
+build/client/assets/framework-HyhFslbv.js         348.01 kB │ gzip: 109.69 kB
+
+✓ built in 638ms
+vite v8.3.1 building ssr environment for production...
+transforming...
+✓ 144 modules transformed.
+rendering chunks...
+
+✓ 5 assets cleaned from React Router server build.
+build/client/assets/daily-BymySltl.svg
+build/client/assets/weekly-lZtLQUiY.svg
+build/client/assets/monthly-D8-liJEq.svg
+build/client/assets/archive-DBCwyhNh.svg
+build/server/assets/server-build-CzRaSkxU.css
+
+computing gzip size...
+build/server/.vite/manifest.json                 1.66 kB │ gzip:   0.43 kB
+build/server/assets/daily-BymySltl.svg           2.52 kB │ gzip:   1.10 kB
+build/server/assets/monthly-D8-liJEq.svg         3.08 kB │ gzip:   1.34 kB
+build/server/assets/weekly-lZtLQUiY.svg          3.25 kB │ gzip:   1.37 kB
+build/server/assets/archive-DBCwyhNh.svg         4.71 kB │ gzip:   1.97 kB
+build/server/assets/server-build-CzRaSkxU.css  105.70 kB │ gzip:  19.64 kB
+build/server/assets/highlight-B-T3fBmX.js        1.64 kB │ gzip:   0.70 kB
+build/server/assets/PosterSheet-AOrBvlYx.js      3.18 kB │ gzip:   1.42 kB
+build/server/assets/shared-D9YQ23Ut.js          33.72 kB │ gzip:  12.46 kB
+build/server/index.js                          751.20 kB │ gzip: 191.18 kB
+
+✓ built in 242ms

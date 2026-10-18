@@ -18,7 +18,7 @@ RESEARCH_DIR = REPO_ROOT / "docs" / "aihot_research"
 ENDPOINTS_PATH = RESEARCH_DIR / "endpoints.json"
 TGB_VIP_PATH = RESEARCH_DIR / "tgb.json"
 XUEQIU_AUTHORS_PATH = RESEARCH_DIR / "xueqiu.json"
-THEMES_PATH = RESEARCH_DIR / "dict" / "themes.json"
+THEMES_PATH = RESEARCH_DIR / "dict" / "themes_v2.json"  # Grok 第六波核验的 60 大高频题材与别名映射（LITE-01 起启用）
 SENTIMENT_DICT_PATH = RESEARCH_DIR / "dict" / "sentiment_dict.json"
 GOLD_SOURCE_PATH = RESEARCH_DIR / "gold" / "gold.jsonl"
 
@@ -61,7 +61,7 @@ class BridgeConfig:
     dump_payloads: str = ""     # 把四轨 push payload 落盘，供 scripts/verify-bridge-contract.ts 跨语言校验
     max_stocks: int = 0  # 0 = 不限；--live-smoke --max-stocks 3 时只取 3 只
     focus_limit: int = 50
-    top_resonance_limit: int = 30
+    top_resonance_limit: int = 50  # LITE-03：与 focus_limit 对齐，共振榜即全池 50 只（不再截断成 30）
     posts_per_stock: int = 50
     aihot_base_url: str = DEFAULT_AIHOT_BASE_URL
     ingest_token: str = ""

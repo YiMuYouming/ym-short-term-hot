@@ -36,14 +36,24 @@ def _int(value: Any) -> int:
 
 
 def _iso_from_ms(value: Any) -> str | None:
-    """`post_publish_time` 是毫秒时间戳；缺失或非法返回 None（不猜时间）。"""
+    """发布时间 → ISO 8601（北京时间）。
+
+    接口给过两种形状：毫秒时间戳（旧）与「2026-10-17 20:02:14」字符串（2026-10-17 实测）；
+    缺失或非法返回 None（不猜时间）。
+    """
+    text = str(value if value is not None else "").strip()
+    if not text:
+        return None
+    if text.isdigit():
+        ms = int(text)
+        if ms <= 0:
+            return None
+        return datetime.fromtimestamp(ms / 1000, tz=BEIJING).isoformat()
     try:
-        ms = int(value)
-    except (TypeError, ValueError):
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
         return None
-    if ms <= 0:
-        return None
-    return datetime.fromtimestamp(ms / 1000, tz=BEIJING).isoformat()
+    return (parsed if parsed.tzinfo else parsed.replace(tzinfo=BEIJING)).isoformat()
 
 
 def hot_weight(comment_count: int, click_count: int) -> float:
@@ -156,7 +166,13 @@ def fetch_stock(client: HttpClient, code: str, stock_name: str | None, page_size
     posts = parse_articlelist(payload, code, stock_name)
     if with_body and posts:
         try:
-            attach_bodies(posts, parse_mobile_list(client.get(MOBILE_LIST_URL.format(code=code)), code))
+            bodies = parse_mobile_list(client.get(MOBILE_LIST_URL.format(code=code)), code)
+            if bodies:
+                attach_bodies(posts, bodies)
+            else:
+                # 移动端正文页被 WAF「身份核实」拦下时静悄悄返回空——显式记账，
+                # 快照 dataQuality.httpFailures 才说得出「为什么高亮帖只有标题」
+                client.note_failure(f"eastmoney_guba body {code}: 移动端正文页无帖子正文（WAF 拦截或改版）")
         except FetchError as exc:
             client.note_failure(f"eastmoney_guba body {code}: {exc}")
     return posts

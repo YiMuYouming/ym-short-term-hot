@@ -1,0 +1,5 @@
+origin: http://127.0.0.1:3088 | api: 55160 | dataDir: /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data
+[PASS] 默认视角（热门板块） (/radar) 7 项断言全中
+[PASS] 视角二（热门股 Top 50 表格） (/radar?view=stocks) 8 项断言全中
+[PASS] 板块选中（?theme=） (/radar?theme=%E4%BD%8E%E7%A9%BA%E7%BB%8F%E6%B5%8E%2FeVTOL) 3 项断言全中
+[PASS] 个股详情抽屉（?stock=） (/radar?stock=300308) 9 项断言全中

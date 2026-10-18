@@ -1,0 +1,26 @@
+generatedAt: 2026-10-17T11:09:26.718596+08:00
+mode: live | tradeDate: 20261016 | focusPoolSize: 50
+sources:
+   intraday -> {'status': 'degraded', 'provider': None, 'data_as_of': '2026-10-16T15:34:30+08:00', 'rows': 61}
+   ths_hot -> {'status': 'success', 'provider': None, 'data_as_of': '2026-10-16T15:00:00+08:00', 'rows': 100}
+   dc_hot -> {'status': 'success', 'provider': None, 'data_as_of': '2026-10-16T15:00:00+08:00', 'rows': 100}
+   legacy_hot_rank -> {'status': 'degraded', 'provider': None, 'data_as_of': '2026-10-16T15:00:00+08:00', 'rows': 59, 'reasonStats': 154}
+warnings: []
+httpFailures: 10
+[PASS] topResonanceStocks 30~50: 50
+[PASS] themeLadders 非空且按真实热度排名: ['低空经济/eVTOL', '人形机器人', '智能驾驶/汽车', '商业航天/卫星互联网', '特斯拉概念', '传媒/AI短剧/影视', '数据中心液冷', '汽车轻量化']
+[PASS] 未归题材占比 0: 0
+[PASS] limitReason 非空: 47/50
+[PASS] whyHot 非空: 48/50
+[PASS] 社区评论(highlights): 47/50
+[PASS] 社区帖(sentiment.totalPosts): 50/50
+
+热门板块 Top 8（含 whyHot 的板块内热门股数）:
+  低空经济/eVTOL: 16 只（whyHot 16 只）| 低空经济/eVTOL：16 只热门股，涨停 16 家，同花顺涨停原因统计 17 家；20cm弹性 5 只、容量中军 2 只、首板发酵 9 只
+  人形机器人: 3 只（whyHot 3 只）| 人形机器人：3 只热门股，涨停 3 家，同花顺涨停原因统计 8 家；容量中军 1 只、首板发酵 2 只
+  智能驾驶/汽车: 2 只（whyHot 2 只）| 智能驾驶/汽车：2 只热门股，涨停 2 家，同花顺涨停原因统计 5 家；容量中军 1 只、首板发酵 1 只
+  商业航天/卫星互联网: 2 只（whyHot 2 只）| 商业航天/卫星互联网：2 只热门股，涨停 2 家，同花顺涨停原因统计 4 家；20cm弹性 1 只、容量中军 1 只
+  特斯拉概念: 3 只（whyHot 3 只）| 特斯拉概念：3 只热门股，涨停 3 家，同花顺涨停原因统计 3 家；容量中军 1 只、首板发酵 2 只
+  传媒/AI短剧/影视: 3 只（whyHot 3 只）| 传媒/AI短剧/影视：3 只热门股，涨停 2 家，同花顺涨停原因统计 2 家；容量中军 1 只、首板发酵 2 只
+  数据中心液冷: 2 只（whyHot 2 只）| 数据中心液冷：2 只热门股，涨停 2 家，同花顺涨停原因统计 2 家；空间板 1 只、首板发酵 1 只
+  汽车轻量化: 2 只（whyHot 2 只）| 汽车轻量化：2 只热门股，涨停 2 家，同花顺涨停原因统计 2 家；容量中军 1 只、首板发酵 1 只

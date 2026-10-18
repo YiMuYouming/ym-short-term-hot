@@ -1,0 +1,3374 @@
+{
+  "generatedAt": "2026-10-17T12:32:24.609371+08:00",
+  "mode": "offline_fixtures",
+  "dataQuality": {
+    "mode": "offline_fixtures",
+    "sources": {
+      "ths_hot": {
+        "status": "fixture",
+        "rows": 7
+      },
+      "dc_hot": {
+        "status": "fixture",
+        "rows": 3
+      },
+      "intraday": {
+        "status": "fixture",
+        "rows": 7
+      },
+      "legacy_hot_rank": {
+        "status": "fixture",
+        "rows": 6,
+        "reasonStats": 20
+      }
+    },
+    "warnings": [],
+    "tradeDate": "20261016",
+    "hotAvailable": true,
+    "focusPoolSize": 50,
+    "reasonStats": {
+      "低空经济": 11,
+      "飞行汽车": 5,
+      "机器人": 5,
+      "商业航天": 4,
+      "特斯拉概念": 3,
+      "人形机器人": 3,
+      "汽车零部件": 3,
+      "光模块": 6,
+      "CPO": 2,
+      "AI芯片": 4,
+      "华为昇腾": 2,
+      "国产算力": 2,
+      "固态电池": 1,
+      "储能": 3,
+      "冰雪产业": 3,
+      "体育产业": 2,
+      "卫星通信芯片": 1,
+      "卫星应用": 2,
+      "软件开发": 1,
+      "软件服务": 1
+    },
+    "offlineMissing": [],
+    "push": {
+      "external-ym-pipeline": {
+        "sourceId": "external-ym-pipeline",
+        "planned": 30,
+        "batches": 1,
+        "sent": 0,
+        "status": "dry_run"
+      },
+      "external-taoguba-hot": {
+        "sourceId": "external-taoguba-hot",
+        "planned": 5,
+        "batches": 1,
+        "sent": 0,
+        "status": "dry_run"
+      },
+      "external-xueqiu-hot": {
+        "sourceId": "external-xueqiu-hot",
+        "planned": 2,
+        "batches": 1,
+        "sent": 0,
+        "status": "dry_run"
+      },
+      "external-eastmoney-guba": {
+        "sourceId": "external-eastmoney-guba",
+        "planned": 4,
+        "batches": 1,
+        "sent": 0,
+        "status": "dry_run"
+      }
+    }
+  },
+  "focusPoolSize": 50,
+  "themeLadders": [
+    {
+      "theme": "低空经济/eVTOL",
+      "summary": "低空经济/eVTOL：4 只热门股，涨停 1 家，同花顺涨停原因统计 16 家；20cm弹性 1 只、容量中军 1 只、人气热股 2 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300045",
+            "name": "华力创通",
+            "exchange": "sz",
+            "symbol": "SZ300045",
+            "themes": [
+              "卫星通信芯片",
+              "低空经济/eVTOL",
+              "卫星应用"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 1,
+            "changePct": 20.038,
+            "amountYi": 8.4557,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "卫星通信芯片+低空经济+卫星应用",
+            "whyHot": "首板涨停；09:41:18 封板；涨停原因：卫星通信芯片+低空经济+卫星应用",
+            "sealTime": "09:41:18"
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "001696",
+            "name": "宗申动力",
+            "exchange": "sz",
+            "symbol": "SZ001696",
+            "themes": [
+              "低空经济/eVTOL"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "低空经济/eVTOL",
+            "whyHot": "题材归属：低空经济/eVTOL",
+            "sealTime": ""
+          }
+        ],
+        "人气热股": [
+          {
+            "code": "002085",
+            "name": "万丰奥威",
+            "exchange": "sz",
+            "symbol": "SZ002085",
+            "themes": [
+              "低空经济/eVTOL"
+            ],
+            "nicknames": [],
+            "roleLabel": "人气热股",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "低空经济/eVTOL",
+            "whyHot": "题材归属：低空经济/eVTOL",
+            "sealTime": ""
+          },
+          {
+            "code": "600210",
+            "name": "紫江企业",
+            "exchange": "sh",
+            "symbol": "SH600210",
+            "themes": [
+              "低空经济/eVTOL"
+            ],
+            "nicknames": [],
+            "roleLabel": "人气热股",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "低空经济/eVTOL",
+            "whyHot": "题材归属：低空经济/eVTOL",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "光模块/CPO",
+      "summary": "光模块/CPO：4 只热门股，涨停 2 家，同花顺涨停原因统计 8 家；空间板 1 只、20cm弹性 2 只、容量中军 1 只",
+      "ladders": {
+        "空间板": [
+          {
+            "code": "300308",
+            "name": "中际旭创",
+            "exchange": "sz",
+            "symbol": "SZ300308",
+            "themes": [
+              "光模块/CPO",
+              "算力硬件"
+            ],
+            "nicknames": [
+              "旭创",
+              "易中天"
+            ],
+            "roleLabel": "空间板",
+            "boardCount": 3,
+            "changePct": 20.01,
+            "amountYi": 82.6,
+            "hotRankThs": 2,
+            "hotRankDc": 1,
+            "hotRankXq": 2,
+            "taogubaMentions": 1,
+            "sources": [
+              "ths",
+              "dc",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 55.2,
+            "platformsHit": [
+              "同花顺热榜#2",
+              "东财热榜#1",
+              "雪球热股#2",
+              "淘股吧热议×1"
+            ],
+            "limitReason": "光模块+CPO+算力硬件",
+            "whyHot": "光模块+CPO+算力硬件；3 连板；09:32:11 封板\n行业原因：\n1.6T光模块需求持续超预期，北美云厂商资本开支上修，CPO共封装光学导入节奏加快。\n公司原因：\n据2026年8月13日半年报，公司1.6T OSFP-XD产品已批量交付，硅光方案良率稳步提升。",
+            "sealTime": "09:32:11"
+          }
+        ],
+        "20cm弹性": [
+          {
+            "code": "300502",
+            "name": "新易盛",
+            "exchange": "sz",
+            "symbol": "SZ300502",
+            "themes": [
+              "光模块/CPO"
+            ],
+            "nicknames": [
+              "易",
+              "易中天"
+            ],
+            "roleLabel": "20cm弹性",
+            "boardCount": 2,
+            "changePct": 19.98,
+            "amountYi": 51.4,
+            "hotRankThs": 3,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 1,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 16.1,
+            "platformsHit": [
+              "同花顺热榜#3",
+              "淘股吧热议×1"
+            ],
+            "limitReason": "光模块+CPO",
+            "whyHot": "光模块+CPO；2 连板；09:35:02 封板\n行业原因：\n高速率光模块供需紧张，CPO产业化提速。\n公司原因：\n据2026年8月13日半年报，公司高速率光模块产能持续释放，海外产能爬坡顺利。",
+            "sealTime": "09:35:02"
+          },
+          {
+            "code": "300394",
+            "name": "天孚通信",
+            "exchange": "sz",
+            "symbol": "SZ300394",
+            "themes": [
+              "光模块/CPO"
+            ],
+            "nicknames": [
+              "天孚",
+              "易中天"
+            ],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 1,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 4.0,
+            "platformsHit": [
+              "淘股吧热议×1"
+            ],
+            "limitReason": "光模块/CPO",
+            "whyHot": "题材归属：光模块/CPO",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "002281",
+            "name": "光迅科技",
+            "exchange": "sz",
+            "symbol": "SZ002281",
+            "themes": [
+              "光模块/CPO"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "光模块/CPO",
+            "whyHot": "题材归属：光模块/CPO",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "人形机器人",
+      "summary": "人形机器人：6 只热门股，涨停 0 家，同花顺涨停原因统计 8 家；20cm弹性 1 只、容量中军 5 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "688017",
+            "name": "绿的谐波",
+            "exchange": "sh",
+            "symbol": "SH688017",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "002050",
+            "name": "三花智控",
+            "exchange": "sz",
+            "symbol": "SZ002050",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          },
+          {
+            "code": "300124",
+            "name": "汇川技术",
+            "exchange": "sz",
+            "symbol": "SZ300124",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          },
+          {
+            "code": "601689",
+            "name": "拓普集团",
+            "exchange": "sh",
+            "symbol": "SH601689",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          },
+          {
+            "code": "603305",
+            "name": "旭升集团",
+            "exchange": "sh",
+            "symbol": "SH603305",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          },
+          {
+            "code": "603728",
+            "name": "鸣志电器",
+            "exchange": "sh",
+            "symbol": "SH603728",
+            "themes": [
+              "人形机器人"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "人形机器人",
+            "whyHot": "题材归属：人形机器人",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "AI算力芯片/GPU",
+      "summary": "AI算力芯片/GPU：4 只热门股，涨停 2 家，同花顺涨停原因统计 6 家；空间板 1 只、容量中军 2 只、首板发酵 1 只",
+      "ladders": {
+        "空间板": [
+          {
+            "code": "688256",
+            "name": "寒武纪",
+            "exchange": "sh",
+            "symbol": "SH688256",
+            "themes": [
+              "AI算力芯片/GPU"
+            ],
+            "nicknames": [
+              "寒",
+              "寒王"
+            ],
+            "roleLabel": "空间板",
+            "boardCount": 4,
+            "changePct": 12.3,
+            "amountYi": 40.2,
+            "hotRankThs": 4,
+            "hotRankDc": 4,
+            "hotRankXq": 4,
+            "taogubaMentions": 1,
+            "sources": [
+              "ths",
+              "dc",
+              "intraday"
+            ],
+            "resonanceScore": 29.0,
+            "platformsHit": [
+              "同花顺热榜#4",
+              "东财热榜#4",
+              "雪球热股#4",
+              "淘股吧热议×1"
+            ],
+            "limitReason": "AI芯片+国产算力",
+            "whyHot": "AI芯片+国产算力；4 连板；10:05:47 封板\n行业原因：\n国产AI算力芯片订单饱满，云端推理需求放量。\n公司原因：\n据2026年8月13日半年报，思元系列芯片在互联网客户处批量部署。",
+            "sealTime": "10:05:47"
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "000977",
+            "name": "浪潮信息",
+            "exchange": "sz",
+            "symbol": "SZ000977",
+            "themes": [
+              "AI算力芯片/GPU"
+            ],
+            "nicknames": [
+              "浪潮"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "AI算力芯片/GPU",
+            "whyHot": "题材归属：AI算力芯片/GPU",
+            "sealTime": ""
+          },
+          {
+            "code": "688041",
+            "name": "海光信息",
+            "exchange": "sh",
+            "symbol": "SH688041",
+            "themes": [
+              "AI算力芯片/GPU"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "AI算力芯片/GPU",
+            "whyHot": "题材归属：AI算力芯片/GPU",
+            "sealTime": ""
+          }
+        ],
+        "首板发酵": [
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "exchange": "sz",
+            "symbol": "SZ002261",
+            "themes": [
+              "华为/鸿蒙",
+              "华为昇腾",
+              "AI算力芯片/GPU",
+              "算力"
+            ],
+            "nicknames": [],
+            "roleLabel": "首板发酵",
+            "boardCount": 1,
+            "changePct": 10.02,
+            "amountYi": 21.0,
+            "hotRankThs": 6,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 7.1,
+            "platformsHit": [
+              "同花顺热榜#6"
+            ],
+            "limitReason": "华为昇腾+国产算力",
+            "whyHot": "华为昇腾+国产算力；首板涨停；13:22:05 封板\n行业原因：\n昇腾生态扩容，国产算力集群招标推进。\n公司原因：\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+            "sealTime": "13:22:05"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "商业航天/卫星互联网",
+      "summary": "商业航天/卫星互联网：5 只热门股，涨停 0 家，同花顺涨停原因统计 4 家；20cm弹性 2 只、容量中军 3 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300342",
+            "name": "天银机电",
+            "exchange": "sz",
+            "symbol": "SZ300342",
+            "themes": [
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "商业航天/卫星互联网",
+            "whyHot": "题材归属：商业航天/卫星互联网",
+            "sealTime": ""
+          },
+          {
+            "code": "688102",
+            "name": "斯瑞新材",
+            "exchange": "sh",
+            "symbol": "SH688102",
+            "themes": [
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "商业航天/卫星互联网",
+            "whyHot": "题材归属：商业航天/卫星互联网",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "002149",
+            "name": "西部材料",
+            "exchange": "sz",
+            "symbol": "SZ002149",
+            "themes": [
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "商业航天/卫星互联网",
+            "whyHot": "题材归属：商业航天/卫星互联网",
+            "sealTime": ""
+          },
+          {
+            "code": "600118",
+            "name": "中国卫星",
+            "exchange": "sh",
+            "symbol": "SH600118",
+            "themes": [
+              "军工",
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "军工+商业航天/卫星互联网",
+            "whyHot": "题材归属：军工+商业航天/卫星互联网",
+            "sealTime": ""
+          },
+          {
+            "code": "601698",
+            "name": "中国卫通",
+            "exchange": "sh",
+            "symbol": "SH601698",
+            "themes": [
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "商业航天/卫星互联网",
+            "whyHot": "题材归属：商业航天/卫星互联网",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "冰雪产业",
+      "summary": "冰雪产业：1 只热门股，涨停 1 家，同花顺涨停原因统计 3 家；空间板 1 只",
+      "ladders": {
+        "空间板": [
+          {
+            "code": "000530",
+            "name": "冰山冷热",
+            "exchange": "sz",
+            "symbol": "SZ000530",
+            "themes": [
+              "冰雪产业",
+              "体育产业"
+            ],
+            "nicknames": [],
+            "roleLabel": "空间板",
+            "boardCount": 4,
+            "changePct": 9.96,
+            "amountYi": 13.9672,
+            "hotRankThs": 1,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 20.0,
+            "platformsHit": [
+              "同花顺热榜#1"
+            ],
+            "limitReason": "冰雪产业+体育产业",
+            "whyHot": "冰雪产业+体育产业；4 连板\n行业原因：\n据黑龙江文旅，10月12日，\"冰雪之冠 龙江有约\"黑龙江省冰雪旅游发展促进会2026—2027冰雪季推介会暨启动仪式在广州举行，园区占地面积将扩至125万平方米，创造历届规模新高。\n公司原因：\n1、据2025年12月24日互动易，公司近年承接了多项代表性商业冰雪工程，包括广州融创茂室内滑雪场项目、上海耀雪冰雪世界室内综合性冰雪场馆项目等。\n2、据2026年9月18日投资者关系活动记录表，公司研发数据中心液冷冷源的干冷器、氟泵系统、冷水系统，部分产品已小批量交付。",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "储能",
+      "summary": "储能：4 只热门股，涨停 0 家，同花顺涨停原因统计 3 家；20cm弹性 1 只、容量中军 3 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300763",
+            "name": "锦浪科技",
+            "exchange": "sz",
+            "symbol": "SZ300763",
+            "themes": [
+              "储能"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "储能",
+            "whyHot": "题材归属：储能",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "300750",
+            "name": "宁德时代",
+            "exchange": "sz",
+            "symbol": "SZ300750",
+            "themes": [
+              "固态电池",
+              "储能"
+            ],
+            "nicknames": [
+              "宁王"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": 3.21,
+            "amountYi": 63.0,
+            "hotRankThs": 5,
+            "hotRankDc": null,
+            "hotRankXq": 6,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy"
+            ],
+            "resonanceScore": 13.7,
+            "platformsHit": [
+              "同花顺热榜#5",
+              "雪球热股#6"
+            ],
+            "limitReason": "固态电池+储能",
+            "whyHot": "涨停原因：固态电池+储能",
+            "sealTime": ""
+          },
+          {
+            "code": "300014",
+            "name": "亿纬锂能",
+            "exchange": "sz",
+            "symbol": "SZ300014",
+            "themes": [
+              "储能"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "储能",
+            "whyHot": "题材归属：储能",
+            "sealTime": ""
+          },
+          {
+            "code": "300274",
+            "name": "阳光电源",
+            "exchange": "sz",
+            "symbol": "SZ300274",
+            "themes": [
+              "储能"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "储能",
+            "whyHot": "题材归属：储能",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "体育产业",
+      "summary": "体育产业：1 只热门股，涨停 1 家，同花顺涨停原因统计 2 家；空间板 1 只",
+      "ladders": {
+        "空间板": [
+          {
+            "code": "000530",
+            "name": "冰山冷热",
+            "exchange": "sz",
+            "symbol": "SZ000530",
+            "themes": [
+              "冰雪产业",
+              "体育产业"
+            ],
+            "nicknames": [],
+            "roleLabel": "空间板",
+            "boardCount": 4,
+            "changePct": 9.96,
+            "amountYi": 13.9672,
+            "hotRankThs": 1,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 20.0,
+            "platformsHit": [
+              "同花顺热榜#1"
+            ],
+            "limitReason": "冰雪产业+体育产业",
+            "whyHot": "冰雪产业+体育产业；4 连板\n行业原因：\n据黑龙江文旅，10月12日，\"冰雪之冠 龙江有约\"黑龙江省冰雪旅游发展促进会2026—2027冰雪季推介会暨启动仪式在广州举行，园区占地面积将扩至125万平方米，创造历届规模新高。\n公司原因：\n1、据2025年12月24日互动易，公司近年承接了多项代表性商业冰雪工程，包括广州融创茂室内滑雪场项目、上海耀雪冰雪世界室内综合性冰雪场馆项目等。\n2、据2026年9月18日投资者关系活动记录表，公司研发数据中心液冷冷源的干冷器、氟泵系统、冷水系统，部分产品已小批量交付。",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "华为昇腾",
+      "summary": "华为昇腾：1 只热门股，涨停 1 家，同花顺涨停原因统计 2 家；首板发酵 1 只",
+      "ladders": {
+        "首板发酵": [
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "exchange": "sz",
+            "symbol": "SZ002261",
+            "themes": [
+              "华为/鸿蒙",
+              "华为昇腾",
+              "AI算力芯片/GPU",
+              "算力"
+            ],
+            "nicknames": [],
+            "roleLabel": "首板发酵",
+            "boardCount": 1,
+            "changePct": 10.02,
+            "amountYi": 21.0,
+            "hotRankThs": 6,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 7.1,
+            "platformsHit": [
+              "同花顺热榜#6"
+            ],
+            "limitReason": "华为昇腾+国产算力",
+            "whyHot": "华为昇腾+国产算力；首板涨停；13:22:05 封板\n行业原因：\n昇腾生态扩容，国产算力集群招标推进。\n公司原因：\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+            "sealTime": "13:22:05"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "卫星应用",
+      "summary": "卫星应用：1 只热门股，涨停 1 家，同花顺涨停原因统计 2 家；20cm弹性 1 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300045",
+            "name": "华力创通",
+            "exchange": "sz",
+            "symbol": "SZ300045",
+            "themes": [
+              "卫星通信芯片",
+              "低空经济/eVTOL",
+              "卫星应用"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 1,
+            "changePct": 20.038,
+            "amountYi": 8.4557,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "卫星通信芯片+低空经济+卫星应用",
+            "whyHot": "首板涨停；09:41:18 封板；涨停原因：卫星通信芯片+低空经济+卫星应用",
+            "sealTime": "09:41:18"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "软件开发",
+      "summary": "软件开发：1 只热门股，涨停 1 家，同花顺涨停原因统计 1 家；首板发酵 1 只",
+      "ladders": {
+        "首板发酵": [
+          {
+            "code": "600410",
+            "name": "华胜天成",
+            "exchange": "sh",
+            "symbol": "SH600410",
+            "themes": [
+              "软件开发"
+            ],
+            "nicknames": [],
+            "roleLabel": "首板发酵",
+            "boardCount": 1,
+            "changePct": 10.0,
+            "amountYi": 8.6,
+            "hotRankThs": 7,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "intraday"
+            ],
+            "resonanceScore": 6.0,
+            "platformsHit": [
+              "同花顺热榜#7"
+            ],
+            "limitReason": "软件开发",
+            "whyHot": "首板涨停；14:01:33 封板",
+            "sealTime": "14:01:33"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "固态电池",
+      "summary": "固态电池：4 只热门股，涨停 0 家，同花顺涨停原因统计 1 家；20cm弹性 2 只、容量中军 2 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300073",
+            "name": "当升科技",
+            "exchange": "sz",
+            "symbol": "SZ300073",
+            "themes": [
+              "固态电池"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "固态电池",
+            "whyHot": "题材归属：固态电池",
+            "sealTime": ""
+          },
+          {
+            "code": "300568",
+            "name": "星源材质",
+            "exchange": "sz",
+            "symbol": "SZ300568",
+            "themes": [
+              "固态电池"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "固态电池",
+            "whyHot": "题材归属：固态电池",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "300750",
+            "name": "宁德时代",
+            "exchange": "sz",
+            "symbol": "SZ300750",
+            "themes": [
+              "固态电池",
+              "储能"
+            ],
+            "nicknames": [
+              "宁王"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": 3.21,
+            "amountYi": 63.0,
+            "hotRankThs": 5,
+            "hotRankDc": null,
+            "hotRankXq": 6,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy"
+            ],
+            "resonanceScore": 13.7,
+            "platformsHit": [
+              "同花顺热榜#5",
+              "雪球热股#6"
+            ],
+            "limitReason": "固态电池+储能",
+            "whyHot": "涨停原因：固态电池+储能",
+            "sealTime": ""
+          },
+          {
+            "code": "002074",
+            "name": "国轩高科",
+            "exchange": "sz",
+            "symbol": "SZ002074",
+            "themes": [
+              "固态电池"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "固态电池",
+            "whyHot": "题材归属：固态电池",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "卫星通信芯片",
+      "summary": "卫星通信芯片：1 只热门股，涨停 1 家，同花顺涨停原因统计 1 家；20cm弹性 1 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300045",
+            "name": "华力创通",
+            "exchange": "sz",
+            "symbol": "SZ300045",
+            "themes": [
+              "卫星通信芯片",
+              "低空经济/eVTOL",
+              "卫星应用"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 1,
+            "changePct": 20.038,
+            "amountYi": 8.4557,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "卫星通信芯片+低空经济+卫星应用",
+            "whyHot": "首板涨停；09:41:18 封板；涨停原因：卫星通信芯片+低空经济+卫星应用",
+            "sealTime": "09:41:18"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "算力硬件",
+      "summary": "算力硬件：1 只热门股，涨停 1 家；空间板 1 只",
+      "ladders": {
+        "空间板": [
+          {
+            "code": "300308",
+            "name": "中际旭创",
+            "exchange": "sz",
+            "symbol": "SZ300308",
+            "themes": [
+              "光模块/CPO",
+              "算力硬件"
+            ],
+            "nicknames": [
+              "旭创",
+              "易中天"
+            ],
+            "roleLabel": "空间板",
+            "boardCount": 3,
+            "changePct": 20.01,
+            "amountYi": 82.6,
+            "hotRankThs": 2,
+            "hotRankDc": 1,
+            "hotRankXq": 2,
+            "taogubaMentions": 1,
+            "sources": [
+              "ths",
+              "dc",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 55.2,
+            "platformsHit": [
+              "同花顺热榜#2",
+              "东财热榜#1",
+              "雪球热股#2",
+              "淘股吧热议×1"
+            ],
+            "limitReason": "光模块+CPO+算力硬件",
+            "whyHot": "光模块+CPO+算力硬件；3 连板；09:32:11 封板\n行业原因：\n1.6T光模块需求持续超预期，北美云厂商资本开支上修，CPO共封装光学导入节奏加快。\n公司原因：\n据2026年8月13日半年报，公司1.6T OSFP-XD产品已批量交付，硅光方案良率稳步提升。",
+            "sealTime": "09:32:11"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "华为/鸿蒙",
+      "summary": "华为/鸿蒙：2 只热门股，涨停 1 家；20cm弹性 1 只、首板发酵 1 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300339",
+            "name": "润和软件",
+            "exchange": "sz",
+            "symbol": "SZ300339",
+            "themes": [
+              "华为/鸿蒙"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "华为/鸿蒙",
+            "whyHot": "题材归属：华为/鸿蒙",
+            "sealTime": ""
+          }
+        ],
+        "首板发酵": [
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "exchange": "sz",
+            "symbol": "SZ002261",
+            "themes": [
+              "华为/鸿蒙",
+              "华为昇腾",
+              "AI算力芯片/GPU",
+              "算力"
+            ],
+            "nicknames": [],
+            "roleLabel": "首板发酵",
+            "boardCount": 1,
+            "changePct": 10.02,
+            "amountYi": 21.0,
+            "hotRankThs": 6,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 7.1,
+            "platformsHit": [
+              "同花顺热榜#6"
+            ],
+            "limitReason": "华为昇腾+国产算力",
+            "whyHot": "华为昇腾+国产算力；首板涨停；13:22:05 封板\n行业原因：\n昇腾生态扩容，国产算力集群招标推进。\n公司原因：\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+            "sealTime": "13:22:05"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "算力",
+      "summary": "算力：1 只热门股，涨停 1 家；首板发酵 1 只",
+      "ladders": {
+        "首板发酵": [
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "exchange": "sz",
+            "symbol": "SZ002261",
+            "themes": [
+              "华为/鸿蒙",
+              "华为昇腾",
+              "AI算力芯片/GPU",
+              "算力"
+            ],
+            "nicknames": [],
+            "roleLabel": "首板发酵",
+            "boardCount": 1,
+            "changePct": 10.02,
+            "amountYi": 21.0,
+            "hotRankThs": 6,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "ths",
+              "legacy",
+              "intraday"
+            ],
+            "resonanceScore": 7.1,
+            "platformsHit": [
+              "同花顺热榜#6"
+            ],
+            "limitReason": "华为昇腾+国产算力",
+            "whyHot": "华为昇腾+国产算力；首板涨停；13:22:05 封板\n行业原因：\n昇腾生态扩容，国产算力集群招标推进。\n公司原因：\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+            "sealTime": "13:22:05"
+          }
+        ]
+      }
+    },
+    {
+      "theme": "白酒/大消费",
+      "summary": "白酒/大消费：1 只热门股，涨停 0 家；容量中军 1 只",
+      "ladders": {
+        "容量中军": [
+          {
+            "code": "600519",
+            "name": "贵州茅台",
+            "exchange": "sh",
+            "symbol": "SH600519",
+            "themes": [
+              "白酒/大消费"
+            ],
+            "nicknames": [
+              "茅台",
+              "茅子"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": 1.12,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": 9,
+            "hotRankXq": 1,
+            "taogubaMentions": 0,
+            "sources": [
+              "dc"
+            ],
+            "resonanceScore": 18.8,
+            "platformsHit": [
+              "东财热榜#9",
+              "雪球热股#1"
+            ],
+            "limitReason": "白酒/大消费",
+            "whyHot": "题材归属：白酒/大消费",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "PCB/覆铜板",
+      "summary": "PCB/覆铜板：4 只热门股，涨停 0 家；容量中军 4 只",
+      "ladders": {
+        "容量中军": [
+          {
+            "code": "002463",
+            "name": "沪电股份",
+            "exchange": "sz",
+            "symbol": "SZ002463",
+            "themes": [
+              "PCB/覆铜板"
+            ],
+            "nicknames": [
+              "沪电"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "PCB/覆铜板",
+            "whyHot": "题材归属：PCB/覆铜板",
+            "sealTime": ""
+          },
+          {
+            "code": "002916",
+            "name": "深南电路",
+            "exchange": "sz",
+            "symbol": "SZ002916",
+            "themes": [
+              "PCB/覆铜板"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "PCB/覆铜板",
+            "whyHot": "题材归属：PCB/覆铜板",
+            "sealTime": ""
+          },
+          {
+            "code": "300476",
+            "name": "胜宏科技",
+            "exchange": "sz",
+            "symbol": "SZ300476",
+            "themes": [
+              "PCB/覆铜板"
+            ],
+            "nicknames": [
+              "胜宏"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "PCB/覆铜板",
+            "whyHot": "题材归属：PCB/覆铜板",
+            "sealTime": ""
+          },
+          {
+            "code": "600183",
+            "name": "生益科技",
+            "exchange": "sh",
+            "symbol": "SH600183",
+            "themes": [
+              "PCB/覆铜板"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "PCB/覆铜板",
+            "whyHot": "题材归属：PCB/覆铜板",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "军工",
+      "summary": "军工：1 只热门股，涨停 0 家；容量中军 1 只",
+      "ladders": {
+        "容量中军": [
+          {
+            "code": "600118",
+            "name": "中国卫星",
+            "exchange": "sh",
+            "symbol": "SH600118",
+            "themes": [
+              "军工",
+              "商业航天/卫星互联网"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "军工+商业航天/卫星互联网",
+            "whyHot": "题材归属：军工+商业航天/卫星互联网",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "半导体设备/材料",
+      "summary": "半导体设备/材料：3 只热门股，涨停 0 家；容量中军 3 只",
+      "ladders": {
+        "容量中军": [
+          {
+            "code": "002371",
+            "name": "北方华创",
+            "exchange": "sz",
+            "symbol": "SZ002371",
+            "themes": [
+              "半导体设备/材料"
+            ],
+            "nicknames": [
+              "北方"
+            ],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "半导体设备/材料",
+            "whyHot": "题材归属：半导体设备/材料",
+            "sealTime": ""
+          },
+          {
+            "code": "603005",
+            "name": "晶方科技",
+            "exchange": "sh",
+            "symbol": "SH603005",
+            "themes": [
+              "半导体设备/材料"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "半导体设备/材料",
+            "whyHot": "题材归属：半导体设备/材料",
+            "sealTime": ""
+          },
+          {
+            "code": "688012",
+            "name": "中微公司",
+            "exchange": "sh",
+            "symbol": "SH688012",
+            "themes": [
+              "半导体设备/材料"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "半导体设备/材料",
+            "whyHot": "题材归属：半导体设备/材料",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "存储芯片/HBM",
+      "summary": "存储芯片/HBM：3 只热门股，涨停 0 家；20cm弹性 2 只、容量中军 1 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "301308",
+            "name": "江波龙",
+            "exchange": "sz",
+            "symbol": "SZ301308",
+            "themes": [
+              "存储芯片/HBM"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "存储芯片/HBM",
+            "whyHot": "题材归属：存储芯片/HBM",
+            "sealTime": ""
+          },
+          {
+            "code": "688525",
+            "name": "佰维存储",
+            "exchange": "sh",
+            "symbol": "SH688525",
+            "themes": [
+              "存储芯片/HBM"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "存储芯片/HBM",
+            "whyHot": "题材归属：存储芯片/HBM",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "603986",
+            "name": "兆易创新",
+            "exchange": "sh",
+            "symbol": "SH603986",
+            "themes": [
+              "存储芯片/HBM"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "存储芯片/HBM",
+            "whyHot": "题材归属：存储芯片/HBM",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "液冷/散热",
+      "summary": "液冷/散热：3 只热门股，涨停 0 家；20cm弹性 2 只、容量中军 1 只",
+      "ladders": {
+        "20cm弹性": [
+          {
+            "code": "300499",
+            "name": "高澜股份",
+            "exchange": "sz",
+            "symbol": "SZ300499",
+            "themes": [
+              "液冷/散热"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "液冷/散热",
+            "whyHot": "题材归属：液冷/散热",
+            "sealTime": ""
+          },
+          {
+            "code": "300602",
+            "name": "飞荣达",
+            "exchange": "sz",
+            "symbol": "SZ300602",
+            "themes": [
+              "液冷/散热"
+            ],
+            "nicknames": [],
+            "roleLabel": "20cm弹性",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "液冷/散热",
+            "whyHot": "题材归属：液冷/散热",
+            "sealTime": ""
+          }
+        ],
+        "容量中军": [
+          {
+            "code": "002837",
+            "name": "英维克",
+            "exchange": "sz",
+            "symbol": "SZ002837",
+            "themes": [
+              "液冷/散热"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "液冷/散热",
+            "whyHot": "题材归属：液冷/散热",
+            "sealTime": ""
+          }
+        ]
+      }
+    },
+    {
+      "theme": "锂电/锂矿",
+      "summary": "锂电/锂矿：3 只热门股，涨停 0 家；容量中军 3 只",
+      "ladders": {
+        "容量中军": [
+          {
+            "code": "002460",
+            "name": "赣锋锂业",
+            "exchange": "sz",
+            "symbol": "SZ002460",
+            "themes": [
+              "锂电/锂矿"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "锂电/锂矿",
+            "whyHot": "题材归属：锂电/锂矿",
+            "sealTime": ""
+          },
+          {
+            "code": "002466",
+            "name": "天齐锂业",
+            "exchange": "sz",
+            "symbol": "SZ002466",
+            "themes": [
+              "锂电/锂矿"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "锂电/锂矿",
+            "whyHot": "题材归属：锂电/锂矿",
+            "sealTime": ""
+          },
+          {
+            "code": "002709",
+            "name": "天赐材料",
+            "exchange": "sz",
+            "symbol": "SZ002709",
+            "themes": [
+              "锂电/锂矿"
+            ],
+            "nicknames": [],
+            "roleLabel": "容量中军",
+            "boardCount": 0,
+            "changePct": null,
+            "amountYi": null,
+            "hotRankThs": null,
+            "hotRankDc": null,
+            "hotRankXq": null,
+            "taogubaMentions": 0,
+            "sources": [
+              "theme_base"
+            ],
+            "resonanceScore": 0.0,
+            "platformsHit": [],
+            "limitReason": "锂电/锂矿",
+            "whyHot": "题材归属：锂电/锂矿",
+            "sealTime": ""
+          }
+        ]
+      }
+    }
+  ],
+  "topResonanceStocks": [
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "exchange": "sz",
+      "symbol": "SZ300308",
+      "themes": [
+        "光模块/CPO",
+        "算力硬件"
+      ],
+      "nicknames": [
+        "旭创",
+        "易中天"
+      ],
+      "roleLabel": "空间板",
+      "boardCount": 3,
+      "changePct": 20.01,
+      "amountYi": 82.6,
+      "hotRankThs": 2,
+      "hotRankDc": 1,
+      "hotRankXq": 2,
+      "taogubaMentions": 1,
+      "sources": [
+        "ths",
+        "dc",
+        "legacy",
+        "intraday"
+      ],
+      "resonanceScore": 55.2,
+      "platformsHit": [
+        "同花顺热榜#2",
+        "东财热榜#1",
+        "雪球热股#2",
+        "淘股吧热议×1"
+      ],
+      "limitReason": "光模块+CPO+算力硬件",
+      "whyHot": "光模块+CPO+算力硬件；3 连板；09:32:11 封板\n行业原因：\n1.6T光模块需求持续超预期，北美云厂商资本开支上修，CPO共封装光学导入节奏加快。\n公司原因：\n据2026年8月13日半年报，公司1.6T OSFP-XD产品已批量交付，硅光方案良率稳步提升。",
+      "sealTime": "09:32:11",
+      "sentiment": {
+        "code": "300308",
+        "totalPosts": 7,
+        "validPosts": 6,
+        "spamPosts": 1,
+        "bullCount": 4,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 100.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "一致亢奋",
+        "posts15m": 0,
+        "platforms": [
+          "eastmoney_guba",
+          "taoguba",
+          "xueqiu"
+        ]
+      },
+      "highlights": [
+        {
+          "platform": "xueqiu",
+          "title": "光模块这一轮的核心矛盾是供给端 1.6T 产能释放节奏与海外算力资本开支的错配。中际旭创在新易盛之间拿到的是同一波…",
+          "authorName": "投机风清扬",
+          "isVipYouzi": false,
+          "isDeepLogic": true,
+          "commentCount": 88,
+          "url": "https://xueqiu.com/5311792678/3100000000000001"
+        },
+        {
+          "platform": "eastmoney_guba",
+          "title": "易中天集体大长腿，明天继续看反包",
+          "authorName": "追涨打板",
+          "isVipYouzi": false,
+          "isDeepLogic": false,
+          "commentCount": 260,
+          "url": "https://guba.eastmoney.com/news,300308,900000001.html"
+        },
+        {
+          "platform": "xueqiu",
+          "title": "补充一个数据：1.6T 光模块的良率爬坡比市场预期慢两个季度，产能释放集中在下半年。",
+          "authorName": "DinX-解构",
+          "isVipYouzi": false,
+          "isDeepLogic": true,
+          "commentCount": 31,
+          "url": "https://xueqiu.com/2503188652/3100000000000003"
+        }
+      ]
+    },
+    {
+      "code": "688256",
+      "name": "寒武纪",
+      "exchange": "sh",
+      "symbol": "SH688256",
+      "themes": [
+        "AI算力芯片/GPU"
+      ],
+      "nicknames": [
+        "寒",
+        "寒王"
+      ],
+      "roleLabel": "空间板",
+      "boardCount": 4,
+      "changePct": 12.3,
+      "amountYi": 40.2,
+      "hotRankThs": 4,
+      "hotRankDc": 4,
+      "hotRankXq": 4,
+      "taogubaMentions": 1,
+      "sources": [
+        "ths",
+        "dc",
+        "intraday"
+      ],
+      "resonanceScore": 29.0,
+      "platformsHit": [
+        "同花顺热榜#4",
+        "东财热榜#4",
+        "雪球热股#4",
+        "淘股吧热议×1"
+      ],
+      "limitReason": "AI芯片+国产算力",
+      "whyHot": "AI芯片+国产算力；4 连板；10:05:47 封板\n行业原因：\n国产AI算力芯片订单饱满，云端推理需求放量。\n公司原因：\n据2026年8月13日半年报，思元系列芯片在互联网客户处批量部署。",
+      "sealTime": "10:05:47",
+      "sentiment": {
+        "code": "688256",
+        "totalPosts": 3,
+        "validPosts": 3,
+        "spamPosts": 0,
+        "bullCount": 1,
+        "divergenceCount": 2,
+        "bearCount": 0,
+        "bullRatio": 33.3,
+        "divergenceRatio": 66.7,
+        "bearRatio": 0.0,
+        "label": "分歧博弈",
+        "posts15m": 0,
+        "platforms": [
+          "eastmoney_guba",
+          "taoguba",
+          "xueqiu"
+        ]
+      },
+      "highlights": [
+        {
+          "platform": "eastmoney_guba",
+          "title": "寒王今天缩量整理，情绪冰点明天看修复",
+          "authorName": "老韭菜",
+          "isVipYouzi": false,
+          "isDeepLogic": false,
+          "commentCount": 95,
+          "url": "https://guba.eastmoney.com/news,688256,900000002.html"
+        },
+        {
+          "platform": "xueqiu",
+          "title": "易中天集体涨停，明天竞价看看有没有溢价。",
+          "authorName": "短线老李",
+          "isVipYouzi": false,
+          "isDeepLogic": false,
+          "commentCount": 1,
+          "url": "https://xueqiu.com/66666666/3100000000000012"
+        }
+      ]
+    },
+    {
+      "code": "000530",
+      "name": "冰山冷热",
+      "exchange": "sz",
+      "symbol": "SZ000530",
+      "themes": [
+        "冰雪产业",
+        "体育产业"
+      ],
+      "nicknames": [],
+      "roleLabel": "空间板",
+      "boardCount": 4,
+      "changePct": 9.96,
+      "amountYi": 13.9672,
+      "hotRankThs": 1,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "ths",
+        "legacy",
+        "intraday"
+      ],
+      "resonanceScore": 20.0,
+      "platformsHit": [
+        "同花顺热榜#1"
+      ],
+      "limitReason": "冰雪产业+体育产业",
+      "whyHot": "冰雪产业+体育产业；4 连板\n行业原因：\n据黑龙江文旅，10月12日，\"冰雪之冠 龙江有约\"黑龙江省冰雪旅游发展促进会2026—2027冰雪季推介会暨启动仪式在广州举行，园区占地面积将扩至125万平方米，创造历届规模新高。\n公司原因：\n1、据2025年12月24日互动易，公司近年承接了多项代表性商业冰雪工程，包括广州融创茂室内滑雪场项目、上海耀雪冰雪世界室内综合性冰雪场馆项目等。\n2、据2026年9月18日投资者关系活动记录表，公司研发数据中心液冷冷源的干冷器、氟泵系统、冷水系统，部分产品已小批量交付。",
+      "sealTime": "",
+      "sentiment": {
+        "code": "000530",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "exchange": "sh",
+      "symbol": "SH600519",
+      "themes": [
+        "白酒/大消费"
+      ],
+      "nicknames": [
+        "茅台",
+        "茅子"
+      ],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": 1.12,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": 9,
+      "hotRankXq": 1,
+      "taogubaMentions": 0,
+      "sources": [
+        "dc"
+      ],
+      "resonanceScore": 18.8,
+      "platformsHit": [
+        "东财热榜#9",
+        "雪球热股#1"
+      ],
+      "limitReason": "白酒/大消费",
+      "whyHot": "题材归属：白酒/大消费",
+      "sealTime": "",
+      "sentiment": {
+        "code": "600519",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300502",
+      "name": "新易盛",
+      "exchange": "sz",
+      "symbol": "SZ300502",
+      "themes": [
+        "光模块/CPO"
+      ],
+      "nicknames": [
+        "易",
+        "易中天"
+      ],
+      "roleLabel": "20cm弹性",
+      "boardCount": 2,
+      "changePct": 19.98,
+      "amountYi": 51.4,
+      "hotRankThs": 3,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 1,
+      "sources": [
+        "ths",
+        "legacy",
+        "intraday"
+      ],
+      "resonanceScore": 16.1,
+      "platformsHit": [
+        "同花顺热榜#3",
+        "淘股吧热议×1"
+      ],
+      "limitReason": "光模块+CPO",
+      "whyHot": "光模块+CPO；2 连板；09:35:02 封板\n行业原因：\n高速率光模块供需紧张，CPO产业化提速。\n公司原因：\n据2026年8月13日半年报，公司高速率光模块产能持续释放，海外产能爬坡顺利。",
+      "sealTime": "09:35:02",
+      "sentiment": {
+        "code": "300502",
+        "totalPosts": 1,
+        "validPosts": 1,
+        "spamPosts": 0,
+        "bullCount": 1,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 100.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": [
+          "taoguba"
+        ]
+      },
+      "highlights": []
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "exchange": "sz",
+      "symbol": "SZ300750",
+      "themes": [
+        "固态电池",
+        "储能"
+      ],
+      "nicknames": [
+        "宁王"
+      ],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": 3.21,
+      "amountYi": 63.0,
+      "hotRankThs": 5,
+      "hotRankDc": null,
+      "hotRankXq": 6,
+      "taogubaMentions": 0,
+      "sources": [
+        "ths",
+        "legacy"
+      ],
+      "resonanceScore": 13.7,
+      "platformsHit": [
+        "同花顺热榜#5",
+        "雪球热股#6"
+      ],
+      "limitReason": "固态电池+储能",
+      "whyHot": "涨停原因：固态电池+储能",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300750",
+        "totalPosts": 1,
+        "validPosts": 1,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 1,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 100.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": [
+          "eastmoney_guba"
+        ]
+      },
+      "highlights": [
+        {
+          "platform": "eastmoney_guba",
+          "title": "宁王被埋了，明天格局还是割肉？",
+          "authorName": "躺平哥",
+          "isVipYouzi": false,
+          "isDeepLogic": false,
+          "commentCount": 40,
+          "url": "https://guba.eastmoney.com/news,300750,900000003.html"
+        }
+      ]
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "exchange": "sz",
+      "symbol": "SZ002261",
+      "themes": [
+        "华为/鸿蒙",
+        "华为昇腾",
+        "AI算力芯片/GPU",
+        "算力"
+      ],
+      "nicknames": [],
+      "roleLabel": "首板发酵",
+      "boardCount": 1,
+      "changePct": 10.02,
+      "amountYi": 21.0,
+      "hotRankThs": 6,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "ths",
+        "legacy",
+        "intraday"
+      ],
+      "resonanceScore": 7.1,
+      "platformsHit": [
+        "同花顺热榜#6"
+      ],
+      "limitReason": "华为昇腾+国产算力",
+      "whyHot": "华为昇腾+国产算力；首板涨停；13:22:05 封板\n行业原因：\n昇腾生态扩容，国产算力集群招标推进。\n公司原因：\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+      "sealTime": "13:22:05",
+      "sentiment": {
+        "code": "002261",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "600410",
+      "name": "华胜天成",
+      "exchange": "sh",
+      "symbol": "SH600410",
+      "themes": [
+        "软件开发"
+      ],
+      "nicknames": [],
+      "roleLabel": "首板发酵",
+      "boardCount": 1,
+      "changePct": 10.0,
+      "amountYi": 8.6,
+      "hotRankThs": 7,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "ths",
+        "intraday"
+      ],
+      "resonanceScore": 6.0,
+      "platformsHit": [
+        "同花顺热榜#7"
+      ],
+      "limitReason": "软件开发",
+      "whyHot": "首板涨停；14:01:33 封板",
+      "sealTime": "14:01:33",
+      "sentiment": {
+        "code": "600410",
+        "totalPosts": 1,
+        "validPosts": 1,
+        "spamPosts": 0,
+        "bullCount": 1,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 100.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": [
+          "eastmoney_guba"
+        ]
+      },
+      "highlights": [
+        {
+          "platform": "eastmoney_guba",
+          "title": "首板发酵，明天打板还是低吸？",
+          "authorName": "打板客",
+          "isVipYouzi": false,
+          "isDeepLogic": false,
+          "commentCount": 35,
+          "url": "https://guba.eastmoney.com/news,600410,900000005.html"
+        }
+      ]
+    },
+    {
+      "code": "300394",
+      "name": "天孚通信",
+      "exchange": "sz",
+      "symbol": "SZ300394",
+      "themes": [
+        "光模块/CPO"
+      ],
+      "nicknames": [
+        "天孚",
+        "易中天"
+      ],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 1,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 4.0,
+      "platformsHit": [
+        "淘股吧热议×1"
+      ],
+      "limitReason": "光模块/CPO",
+      "whyHot": "题材归属：光模块/CPO",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300394",
+        "totalPosts": 1,
+        "validPosts": 1,
+        "spamPosts": 0,
+        "bullCount": 1,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 100.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": [
+          "taoguba"
+        ]
+      },
+      "highlights": []
+    },
+    {
+      "code": "300045",
+      "name": "华力创通",
+      "exchange": "sz",
+      "symbol": "SZ300045",
+      "themes": [
+        "卫星通信芯片",
+        "低空经济/eVTOL",
+        "卫星应用"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 1,
+      "changePct": 20.038,
+      "amountYi": 8.4557,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "legacy",
+        "intraday"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "卫星通信芯片+低空经济+卫星应用",
+      "whyHot": "首板涨停；09:41:18 封板；涨停原因：卫星通信芯片+低空经济+卫星应用",
+      "sealTime": "09:41:18",
+      "sentiment": {
+        "code": "300045",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300073",
+      "name": "当升科技",
+      "exchange": "sz",
+      "symbol": "SZ300073",
+      "themes": [
+        "固态电池"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "固态电池",
+      "whyHot": "题材归属：固态电池",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300073",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300339",
+      "name": "润和软件",
+      "exchange": "sz",
+      "symbol": "SZ300339",
+      "themes": [
+        "华为/鸿蒙"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "华为/鸿蒙",
+      "whyHot": "题材归属：华为/鸿蒙",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300339",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "exchange": "sz",
+      "symbol": "SZ300342",
+      "themes": [
+        "商业航天/卫星互联网"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "商业航天/卫星互联网",
+      "whyHot": "题材归属：商业航天/卫星互联网",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300342",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300499",
+      "name": "高澜股份",
+      "exchange": "sz",
+      "symbol": "SZ300499",
+      "themes": [
+        "液冷/散热"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "液冷/散热",
+      "whyHot": "题材归属：液冷/散热",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300499",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300568",
+      "name": "星源材质",
+      "exchange": "sz",
+      "symbol": "SZ300568",
+      "themes": [
+        "固态电池"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "固态电池",
+      "whyHot": "题材归属：固态电池",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300568",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300602",
+      "name": "飞荣达",
+      "exchange": "sz",
+      "symbol": "SZ300602",
+      "themes": [
+        "液冷/散热"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "液冷/散热",
+      "whyHot": "题材归属：液冷/散热",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300602",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "300763",
+      "name": "锦浪科技",
+      "exchange": "sz",
+      "symbol": "SZ300763",
+      "themes": [
+        "储能"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "储能",
+      "whyHot": "题材归属：储能",
+      "sealTime": "",
+      "sentiment": {
+        "code": "300763",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "301308",
+      "name": "江波龙",
+      "exchange": "sz",
+      "symbol": "SZ301308",
+      "themes": [
+        "存储芯片/HBM"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "存储芯片/HBM",
+      "whyHot": "题材归属：存储芯片/HBM",
+      "sealTime": "",
+      "sentiment": {
+        "code": "301308",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "688017",
+      "name": "绿的谐波",
+      "exchange": "sh",
+      "symbol": "SH688017",
+      "themes": [
+        "人形机器人"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "人形机器人",
+      "whyHot": "题材归属：人形机器人",
+      "sealTime": "",
+      "sentiment": {
+        "code": "688017",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "688102",
+      "name": "斯瑞新材",
+      "exchange": "sh",
+      "symbol": "SH688102",
+      "themes": [
+        "商业航天/卫星互联网"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "商业航天/卫星互联网",
+      "whyHot": "题材归属：商业航天/卫星互联网",
+      "sealTime": "",
+      "sentiment": {
+        "code": "688102",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "688525",
+      "name": "佰维存储",
+      "exchange": "sh",
+      "symbol": "SH688525",
+      "themes": [
+        "存储芯片/HBM"
+      ],
+      "nicknames": [],
+      "roleLabel": "20cm弹性",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "存储芯片/HBM",
+      "whyHot": "题材归属：存储芯片/HBM",
+      "sealTime": "",
+      "sentiment": {
+        "code": "688525",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "000977",
+      "name": "浪潮信息",
+      "exchange": "sz",
+      "symbol": "SZ000977",
+      "themes": [
+        "AI算力芯片/GPU"
+      ],
+      "nicknames": [
+        "浪潮"
+      ],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "AI算力芯片/GPU",
+      "whyHot": "题材归属：AI算力芯片/GPU",
+      "sealTime": "",
+      "sentiment": {
+        "code": "000977",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "001696",
+      "name": "宗申动力",
+      "exchange": "sz",
+      "symbol": "SZ001696",
+      "themes": [
+        "低空经济/eVTOL"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "低空经济/eVTOL",
+      "whyHot": "题材归属：低空经济/eVTOL",
+      "sealTime": "",
+      "sentiment": {
+        "code": "001696",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002050",
+      "name": "三花智控",
+      "exchange": "sz",
+      "symbol": "SZ002050",
+      "themes": [
+        "人形机器人"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "人形机器人",
+      "whyHot": "题材归属：人形机器人",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002050",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002074",
+      "name": "国轩高科",
+      "exchange": "sz",
+      "symbol": "SZ002074",
+      "themes": [
+        "固态电池"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "固态电池",
+      "whyHot": "题材归属：固态电池",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002074",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002149",
+      "name": "西部材料",
+      "exchange": "sz",
+      "symbol": "SZ002149",
+      "themes": [
+        "商业航天/卫星互联网"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "商业航天/卫星互联网",
+      "whyHot": "题材归属：商业航天/卫星互联网",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002149",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002281",
+      "name": "光迅科技",
+      "exchange": "sz",
+      "symbol": "SZ002281",
+      "themes": [
+        "光模块/CPO"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "光模块/CPO",
+      "whyHot": "题材归属：光模块/CPO",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002281",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002371",
+      "name": "北方华创",
+      "exchange": "sz",
+      "symbol": "SZ002371",
+      "themes": [
+        "半导体设备/材料"
+      ],
+      "nicknames": [
+        "北方"
+      ],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "半导体设备/材料",
+      "whyHot": "题材归属：半导体设备/材料",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002371",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002460",
+      "name": "赣锋锂业",
+      "exchange": "sz",
+      "symbol": "SZ002460",
+      "themes": [
+        "锂电/锂矿"
+      ],
+      "nicknames": [],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "锂电/锂矿",
+      "whyHot": "题材归属：锂电/锂矿",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002460",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    },
+    {
+      "code": "002463",
+      "name": "沪电股份",
+      "exchange": "sz",
+      "symbol": "SZ002463",
+      "themes": [
+        "PCB/覆铜板"
+      ],
+      "nicknames": [
+        "沪电"
+      ],
+      "roleLabel": "容量中军",
+      "boardCount": 0,
+      "changePct": null,
+      "amountYi": null,
+      "hotRankThs": null,
+      "hotRankDc": null,
+      "hotRankXq": null,
+      "taogubaMentions": 0,
+      "sources": [
+        "theme_base"
+      ],
+      "resonanceScore": 0.0,
+      "platformsHit": [],
+      "limitReason": "PCB/覆铜板",
+      "whyHot": "题材归属：PCB/覆铜板",
+      "sealTime": "",
+      "sentiment": {
+        "code": "002463",
+        "totalPosts": 0,
+        "validPosts": 0,
+        "spamPosts": 0,
+        "bullCount": 0,
+        "divergenceCount": 0,
+        "bearCount": 0,
+        "bullRatio": 0.0,
+        "divergenceRatio": 0.0,
+        "bearRatio": 0.0,
+        "label": "情绪中性",
+        "posts15m": 0,
+        "platforms": []
+      },
+      "highlights": []
+    }
+  ]
+}

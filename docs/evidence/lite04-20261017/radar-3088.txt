@@ -1,0 +1,8 @@
+origin: http://127.0.0.1:3088 | api: 50213
+[PASS] 默认视角（热门板块） (/radar) 6 项断言全中
+[PASS] 首页（?view=stocks） (/?view=stocks) 0 项断言全中
+[PASS] 视角二（Top 50 表格） (/radar?view=stocks) 5 项断言全中
+[PASS] 个股详情抽屉 (/radar?stock=000530) 5 项断言全中
+[PASS] /radar 无「未封板」矛盾文案
+[PASS] /radar?stock=000530 无「未封板」矛盾文案
+[PASS] /api/site/radar 200 且 topResonanceStocks=50

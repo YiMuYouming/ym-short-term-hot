@@ -1,0 +1,114 @@
+{
+  "workOrder": "LITE-03-20261017",
+  "title": "数据语义、板块归并与社区情绪透传精修（bridge 五文件 + themes_v2 + contracts）",
+  "completedAt": "2026-10-17T20:30:00+08:00",
+  "deliveredBy": "稳米",
+  "git": {
+    "commit": "45b1d36",
+    "commitMessage": "chore(handover): archive Grok waves 4-6 research and record Phase 1 closeout + SH-04 checklist in PROGRESS.md",
+    "workOrderBaseline": "45b1d36",
+    "committed": false,
+    "note": "按惯例保留工作区 diff 待谷米审查；changedFiles 仅列 LITE-03 文件。开工单写的路径是理想化树（bridge/stock_today_bridge/、sentiment.py、modules/short-term-radar/shared/contracts.ts），实际仓库为平铺结构（bridge/、bridge/sentiment_engine.py、modules/short-term-radar/contracts.ts），已按实际路径实施；git status 里其余条目为派单前已在工作区的归档改动与前两阶段交付",
+    "changedFileCount": 11,
+    "changedFiles": [
+      "bridge/config.py",
+      "bridge/pipeline_loader.py",
+      "bridge/run_bridge.py",
+      "bridge/push_to_aihot.py",
+      "bridge/sentiment_engine.py",
+      "bridge/collectors/eastmoney_guba.py",
+      "docs/aihot_research/dict/themes_v2.json",
+      "bridge/tests/test_bridge.py",
+      "modules/short-term-radar/contracts.ts",
+      "modules/short-term-radar/tests/radar.test.ts",
+      "modules/short-term-radar/scripts/radar-page.test.ts"
+    ]
+  },
+  "scope": {
+    "S1": "config.py：BridgeConfig.top_resonance_limit 默认 30→50，与 focus_limit=50 对齐；run_bridge CLI 的 --top 默认改为 None（不传时才用 config 默认），显式 --top 仍可覆盖——此前 CLI 默认 30 会静默压掉 config 默认值",
+    "S2": "社区高亮纳管 + 单帖字段全量透传：run() 把 StockMatcher.group 的归股结果 posts_by_code 传给 build_snapshot 与 build_theme_ladders——按股票名/黑话别名命中的淘股吧/雪球帖（post.code 为空）与显式带代码帖一样进 highlights，归股与精选从此同一链路；push_to_aihot 新增 serialize_highlights：每条高亮输出 postId/source/platform/title/content(截280)/url/author/publishedAt/commentCount/likeCount/viewCount/isKol/isVipYouzi/isDeepLogic/qualityTier(派生)/sentiment(四值)/sentimentScore/sentimentTerms，帖子情绪沿用 summarize 阶段 score_post 的就地回填；梯队桶内每只票也带 sentiment+highlights",
+    "S3": "sentiment_engine.py：新增分句否定前缀修正（NEGATION_PREFIXES/NEGATION_CHARS/CLAUSE_BREAKS/_negated_before）——正向情绪词前方同一分句 1~6 字内出现「无法/不能/不会/难以/未能/没能/不再/不可能/不看好/谨防/小心/警惕/没有」（单字「未/难/别/莫」只认紧邻 1~2 字防「未来」误伤）时不计看多、改记负分；「我认为周一冰山无法继续涨停」由 extreme_bull_consistent 翻为 panic_bear_nuke",
+    "S4": "板块语义精修：themes_v2.json 同义归并（共封装光学(CPO)/CPO概念/光通信模块→光模块/CPO；飞行汽车(eVTOL)/通用航空→低空经济/eVTOL；PCB概念/印制电路板→PCB/覆铜板；黄金概念→黄金/有色；「铜缆高速连接」主题整体并入算力租赁/IDC——成分股与别名一起搬、独立主题删除，59 题材）；泛词「机器人」从人形机器人别名移除、显式「机器人概念」才归入；pipeline_loader 新增 is_event_or_company_tag（事件/公告/财务/股权/车型词只留 limit_reason/why_hot、不进 themes）与 ThemeCatalog.infer_themes（自由文本行业关键词推断）、normalize_theme 支持括号后缀与大小写变体；_merge_themes 兜底链：industry→rank_reason 推断→名称+原因推断→「其他热点」，50 只焦点股 100% 有板块归属；run_bridge：同义子标签涨停统计取 max 再与桶内涨停取大（limitUpCount，别名计数不相加）、_leader_stock 按 (涨跌幅,连板,共振分) 选领涨（全绿才按共振分）、_ladder_summary 只讲内部结构（最高N板(名称)/首板N家/领涨）",
+    "S5": "contracts.ts：mapSnapshot 对 themeLadders[].stocks 统一走 mapStock（桶内已是完整字典，与榜单股合并后一次映射）——第 31~50 名梯队股不再丢 changePct/amountYi/排名/nicknames/sentiment/highlights；RadarThemeLadder 增 limitUpCount(nullable)；mapHighlight 兼容 camel/snake 双读（postId/post_id、sentiment/sentimentLabel/sentiment_label、publishedAt/published_at、likeCount/like_count、viewCount/view_count、sentimentTerms/sentiment_terms、author/authorName/author_name），excerpt 优先取 content，isKol 与 isVipYouzi 兼容",
+    "collectorFix": "eastmoney_guba.py（开工单文件清单未列、但门禁依赖的必要最小修）：① _iso_from_ms 兼容接口新形状——post_publish_time 从毫秒戳变成「2026-10-17 20:02:14」字符串，旧样本(毫秒)不受影响；② 移动端正文页被 WAF「身份核实」拦下时静默返空，改为显式 note_failure，快照 dataQuality.httpFailures 才说得出「为什么高亮帖只有标题」",
+    "notDone": [
+      "股吧帖子正文（content）：移动端正文页当前被 WAF 拦截，本批 live 高亮 content 为空串（字段已全量透传，离线样本与命中的淘股吧/雪球帖有正文，radar-page.test.ts 覆盖）；未改高亮挑选口径（仍按 评论+点赞 取 3 条，属 LITE-04/评审 A7 范围）",
+      "本批 live 采集雪球 0 帖、淘股吧 20 帖 0 只命中池内股票，故 live 高亮全部来自东财股吧——采集侧缺口已如实记入 httpFailures，未为凑数插入低质帖",
+      "UI 渲染新字段（publishedAt/likeCount/content/qualityTier）留给 LITE-04；radar-route.tsx 本轮未动"
+    ]
+  },
+  "gates": [
+    {
+      "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\" -v",
+      "exitCode": 0,
+      "tests": 77,
+      "failures": 0,
+      "result": "77/77 通过，全程离线；新增：否定前缀情绪（含「未来」不误伤、「尚未」正确否定）、事件词不建板块、兜底链四级、同义归并、infer_themes、领涨口径、摘要格式、serialize_highlights 全字段、top_resonance_limit 默认 50、股吧时间双形状",
+      "evidence": "bridge-tests.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "零报错",
+      "evidence": "typecheck.txt"
+    },
+    {
+      "command": "npm run build -w @aihot/web",
+      "exitCode": 0,
+      "result": "生产构建零报错",
+      "evidence": "web-build.txt"
+    },
+    {
+      "command": "DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node --test tests/architecture.test.ts modules/short-term-radar/tests/radar.test.ts modules/short-term-radar/scripts/radar-page.test.ts",
+      "exitCode": 0,
+      "tests": 19,
+      "failures": 0,
+      "result": "19/19 通过：architecture 7 + radar 10（新增 mapSnapshot 尾股完整性、mapHighlight 双兼容、高亮非中性情绪与 publishedAt 断言）+ radar-page 2（抽屉新增淘股吧复盘帖断言）；在离线快照上执行",
+      "evidence": "node-tests.txt"
+    },
+    {
+      "command": "本地 3088 端口实测（api + 生产 web 服务器，四路径 SSR 断言）",
+      "exitCode": 0,
+      "result": "4/4 PASS（默认板块视角 6 项 / Top 50 表格 8 项 / ?theme= 选板块 3 项 / ?stock=300308 抽屉 10 项，含按名/黑话命中的淘股吧复盘帖）",
+      "evidence": "radar-3088.txt"
+    },
+    {
+      "command": "真实管道干跑（COLLECT_ENABLED=false MODEL_CALLS_ENABLED=false FEISHU_CONTENT_PUSH_ENABLED=false FEISHU_INTERNAL_ENABLED=false INDEXNOW_SUBMIT_ENABLED=false，python3 -m bridge.run_bridge --dry-run）",
+      "exitCode": 0,
+      "result": "dry-run 零推送：ths/dc 各 100 行、涨停池 61 行、legacy 59 项，归类帖 358 条覆盖 49 只；.data/short-term-radar-snapshot.json 落 live（50 只/102 组），副本见 live-snapshot-sample.json",
+      "evidence": "dry-run.txt"
+    },
+    {
+      "command": "干跑快照门禁指标核验（snapshot-verify.txt 逐项断言）",
+      "exitCode": 0,
+      "result": "[PASS] topResonance=50；[PASS] themeLadders 115→102 且共封装光学(CPO)/飞行汽车(eVTOL)/PCB概念/黄金概念/铜缆高速连接/三部门联合调查/复牌/尊界V800/界面财联社重组/参股锴威特半导体 全部消失；[PASS] themes 非空 50/50 且「其他热点」兜底在榜；[PASS] 高亮 139 条含非 neutral 单帖情绪（bull25/bear10/divergence2）；[PASS] publishedAt 139/139；[PASS] content 字段全量在场",
+      "evidence": "snapshot-verify.txt"
+    },
+    {
+      "command": "git status --short && git diff --check",
+      "exitCode": 0,
+      "result": "diff --check 干净；改动全部在开工单边界内（另含 1 处门禁依赖的采集器最小修，见 collectorFix）；无凭据泄漏",
+      "evidence": "git-status.txt"
+    }
+  ],
+  "environment": {
+    "python": "CPython 3.14.5，零第三方依赖",
+    "pipeline": "/Users/yimu/Projects/YM_Capital/YM-data-pipeline；ths/dc 热榜 success 各 100 行，intraday/legacy degraded 但有数（61 行涨停池 / 59 项+reason_stats）",
+    "database": "postgres://127.0.0.1:5432/ymhot_test",
+    "snapshot": ".data/short-term-radar-snapshot.json（live，2026-10-17T20:23:54+08:00，tradeDate 20261016）",
+    "notes": "Python 单测的 TestEndToEnd 会把 .data 覆写回离线快照，故真实干跑必须是最后的 bridge 动作（本轮已按此顺序收尾）"
+  },
+  "findings": [
+    "开工单路径是理想化树（bridge/stock_today_bridge/、sentiment.py、modules/short-term-radar/shared/contracts.ts 均不存在），按实际平铺结构实施；字段名同样以仓库实体为准（CommunityPost 无 is_kol/quality_tier/source，isKol 映射 is_vip_youzi、qualityTier 由 is_deep_logic/is_vip_youzi 派生、source 映射 platform）",
+    "CLI --top 默认 30 会静默压掉 config 的 top_resonance_limit——改默认值必须同时把 CLI 默认改 None，否则干跑仍是 30 只",
+    "股吧接口 2026-10-17 起把 post_publish_time 从毫秒戳换成字符串，旧解析全变 None；移动端正文页变成「身份核实」WAF 页（2.8KB），帖子正文拿不到——两者都做了兼容/记账处理",
+    "「铜缆高速连接」在 themes_v2 里本是独立主题（4 只成分股），仅加 alias 会被标准名优先占用而失效，必须整主题并入（成分股+别名一起搬）再删原主题",
+    "泛词「机器人」移出人形机器人别名后，reason_stats 的「机器人=5」不再计入人形机器人，其排序让位给 AI算力芯片/GPU——这是评审 A2 要求的去窄化，属预期变化"
+  ],
+  "knownNuances": [
+    "node 门禁三文件须在离线快照上跑（radar.test.ts 断言 mode=offline_fixtures）；真实干跑放最后，.data 落 live",
+    "高亮帖情绪标签四值（bull/bear/divergence/neutral）中 neutral 含「无方向词」与「未评分」两种来源，契约层暂未区分（评审 B1 的 unknown 态留待后续契约演进）",
+    "leaderStock（TS）与 _leader_stock（Python）是同口径双实现，两侧各有单测；领涨只在有涨幅时按涨幅选，全绿板块按共振分选代表股",
+    "板块 limitUpCount = max(同义子标签统计, 桶内涨停数)，只数焦点池成员，不等于全市场板块涨停家数（评审 A3 的口径分离在 UI 层由 LITE-04 呈现）"
+  ]
+}

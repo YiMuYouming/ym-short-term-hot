@@ -1,0 +1,97 @@
+{
+  "workOrder": "LITE-04-20261017",
+  "title": "前端密度、缺失值诚实化与抽屉交互精修（radar-route.tsx 重写 + 两测试文件）",
+  "completedAt": "2026-10-17T21:40:00+08:00",
+  "deliveredBy": "稳米",
+  "git": {
+    "commit": "45b1d36",
+    "commitMessage": "chore(handover): archive Grok waves 4-6 research and record Phase 1 closeout + SH-04 checklist in PROGRESS.md",
+    "workOrderBaseline": "45b1d36",
+    "committed": false,
+    "note": "按惯例保留工作区 diff 待谷米审查；changedFiles 仅列 LITE-04 文件，git status 里其余条目为前三个阶段交付与派单前归档改动",
+    "changedFileCount": 3,
+    "changedFiles": [
+      "modules/short-term-radar/web/radar-route.tsx",
+      "modules/short-term-radar/tests/radar.test.ts",
+      "modules/short-term-radar/scripts/radar-page.test.ts"
+    ]
+  },
+  "scope": {
+    "S1": "缺失值与降级诚实化：boardBadge/boardFactText——>=2 显示「N 连板」、===1 显示「首板」（不再「1 连板」）、0 板但涨幅 >=9.8 显示「涨停/待核连板」、盘中池降级且有归因显示「连板待补」，抽屉无信号明说「未连板」；sealTimeText——连板股缺封板时间显示「封板时间待补」（彻底消灭「4 连板 + 未封板/非涨停」自相矛盾），非连板涨幅够涨停同样待补，真正未涨停才写「未涨停」；页头从笼统「实时」改为「交易日 2026-10-16 · 10-17 20:23 更新」（tradeDate 取自 dataQuality，纯字符串切片不碰本地时区），模式徽章改显真实采集/离线样本",
+    "S2": "视角 1 密度：ThemePicker 主线默认展示（stockCount>=2 或 limitUpCount>=2，不足 12 个补足前 15 个），单股长尾折叠进底部「展开其余 N 个单股异动概念 ▾/收起单股概念 ▴」，URL 选中板块落在折叠区自动展开；顶部新增「筛选板块或成分股...」本地过滤框（匹配板块名/股票名/代码/symbol）；领涨文案按涨幅分流——正涨幅「领涨 名称 +x%」、全绿板块改称「代表 名称 x%」；ThemeStockRow 改紧凑双行（第一行 名称+代码+连板徽章+封板时间 ｜ 涨跌幅大号+成交额，第二行 一句话为什么火 ｜ 紧凑社区徽章「15帖 · 偏多 60%」），移除全宽 SentimentBar",
+    "S3": "视角 2 表格：table-layout fixed + colgroup 固定列宽（排名 64/股票 176/涨跌连板 128/板块 176/原因自适应/社区 144，min-w 960px）；股票名包裹原生 button（Tab 聚焦、回车打开、stopPropagation 不与行点击双触发）；板块胶囊最多 2 个 +「+N」；为什么火列 line-clamp-2 行高整齐；SentimentBar 重写——有有效帖即按真实三色比例渲染（不再因「情绪中性」抹灰），0 帖才是全灰占位+「暂无评论」，样本 <5 条加 opacity-65 与「小样本」标注",
+    "S4": "StockDrawer 交互闭环：头部「← 上一只 / 下一只 →」沿当前视角列表切换并显示 序号/总数，键盘 ArrowLeft/ArrowRight 经 useModal.onKeyDown 切换（Escape 仍关闭）；useEffect 监听 stock.code 变化——平台筛选重置为全部、收起长文本、滚回顾区顶部；布局重排为 一句话 limitReason 置顶 → 六格硬指标（连板/封板/成交额/换手率/同花顺/东财）→ whyHot 详细逻辑（超 110 字或含换行默认 line-clamp-3 + 「展开完整逻辑 ▾/收起 ▴」）→ 所属板块 → 社区情绪 → 各平台评价；平台 Tab 带计数「全部 (N)/淘股吧 (N)/雪球 (N)/东财股吧 (N)」且 0 计数弱化；HighlightCard 补单帖情绪徽章、发布时间（MM-DD HH:mm）、正文摘要（line-clamp-2）、点赞数；顺带修复 LITE-03 后 HighlightCard 仍比对旧情绪常量（extreme_bull_consistent 等）导致全部退化为「中性」的陈旧映射，改为四值 bull/bear/divergence/neutral；样式清理：--page-max-board（未定义）改 --page-max-wide，fadeIn/fadeOut（未定义 keyframes）改 anim-fade-in/anim-fade-out，抽屉宽度改 min(100vw,560px)",
+    "tests": "radar.test.ts 新增「tradeDate 与四值单帖情绪」契约断言（页头与卡片的数据来源）；radar-page.test.ts 更新默认视图断言（交易日/筛选框/长尾折叠/首板/代表/不再有 1 连板）、Top 50 断言（colgroup/小样本/+N）、抽屉断言（上一只下一只/平台计数/展开完整逻辑）并新增「4 连板不得显示未封板」回归锁",
+    "notDone": [
+      "首页重定向与导航栏弱化仍未做（LITE-02 起连续三个开工单标为可选/不在边界）：/?view=stocks 返回 200 但渲染的是 AIHOT 资讯流首页，非雷达页",
+      "换手率字段 bridge 未采集（快照恒 0），抽屉硬指标显示「—」",
+      "抽屉长文折叠/平台计数等新交互只有 SSR 断言，无浏览器级交互测试（项目无 Playwright 运行时依赖）"
+    ]
+  },
+  "gates": [
+    {
+      "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\" -v",
+      "exitCode": 0,
+      "tests": 77,
+      "failures": 0,
+      "result": "77/77 通过（LITE-04 未改 bridge，回归确认无破坏）",
+      "evidence": "bridge-tests.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "零报错",
+      "evidence": "typecheck.txt"
+    },
+    {
+      "command": "npm run build -w @aihot/web",
+      "exitCode": 0,
+      "result": "生产构建零报错（页面测试跑生产构建，路由重写后已重建）",
+      "evidence": "web-build.txt"
+    },
+    {
+      "command": "DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node --test tests/architecture.test.ts modules/short-term-radar/tests/radar.test.ts modules/short-term-radar/scripts/radar-page.test.ts",
+      "exitCode": 0,
+      "tests": 21,
+      "failures": 0,
+      "result": "21/21 通过：architecture 7 + radar 11（含 LITE-04 新增 tradeDate/四值情绪断言）+ radar-page 3（含 4 连板不显示未封板回归锁）；在离线快照上执行",
+      "evidence": "node-tests.txt"
+    },
+    {
+      "command": "本地 3088 端口实测（api + 生产 web 服务器，开工单四路径 + 矛盾文案回归）",
+      "exitCode": 0,
+      "result": "7/7 PASS：/radar（交易日/筛选框/长尾折叠/首板/代表/题材名 6 项）、/?view=stocks 200、/radar?view=stocks（表头/小样本/中际旭创 5 项）、/radar?stock=000530（4 连板/封板时间待补/上一只/下一只/为什么火 5 项）、两路径均无「未封板」矛盾文案、/api/site/radar 200 且 50 只",
+      "evidence": "radar-3088.txt"
+    },
+    {
+      "command": "真实管道干跑（ valves 全 false，python3 -m bridge.run_bridge --dry-run）",
+      "exitCode": 0,
+      "result": "dry-run 零推送；.data/short-term-radar-snapshot.json 落 live（50 只/102 组，tradeDate 20261016），副本见 live-snapshot-sample.json",
+      "evidence": "dry-run.txt"
+    },
+    {
+      "command": "git status --short && git diff --check",
+      "exitCode": 0,
+      "result": "diff --check 干净；改动 3 个文件全部在开工单边界内；无凭据泄漏",
+      "evidence": "git-status.txt"
+    }
+  ],
+  "environment": {
+    "python": "CPython 3.14.5，零第三方依赖",
+    "database": "postgres://127.0.0.1:5432/ymhot_test",
+    "snapshot": ".data/short-term-radar-snapshot.json（live，tradeDate 20261016，50 只/102 组）",
+    "notes": "页面测试跑生产构建，路由重写后必须 npm run build -w @aihot/web 再跑 node 页面测试（首轮因构建过期三处 SSR 失败，重建后全绿）；Python 单测的 TestEndToEnd 会把 .data 覆写回离线快照，故真实干跑排在最后"
+  },
+  "findings": [
+    "LITE-03 把高亮帖情绪改成四值（bull/bear/divergence/neutral）后，HighlightCard 的比对常量仍是旧内部名（extreme_bull_consistent 等），所有帖子退化成「中性」徽章——LITE-04 重写映射时发现并修复，radar.test.ts 新增四值断言防回归",
+    "页面测试（radar-page.test.ts）跑的是 build/server 生产构建而非源码：路由重写后不重建会出现「源码对、构建旧」的假失败，首轮 3 处 SSR 失败即此因",
+    "live 快照的 102 组梯队里 79 组是单股长尾——主线默认展示 + 折叠后左侧从 102 行降到 23 行，筛选框兜底定位",
+    "离线样本里 8 个全绿板块（theme_base 成分股无行情数据）恰好覆盖「代表」口径，11 个全绿板块在 live 快照同样成立"
+  ],
+  "knownNuances": [
+    "intradayDegraded 只在 dataQuality.sources.intraday.status=degraded 时为真（live 批次的降级路径），离线样本是 fixture 状态，「连板待补」分支由逻辑单测思路覆盖而非页面断言",
+    "drawerStocks（上一只/下一只的列表）视角一下拉取选中板块的 stocks、视角二取共振榜；从抽屉点板块标签回板块视角后，抽屉关闭（stock=null）",
+    "whyHot 折叠阈值 110 字或含换行；展开状态在切股时重置，避免带着上一只的长文状态看下一只",
+    "封板时间/连板的「待补」口径只表达数据缺失，不替代行情核验；换手率恒「—」（bridge 未采该字段）"
+  ]
+}

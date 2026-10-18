@@ -15,7 +15,10 @@
    "LPO",
    "OCS",
    "光器件",
-   "易中天"
+   "易中天",
+   "共封装光学(CPO)",
+   "CPO概念",
+   "光通信模块"
   ],
   "representative_stocks": [
    {
@@ -164,7 +167,9 @@
    "载板",
    "ABF",
    "M9",
-   "电子布"
+   "电子布",
+   "PCB概念",
+   "印制电路板"
   ],
   "representative_stocks": [
    {
@@ -359,7 +364,6 @@
   "aliases": [
    "人形机器人",
    "具身智能",
-   "机器人",
    "Optimus",
    "擎天柱",
    "灵巧手",
@@ -370,7 +374,8 @@
    "无框电机",
    "空心杯",
    "T链",
-   "执行器"
+   "执行器",
+   "机器人概念"
   ],
   "representative_stocks": [
    {
@@ -438,7 +443,10 @@
    "飞行汽车",
    "无人机",
    "通航",
-   "空管"
+   "空管",
+   "飞行汽车(eVTOL)",
+   "飞行汽车（eVTOL）",
+   "通用航空"
   ],
   "representative_stocks": [
    {
@@ -1000,7 +1008,8 @@
    "铜",
    "铝",
    "白银",
-   "小金属"
+   "小金属",
+   "黄金概念"
   ],
   "representative_stocks": [
    {
@@ -1986,60 +1995,20 @@
   "aliases_status": "常见用语，未逐词做股吧抽样"
  },
  {
-  "standard_name": "铜缆高速连接",
-  "aliases": [
-   "铜缆",
-   "高速铜缆",
-   "铜连接",
-   "DAC",
-   "AEC",
-   "高速连接器"
-  ],
-  "representative_stocks": [
-   {
-    "code": "002130",
-    "name": "沃尔核材",
-    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
-    "role": "容量中军",
-    "role_note": "主观归类",
-    "nicknames": []
-   },
-   {
-    "code": "300913",
-    "name": "兆龙互连",
-    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
-    "role": "20cm弹性",
-    "role_note": "主观归类",
-    "nicknames": []
-   },
-   {
-    "code": "688800",
-    "name": "瑞可达",
-    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
-    "role": "20cm弹性",
-    "role_note": "主观归类",
-    "nicknames": []
-   },
-   {
-    "code": "601869",
-    "name": "长飞光纤",
-    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
-    "role": "容量中军",
-    "role_note": "主观归类",
-    "nicknames": []
-   }
-  ],
-  "source": "v2新增",
-  "aliases_status": "常见用语，未逐词做股吧抽样"
- },
- {
   "standard_name": "算力租赁/IDC",
   "aliases": [
    "算力租赁",
    "IDC",
    "数据中心",
    "智算中心",
-   "东数西算"
+   "东数西算",
+   "铜缆高速连接",
+   "铜缆",
+   "高速铜缆",
+   "铜连接",
+   "DAC",
+   "AEC",
+   "高速连接器"
   ],
   "representative_stocks": [
    {
@@ -2071,6 +2040,38 @@
     "name": "鸿博股份",
     "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
     "role": "人气老龙",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "002130",
+    "name": "沃尔核材",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "300913",
+    "name": "兆龙互连",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "688800",
+    "name": "瑞可达",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "20cm弹性",
+    "role_note": "主观归类",
+    "nicknames": []
+   },
+   {
+    "code": "601869",
+    "name": "长飞光纤",
+    "code_name_status": "已核实(东财suggest，logs/code_verify_log.json)",
+    "role": "容量中军",
     "role_note": "主观归类",
     "nicknames": []
    }

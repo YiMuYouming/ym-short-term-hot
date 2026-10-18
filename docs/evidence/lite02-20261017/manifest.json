@@ -1,0 +1,90 @@
+{
+  "workOrder": "LITE-02-20261017",
+  "title": "前端极简减法重构：热门板块 ⇄ 热门股 Top 50 双视角 + 共用个股详情抽屉",
+  "completedAt": "2026-10-17T12:40:00+08:00",
+  "deliveredBy": "稳米",
+  "git": {
+    "commit": "45b1d36",
+    "commitMessage": "chore(handover): archive Grok waves 4-6 research and record Phase 1 closeout + SH-04 checklist in PROGRESS.md",
+    "workOrderBaseline": "45b1d36",
+    "committed": false,
+    "note": "按惯例保留工作区 diff 待谷米审查；changedFiles 仅列 LITE-02 文件，git status 里其余条目（AGENTS.md/PROGRESS.md/实施与验收计划.md、SH01~03 开工单删除、docs/archive/、LITE01/LITE02 开工单）为派单前已在工作区的归档改动与 LITE-01 交付",
+    "changedFileCount": 4,
+    "changedFiles": [
+      "modules/short-term-radar/contracts.ts",
+      "modules/short-term-radar/web/radar-route.tsx",
+      "modules/short-term-radar/tests/radar.test.ts",
+      "modules/short-term-radar/scripts/radar-page.test.ts"
+    ]
+  },
+  "scope": {
+    "S1": "contracts.ts：新增 sealedCount(ladder)（板块内涨停家数）与 leaderStock(ladder)（领涨代表股：身位优先、同身位取共振分最高）两个纯函数，供热门板块列表渲染与测试",
+    "S2": "web/radar-route.tsx 全量重写为极简两视角 + 共用抽屉：① 顶部只有 [🔥 热门板块] ⇄ [📈 热门股 Top 50] 两个 Tab；② 视角一默认选中热度第一板块，左列按热度排列全部板块（名称/热股数/涨停数/最高连板/领涨代表股），右列展示选中板块内热门股（涨跌幅、连板、封板、一句话为什么火、社区情绪简况）；③ 视角二为干净表格（排名+ths#/dc# 标记、股票+代码+黑话、涨跌幅·连板、可点击的所属板块标签、为什么火摘要、有效帖+多空简况）；④ 点任意股票打开同一个抽屉：为什么火（whyHot 全文置顶醒目 + limitReason 一句话）+ 连板/封板/成交额/同花顺榜/东财榜硬信息网格 + 所属板块回跳 + 社区情绪 + 各平台真实评价（全部/淘股吧/雪球/东财股吧切换，水贴已滤，带作者/互动数/原帖链接）",
+    "S3": "砍掉旧页面繁复件：五分身位桶嵌套卡片、身位筛选 chips、搜索框（API 侧 theme/role/q 过滤与 agent Markdown 视图保持不变，contracts.ts/server.ts 过滤逻辑未动）；视图状态全部进 URL（view/theme/stock）可分享可刷新，resonance 旧参数名兼容",
+    "S4": "tests/radar.test.ts：新增「api 回答极简页面渲染的为什么火事实」（board 三字段类型、whyHot/limitReason 非空、梯队股带为什么火）与 sealedCount/leaderStock 单测；scripts/radar-page.test.ts 重写 SSR 断言（两个 Tab、板块列表、Top 50 表头列、?theme= 选板块、?stock= 抽屉的为什么火/行业原因/封板/三平台切换/有效帖）",
+    "notDone": [
+      "首页重定向与导航栏弱化未做：home.tsx 在开工单中标为可选，重定向会破坏 AIHOT 资讯流首页契约及其既有测试，导航栏配置不在本单文件边界内；雷达经侧边栏/手机 Tab/直访 /radar 进入",
+      "server.ts 的 agent Markdown 视图（题材主线梯队/跨平台人气共振标题）未改：不在本单文件边界，面向 agent 的富视图保持原样",
+      "页面级搜索框按开工单「只保留两个视角 + 一个抽屉」砍掉；API 的 ?q=/?theme=/?role= 过滤与 radar.test.ts 契约测试保持原样"
+    ]
+  },
+  "gates": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "零报错（packages/contracts、backend、apps/api、apps/worker、tests、modules、@aihot/web 全量）",
+      "evidence": "typecheck.txt"
+    },
+    {
+      "command": "npm run build -w @aihot/web",
+      "exitCode": 0,
+      "result": "生产构建零报错（react-router build）",
+      "evidence": "web-build.txt"
+    },
+    {
+      "command": "DATABASE_URL=postgres://127.0.0.1:5432/ymhot_test node --test tests/architecture.test.ts modules/short-term-radar/tests/radar.test.ts modules/short-term-radar/scripts/radar-page.test.ts",
+      "exitCode": 0,
+      "tests": 17,
+      "failures": 0,
+      "result": "17/17 通过：architecture 7 项分层门禁 + radar 8 项契约（含 LITE-02 新增 2 项）+ radar-page 2 项 SSR 页面渲染",
+      "evidence": "node-tests.txt"
+    },
+    {
+      "command": "本地 3088 端口实测（api + 生产 web 服务器，四个路径抓 SSR HTML 断言）",
+      "exitCode": 0,
+      "result": "4/4 PASS：默认视角（两个 Tab/按热度排序/低空经济/eVTOL/为什么火/华力创通/连板）、?view=stocks 表格（排名/股票/涨跌幅·连板/所属板块/为什么火/社区热度/中际旭创/ths #2）、?theme=低空经济/eVTOL 选板块、?stock=300308 抽屉（为什么火/行业原因/封板/淘股吧/雪球/东财股吧/有效帖/同花顺热榜/东财人气榜）",
+      "evidence": "radar-3088.txt"
+    },
+    {
+      "command": "python3 -m unittest discover -s bridge/tests -p \"test_*.py\"",
+      "exitCode": 0,
+      "tests": 65,
+      "failures": 0,
+      "result": "65/65 通过（LITE-02 未改 bridge，回归确认无破坏）",
+      "evidence": "bridge-tests.txt"
+    },
+    {
+      "command": "git status --short && git diff --check",
+      "exitCode": 0,
+      "result": "diff --check 干净；LITE-02 改动 4 个文件全部在开工单边界内；无凭据泄漏",
+      "evidence": "git-status.txt"
+    }
+  ],
+  "environment": {
+    "web": "apps/web 生产构建（react-router 8.4.0）+ node server.ts，WEB_PORT=3088，SITE_URL=http://127.0.0.1:3088，TRUST_PROXY=false，API_BASE_URL 指向进程内 api",
+    "database": "postgres://127.0.0.1:5432/ymhot_test",
+    "snapshot": ".data/short-term-radar-snapshot.json（offline_fixtures 基线，副本见 short-term-radar-snapshot.json；bridge 未变，live 快照证据在 LITE-01）"
+  },
+  "findings": [
+    "React SSR 会在相邻文本插值之间插入注释标记（ths # 与名次分成两个文本节点，HTML 里中间多一个注释），页面断言与可复制文案都要求把名次拼成单模板串，排名标记已改为单插值",
+    "startWebServer 的 env 覆盖若改 WEB_PORT，会与其上报的 origin（探针端口）脱节导致 fetch ECONNREFUSED，且异常路径不杀子进程会残留占住 3088（下次 EADDRINUSE）；3088 实测改为自行 spawn web 服务器并 finally 清理，一次性脚本跑完即删",
+    "installModules 必须在 buildApp 之前调用（模块路由随 api 一起装配），否则 /api/site/radar 无路由、页面整体 500",
+    "contracts.ts 的 sealedCount/leaderStock 把「板块内涨停家数/领涨代表股」变成可单测纯函数，板块列表不再需要前端解析 summary 文本"
+  ],
+  "knownNuances": [
+    "页面不再有搜索框与身位筛选：API 的 theme/role/q 过滤、agent Markdown 视图与 radar.test.ts 契约测试均保持原样，分享链接 /radar?theme=X 的语义从「过滤」变为「选中板块」",
+    "视角二表格行整行可点开抽屉，板块标签按钮 stopPropagation 回板块视角；抽屉打开时 useModal 锁滚动、Esc 关闭、焦点圈定，行为与旧抽屉一致",
+    "默认选中热度第一板块；?theme= 未命中任何梯队时静默退回第一个，不报错",
+    "radar-page.test.ts 读仓库 .data/short-term-radar-snapshot.json，跑它之前需先有离线快照（python3 -m bridge.run_bridge --offline-fixtures --sync-gold --dry-run）"
+  ]
+}

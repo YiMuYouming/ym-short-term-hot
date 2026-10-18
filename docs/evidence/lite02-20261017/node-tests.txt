@@ -1,0 +1,25 @@
+✔ the radar page renders the two minimal views over one snapshot (LITE-02) (259.772292ms)
+✔ view, theme and stock are addressable by URL; the drawer shows why-hot and the communities (53.655583ms)
+✔ both views answer 200 with ladders, the board, sentiment and highlights (71.695125ms)
+✔ theme, role and nickname queries filter both views (4.697708ms)
+✔ every ladder stock carries its own theme, a qualified code and the role its summary promises (5.764708ms)
+✔ one stock answers by bare code, dotted code and symbol; an unknown code is a 404 (2.928708ms)
+✔ the api answers the why-hot facts the minimal page renders (LITE-02) (0.981333ms)
+✔ sealedCount and leaderStock describe a ladder for the theme list (LITE-02) (0.9305ms)
+✔ a missing or unreadable snapshot degrades to an empty snapshot instead of failing (1.224667ms)
+✔ the web reaches the backend only over HTTP (8.810833ms)
+✔ packages never import the apps, and nothing below the admin imports it (13.715167ms)
+✔ public routes read content only through the public read layer (0.769958ms)
+✔ the tables that carry a rule are written only by the code that owns it (6.079625ms)
+✔ the public scope and the composite rule are spelled once, in publication/scope.ts (4.750916ms)
+✔ every table and column is used by the code that reads and writes the database (45.482875ms)
+✔ every environment variable the code reads is listed in a template, and every listed one is read (49.540584ms)
+✔ modules do not import other modules (0.556083ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 895.995958

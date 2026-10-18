@@ -1,0 +1,12 @@
+[bridge] 模式=live dry_run=True push=False
+[bridge] 焦点股池 50 只（题材词典 60 个题材）
+[bridge] 采集失败：xueqiu status SZ300900: https://www.xueqiu.com/query/v1/symbol/search/status.json?count=20&comment=0&symbol=SZ300900&hl=0&source=all&sort=alpha&page=1&q=&type=11: 返回不是 JSON（Expecting value: line 1 column 1 (char 0)）
+[bridge] 采集失败：xueqiu status SZ300900: https://www.xueqiu.com/query/v1/symbol/search/status.json?count=20&comment=0&symbol=SZ300900&hl=0&source=all&sort=time&page=1&q=&type=11: 返回不是 JSON（Expecting value: line 1 column 1 (char 0)）
+[bridge] 采集失败：xueqiu status SZ301230: https://www.xueqiu.com/query/v1/symbol/search/status.json?count=20&comment=0&symbol=SZ301230&hl=0&source=all&sort=alpha&page=1&q=&type=11: 返回不是 JSON（Expecting value: line 1 column 1 (char 0)）
+[bridge] 采集失败：xueqiu status SZ301230: https://www.xueqiu.com/query/v1/symbol/search/status.json?count=20&comment=0&symbol=SZ301230&hl=0&source=all&sort=time&page=1&q=&type=11: 返回不是 JSON（Expecting value: line 1 column 1 (char 0)）
+[bridge] 采集失败：xueqiu status SH688592: https://www.xueqiu.com/query/v1/symbol/search/status.json?count=20&comment=0&symbol=SH688592&hl=0&source=all&sort=alpha&page=1&q=&type=11: 返回不是 JSON（Expecting value: line 1 column 1 (char 0)）
+[bridge] 归类帖子 364 条，覆盖 50 只票；词典情绪词 169 条、水贴正则 14 条
+[bridge] 快照已写 /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data/short-term-radar-snapshot.json（梯队 115 组、共振榜 50 只）
+[bridge] 推送 external-ym-pipeline：计划 50 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-taoguba-hot：计划 20 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-eastmoney-guba：计划 460 条 / 批次 10 / 已发 0 / 状态 dry_run

@@ -1,0 +1,35 @@
+== git status --short ==
+ M AGENTS.md
+ M PROGRESS.md
+ M bridge/config.py
+ M bridge/pipeline_loader.py
+ M bridge/run_bridge.py
+ M bridge/schema.py
+ M bridge/tests/fixtures/pipeline_sample.json
+ M bridge/tests/test_bridge.py
+ M "docs/\345\256\236\346\226\275\344\270\216\351\252\214\346\224\266\350\256\241\345\210\222.md"
+ D "docs/\345\274\200\345\267\245\345\215\225-SH01-\345\237\272\345\272\247\344\270\216\347\237\255\347\272\277KnowHow-2026-10-16.md"
+ D "docs/\345\274\200\345\267\245\345\215\225-SH02-\346\225\260\346\215\256\347\256\241\351\201\223\346\241\245\346\216\245\344\270\216\344\270\211\347\244\276\345\214\272\351\207\207\351\233\206-2026-10-16.md"
+ D "docs/\345\274\200\345\267\245\345\215\225-SH03-\345\217\214\350\247\206\345\233\276\347\237\255\347\272\277\351\233\267\350\276\276\346\250\241\345\235\227\344\270\216\347\253\257\345\210\260\347\253\257\350\201\224\350\260\203-2026-10-16.md"
+ M modules/short-term-radar/contracts.ts
+ M modules/short-term-radar/scripts/radar-page.test.ts
+ M modules/short-term-radar/tests/radar.test.ts
+ M modules/short-term-radar/web/radar-route.tsx
+?? docs/archive/
+?? docs/evidence/lite01-20261017/
+?? docs/evidence/lite02-20261017/
+?? "docs/\345\274\200\345\267\245\345\215\225-LITE01-\346\236\201\347\256\200\347\203\255\351\227\250\346\235\277\345\235\227\344\270\216\347\203\255\350\202\241\346\225\260\346\215\256\345\272\225\345\272\247-2026-10-17.md"
+?? "docs/\345\274\200\345\267\245\345\215\225-LITE02-\345\211\215\347\253\257\346\236\201\347\256\200\345\217\214\350\247\206\350\247\222\344\270\216\344\270\252\350\202\241\350\257\246\346\203\205\351\207\215\346\236\204-2026-10-17.md"
+
+== git diff --check ==
+(clean)
+
+== HEAD ==
+45b1d36
+
+== 3088 实测（radar-3088.txt）==
+origin: http://127.0.0.1:3088 | api: 55160 | dataDir: /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data
+[PASS] 默认视角（热门板块） (/radar) 7 项断言全中
+[PASS] 视角二（热门股 Top 50 表格） (/radar?view=stocks) 8 项断言全中
+[PASS] 板块选中（?theme=） (/radar?theme=%E4%BD%8E%E7%A9%BA%E7%BB%8F%E6%B5%8E%2FeVTOL) 3 项断言全中
+[PASS] 个股详情抽屉（?stock=） (/radar?stock=300308) 9 项断言全中

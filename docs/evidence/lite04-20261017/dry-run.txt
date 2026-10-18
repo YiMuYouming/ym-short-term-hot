@@ -1,0 +1,12 @@
+[bridge] 模式=live dry_run=True push=False
+[bridge] 焦点股池 50 只（题材词典 59 个题材）
+[bridge] 采集失败：eastmoney_guba body 000530: 移动端正文页无帖子正文（WAF 拦截或改版）
+[bridge] 采集失败：eastmoney_guba body 601811: 移动端正文页无帖子正文（WAF 拦截或改版）
+[bridge] 采集失败：eastmoney_guba body 300006: 移动端正文页无帖子正文（WAF 拦截或改版）
+[bridge] 采集失败：eastmoney_guba body 300394: 移动端正文页无帖子正文（WAF 拦截或改版）
+[bridge] 采集失败：eastmoney_guba body 300364: 移动端正文页无帖子正文（WAF 拦截或改版）
+[bridge] 归类帖子 353 条，覆盖 49 只票；词典情绪词 169 条、水贴正则 14 条
+[bridge] 快照已写 /Users/yimu/Projects/YM_Capital/ym-short-term-hot/.data/short-term-radar-snapshot.json（梯队 102 组、共振榜 50 只）
+[bridge] 推送 external-ym-pipeline：计划 50 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-taoguba-hot：计划 20 条 / 批次 1 / 已发 0 / 状态 dry_run
+[bridge] 推送 external-eastmoney-guba：计划 477 条 / 批次 10 / 已发 0 / 状态 dry_run

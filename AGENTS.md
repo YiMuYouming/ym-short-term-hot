@@ -1,20 +1,22 @@
 # YM-ShortTerm-Hot · Agent 规范与协作边界
 
 本文件是 `/Users/yimu/Projects/YM_Capital/ym-short-term-hot` 的权威 Agent 入口。任何 Agent 进入本仓库后，按以下顺序读取上下文：
-1. 先读 [`PROGRESS.md`](PROGRESS.md)（按 `当前摘要 → 有效边界与决定 → 未完成队列 → 最近记录` 顺序读，不要只读文件末尾）；
-2. 再读当前处于激活状态的开工单（见 `PROGRESS.md` 的“下一步唯一任务”，首期第一阶段为 [`docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md`](docs/开工单-SH01-基座与短线KnowHow-2026-10-16.md)）；
-3. 需要了解全局蓝图时读 [`docs/实施与验收计划.md`](docs/实施与验收计划.md)；需要查阅 AIHOT 底层机制时读 [`docs/architecture.md`](docs/architecture.md)、[`docs/customize.md`](docs/customize.md) 与 [`docs/upstream/AIHOT-AGENTS.md`](docs/upstream/AIHOT-AGENTS.md)。
+1. 先读 [`PROGRESS.md`](PROGRESS.md)（按 `当前摘要 → 阶段队列 → 历史归档索引` 顺序读，不要只读文件末尾）；
+2. 再读当前处于激活状态的 V2 极简重构开工单：
+   - 第一步（数据底座）：[`docs/开工单-LITE01-极简热门板块与热股数据底座-2026-10-17.md`](docs/开工单-LITE01-极简热门板块与热股数据底座-2026-10-17.md)
+   - 第二步（前端减法重构）：[`docs/开工单-LITE02-前端极简双视角与个股详情重构-2026-10-17.md`](docs/开工单-LITE02-前端极简双视角与个股详情重构-2026-10-17.md)
+3. 需要了解全局蓝图时读 [`docs/实施与验收计划.md`](docs/实施与验收计划.md)（旧版 V1 已归档至 [`docs/archive/v1-aihot-heavy/`](docs/archive/v1-aihot-heavy/)，请勿参考旧版复杂卡片设计）；需要查阅 AIHOT 底层机制时读 [`docs/architecture.md`](docs/architecture.md)、[`docs/customize.md`](docs/customize.md) 与 [`docs/upstream/AIHOT-AGENTS.md`](docs/upstream/AIHOT-AGENTS.md)。
 
 ---
 
-## 1. 协作分工铁律（谷米 × 稳米）
+## 1. 协作分工铁律（谷米 PM × 稳米 实施）
 
-- **谷米（规划、开单与审查）**：
-  - 负责制定分阶段实施方案、签发具体开工单（`SH-01`、`SH-02`、`SH-03`……）；
-  - 在稳米完成一个阶段后，独立核验 git diff、测试回执、架构边界与契约一致性，出具审计结论（通过后才签发下一阶段开工单）。
+- **谷米（PM / 规划、开单与审查）**：
+  - 负责制定 V2 极简分阶段实施方案、签发具体开工单（`LITE-01`、`LITE-02`……）；
+  - 在稳米完成一个阶段后，独立核验 git diff、测试回执、架构边界与数据真实性，出具审计结论或反馈（通过后再推进下一阶段）。
 - **稳米（分阶段工程实施）**：
   - 严格在当前开工单划定的文件与功能边界内施工；
-  - **完成一个阶段即停**：跑通本阶段全部门禁测试、生成 `docs/evidence/<单号>/` 证据与 `manifest.json`、按 [`../shared/progress-workflow.md`](../shared/progress-workflow.md) 更新 `PROGRESS.md` 后立即停止，等待弈沐转交谷米审计，**不得自行跨阶段继续开发下一阶段**。
+  - **完成一个阶段即停**：跑通本阶段全部门禁测试、生成 `docs/evidence/<单号>/` 证据与 `manifest.json`、按 [`../shared/progress-workflow.md`](../shared/progress-workflow.md) 更新 `PROGRESS.md` 后立即回报谷米审查，**不得自行跨阶段继续开发下一阶段**。
 
 ---
 

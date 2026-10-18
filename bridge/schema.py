@@ -36,9 +36,12 @@ class FocusStock:
     hot_rank_dc: int | None = None     # 东财热榜名次
     hot_rank_xq: int | None = None     # 雪球热股榜名次
     taoguba_mentions: int = 0
-    sources: tuple[str, ...] = ()      # ths / dc / intraday / theme_base
+    sources: tuple[str, ...] = ()      # ths / dc / intraday / legacy / theme_base
     resonance_score: float = 0.0
     platforms_hit: tuple[str, ...] = ()
+    limit_reason: str = ""             # 一句话涨停/热门原因标签（如「卫星通信芯片+低空经济」）
+    why_hot: str = ""                  # 详细原因正文（优先同花顺 rank_reason，其次涨停原因+连板描述）
+    seal_time: str = ""                # 封板时间（涨停池如实记录，未封/非涨停为空）
 
     @property
     def symbol(self) -> str:
@@ -69,6 +72,9 @@ class FocusStock:
             "sources": list(self.sources),
             "resonanceScore": round(self.resonance_score, 1),
             "platformsHit": list(self.platforms_hit),
+            "limitReason": self.limit_reason,
+            "whyHot": self.why_hot,
+            "sealTime": self.seal_time,
         }
 
 

@@ -65,6 +65,27 @@ CONTEXT_CUES: tuple[str, ...] = (
     "出货砸", "主力出货", "主力砸", "出货了", "砸了", "拉板", "封板", "涨停", "打板", "龙头", "低吸",
 )
 
+# 分句否定前缀（LITE-03）：正向情绪词被这些前缀修饰时不是看多——「无法继续涨停」「不能连板」
+# 「谨防追高」都要按负向计分。前缀必须在命中词前方同一分句内（未被标点隔断）。
+NEGATION_PREFIXES: tuple[str, ...] = (
+    "无法", "不能", "不会", "难以", "未能", "没能", "不再", "不可能", "不看好", "谨防", "小心", "警惕", "没有",
+)
+# 单字否定前缀只认紧邻（前 1~2 字），避免「未来」「艰难」等无关词误伤
+NEGATION_CHARS: tuple[str, ...] = ("未", "难", "别", "莫")
+CLAUSE_BREAKS = "，。！？；,.!?;"
+
+
+def _negated_before(text: str, start: int) -> bool:
+    """命中词前方（同一分句内、1~6 字窗口）是否带否定前缀。"""
+    window = text[max(0, start - 6) : start]
+    cut = max((index + 1 for index, ch in enumerate(window) if ch in CLAUSE_BREAKS), default=0)
+    clause = window[cut:]
+    if not clause:
+        return False
+    if any(prefix in clause for prefix in NEGATION_PREFIXES):
+        return True
+    return any(ch in clause[-2:] for ch in NEGATION_CHARS)
+
 # 情绪标签门槛：占比要够高且样本够多，否则只算「情绪中性」（1 条帖不叫一致亢奋）
 LABEL_MIN_RATIO = 55.0
 LABEL_MIN_POSTS = 2
@@ -182,6 +203,19 @@ class SentimentEngine:
                 )
                 if not rule_hit:
                     continue  # 泛词只在中性语境出现，忽略
+            # 分句否定前缀：「无法继续涨停」不是看多，正向词被否定时改记负分（LITE-03）
+            if entry.category == SENTIMENT_BULL and _negated_before(text, text.find(entry.term)):
+                matched.append(
+                    SentimentEntry(
+                        term=entry.term,
+                        weight=-entry.weight,
+                        category=SENTIMENT_BEAR,
+                        context_dependent=entry.context_dependent,
+                        meaning="句内否定前缀修正：正向词不计看多，改记负分",
+                    )
+                )
+                consumed.append(entry.term)
+                continue
             consumed.append(entry.term)
             matched.append(entry)
         return matched

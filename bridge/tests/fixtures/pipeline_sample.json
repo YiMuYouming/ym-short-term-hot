@@ -1,133 +1,388 @@
 {
-  "_comment": "离线管道样本：结构对齐 YM-data-pipeline contract 1.0 的 items/indicators 形状",
+  "_comment": "离线管道样本：字段形状对齐 YM-data-pipeline contract 1.0 与 2026-10-17 实测真实返回（ths/dc 的 ts_code/ts_name/pct_change/concept/rank_reason，limit_up 的 board/pct/industry/seal_time，legacy_hot_rank 的 reason/reason_stats）；data 外层包装与在线一致，rank_reason 内的换行保留 API 原样的字面 \\n",
   "ths_hot": {
     "_meta": {
-      "status": "ok",
-      "provider": "fixture",
-      "data_as_of": "2026-10-16T10:30:00+08:00"
+      "contract_version": "1.0",
+      "intent": "market_hot_rank",
+      "status": "success",
+      "provider_used": "stocktoday",
+      "fetched_at": "2026-10-17T09:57:00+08:00"
     },
-    "items": [
-      {
-        "code": "300308",
-        "name": "中际旭创",
-        "rank": 1,
-        "zdpct": 20.01,
-        "amount": 8260000000
-      },
-      {
-        "code": "300502",
-        "name": "新易盛",
-        "rank": 2,
-        "zdpct": 19.98,
-        "amount": 5140000000
-      },
-      {
-        "code": "688256",
-        "name": "寒武纪",
-        "rank": 3,
-        "zdpct": 12.3,
-        "amount": 4020000000
-      },
-      {
-        "code": "300750",
-        "name": "宁德时代",
-        "rank": 4,
-        "zdpct": 3.21,
-        "amount": 6300000000
-      },
-      {
-        "code": "002261",
-        "name": "拓维信息",
-        "rank": 5,
-        "zdpct": 10.02,
-        "amount": 2100000000
-      },
-      {
-        "code": "600410",
-        "name": "华胜天成",
-        "rank": 6,
-        "zdpct": 10.0,
-        "amount": 860000000
-      }
-    ]
+    "data": {
+      "source": "ths",
+      "trade_date": "20261016",
+      "items": [
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "000530.SZ",
+          "ts_name": "冰山冷热",
+          "rank": 1,
+          "pct_change": 9.96,
+          "current_price": 7.62,
+          "hot": 562922.0,
+          "concept": "[\"冰雪产业\", \"体育产业\"]",
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "行业原因：\\n据黑龙江文旅，10月12日，\"冰雪之冠 龙江有约\"黑龙江省冰雪旅游发展促进会2026—2027冰雪季推介会暨启动仪式在广州举行，园区占地面积将扩至125万平方米，创造历届规模新高。\\n公司原因：\\n1、据2025年12月24日互动易，公司近年承接了多项代表性商业冰雪工程，包括广州融创茂室内滑雪场项目、上海耀雪冰雪世界室内综合性冰雪场馆项目等。\\n2、据2026年9月18日投资者关系活动记录表，公司研发数据中心液冷冷源的干冷器、氟泵系统、冷水系统，部分产品已小批量交付。\\n\\n（免责声明：本内容由AI技术搜集公开信息总结生成，仅供参考，不构成投资建议，以上市公司公告为准）",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "300308.SZ",
+          "ts_name": "中际旭创",
+          "rank": 2,
+          "pct_change": 20.01,
+          "current_price": 312.4,
+          "hot": 498310.0,
+          "concept": "[\"光模块\", \"CPO\"]",
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "行业原因：\\n1.6T光模块需求持续超预期，北美云厂商资本开支上修，CPO共封装光学导入节奏加快。\\n公司原因：\\n据2026年8月13日半年报，公司1.6T OSFP-XD产品已批量交付，硅光方案良率稳步提升。",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "300502.SZ",
+          "ts_name": "新易盛",
+          "rank": 3,
+          "pct_change": 19.98,
+          "current_price": 210.3,
+          "hot": 461220.0,
+          "concept": "[\"光模块\"]",
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "行业原因：\\n高速率光模块供需紧张，CPO产业化提速。\\n公司原因：\\n据2026年8月13日半年报，公司高速率光模块产能持续释放，海外产能爬坡顺利。",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "688256.SH",
+          "ts_name": "寒武纪",
+          "rank": 4,
+          "pct_change": 12.3,
+          "current_price": 1285.0,
+          "hot": 430115.0,
+          "concept": "[\"AI芯片\", \"国产算力\"]",
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "行业原因：\\n国产AI算力芯片订单饱满，云端推理需求放量。\\n公司原因：\\n据2026年8月13日半年报，思元系列芯片在互联网客户处批量部署。",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "300750.SZ",
+          "ts_name": "宁德时代",
+          "rank": 5,
+          "pct_change": 3.21,
+          "current_price": 386.5,
+          "hot": 298440.0,
+          "concept": null,
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "002261.SZ",
+          "ts_name": "拓维信息",
+          "rank": 6,
+          "pct_change": 10.02,
+          "current_price": 22.8,
+          "hot": 244310.0,
+          "concept": "[\"华为昇腾\", \"算力\"]",
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "行业原因：\\n昇腾生态扩容，国产算力集群招标推进。\\n公司原因：\\n据2026年9月投资者关系活动记录表，公司昇腾服务器产能与交付量持续提升。",
+          "market": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "热股",
+          "ts_code": "600410.SH",
+          "ts_name": "华胜天成",
+          "rank": 7,
+          "pct_change": 10.0,
+          "current_price": 9.87,
+          "hot": 187660.0,
+          "concept": null,
+          "rank_time": "2026-10-16 22:30:00",
+          "rank_reason": "",
+          "market": null,
+          "is_new": null
+        }
+      ]
+    }
   },
   "dc_hot": {
     "_meta": {
-      "status": "ok",
-      "provider": "fixture",
-      "data_as_of": "2026-10-16T10:30:00+08:00"
+      "contract_version": "1.0",
+      "intent": "market_hot_rank",
+      "status": "success",
+      "provider_used": "stocktoday",
+      "fetched_at": "2026-10-17T09:57:00+08:00"
     },
-    "items": [
-      {
-        "code": "300308",
-        "name": "中际旭创",
-        "rank": 1,
-        "zdpct": 20.01
-      },
-      {
-        "code": "688256",
-        "name": "寒武纪",
-        "rank": 4,
-        "zdpct": 12.3
-      },
-      {
-        "code": "600519",
-        "name": "贵州茅台",
-        "rank": 9,
-        "zdpct": 1.12
-      }
-    ]
+    "data": {
+      "source": "dc",
+      "trade_date": "20261016",
+      "items": [
+        {
+          "trade_date": "20261016",
+          "data_type": "A股市场",
+          "ts_code": "300308.SZ",
+          "ts_name": "中际旭创",
+          "rank": 1,
+          "pct_change": 20.01,
+          "current_price": 312.4,
+          "hot": null,
+          "concept": null,
+          "rank_time": "2026-10-16 22:30:03",
+          "market": null,
+          "hot_type": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "A股市场",
+          "ts_code": "688256.SH",
+          "ts_name": "寒武纪",
+          "rank": 4,
+          "pct_change": 12.3,
+          "current_price": 1285.0,
+          "hot": null,
+          "concept": null,
+          "rank_time": "2026-10-16 22:30:03",
+          "market": null,
+          "hot_type": null,
+          "is_new": null
+        },
+        {
+          "trade_date": "20261016",
+          "data_type": "A股市场",
+          "ts_code": "600519.SH",
+          "ts_name": "贵州茅台",
+          "rank": 9,
+          "pct_change": 1.12,
+          "current_price": 1521.0,
+          "hot": null,
+          "concept": null,
+          "rank_time": "2026-10-16 22:30:03",
+          "market": null,
+          "hot_type": null,
+          "is_new": null
+        }
+      ]
+    }
   },
   "intraday": {
     "_meta": {
-      "status": "ok",
-      "provider": "fixture",
-      "data_as_of": "2026-10-16T10:30:00+08:00"
+      "contract_version": "1.0",
+      "intent": "market_intraday_state",
+      "status": "degraded",
+      "provider_used": "stocktoday",
+      "fetched_at": "2026-10-16T15:30:00+08:00"
     },
-    "trade_date": "2026-10-16",
-    "indicators": {
-      "zt_count": 62,
-      "zb_count": 11,
-      "dt_count": 4,
-      "break_rate": 0.177,
-      "max_board": 5
+    "data": {
+      "trade_date": "20261016",
+      "previous_trade_date": "20261015",
+      "data_as_of": "2026-10-16T15:30:00+08:00",
+      "indicators": {
+        "indicator_version": "indicators.v1",
+        "emotion": 60.8,
+        "emotion_band": "主升",
+        "up_count": 3301,
+        "down_count": 2128,
+        "limit_up_count": 61,
+        "limit_down_count": 10,
+        "broken_count": 52,
+        "broken_rate": 46.02,
+        "seal_rate": 53.98,
+        "board_highest": 4,
+        "board_second_highest": 3
+      },
+      "limit_up": [
+        {
+          "code": "000530",
+          "name": "冰山冷热",
+          "price": 7.62,
+          "pct": 9.9567,
+          "amount": 1396717639.0,
+          "source": "stocktoday",
+          "board": 4,
+          "industry": "",
+          "seal_time": ""
+        },
+        {
+          "code": "300308",
+          "name": "中际旭创",
+          "price": 312.4,
+          "pct": 20.01,
+          "amount": 8260000000.0,
+          "source": "stocktoday",
+          "board": 3,
+          "industry": "",
+          "seal_time": "09:32:11"
+        },
+        {
+          "code": "300502",
+          "name": "新易盛",
+          "price": 210.3,
+          "pct": 19.98,
+          "amount": 5140000000.0,
+          "source": "stocktoday",
+          "board": 2,
+          "industry": "",
+          "seal_time": "09:35:02"
+        },
+        {
+          "code": "688256",
+          "name": "寒武纪",
+          "price": 1285.0,
+          "pct": 12.3,
+          "amount": 4020000000.0,
+          "source": "stocktoday",
+          "board": 4,
+          "industry": "",
+          "seal_time": "10:05:47"
+        },
+        {
+          "code": "002261",
+          "name": "拓维信息",
+          "price": 22.8,
+          "pct": 10.02,
+          "amount": 2100000000.0,
+          "source": "stocktoday",
+          "board": 1,
+          "industry": "软件服务",
+          "seal_time": "13:22:05"
+        },
+        {
+          "code": "600410",
+          "name": "华胜天成",
+          "price": 9.87,
+          "pct": 10.0,
+          "amount": 860000000.0,
+          "source": "stocktoday",
+          "board": 1,
+          "industry": "软件开发",
+          "seal_time": "14:01:33"
+        },
+        {
+          "code": "300045",
+          "name": "华力创通",
+          "price": 24.15,
+          "pct": 20.038,
+          "amount": 845570000.0,
+          "source": "stocktoday",
+          "board": 1,
+          "industry": "航天装备",
+          "seal_time": "09:41:18"
+        }
+      ]
+    }
+  },
+  "legacy_hot_rank": {
+    "_meta": {
+      "contract_version": "1.0",
+      "intent": "legacy_hot_rank",
+      "status": "degraded",
+      "provider_used": "ths_hot",
+      "fetched_at": "2026-10-17T09:57:00+08:00"
     },
-    "limit_up_pool": [
-      {
-        "code": "300308",
-        "name": "中际旭创",
-        "boards": 3,
-        "zdpct": 20.01,
-        "amount": 8260000000
-      },
-      {
-        "code": "300502",
-        "name": "新易盛",
-        "boards": 2,
-        "zdpct": 19.98,
-        "amount": 5140000000
-      },
-      {
-        "code": "688256",
-        "name": "寒武纪",
-        "boards": 4,
-        "zdpct": 12.3,
-        "amount": 4020000000
-      },
-      {
-        "code": "600410",
-        "name": "华胜天成",
-        "boards": 1,
-        "zdpct": 10.0,
-        "amount": 860000000
-      },
-      {
-        "code": "002261",
-        "name": "拓维信息",
-        "boards": 1,
-        "zdpct": 10.02,
-        "amount": 2100000000
+    "data": {
+      "trade_date": "2026-10-16",
+      "zt_count": 61,
+      "source": "ths_hot",
+      "items": [
+        {
+          "code": "300045",
+          "name": "华力创通",
+          "zhangfu": 20.038,
+          "reason": "卫星通信芯片+低空经济+卫星应用",
+          "huanshou": 13.66,
+          "chengjiaoe": 84557.0,
+          "ddejingliang": 3.33,
+          "market": 33
+        },
+        {
+          "code": "300308",
+          "name": "中际旭创",
+          "zhangfu": 20.01,
+          "reason": "光模块+CPO+算力硬件",
+          "huanshou": 8.12,
+          "chengjiaoe": 826000.0,
+          "ddejingliang": 12.5,
+          "market": 33
+        },
+        {
+          "code": "000530",
+          "name": "冰山冷热",
+          "zhangfu": 9.9567,
+          "reason": "冰雪产业+体育产业",
+          "huanshou": 15.3,
+          "chengjiaoe": 139672.0,
+          "ddejingliang": 1.2,
+          "market": 33
+        },
+        {
+          "code": "300750",
+          "name": "宁德时代",
+          "zhangfu": 3.21,
+          "reason": "固态电池+储能",
+          "huanshou": 1.1,
+          "chengjiaoe": 630000.0,
+          "ddejingliang": 0.8,
+          "market": 33
+        },
+        {
+          "code": "002261",
+          "name": "拓维信息",
+          "zhangfu": 10.02,
+          "reason": "华为昇腾+国产算力",
+          "huanshou": 9.4,
+          "chengjiaoe": 210000.0,
+          "ddejingliang": 2.1,
+          "market": 33
+        },
+        {
+          "code": "300502",
+          "name": "新易盛",
+          "zhangfu": 19.98,
+          "reason": "光模块+CPO",
+          "huanshou": 7.8,
+          "chengjiaoe": 514000.0,
+          "ddejingliang": 8.9,
+          "market": 33
+        }
+      ],
+      "reason_stats": {
+        "低空经济": 11,
+        "飞行汽车": 5,
+        "机器人": 5,
+        "商业航天": 4,
+        "特斯拉概念": 3,
+        "人形机器人": 3,
+        "汽车零部件": 3,
+        "光模块": 6,
+        "CPO": 2,
+        "AI芯片": 4,
+        "华为昇腾": 2,
+        "国产算力": 2,
+        "固态电池": 1,
+        "储能": 3,
+        "冰雪产业": 3,
+        "体育产业": 2,
+        "卫星通信芯片": 1,
+        "卫星应用": 2,
+        "软件开发": 1,
+        "软件服务": 1
       }
-    ]
+    }
   }
 }
